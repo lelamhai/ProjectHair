@@ -12,15 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('allView.home');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/authLoign', 'LoginController@getAuthLogin')->name('getLogin');
-Route::post('/authLoign', 'LoginController@postAuthLogin')->name('postLogin');
+Route::get('/authLogin', 'Auth_\LoginController@getLoginForm')->name('getLogin');
+Route::post('/authLogin', 'Auth_\LoginController@login')->name('postLogin');
 
-Route::get('/authRegister', 'RegisterController@getAuthRegister')->name('getRegister');
-Route::post('/authRegister', 'RegisterController@postAuthRegister')->name('postRegister');
+Route::get('/authRegister', 'Auth_\RegisterController@getRegistrationForm')->name('getRegister');
+Route::post('/authRegister', 'Auth_\RegisterController@register')->name('postRegister');
+
+Route::get('/10tep', 'AllController\10StepController@index')->name('get10Step');
+Route::get('/book', 'AllController\BookController@index')->name('getBook');
+Route::get('/cart', 'AllController\CartController@index')->name('getCart');
+Route::get('/contact', 'AllController\ContactController@index')->name('getContact');
+Route::get('/detailProducts', 'AllController\DetailProductsController@index')->name('getDetailProducts');
+Route::get('/modelHot', 'AllController\ModelHotController@index')->name('getModelHot');
+Route::get('/products', 'AllController\ProductsController@index')->name('getProducts');
+Route::get('/service', 'AllController\ServiceController@index')->name('getService');
