@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BookController extends Controller
 {
 	public function index() {
-		return view('allView.book');
+		return view('_allView.book');
 	}
     //
 }

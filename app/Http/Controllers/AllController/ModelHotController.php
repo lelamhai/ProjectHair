@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ModelHotController extends Controller
 {
 	public function index() {
-		return view('allView.model_hot');
+		return view('_allView.model_hot');
 	}
     //
 }

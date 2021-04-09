@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CartController extends Controller
 {
 	public function index() {
-		return view('allView.cart');
+		return view('_allView.cart');
 	}
     //
 }
