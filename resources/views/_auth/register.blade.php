@@ -6,6 +6,7 @@
     <title>Register</title>
 </head>
 <body>
+    @include('header')
     <form method="POST" action="/authRegister">
         @csrf
                         <div class="form-group row">
@@ -81,5 +82,6 @@
                             </div>
                         </div>
                     </form>
+        @include('footer')
 </body>
 </html>
