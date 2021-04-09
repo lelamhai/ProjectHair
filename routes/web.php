@@ -25,7 +25,7 @@ Route::post('/authLogin', 'Auth_\LoginController@login')->name('postLogin');
 Route::get('/authRegister', 'Auth_\RegisterController@getRegistrationForm')->name('getRegister');
 Route::post('/authRegister', 'Auth_\RegisterController@register')->name('postRegister');
 
-Route::get('/10tep', 'AllController\10StepController@index')->name('get10Step');
+Route::get('/step', 'AllController\StepController@index')->name('get10Step');
 Route::get('/book', 'AllController\BookController@index')->name('getBook');
 Route::get('/cart', 'AllController\CartController@index')->name('getCart');
 Route::get('/contact', 'AllController\ContactController@index')->name('getContact');

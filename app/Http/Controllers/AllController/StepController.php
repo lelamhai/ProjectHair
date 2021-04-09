@@ -5,10 +5,10 @@ namespace App\Http\Controllers\AllController;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class 10StepController extends Controller
+class StepController extends Controller
 {
 	public function index() {
-		return view('allView.10step');
+		return view('allView.step');
 	}
     //
 }

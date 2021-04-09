@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
+	<title>10 Step</title>
 </head>
 <body>
 	@include('header')
