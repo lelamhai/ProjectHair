@@ -4,7 +4,25 @@
 	<title>Login</title>
 </head>
 <body>
+
+@if (session('status'))
+        <div class="alert alert-info">{{session('status')}}</div>
+@endif
+@if (isset($result))
+    {{$result}}
+
+@endif
     @include('header')
+
+
+
+<?php 
+
+if(isset($keyName))
+{
+    var_dump($keyName);
+}
+?>
 	<form method="POST" action="/authLogin">
         @csrf
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">

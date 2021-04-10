@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="js/test.js"></script>
 </head>
 <body>
-	@include('header')
-	@include('footer')
+	<h1>Hello</h1>
+
 </body>
 </html>

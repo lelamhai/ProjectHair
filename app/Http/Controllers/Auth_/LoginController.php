@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Auth\RedirectsUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -33,7 +34,36 @@ class LoginController extends Controller
         }
 
         if ($this->attemptLogin($request)) {
-            return $this->sendLoginResponse($request);
+            $request->session()->regenerate();
+
+
+            $this->clearLoginAttempts($request);
+
+            $results = DB::table('user')
+                ->where('phone', $request->phone)
+                ->get();
+
+            $stringToken = substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(15/strlen($x)) )),1,15) . (string)time();
+
+            $array = [
+                    "result" => true,
+                    "data" => $results,
+                    "token" => $stringToken 
+                    //"message" => "Order thành công!",
+                ];
+            $jsonData = json_encode($array);
+           
+            $request->session()->flash('status', 'Login thành công!');
+            return View('_auth.login')->with('keyName', $jsonData);
+            //return response()
+                //->view('_auth.login',  $jsonData
+                // ->json([
+                //     "result" => "Successfully",
+                //     //"message" => "Order thành công!",
+                //     "data" => $arr
+                // ]
+            //);
+            //return $this->sendLoginResponse($request);
         }
 
         // If the login attempt was unsuccessful we will increment the number of attempts
@@ -70,8 +100,11 @@ class LoginController extends Controller
 
         $this->clearLoginAttempts($request);
 
-        return $this->authenticated($request, $this->guard()->user())
-                ?: redirect()->intended($this->redirectPath());
+        $text = 'sasas';
+        return view('_allView.home')->with('arr', response()->json($text));
+
+        // return $this->authenticated($request, $this->guard()->user())
+        //         ?: redirect()->intended($this->redirectPath());
     }
 
     /**
