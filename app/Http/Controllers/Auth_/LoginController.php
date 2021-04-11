@@ -9,11 +9,12 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Auth\RedirectsUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
+use App\User;
 
 class LoginController extends Controller
 {
 	use RedirectsUsers, ThrottlesLogins;
-
 	public function getLoginForm()
     {
         return view('_auth.login');
@@ -39,11 +40,17 @@ class LoginController extends Controller
 
             $this->clearLoginAttempts($request);
 
+            //lấy user từ database lên để lấy thông tin
             $results = DB::table('user')
                 ->where('phone', $request->phone)
                 ->get();
 
             $stringToken = substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(15/strlen($x)) )),1,15) . (string)time();
+            //update token vao database
+            DB::table('user')
+            ->where('phone', $request->phone)
+            ->update(['token' => $stringToken]);
+
 
             $array = [
                     "result" => true,
@@ -52,17 +59,9 @@ class LoginController extends Controller
                     //"message" => "Order thành công!",
                 ];
             $jsonData = json_encode($array);
-           
+            $request->session()->put('user', $request->phone);
             $request->session()->flash('status', 'Login thành công!');
             return View('_auth.login')->with('keyName', $jsonData);
-            //return response()
-                //->view('_auth.login',  $jsonData
-                // ->json([
-                //     "result" => "Successfully",
-                //     //"message" => "Order thành công!",
-                //     "data" => $arr
-                // ]
-            //);
             //return $this->sendLoginResponse($request);
         }
 
@@ -71,7 +70,25 @@ class LoginController extends Controller
         // user surpasses their maximum number of attempts they will get locked out.
         $this->incrementLoginAttempts($request);
 
-        return $this->sendFailedLoginResponse($request);
+        $phone = DB::table('user')->select('phone')->where('phone', $request->phone)->get();
+
+        if (count($phone) === 0) {
+            $message = "Account not exit! :)) Please create a account!";
+        } 
+        else {
+            $message = "Password was wrong! :)) Again!";
+        }
+
+        $array_l = [
+                    "result" => false,
+                    "data" => null,
+                    "message" => $message
+                    //"message" => "Order thành công!",
+                ];
+
+        $jsonData_l = json_encode($array_l);
+        return View('_auth.login')->with('keyName', $jsonData_l);
+        //return $this->sendFailedLoginResponse($request);
     }
 
     protected function validateLogin(Request $request)
@@ -167,8 +184,24 @@ class LoginController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return mixed
      */
-    protected function loggedOut(Request $request)
+    public function log() {
+        return view('_auth.logout');
+    }
+
+    public function loggedOut(Request $request)
     {
+        $p = $request->session()->get('user');
+        var_dump($p);
+        DB::table('user')
+            ->where('phone', $p)
+            ->update(['token' => '']);
+
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+        return view('_auth.login');
         //
     }
 

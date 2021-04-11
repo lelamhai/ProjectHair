@@ -21,6 +21,8 @@ Auth::routes();
 
 Route::get('/authLogin', 'Auth_\LoginController@getLoginForm')->name('getLogin');
 Route::post('/authLogin', 'Auth_\LoginController@login')->name('postLogin');
+Route::get('/authLogout', 'Auth_\LoginController@log')->name('getLogout');
+Route::post('/authLogout', 'Auth_\LoginController@loggedOut')->name('postLogout');
 
 Route::get('/authRegister', 'Auth_\RegisterController@getRegistrationForm')->name('getRegister');
 Route::post('/authRegister', 'Auth_\RegisterController@register')->name('postRegister');

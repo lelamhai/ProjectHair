@@ -79,7 +79,8 @@ if(isset($keyName))
                                 @endif
                             </div>
                         </div>
-                    </form>
+                        
+    </form>
         @include('footer')
 </body>
 </html>
