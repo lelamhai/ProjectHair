@@ -27,7 +27,7 @@ Route::post('/authLogout', 'Auth_\LoginController@loggedOut')->name('postLogout'
 Route::get('/authRegister', 'Auth_\RegisterController@getRegistrationForm')->name('getRegister');
 Route::post('/authRegister', 'Auth_\RegisterController@register')->name('postRegister');
 
-Route::get('/step', 'AllController\StepController@index')->name('get10Step');
+//Route::get('/step', 'AllController\StepController@index')->name('get10Step');
 Route::get('/book', 'AllController\BookController@index')->name('getBook');
 Route::get('/cart', 'AllController\CartController@index')->name('getCart');
 Route::get('/contact', 'AllController\ContactController@index')->name('getContact');
@@ -35,3 +35,4 @@ Route::get('/detailProducts', 'AllController\DetailProductsController@index')->n
 Route::get('/modelHot', 'AllController\ModelHotController@index')->name('getModelHot');
 Route::get('/products', 'AllController\ProductsController@index')->name('getProducts');
 Route::get('/service', 'AllController\ServiceController@index')->name('getService');
+Route::get('/service/{id}', 'AllController\ServiceController@showStepOfService')->name('getServiceById');
