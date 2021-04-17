@@ -13,7 +13,9 @@
 	   </span>
 	   <input id="thumbnail" class="form-control" type="text" name="filepath">
  	</div>
- 	<img id="holder" style="margin-top:15px;max-height:100px;">
+	 <div id="holder">
+	 
+	 </div>
 	</div>
 	
 
