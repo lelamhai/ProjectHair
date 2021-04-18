@@ -61,7 +61,7 @@ class LoginController extends Controller
             $jsonData = json_encode($array);
             $request->session()->put('user', $request->phone);
             $request->session()->flash('status', 'Login thành công!');
-            return View('_auth.login')->with('keyName', $jsonData);
+            return redirect('/admin/root')->with('keyName', $jsonData);
             //return $this->sendLoginResponse($request);
         }
 

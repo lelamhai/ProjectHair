@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Login</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="refresh" content="{{ config('session.lifetime') * 60 }}">
 </head>
 <body>
 
@@ -23,7 +25,7 @@ if(isset($keyName))
     var_dump($keyName);
 }
 ?>
-	<form method="POST" action="/authLogin">
+	<form method="POST" action="/login">
         @csrf
         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                         <div class="form-group row">

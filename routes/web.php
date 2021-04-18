@@ -24,7 +24,7 @@ Route::group(['prefix' => 'laravel-filemanager'], function () {
 //Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/login', 'Auth_\LoginController@getLoginForm')->name('getLogin');
-Route::post('/authLogin', 'Auth_\LoginController@login')->name('postLogin');
+Route::post('/login', 'Auth_\LoginController@login')->name('postLogin');
 Route::get('/authLogout', 'Auth_\LoginController@log')->name('getLogout');
 Route::post('/authLogout', 'Auth_\LoginController@loggedOut')->name('postLogout');
 
@@ -43,3 +43,6 @@ Route::get('/service', 'AllController\ServiceController@index')->name('getServic
 Route::get('/service/{id}', 'AllController\ServiceController@showStepOfService')->name('getServiceById');
 //-------------------------admin------------------------------
 Route::get('/admin/add-details-service', 'AdminController\ServiceController@indexFormAddDetailService')->name('form.addDetailsService');
+Route::get('admin/root','AdminController\ServiceController@showAllServie')->name('show.service');
+Route::get('/admin/service/{id}', 'AdminController\ServiceController@showStepOfService')->name('get.ServiceById');
+Route::post('/admin/add-details-service', 'AdminController\ServiceController@postDetailService')->name('post.detailService');

@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service_Details extends Model
 {
+	protected $fillable = [
+        'step', 'nameStep', 'image', 'content', 'idService',
+    ];
     //
 }
