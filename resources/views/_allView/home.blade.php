@@ -8,6 +8,7 @@
 	@foreach ($steps as $step)
 		{{$step->step}}: {{$step->nameStep}} <br>
 		{{$step->content}} <br>
+		<img src="{{$step->image}}">
 	@endforeach
 	<h1>models hot (products)</h1>
 	@foreach ($models_hot as $model)
