@@ -1,9 +1,6 @@
 @extends('index')
 
 @section('content')
-	<link rel="stylesheet" href="css/test.css">
-	<script src="js/test.js"></script>
-
 	<h1>service and steps</h1>
 	@foreach ($steps as $step)
 		{{$step->step}}: {{$step->nameStep}} <br>
