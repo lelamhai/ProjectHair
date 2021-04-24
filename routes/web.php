@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('_allView.home');
-});
+Route::get('/', 'AllController\HomeController@index');
 
 //Auth::routes();
 
@@ -39,10 +37,14 @@ Route::get('/contact', 'AllController\ContactController@index')->name('getContac
 Route::get('/detailProducts', 'AllController\DetailProductsController@index')->name('getDetailProducts');
 Route::get('/modelHot', 'AllController\ModelHotController@index')->name('getModelHot');
 Route::get('/products', 'AllController\ProductsController@index')->name('getProducts');
+Route::get('/detail-product/{id}', 'AllController\DetailProductsController@getProduct')->name('get.Product');
+Route::get('/products-of-categories/{idCate}', 'AllController\ProductsController@getProductsOfCategories')->name('get.ProductsOfCategories');
 Route::get('/service', 'AllController\ServiceController@index')->name('getService');
 Route::get('/service/{id}', 'AllController\ServiceController@showStepOfService')->name('getServiceById');
 //-------------------------admin------------------------------
 Route::get('/admin/add-details-service', 'AdminController\ServiceController@indexFormAddDetailService')->name('form.addDetailsService');
 Route::get('admin/root','AdminController\ServiceController@showAllServie')->name('show.service');
-Route::get('/admin/service/{id}', 'AdminController\ServiceController@showStepOfService')->name('get.ServiceById');
+Route::get('/admin/service/{id}', 'AdminController\ServiceController@showAllStepOfService')->name('get.ServiceById');
 Route::post('/admin/add-details-service', 'AdminController\ServiceController@postDetailService')->name('post.detailService');
+Route::get('admin/edit-step/{id}', 'AdminController\ServiceController@showStepOfServiceToEdit')->name('edit.step');
+Route::get('admin/delete-step/{id}', 'AdminController\ServiceController@deleteStep')->name('delete.step');

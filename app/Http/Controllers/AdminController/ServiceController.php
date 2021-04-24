@@ -22,12 +22,14 @@ class ServiceController extends Controller
 		return view('_adminView.root')->with('services', $services);
 	}
 
-	public function showStepOfService($id, Request $request) {
+	public function showAllStepOfService($id, Request $request) {
 		$steps = DB::table('service__details')->where('idService', $id)->get();
 		$services = DB::table('services')->get();
+		$service = DB::table('services')->where('id', $id)->first();
 		$request->session()->put('idService', $id);
 		return view('_adminView.show_detail_service')->with(['steps'=> $steps,
-															'services'=> $services]);
+															'services'=> $services,
+															'service' => $service]);
 	}
 
 	public function postDetailService(Request $request) {
@@ -55,6 +57,16 @@ class ServiceController extends Controller
             'content' => $data['content'],
             'idService' => $data['idService'],
         ]);
+    }
+
+    public function showStepOfServiceToEdit($id) {
+    	$step = DB::table('service__details')->where('id', $id)->get();
+
+    	return view('');
+    }
+
+    public function deleteStep($id) {
+
     }
     //
 }
