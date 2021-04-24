@@ -14,7 +14,6 @@
     {{$result}}
 
 @endif
-    @include('header')
 
 
 
@@ -83,6 +82,5 @@ if(isset($keyName))
                         </div>
                         
     </form>
-        @include('footer')
 </body>
 </html>

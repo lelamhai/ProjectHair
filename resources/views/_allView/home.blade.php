@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Home</title>
-</head>
-<body>
+@extends('index')
+
+@section('content')
+	<link rel="stylesheet" href="css/test.css">
+	<script src="js/test.js"></script>
+
 	<h1>service and steps</h1>
 	@foreach ($steps as $step)
 		{{$step->step}}: {{$step->nameStep}} <br>
@@ -22,5 +22,4 @@
     	<a href="/detail-product/{{$product->idPro}}">{{$product->name}}</a>  <br>
     	{{$product->price}} <br>
 	@endforeach
-</body>
-</html>
+@endsection

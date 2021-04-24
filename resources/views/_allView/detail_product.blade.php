@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Detail Product/title></title>
-</head>
-<body>
-	@include('header')
+@extends('index')
+
+@section('content')
 
 	<img src="{{$product->image}}" alt="Loi anh roi!"> <br>
 	{{$product->name}} : {{$product->price}} <br>
@@ -20,6 +16,4 @@
     	{{$product->price}} <br>
 	@endforeach
 
-	@include('footer')
-</body>
-</html>
+@endsection

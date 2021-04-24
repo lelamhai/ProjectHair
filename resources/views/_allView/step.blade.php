@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>10 Step</title>
-</head>
-<body>
-	@include('header')
+@extends('index')
+
+@section('content')
 
 	@foreach ($steps as $step)
 	{{$step->step}} : {{$step->nameStep}}
@@ -13,6 +9,4 @@
     <h5>------------------------</h5>
 	@endforeach
 
-	@include('footer')
-</body>
-</html>
+@endsection

@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Book</title>
-</head>
-<body>
+@extends('index')
+
+@section('content')
 	@include('header')
 	{{$stringToken}}
 	@include('footer')
-</body>
-</html>
+@endsection
+

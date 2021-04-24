@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Products</title>
-</head>
-<body>
-	@include('header')
-
+@extends('index')
+@section('content')
+	
 	<h3>Danh muc</h3>
 	@foreach ($categories as $category)
 		<a href="/products-of-categories/{{$category->idCate}}">{{$category->name}}</a>
@@ -19,6 +14,4 @@
 		{{$product->name}} : {{$product->price}}
 	@endforeach
 
-	@include('footer')
-</body>
-</html>
+@endsection

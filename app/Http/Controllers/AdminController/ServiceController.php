@@ -19,7 +19,7 @@ class ServiceController extends Controller
 
 	public function showAllServie() {
 		$services = DB::table('services')->get();
-		return view('_adminView.root')->with('services', $services);
+		return view('_adminView.index')->with('services', $services);
 	}
 
 	public function showAllStepOfService($id, Request $request) {
@@ -35,7 +35,7 @@ class ServiceController extends Controller
 	public function postDetailService(Request $request) {
 		$this->validator($request->all())->validate();
 		$this->createDetailService($request->all());
-		return redirect('admin/root');
+		return redirect('admin/index');
 	}
 
 	protected function validator(array $data)
