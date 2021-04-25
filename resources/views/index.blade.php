@@ -3,10 +3,9 @@
 <head>
 	<title>Trang chu</title>
 	<link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/Home/responsive.css">
-    <link rel="stylesheet" href="assets/css/Home/style.css">
     <link rel="stylesheet" href="assets/js/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/js/owlcarousel/assets/owl.theme.default.min.css">
+    @yield('css')
 	<!-- <link rel="stylesheet" href="css/test.css"> -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
@@ -170,7 +169,7 @@
             slides[slideIndex - 1].style.display = "block";
         }
     </script>
-    @yield('css')
+    
     @yield('script')
 
 </html>
