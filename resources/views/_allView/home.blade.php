@@ -53,7 +53,6 @@
 								<?php $count ++; ?>
 								@endforeach
 							<?php
-							
 						?>
 						
                     </div>
@@ -77,96 +76,23 @@
 <section class="ten-step-mobile">
     <div class="container">
         <div class="owl-carousel owl-theme">
-            <div class="ten-step-mobile-box">
-                <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                    <p class="ten-step__sidebar-desc">Bước 1. Massage khai huyệt điều hòa (mới)</p>
-                </div>
-                <div class=" img-responsive">
-                    <img src="https://www.w3schools.com/howto/img_woods_wide.jpg">
-                </div>
-            </div>
 
-            <div class="ten-step-mobile-box">
-                <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                    <p class="ten-step__sidebar-desc">Bước 2. Massage khai huyệt điều hòa (mới)</p>
-                </div>
-                <div class=" img-responsive ">
-                    <img src="https://www.w3schools.com/howto/img_5terre_wide.jpg">
-                </div>
-            </div>
-
-            <div class="ten-step-mobile-box">
-                <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                    <p class="ten-step__sidebar-desc">Bước 3. Massage khai huyệt điều hòa (mới)</p>
-                </div>
-                <div class=" img-responsive">
-                    <img src="https://www.w3schools.com/howto/img_woods_wide.jpg">
-                </div>
-            </div>
-
-            <div class="ten-step-mobile-box">
-                <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                    <p class="ten-step__sidebar-desc">Bước 4. Massage khai huyệt điều hòa (mới)</p>
-                </div>
-                <div class=" img-responsive ">
-                    <img src="https://www.w3schools.com/howto/img_5terre_wide.jpg">
-                </div>
-            </div>
-
-            <div class="ten-step-mobile-box">
-                <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                    <p class="ten-step__sidebar-desc">Bước 5. Massage khai huyệt điều hòa (mới)</p>
-                </div>
-                <div class=" img-responsive">
-                    <img src="https://www.w3schools.com/howto/img_woods_wide.jpg">
-                </div>
-            </div>
-
-            <div class="ten-step-mobile-box">
-                <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                    <p class="ten-step__sidebar-desc">Bước 6. Massage khai huyệt điều hòa (mới)</p>
-                </div>
-                <div class=" img-responsive ">
-                    <img src="https://www.w3schools.com/howto/img_5terre_wide.jpg">
-                </div>
-            </div>
-
-            <div class="ten-step-mobile-box">
-                <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                    <p class="ten-step__sidebar-desc">Bước 7. Massage khai huyệt điều hòa (mới)</p>
-                </div>
-                <div class=" img-responsive">
-                    <img src="https://www.w3schools.com/howto/img_woods_wide.jpg">
-                </div>
-            </div>
-
-            <div class="ten-step-mobile-box">
-                <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                    <p class="ten-step__sidebar-desc">Bước 8. Massage khai huyệt điều hòa (mới)</p>
-                </div>
-                <div class=" img-responsive ">
-                    <img src="https://www.w3schools.com/howto/img_5terre_wide.jpg">
-                </div>
-            </div>
-
-            <div class="ten-step-mobile-box">
-                <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                    <p class="ten-step__sidebar-desc">Bước 9. Massage khai huyệt điều hòa (mới)</p>
-                </div>
-                <div class=" img-responsive">
-                    <img src="https://www.w3schools.com/howto/img_woods_wide.jpg">
-                </div>
-            </div>
-
-            <div class="ten-step-mobile-box">
-                <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                    <p class="ten-step__sidebar-desc">Bước 10. Massage khai huyệt điều hòa (mới)</p>
-                </div>
-                <div class=" img-responsive ">
-                    <img src="https://www.w3schools.com/howto/img_5terre_wide.jpg">
-                </div>
-            </div>
-
+			<?php 
+				$count = 1;
+				?>
+					@foreach ($steps as $step)
+					<div class="ten-step-mobile-box">
+						<div class="ten-step__sidebar-item" onclick="currentSlide(1)">
+							<p class="ten-step__sidebar-desc">{{$step->step}}: {{$step->nameStep}}</p>
+						</div>
+						<div class=" img-responsive">
+							<img src="{{$step->image}}">
+						</div>
+					</div>
+						<?php $count ++; ?>
+					@endforeach
+				<?php
+			?>
 
         </div>
     </div>
@@ -182,64 +108,12 @@
             <a href="" class="heading-more">Xem thêm >></a>
         </div>
         <div class="hair-hot__content">
-            <div class="owl-carousel owl-theme">
+            <div class="wrap-hot">
                 <div class="hair-hot__thumb">
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/4.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/5.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/3.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/7.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/8.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/2.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/3.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/1.jpg" alt=""
-                            class="img-responsive"></a>
+					@foreach ($models_hot as $model)
+                    	<a href="#" class="hair-hot__item"><img src="{{$model->image}}" alt="" class="img-responsive"></a>
+					@endforeach
                 </div>
-
-                <div class="hair-hot__thumb">
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/1.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/2.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/3.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/4.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/5.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/6.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/7.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/8.jpg" alt=""
-                            class="img-responsive"></a>
-                </div>
-
-                <div class="hair-hot__thumb">
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/8.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/7.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/6.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/5.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/5.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/6.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/7.jpg" alt=""
-                            class="img-responsive"></a>
-                    <a href="#" class="hair-hot__item"><img src="./assets/img/Home/8.jpg" alt=""
-                            class="img-responsive"></a>
-                </div>
-
             </div>
         </div>
     </div>
@@ -254,152 +128,22 @@
             <a href="" class="heading-more">Xem thêm >></a>
         </div>
         <div class=" owl-carousel owl-theme">
-            <div class="brand__item">
-                <div class="product__item ">
-                    <a href="#" class="product__thumb">
+
+           	<div class="brand__item">
+			   @foreach ($products as $product)
+			   	<div class="product__item ">
+                   <a href="/detail-product/{{$product->idPro}}" class="product__thumb">
                         <img src="./assets/img/Detail/product-1.png" alt=""
                             class="product__photo img-responsive">
                     </a>
 
                     <div class="product__detail">
-                        <a href="#" class="product__link">Bộ đôi DẦU GỘI - XẢ TIGI RESURRECTION
-                            970ml -
-                            Phiên
-                            bản
-                            mới 2021</a>
-                        <p class="product__price--new">780,000₫ <span class="product__price--old">1.500.000₫
-                            </span> </p>
+						<a href="/detail-product/{{$product->idPro}}" class="product__link">{{$product->name}}</a>
+                        <p class="product__price--new">{{$product->price}}₫ </p>
                     </div>
 
                 </div>
-
-                <div class="product__item">
-                    <a href="#" class="product__thumb">
-                        <img src="./assets/img/Detail/product-2.png" alt=""
-                            class="product__photo img-responsive">
-                    </a>
-
-                    <div class="product__detail">
-                        <a href="#" class="product__link">Bộ đôi DẦU GỘI - XẢ TIGI RESURRECTION
-                            970ml -
-                            Phiên
-                            bản
-                            mới 2021</a>
-                        <p class="product__price--new">780,000₫ <span class="product__price--old">1.500.000₫
-                            </span> </p>
-                    </div>
-
-                </div>
-
-                <div class="product__item">
-                    <a href="#" class="product__thumb">
-                        <img src="./assets/img/Detail/product-3.png" alt=""
-                            class="product__photo img-responsive">
-                    </a>
-
-                    <div class="product__detail">
-                        <a href="#" class="product__link">Bộ đôi DẦU GỘI - XẢ TIGI RESURRECTION
-                            970ml -
-                            Phiên
-                            bản
-                            mới 2021</a>
-                        <p class="product__price--new">780,000₫ <span class="product__price--old">1.500.000₫
-                            </span> </p>
-                    </div>
-
-                </div>
-
-                <div class="product__item">
-                    <a href="#" class="product__thumb">
-                        <img src="./assets/img/Detail/product-4.png" alt=""
-                            class="product__photo img-responsive">
-                    </a>
-
-                    <div class="product__detail">
-                        <a href="#" class="product__link">Bộ đôi DẦU GỘI - XẢ TIGI RESURRECTION
-                            970ml -
-                            Phiên
-                            bản
-                            mới 2021</a>
-                        <p class="product__price--new">780,000₫ <span class="product__price--old">1.500.000₫
-                            </span> </p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="brand__item">
-                <div class="product__item">
-                    <a href="#" class="product__thumb">
-                        <img src="./assets/img/Detail/product-2.png" alt=""
-                            class="product__photo img-responsive">
-                    </a>
-
-                    <div class="product__detail">
-                        <a href="#" class="product__link">Bộ đôi DẦU GỘI - XẢ TIGI RESURRECTION
-                            970ml -
-                            Phiên
-                            bản
-                            mới 2021</a>
-                        <p class="product__price--new">780,000₫ <span class="product__price--old">1.500.000₫
-                            </span> </p>
-                    </div>
-
-                </div>
-
-                <div class="product__item">
-                    <a href="#" class="product__thumb">
-                        <img src="./assets/img/Detail/product-3.png" alt=""
-                            class="product__photo img-responsive">
-                    </a>
-
-                    <div class="product__detail">
-                        <a href="#" class="product__link">Bộ đôi DẦU GỘI - XẢ TIGI RESURRECTION
-                            970ml -
-                            Phiên
-                            bản
-                            mới 2021</a>
-                        <p class="product__price--new">780,000₫ <span class="product__price--old">1.500.000₫
-                            </span> </p>
-                    </div>
-
-                </div>
-
-                <div class="product__item">
-                    <a href="#" class="product__thumb">
-                        <img src="./assets/img/Detail/product-4.png" alt=""
-                            class="product__photo img-responsive">
-                    </a>
-
-                    <div class="product__detail">
-                        <a href="#" class="product__link">Bộ đôi DẦU GỘI - XẢ TIGI RESURRECTION
-                            970ml -
-                            Phiên
-                            bản
-                            mới 2021</a>
-                        <p class="product__price--new">780,000₫ <span class="product__price--old">1.500.000₫
-                            </span> </p>
-                    </div>
-
-                </div>
-
-                <div class="product__item">
-                    <a href="#" class="product__thumb">
-                        <img src="./assets/img/Detail/product-3.png" alt=""
-                            class="product__photo img-responsive">
-                    </a>
-
-                    <div class="product__detail">
-                        <a href="#" class="product__link">Bộ đôi DẦU GỘI - XẢ TIGI RESURRECTION
-                            970ml -
-                            Phiên
-                            bản
-                            mới 2021</a>
-                        <p class="product__price--new">780,000₫ <span class="product__price--old">1.500.000₫
-                            </span> </p>
-                    </div>
-
-                </div>
+				@endforeach
             </div>
         </div>
     </div>
