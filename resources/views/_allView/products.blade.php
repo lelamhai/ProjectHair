@@ -6,7 +6,6 @@
         <!-- Begin banner -->
         <section class="product__banner">
             <img src="{{asset("./assets/img/Products/banner_image_collection.jpg")}}" alt="" class="img-responsive">
-
         </section>
         <!-- End banner -->
 
@@ -93,7 +92,6 @@
 
 @section('css')
 	<link rel="stylesheet" href="{{ asset('assets/css/Products/responsive.css') }}">
-
     <link rel="stylesheet" href="{{ asset('assets/css/Products/style.css') }}">
 @endsection
 

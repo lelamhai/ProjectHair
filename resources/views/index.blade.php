@@ -2,15 +2,16 @@
 <html>
 <head>
 	<title>Trang chu</title>
-	<link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/js/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/js/owlcarousel/assets/owl.theme.default.min.css">
+	<link rel="stylesheet" href="/assets/css/common.css">
+    <link rel="stylesheet" href="/assets/js/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/js/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>
     
 	<!-- <link rel="stylesheet" href="css/test.css"> -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="stylesheet" href="assets/css/Products/responsive.css">
-    <link rel="stylesheet" href="assets/css/Products/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/Products/responsive.css">
+    <link rel="stylesheet" href="assets/css/Products/style.css"> -->
 
 
     @yield('css')
@@ -124,10 +125,10 @@
 
 
 </body>
-<!-- <script src="js/test.js"></script> -->
 
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/owlcarousel/owl.carousel.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="/assets/js/owlcarousel/owl.carousel.min.js"></script>
     
     @yield('script')
 
