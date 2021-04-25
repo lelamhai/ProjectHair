@@ -162,5 +162,5 @@
 @endsection
 
 @section('script')
-	<!-- <script type="text/javascript" src="js/test.js"></script> -->
+	<script type="text/javascript" src="assets/js/home.js"></script>
 @endsection

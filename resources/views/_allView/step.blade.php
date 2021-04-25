@@ -1,7 +1,6 @@
 @extends('index')
 
 @section('content')
-
 	@foreach ($steps as $step)
 	{{$step->step}} : {{$step->nameStep}}
 	<p>{{$step->content}}</p>
