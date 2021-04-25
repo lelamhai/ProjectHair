@@ -1,10 +1,12 @@
 @extends('index')
+
 @section('content')
  <!-- Begin product -->
  <main class="product">
         <!-- Begin banner -->
         <section class="product__banner">
-            <img src="./assets/img/Products/banner_image_collection.jpg" alt="" class="img-responsive">
+            <img src="{{asset("./assets/img/Products/banner_image_collection.jpg")}}" alt="" class="img-responsive">
+
         </section>
         <!-- End banner -->
 
@@ -60,13 +62,13 @@
 							@foreach ($products as $product)
 								<div class="col l-4 m-6">
 									<div class="product__item">
-										<a href="/detail-product/{id}" class="product__thumb">
+										<a href="/detail-product/{{$product->idPro}}" class="product__thumb">
 											<img src="{{$product->image}}" alt=""
 												class="product__photo img-responsive">
 										</a>
 
 										<div class="product__detail">
-											<a href="/detail-product/{id}" class="product__link">Bộ đôi DẦU GỘI - XẢ TIGI RESURRECTION
+											<a href="/detail-product/{{$product->idPro}}" class="product__link">Bộ đôi DẦU GỘI - XẢ TIGI RESURRECTION
 												{{$product->name}}</a>
 											<p class="product__price--new">{{$product->price}}₫</p>
 										</div>
@@ -90,8 +92,9 @@
 @endsection
 
 @section('css')
-	<link rel="stylesheet" href="assets/css/Products/responsive.css">
-    <link rel="stylesheet" href="assets/css/Products/style.css">
+	<link rel="stylesheet" href="{{ asset('assets/css/Products/responsive.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('assets/css/Products/style.css') }}">
 @endsection
 
 @section('script')

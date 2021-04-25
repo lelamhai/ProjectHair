@@ -16,11 +16,12 @@ class ProductsController extends Controller
 												'products'=> $products]);
 	}
 
-	public function getProductsOfCategories ($idCate) {
+	public function getProductsOfCategories($idCate) {
 		$categories = DB::table('categories')->get();
 		$products = DB::table('products')->where('idCate', $idCate)->get();
-		return view('_allView.products')->with(['categories' => $categories,
+		return View('_allView.products')->with(['categories' => $categories,
 												'products'=> $products]);
 	}
+
     //
 }
