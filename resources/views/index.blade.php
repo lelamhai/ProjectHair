@@ -170,4 +170,7 @@
             slides[slideIndex - 1].style.display = "block";
         }
     </script>
+    @yield('css')
+    @yield('script')
+
 </html>

@@ -19,4 +19,13 @@
     	<a href="/detail-product/{{$product->idPro}}">{{$product->name}}</a>  <br>
     	{{$product->price}} <br>
 	@endforeach
+
+@endsection
+
+@section('css')
+	<link rel="stylesheet" href="css/test.css">
+@endsection
+
+@section('script')
+	<script type="text/javascript" src="js/test.js"></script>
 @endsection
