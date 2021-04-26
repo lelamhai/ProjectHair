@@ -29,21 +29,13 @@
                         <div class="row">
                             <div class="owl-carousel owl-theme">
 
-                                <a href="#"><img src="./assets/img/Service/1-uon-cao-cap.jpg" alt=""
+                            	@foreach ($services_uon as $service)
+									<a href="#"><img src="{{$service->image}}" alt=""
                                         class="img-responsive"></a>
-                                <a href="#"><img src="./assets/img/Service/2-uon-tieu-chuan.jpg" alt=""
-                                        class="img-responsive"></a>
-                                <a href="#"><img src="./assets/img/Service/3-uon-con-sau.jpg" alt=""
-                                        class="img-responsive"></a>
-                                <a href="#"><img src="./assets/img/Service/4-uon-prem-lock.jpg" alt=""
-                                        class="img-responsive"></a>
+								@endforeach
 
                             </div>
                         </div>
-                        <!-- <div class="owl-carousel owl-theme">
-
-
-                    </div> -->
                     </div>
                 </div>
             </div>
@@ -56,14 +48,11 @@
                     <div class="grid">
                         <div class="row">
                             <div class="owl-carousel owl-theme">
-                                <a href="#"><img src="./assets/img/Service/1-Elegant-black.jpg" alt=""
+
+                            	@foreach ($services_nhuom as $service)
+									<a href="#"><img src="{{$service->image}}" alt=""
                                         class="img-responsive"></a>
-                                <a href="#"><img src="./assets/img/Service/2-Modern-man.jpg" alt=""
-                                        class="img-responsive"></a>
-                                <a href="#"><img src="./assets/img/Service/3-Lady-Killer.jpg" alt=""
-                                        class="img-responsive"></a>
-                                <a href="#"><img src="./assets/img/Service/4-Fashionisto.jpg" alt=""
-                                        class="img-responsive"></a>
+								@endforeach
                             </div>
                         </div>
                     </div>
