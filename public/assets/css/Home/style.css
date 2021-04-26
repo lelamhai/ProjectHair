@@ -107,7 +107,7 @@ section {
     margin-bottom: 30px;
     padding: 15px;
     flex: 25%;
-    max-width: 25%;
+    /* max-width: 25%; */
 }
 
 .product__item:hover {
@@ -268,7 +268,7 @@ section {
     }
     .product__item {
         flex: 33.33%;
-        max-width: 33.33%;
+        /* max-width: 33.33%; */
     }
     .hair-hot__item {
         flex: 33.33%;
