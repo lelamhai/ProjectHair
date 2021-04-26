@@ -13,9 +13,9 @@ class DetailProductsController extends Controller
 	// }
 	public function getProduct($id) {
 		$product = DB::table('products')->where('idPro', $id)->first();
-		$products = DB::table('products')->where('idCate', $product->idCate)->get();
+		$products = DB::table('products')->where('idCate', $product->idCate)->get(); // them dk
+
 		return view('_allView.detail_product')->with(['product'=> $product,
 														'products' => $products]);
 	}
-    //
 }

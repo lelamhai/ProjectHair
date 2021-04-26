@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="row header__content">
                     <div class="col l-2 m-2 xs-6">
-                        <a href="" class="header__logo"><img src="./assets/img/Home/logo.png" alt=""
+                        <a href="" class="header__logo"><img src="/assets/img/Home/logo.png" alt=""
                                 class="header__logo-img img-responsive"></a>
                     </div>
                     <div class="col l-10 m-1 xs-6">
@@ -32,7 +32,7 @@
                             </span>
                         </label>
                         <nav class="header__navbar">
-                            <a href="" class="header__logo header__navbar-logo"><img src="./assets/img/Home/logo.png"
+                            <a href="" class="header__logo header__navbar-logo"><img src="/assets/img/Home/logo.png"
                                     alt="" class="header__logo-img img-responsive"></a>
                             <label for='item-dropdown'>
                                 <span class="header__navbar-bars header__navbar-bars--remove">
