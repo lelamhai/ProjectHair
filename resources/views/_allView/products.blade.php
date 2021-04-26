@@ -42,7 +42,7 @@
                 <!-- product main -->
                 <div class="row">
                     <!-- product sidebar -->
-                    <div class="col l-3">
+                    <div class="col l-3 m-0 xs-0">
                         <div class="product__sidebar">
                             <ul class="product__sidebar-list">
 
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                     <!-- product content -->
-                    <div class="col l-9 s-12">
+                    <div class="col l-9 m-12 xs-12">
                         <div class="row">
 
 
