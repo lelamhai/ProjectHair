@@ -1,12 +1,83 @@
 @extends('index')
 
 @section('content')
-	@foreach ($services as $service)
-	<h4>{{$service->name}}</h4>
-	<h5>{{$service->price}}</h5>
-    <a href="/service/{{$service->id}}">
-    	<img src="" alt="Loi anh roi!" width="280" height="300	">
-    </a>
-    <h5>------------------------</h5>
-	@endforeach
+
+<main id="service">
+<!-- Begin service -->
+<section class="service">
+        <div class="grid full service-wrapper">
+            <div class="service__combo-10step">
+                <div class="service__title mb-30">
+                    <h3>SHINE COMBO CẮT GỘI 10 BƯỚC</h3>
+                </div>
+
+                <div class="combo-10step__content">
+                    <div class="combo-10step__banner">
+                        <a href="#" class="combo-10step__link"><img src="./assets/img/Service/shine-combo-10-buoc.jpg"
+                                alt="" class="combo-10step__img img-responsive"></a>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div class="service__hair-curling mb-50">
+                <div class="service__title mb-30">
+                    <h3>DỊCH VỤ UỐN</h3>
+                </div>
+                <div class="hair-curling-content">
+                    <div class="grid">
+                        <div class="row">
+                            <div class="owl-carousel owl-theme">
+
+                                <a href="#"><img src="./assets/img/Service/1-uon-cao-cap.jpg" alt=""
+                                        class="img-responsive"></a>
+                                <a href="#"><img src="./assets/img/Service/2-uon-tieu-chuan.jpg" alt=""
+                                        class="img-responsive"></a>
+                                <a href="#"><img src="./assets/img/Service/3-uon-con-sau.jpg" alt=""
+                                        class="img-responsive"></a>
+                                <a href="#"><img src="./assets/img/Service/4-uon-prem-lock.jpg" alt=""
+                                        class="img-responsive"></a>
+
+                            </div>
+                        </div>
+                        <!-- <div class="owl-carousel owl-theme">
+
+
+                    </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="service__hair-dyeing mb-50">
+                <div class="service__title mb-30">
+                    <h3>DỊCH VỤ NHUỘM</h3>
+                </div>
+                <div class="hair-dyeing__content">
+                    <div class="grid">
+                        <div class="row">
+                            <div class="owl-carousel owl-theme">
+                                <a href="#"><img src="./assets/img/Service/1-Elegant-black.jpg" alt=""
+                                        class="img-responsive"></a>
+                                <a href="#"><img src="./assets/img/Service/2-Modern-man.jpg" alt=""
+                                        class="img-responsive"></a>
+                                <a href="#"><img src="./assets/img/Service/3-Lady-Killer.jpg" alt=""
+                                        class="img-responsive"></a>
+                                <a href="#"><img src="./assets/img/Service/4-Fashionisto.jpg" alt=""
+                                        class="img-responsive"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@endsection
+@section('css')
+	<link rel="stylesheet" href="{{ asset('assets/css/Service/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/Service/style.css') }}">
+@endsection
+
+@section('script')
+<script type="text/javascript" src="assets/js/service.js"></script>
 @endsection

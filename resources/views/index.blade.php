@@ -17,7 +17,7 @@
     @yield('css')
 </head>
 <body>
-	<header class="header" id="header">
+	<!-- <header class="header" id="header">
             <div class="container">
                 <div class="row header__content">
                     <div class="col l-2 m-2 xs-6">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </header> -->
 
     @yield('content')
 
