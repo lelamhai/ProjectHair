@@ -34,7 +34,7 @@ Route::post('/authRegister', 'Auth_\RegisterController@register')->name('postReg
 Route::get('/book', 'AllController\BookController@index')->name('getBook');
 Route::get('/cart', 'AllController\CartController@index')->name('getCart');
 Route::get('/contact', 'AllController\ContactController@index')->name('getContact');
-Route::get('/detailProducts', 'AllController\DetailProductsController@index')->name('getDetailProducts');
+//Route::get('/detailProducts', 'AllController\DetailProductsController@index')->name('getDetailProducts');
 Route::get('/modelHot', 'AllController\ModelHotController@index')->name('getModelHot');
 Route::get('/products', 'AllController\ProductsController@index')->name('getProducts');
 Route::get('/detail-product/{id}', 'AllController\DetailProductsController@getProduct')->name('get.Product');

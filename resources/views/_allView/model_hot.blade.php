@@ -2,6 +2,11 @@
 
 @section('content')
 <main>
+    @foreach ($models_hot as $model)
+                                    <a href="#"><img src="{{$model->image}}" alt=""
+                                        class="img-responsive"></a>
+                                @endforeach
+
     <div class="container">
 
         <div class="gallery-container w-2 h-2">
