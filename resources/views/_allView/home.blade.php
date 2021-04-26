@@ -133,7 +133,7 @@
 			   @foreach ($products as $product)
 			   	<div class="product__item ">
                    <a href="/detail-product/{{$product->idPro}}" class="product__thumb">
-                        <img src="./assets/img/Detail/product-1.png" alt=""
+                        <img src="{{$product->image}}" alt=""
                             class="product__photo img-responsive">
                     </a>
 
