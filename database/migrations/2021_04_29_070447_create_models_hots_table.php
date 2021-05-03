@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateServiceDetailsTable extends Migration
+class CreateModelsHotsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateServiceDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('service__details', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('step');
-            $table->string('nameStep');
-            $table->text('content');
-            $table->string('image');
-            $table->integer('idService');
+        Schema::create('modesl_hair__hots', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('thumbnail');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ class CreateServiceDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('service__details');
+        Schema::dropIfExists('models_hots');
     }
 }

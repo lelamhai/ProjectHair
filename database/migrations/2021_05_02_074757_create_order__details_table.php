@@ -14,10 +14,16 @@ class CreateOrderDetailsTable extends Migration
     public function up()
     {
         Schema::create('order__details', function (Blueprint $table) {
-            $table->integer('idOrder');
-            $table->integer('idPro');
+            $table->unsignedInteger('idOrder');
+            $table->unsignedInteger('idPro');
             $table->integer('amount');
             $table->timestamps();
+        });
+
+        Schema::table('order__details', function (Blueprint $table) {
+            
+            $table->foreign('idPro')->references('idPro')->on('products')->onDelete('cascade');
+            $table->foreign('idOrder')->references('idOrder')->on('orders')->onDelete('cascade');
         });
     }
 

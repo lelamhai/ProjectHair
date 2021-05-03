@@ -15,7 +15,7 @@ class AddPriceandimgToServicesTable extends Migration
     {
         Schema::table('services', function (Blueprint $table) {
             $table->integer('oldPrice');
-            $table->string('image');
+            $table->string('thumbnail');
             //
         });
     }
@@ -29,7 +29,7 @@ class AddPriceandimgToServicesTable extends Migration
     {
         Schema::table('services', function (Blueprint $table) {
             $table->dropColumn('oldPrice');
-            $table->dropColumn('image');
+            $table->dropColumn('thumbnail');
             //
         });
     }
