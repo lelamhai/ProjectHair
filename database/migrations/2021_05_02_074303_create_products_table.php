@@ -14,14 +14,19 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->bigIncrements('idPro');
-            $table->integer('idCate');
-            $table->string('name');
+            $table->increments('idPro');
+            $table->unsignedInteger('idCate');
+            $table->string('title');
             $table->integer('price');
-            $table->string('image');
+            $table->string('thumbnail');
             $table->text('short_Description');
             $table->text('detailed_description');
             $table->timestamps();
+        });
+
+        Schema::table('products', function (Blueprint $table) {
+
+            $table->foreign('idCate')->references('idCate')->on('categories')->onDelete('cascade');
         });
     }
 
@@ -35,3 +40,4 @@ class CreateProductsTable extends Migration
         Schema::dropIfExists('products');
     }
 }
+

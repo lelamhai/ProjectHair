@@ -14,10 +14,11 @@
                 hàng
               </div>
               <div class="table-cart">
+                @foreach ($carts as $cart)
                 <div class="row-product">
                   <div class="img-pro">
                     <a href="">
-                      <img src="assets/img/Cart/1.jpg" alt="" /> <!-- Thumbnail -->
+                      <img src="{{$cart->products->thumbnail}}" alt="" /> <!-- Thumbnail -->
                     </a>
                   </div>
                   <div class="info-pro">
@@ -52,6 +53,7 @@
                     </button>
                   </div>
                 </div>
+                @endforeach
               </div>
               <div class="note-cart">
                 <div class="left-note">

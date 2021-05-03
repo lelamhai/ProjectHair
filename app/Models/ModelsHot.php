@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ModeslHair_Hot extends Model
+class ModelsHot extends Model
 {
     //
 }
