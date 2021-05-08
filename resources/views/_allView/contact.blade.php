@@ -11,22 +11,25 @@
                         </div>
     
                         <div class="wrap-input">
-                            <div class="wrap-item-contact">
-                                <input type="text" placeholder="Họ và tên">
-                            </div>
-                            <div class="wrap-item-contact">
-                                <input type="text" placeholder="Địa chỉ mail">
-                            </div>
-                            <div class="wrap-item-contact">
-                                <input type="text" placeholder="Số điệnt thoại">
-                            </div>
-                            <div class="wrap-item-contact">
-                                <textarea name="" id="" cols="55" rows="10" placeholder="Nội dung"></textarea>
-                            </div>
+                            <form action="/contact" method="POST" enctype="multipart/form-data">
+                            @csrf
+                                <div class="wrap-item-contact">
+                                    <input type="text" placeholder="Họ và tên" name="fullName">
+                                </div>
+                                <div class="wrap-item-contact">
+                                    <input type="text" placeholder="Địa chỉ mail" name="mail">
+                                </div>
+                                <div class="wrap-item-contact">
+                                    <input type="text" placeholder="Số điệnt thoại" name="phone">
+                                </div>
+                                <div class="wrap-item-contact">
+                                    <textarea id="" cols="55" rows="10" placeholder="Nội dung" name="description"></textarea>
+                                </div>
 
-                            <div class="wrap-button-contact">
-                                <button>Gửi</button>
-                            </div>
+                                <div class="wrap-button-contact">
+                                    <button>Gửi</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
