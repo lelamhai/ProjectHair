@@ -33,7 +33,10 @@ Route::post('/authRegister', 'Auth_\RegisterController@register')->name('postReg
 Route::get('/step', 'AllController\StepController@index')->name('get10Step');
 Route::get('/book', 'AllController\BookController@index')->name('getBook');
 Route::get('/cart', 'AllController\CartController@index')->name('getCart');
-Route::get('/contact', 'AllController\ContactController@index')->name('getContact');
+
+Route::get('/contact', 'AllController\ContactController@index');
+Route::post('/contact', 'AllController\ContactController@contactSubmit')->name('contact.submit');
+
 //Route::get('/detailProducts', 'AllController\DetailProductsController@index')->name('getDetailProducts');
 Route::get('/modelHot', 'AllController\ModelHotController@index')->name('getModelHot');
 Route::get('/products', 'AllController\ProductsController@index')->name('getProducts');
