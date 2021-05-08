@@ -38,4 +38,16 @@ class User extends Authenticatable
     protected $casts = [
         //'email_verified_at' => 'datetime',
     ];
+
+    public function cart(){
+        return $this->hasMany(related: 'App\Models\Cart', foreignKey: 'idUser', localKey: 'id');
+    }
+
+    public function user_book(){
+        return $this->hasMany(related: 'App\Models\Books', foreignKey: 'idUser', localKey: 'id');
+    }
+
+    public function Emp_book(){
+        return $this->hasMany(related: 'App\Models\Books', foreignKey: 'idEmp', localKey: 'id');
+    }
 }

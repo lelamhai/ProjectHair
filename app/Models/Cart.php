@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Cart extends Model
 {
 	public function products () {
-		return $this->belongsToMany(Products::class, 'idPro');
+		return $this->belongsTo(related: 'App\Models\Products', foreignKey:'idPro', ownerKey:'idPro');
 	}
 
 	public function users () {
-		return $this->hasMany(App\User::class);
+		return $this->belongsTo(related: 'App\User', foreignKey:'idUser', ownerKey:'id');
 	}
     //
 }

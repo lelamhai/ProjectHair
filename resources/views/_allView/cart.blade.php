@@ -23,10 +23,10 @@
                   </div>
                   <div class="info-pro">
                     <div class="name-product">
-                       <h3>Gôm Xịt Tóc Lady Killer - Thách thức nón bảo hiểm</h3> <!-- Title -->
+                       <h3>{{$cart->products->title}}</h3> <!-- Title -->
                     </div>
                     <div class="price-product">
-                      <span>69.000 ₫</span> <!-- Price -->
+                      <span>{{$cart->products->price}}.000 ₫</span> <!-- Price -->
                     </div>
                     <div class="product-quantity">
                       <button class="subtract-pro float-left">
