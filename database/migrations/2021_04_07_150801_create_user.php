@@ -13,7 +13,7 @@ class CreateUser extends Migration
      */
     public function up()
     {
-        Schema::create('user', function (Blueprint $table) {
+        Schema::create('user', function (Blueprint $table) { // 0: admin, 1: Emp, 2: User
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
