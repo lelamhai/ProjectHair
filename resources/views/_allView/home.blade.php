@@ -48,7 +48,7 @@
 							?>
 								@foreach ($steps as $step)
 								<div class="ten-step__sidebar-item" onclick="currentSlide(<?php echo $count;?>)">
-									<p class="ten-step__sidebar-desc">{{$step->step}}: {{$step->nameStep}}</p>
+									<p class="ten-step__sidebar-desc">{{$step->step}}: {{$step->title}}</p>
 								</div>
 								<?php $count ++; ?>
 								@endforeach
@@ -62,7 +62,7 @@
                 <div class="wrap-images">
 					@foreach ($steps as $step)
 						<div class="mySlides">
-							<img src="{{$step->image}}">
+							<img src="{{$step->thumbnail}}">
 						</div>
 					@endforeach
                 </div>
@@ -83,10 +83,10 @@
 					@foreach ($steps as $step)
 					<div class="ten-step-mobile-box">
 						<div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-							<p class="ten-step__sidebar-desc">{{$step->step}}: {{$step->nameStep}}</p>
+							<p class="ten-step__sidebar-desc">{{$step->step}}: {{$step->title}}</p>
 						</div>
 						<div class=" img-responsive">
-							<img src="{{$step->image}}">
+							<img src="{{$step->thumbnail}}">
 						</div>
 					</div>
 						<?php $count ++; ?>
@@ -111,7 +111,7 @@
             <div class="wrap-hot">
                 <div class="hair-hot__thumb">
 					@foreach ($models_hot as $model)
-                    	<a href="#" class="hair-hot__item"><img src="{{$model->image}}" alt="" class="img-responsive"></a>
+                    	<a href="#" class="hair-hot__item"><img src="{{$model->thumbnail}}" alt="" class="img-responsive"></a>
 					@endforeach
                 </div>
             </div>
@@ -133,12 +133,12 @@
 			   @foreach ($products as $product)
 			   	<div class="product__item ">
                    <a href="/detail-product/{{$product->idPro}}" class="product__thumb">
-                        <img src="{{$product->image}}" alt=""
+                        <img src="{{$product->thumbnail}}" alt=""
                             class="product__photo img-responsive">
                     </a>
 
                     <div class="product__detail">
-						<a href="/detail-product/{{$product->idPro}}" class="product__link">{{$product->name}}</a>
+						<a href="/detail-product/{{$product->idPro}}" class="product__link">{{$product->title}}</a>
                         <p class="product__price--new">{{$product->price}}₫ </p>
                     </div>
 
