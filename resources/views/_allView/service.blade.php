@@ -30,7 +30,7 @@
                             <div class="owl-carousel owl-theme">
 
                             	@foreach ($services_uon as $service)
-									<a href="#"><img src="{{$service->image}}" alt=""
+									<a href="#"><img src="{{$service->thumbnail}}" alt=""
                                         class="img-responsive"></a>
 								@endforeach
 
@@ -50,7 +50,7 @@
                             <div class="owl-carousel owl-theme">
 
                             	@foreach ($services_nhuom as $service)
-									<a href="#"><img src="{{$service->image}}" alt=""
+									<a href="#"><img src="{{$service->thumbnail}}" alt=""
                                         class="img-responsive"></a>
 								@endforeach
                             </div>

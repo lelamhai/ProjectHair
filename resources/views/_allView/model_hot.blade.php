@@ -3,7 +3,7 @@
 @section('content')
 <main>
     @foreach ($models_hot as $model)
-                                    <a href="#"><img src="{{$model->image}}" alt=""
+                                    <a href="#"><img src="{{$model->thumbnail}}" alt=""
                                         class="img-responsive"></a>
                                 @endforeach
 

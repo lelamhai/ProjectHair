@@ -8,16 +8,16 @@
             <div class="row">
                 <div class="col l-6 m-12">
                     <div class="detail-product__left">
-                        <img src="{{$product->image}}" alt="" class="detail-product__img img-responsive">
+                        <img src="{{$product->thumbnail}}" alt="" class="detail-product__img img-responsive">
                     </div>
                 </div>
                 <div class="col l-6 m-12">
                     <div class="detail-product__right">
                         <h3 class="detail-product__right-title">
-							{{$product->name}}
+							{{$product->title}}
                         </h3>
                         <div class="detail-product__right-price">
-                            <span class="detail-product__right-price-new">{{$product->price}}</span>
+                            <span class="detail-product__right-price-new">{{$product->price}}đ</span>
                         </div>
                         <div class="detail-product__right-quality">
                             <div class="detail-product__right-value">
@@ -69,12 +69,12 @@
 							@foreach ($products as $product)
 								<div class="product__item">
 									<a href="#" class="product__thumb">
-										<img src="{{$product->image}}" alt=""
+										<img src="{{$product->thumbnail}}" alt=""
 											class="product__photo img-responsive">
 									</a>
 
 									<div class="product__detail">
-										<a href="#" class="product__link">{{$product->name}}</a>
+										<a href="#" class="product__link">{{$product->title}}</a>
 										<p class="product__price--new">{{$product->price}}₫</p>
 									</div>
 								</div>

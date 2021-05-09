@@ -17,7 +17,7 @@
                         <ul class="product__nav-list">
 
 							@foreach ($categories as $category)
-								<li class="product__nav-item"><a href="/products-of-categories/{{$category->idCate}}" class="product__nav-link">{{$category->name}}</a></li>
+								<li class="product__nav-item"><a href="/products-of-categories/{{$category->idCate}}" class="product__nav-link">{{$category->title}}</a></li>
 							@endforeach
 
                         </ul>
@@ -47,7 +47,7 @@
                             <ul class="product__sidebar-list">
 
 								@foreach ($categories as $category)
-									<li class="product__sidebar-item"><a href="/products-of-categories/{{$category->idCate}}" class="product__sidebar-link">{{$category->name}}</a></li>
+									<li class="product__sidebar-item"><a href="/products-of-categories/{{$category->idCate}}" class="product__sidebar-link">{{$category->title}}</a></li>
 								@endforeach
                                
                             </ul>
@@ -62,13 +62,13 @@
 								<div class="col l-4 m-6">
 									<div class="product__item">
 										<a href="/detail-product/{{$product->idPro}}" class="product__thumb">
-											<img src="{{$product->image}}" alt=""
+											<img src="{{$product->thumbnail}}" alt=""
 												class="product__photo img-responsive">
 										</a>
 
 										<div class="product__detail">
 											<a href="/detail-product/{{$product->idPro}}" class="product__link">Bộ đôi DẦU GỘI - XẢ TIGI RESURRECTION
-												{{$product->name}}</a>
+												{{$product->title}}</a>
 											<p class="product__price--new">{{$product->price}}₫</p>
 										</div>
 									</div>

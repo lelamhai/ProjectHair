@@ -15,14 +15,14 @@
 			<div class="row-item">
               <div class="item-menu-step">
                 <div class="content-item">
-                  <h3>{{$step->step}} : {{$step->nameStep}}</h3>
+                  <h3>{{$step->step}} : {{$step->title}}</h3>
                   <p>
 				  	{{$step->content}}
                   </p>
                 </div>
               </div>
               <div class="item-menu-step">
-                <img src="{{$step->image}}" alt="" />
+                <img src="{{$step->thumbnail}}" alt="" />
               </div>
             </div>
 			
