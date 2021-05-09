@@ -1,24 +1,3 @@
-/* line 1, book.scss */
-* {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-/* line 7, book.scss */
-body, .book-container {
-  display: flex;
-  justify-content: center; }
-
-/* line 12, book.scss */
-b {
-  display: block; }
-
-/* line 17, book.scss */
-.book-container {
-  width: 1200px;
-  margin-top: 20px; }
-
 /* line 27, book.scss */
 .steps {
   display: flex;
@@ -60,7 +39,7 @@ b {
   overflow: auto;
   white-space: nowrap;
   width: auto;
-  max-width: 645px; }
+  width: 100%; }
   /* line 74, book.scss */
   .list-avatar .list-avatar-item {
     display: inline-block;
@@ -111,6 +90,7 @@ b {
 
 /* line 129, book.scss */
 .slot {
+  width: 100%;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
   border-bottom: 1px solid #ddd;

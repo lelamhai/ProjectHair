@@ -6,13 +6,7 @@
     <link rel="stylesheet" href="/assets/js/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="/assets/js/owlcarousel/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"/>
-    
-	<!-- <link rel="stylesheet" href="css/test.css"> -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <!-- <link rel="stylesheet" href="assets/css/Products/responsive.css">
-    <link rel="stylesheet" href="assets/css/Products/style.css"> -->
-
 
     @yield('css')
 </head>
@@ -21,7 +15,7 @@
             <div class="container">
                 <div class="row header__content">
                     <div class="col l-2 m-2 xs-6">
-                        <a href="" class="header__logo"><img src="/assets/img/Home/logo.png" alt=""
+                        <a href="http://localhost:8000/" class="header__logo"><img src="/assets/img/Home/logo.png" alt=""
                                 class="header__logo-img img-responsive"></a>
                     </div>
                     <div class="col l-10 m-1 xs-6">
@@ -32,7 +26,7 @@
                             </span>
                         </label>
                         <nav class="header__navbar">
-                            <a href="" class="header__logo header__navbar-logo"><img src="/assets/img/Home/logo.png"
+                            <a href="http://localhost:8000/" class="header__logo header__navbar-logo"><img src="/assets/img/Home/logo.png"
                                     alt="" class="header__logo-img img-responsive"></a>
                             <label for='item-dropdown'>
                                 <span class="header__navbar-bars header__navbar-bars--remove">
@@ -40,14 +34,12 @@
                                 </span>
                             </label>
                             <ul class="header__navbar-list">
-                                <li class="header__navbar-item"><a href="" class="header__navbar-link">Trang chủ</a>
-                                </li>
-                                <li class="header__navbar-item"><a href="" class="header__navbar-link"> 10 bước</a></li>
-                                <li class="header__navbar-item"><a href="" class="header__navbar-link">Mẫu tóc</a></li>
-                                <li class="header__navbar-item"><a href="" class="header__navbar-link">Dịch vụ khác</a>
-                                </li>
-                                <li class="header__navbar-item"><a href="" class="header__navbar-link">Sản phầm</a></li>
-                                <li class="header__navbar-item"><a href="" class="header__navbar-link">Liên hệ</a></li>
+                                <li class="header__navbar-item"><a href="http://localhost:8000/" class="header__navbar-link">Trang chủ</a></li>
+                                <li class="header__navbar-item"><a href="http://localhost:8000/service/1" class="header__navbar-link"> 10 bước</a></li>
+                                <li class="header__navbar-item"><a href="http://localhost:8000/book" class="header__navbar-link">Đặt vé</a></li>
+                                <li class="header__navbar-item"><a href="http://localhost:8000/service" class="header__navbar-link">Dịch vụ khác</a></li>
+                                <li class="header__navbar-item"><a href="http://localhost:8000/products" class="header__navbar-link">Sản phầm</a></li>
+                                <li class="header__navbar-item"><a href="http://localhost:8000/contact" class="header__navbar-link">Liên hệ</a></li>
                             </ul>
                             <a href="#" class="header__login">
                                 <i class="fas fa-crown header__login-icon"></i>

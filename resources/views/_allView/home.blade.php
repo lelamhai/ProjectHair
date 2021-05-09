@@ -160,7 +160,6 @@
 @endsection
 
 @section('css')
-	<!-- <link rel="stylesheet" href="css/test.css">  -->
 	<link rel="stylesheet" href="assets/css/Home/responsive.css">
     <link rel="stylesheet" href="assets/css/Home/style.css">
 @endsection

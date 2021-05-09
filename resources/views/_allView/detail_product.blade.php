@@ -27,7 +27,7 @@
                                 <input type="button" value="+" onclick="plusQuantity()" class="qty-btn">
                             </div>
                             <button class="detail-product__right-btn">
-                                THÊM VÀO GIỎ
+                                <a href="http://localhost:8000/cart">THÊM VÀO GIỎ</a> 
                             </button>
                         </div>
                         <div class="detail-product__right-label">
