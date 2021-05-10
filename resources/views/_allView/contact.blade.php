@@ -1,6 +1,27 @@
 @extends('index')
 
 @section('content')
+@if(session()->has('error'))
+<div class="alert alert-danger {{ Route::currentRouteName() == 'user-login' || Route::currentRouteName() == 'admin-login' ? 'notice-login' : '' }}">
+    {{ session()->get('error') }}
+</div>
+@endif
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+            @if ($error)
+            <li>{{ $error }}</li>  
+            @endif
+        @endforeach
+    </ul>
+</div>
+@endif
+@if(session()->has('message'))
+<div class="alert alert-success">
+    {{ session()->get('message') }}
+</div>
+@endif
         <main id="contact">
             <div class="container">
                 <div class="wrap-contact">
