@@ -119,41 +119,36 @@
     </div>
 </section>
 <!-- End hair-hot -->
-      <!-- Begin branch -->
-      <section class="brand">
-                <div class="container">
-                    <div class="heading-content">
-                        <h3 class="heading-title">THƯƠNG HIỆU ĐỘC QUYỀN</h3>
-                        <a href="" class="heading-more">Xem thêm >></a>
-                    </div>
+   <!-- Begin branch -->
+   <section class="brand">
+    <div class="container">
+        <div class="heading-content">
+            <h3 class="heading-title">THƯƠNG HIỆU ĐỘC QUYỀN</h3>
+            <a href="" class="heading-more">Xem thêm >></a>
+        </div>
 
 
-                    <div class="home-carousel owl-carousel owl-theme">
+        <div class="home-carousel owl-carousel owl-theme">
 
-                    @foreach ($products as $product)
-
-                        <div class="product__item ">
-                        <a href="/detail-product/{{$product->idPro}}" class="product__thumb">
+            @foreach ($products as $product)
+                <div class="product__item ">
+                    <a href="/detail-product/{{$product->idPro}}" class="product__thumb">
                         <img src="{{$product->thumbnail}}" alt=""
                             class="product__photo img-responsive">
-                            </a>
+                    </a>
 
-                            <div class="product__detail">
-                                <a href="/detail-product/{{$product->idPro}}" class="product__link">{{$product->title}}</a>
-                                <p class="product__price--new">{{$product->price}}₫ </p>
-                            </div>
-                        </div>
-
-
-
-                    @endforeach
-
-                        
+                    <div class="product__detail">
+						<a href="/detail-product/{{$product->idPro}}" class="product__link">{{$product->title}}</a>
+                        <p class="product__price--new">{{$product->price}}₫ </p>
                     </div>
-
                 </div>
-            </section>
-            <!-- End branch -->
+            @endforeach
+
+        </div>
+
+    </div>
+</section>
+<!-- End branch -->  
 
 </main>
 

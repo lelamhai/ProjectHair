@@ -30,7 +30,7 @@ Route::get('/authRegister', 'Auth_\RegisterController@getRegistrationForm')->nam
 Route::post('/authRegister', 'Auth_\RegisterController@register')->name('postRegister');
 
 //-------------------------public---------------------------
-//Route::get('/step', 'AllController\StepController@index')->name('get10Step');
+Route::get('/step', 'AllController\StepController@index')->name('get10Step');
 Route::get('/book', 'AllController\BookController@index')->name('getBook');
 Route::get('/cart', 'AllController\CartController@index')->name('getCart');
 
