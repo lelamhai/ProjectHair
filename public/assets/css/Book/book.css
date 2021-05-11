@@ -1,9 +1,33 @@
 /* line 1, book.scss */
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+/* replace bootstrap */
+/* header */
+
+.modal-open {
+  overflow: auto;
+  padding-right: unset !important;
+}
+
+.header__navbar-link {
+  color: black;
+}
+
+.container {
+  width: 1200px;
+}
+
+
+  .header__navbar-link:hover{
+    color: unset;
+    text-decoration: unset;
+  }
+  /* header-end */
 
  .book-container{
     display: flex;
@@ -13,6 +37,10 @@
 body, .book-container {
   
   justify-content: center; }
+
+.book-container-flex{
+  margin-top: 60px;
+}
 
 /* line 12, book.scss */
 b {
