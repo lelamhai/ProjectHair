@@ -13,9 +13,20 @@
   overflow: auto;
   padding-right: unset !important;
 }
+body{
+  line-height: unset !important;
+}
 
-.header__navbar-link {
+.xs-6 label{
+  display: unset;
+}
+
+.header__navbar-link, .header__login {
   color: black;
+}
+
+.header__navbar-list{
+  margin-bottom: unset;
 }
 
 .container {
@@ -23,10 +34,10 @@
 }
 
 
-  .header__navbar-link:hover{
-    color: unset;
-    text-decoration: unset;
-  }
+.header__navbar-link:hover, .header__login:hover{
+  color: unset;
+  text-decoration: unset;
+}
   /* header-end */
 
  .book-container{
@@ -259,6 +270,10 @@ b {
     width: 100%; } }
 @media only screen and (max-device-width: 414px) and (min-device-width: 375px) and (orientation: portrait) {
   /* line 276, book.scss */
+  body{
+    width: 1200px;
+  }
+
   .book-container-flex, .slot {
     width: 100%; }
 
@@ -266,3 +281,22 @@ b {
   .list-avatar {
     max-width: 100%;
     width: 100%; } }
+
+@media only screen and (max-device-width: 736px) and (min-device-width: 667px) and (orientation: landscape){
+  body{
+    width: 1200px;
+  }
+}
+
+      /* ipad */
+@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: portrait){
+  body{
+    width: 1200px;
+  }
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape){
+  body{
+    width: 1200px;
+  }
+}
