@@ -5,9 +5,13 @@
   padding: 0;
   box-sizing: border-box; }
 
+ .book-container{
+    display: flex;
+ }
+
 /* line 7, book.scss */
 body, .book-container {
-  display: flex;
+  
   justify-content: center; }
 
 /* line 12, book.scss */
@@ -16,7 +20,7 @@ b {
 
 /* line 17, book.scss */
 .book-container {
-  width: 1200px;
+  width: 100%;
   margin-top: 20px; }
 
 /* line 27, book.scss */
@@ -120,7 +124,7 @@ b {
   /* line 137, book.scss */
   .slot tr td {
     text-align: center;
-    padding: 10px 32px;
+    padding: 10px 36px;
     border-bottom: 3px solid green; }
   /* line 143, book.scss */
   .slot tr .het-slot {
