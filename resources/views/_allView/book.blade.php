@@ -224,7 +224,7 @@
                               </tbody>
                               </table>
                           </div>
-                          <div id="after-tomorrow" class="tab-pan fade">
+                          <div id="after-tomorrow" class="tab-pane fade">
                             <table class="slot" >
                               <tbody>
                                 <tr>
