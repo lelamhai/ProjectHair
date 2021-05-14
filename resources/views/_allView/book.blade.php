@@ -3,7 +3,7 @@
 @section('content')
 	<main>
 		<div class="book-container">
-            <div class="book-container-flex">
+            <div class="book-container-flex" >
                 <div class="steps">
                     <div class="slogan">
                         <b>THƯ GIÃN 30 PHÚT VÀ BẠN SẼ TỎA SÁNG</b>
@@ -270,8 +270,68 @@
                     </div>
                     
                 </div>
-                <div class="navigation"></div>
+                <div class="service">
+                  <b class="service-tittle" >DỊCH VỤ</b>
+                  <div class="ser-cut">
+                    <b class="ser-tittle">
+                      Cắt tóc
+                    </b>
+                    <div>
+                      <label class="container-checkbox-service">Combo 10 bước
+                        <input type="radio" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
 
+                  <div class="ser-perm">
+                    <b class="ser-tittle">Uốn</b>
+                    <div>
+                      <label class="container-checkbox-service line-1">Cao cấp
+                        <input type="radio" checked="checked" name="perm">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container-checkbox-service line-2">Tiêu chuẩn
+                        <input type="radio" name="perm">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container-checkbox-service line-1">Con sâu
+                        <input type="radio" name="perm">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container-checkbox-service line-2">Premlock
+                        <input type="radio" name="perm">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="ser-dye">
+                    <b class= "ser-tittle">
+                      Nhuộm tóc
+                    </b>
+                    <div>
+                      <label class="container-checkbox-service line-1">Đen phủ bạc
+                        <input type="radio" checked="checked" name="dye">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container-checkbox-service line-2">Nâu cao cấp
+                        <input type="radio" name="dye">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container-checkbox-service line-1">Đỏ nâu cao cấp
+                        <input type="radio" name="dye">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="container-checkbox-service line-2">Bạc cao cấp
+                        <input type="radio" name="dye">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                
                 <!-- Modal -->
                   <div id="myModal" class="modal fade" role="dialog">
                     <div class="modal-dialog">
