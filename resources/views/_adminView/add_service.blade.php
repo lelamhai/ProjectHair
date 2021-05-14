@@ -1,8 +1,8 @@
-@extends('_adminView.root')
+@extends('_adminView.index')
 
 @section('content')
 	<div>
-		<input type="text" name="nameStep"><br><br>
+		<input type="text" name="title"><br><br>
 	</div>
 	<div>
 		<div class="input-group">
@@ -11,7 +11,7 @@
 	       <i class="fa fa-picture-o"></i> Choose
 	     </a>
 	   </span>
-	   <input id="thumbnail" class="form-control" type="text" name="filepath">
+	   <input id="thumbnail" class="form-control" type="text" name="thumbnail">
  	</div>
 	 <div id="holder">
 	 

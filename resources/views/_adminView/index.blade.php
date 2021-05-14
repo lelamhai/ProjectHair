@@ -12,7 +12,7 @@
 			class="fa fa-dashboard fa-3x"></i> Dashboard</a></li>
 	@foreach ($services as $service)
 		<li><a href="/admin/service/{{$service->id}}"><i class="fa fa-desktop fa-3x"></i>
-			{{$service->name}}</a></li>
+			{{$service->title}}</a></li>
 	@endforeach
 
 	@yield('content')
