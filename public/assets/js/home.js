@@ -90,7 +90,6 @@ function showSlides(n) {
         slides[i].style.display = "none";
     }
     slides[slideIndex - 1].style.display = "block";
-    console.log(slides[slideIndex - 1]);
     let listItem = document.querySelectorAll('.ten-step .ten-step__sidebar-item');
     for (i = 0; i < listItem.length; i++) {
         listItem[i].classList.remove('ten-step__sidebar-item--active');
