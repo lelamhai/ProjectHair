@@ -65,7 +65,8 @@ a {
 }
 
 section {
-    margin: 50px 0;
+    padding-top: 40px;
+    padding-bottom: 15px;
 }
 
 .heading-content {
@@ -106,8 +107,8 @@ section {
     background-color: #FDFDFD;
     margin-bottom: 30px;
     padding: 15px;
-    flex: 25%;
-    /* max-width: 25%; */
+    /* flex: 25%;
+    max-width: 25%; */
 }
 
 .product__item:hover {
@@ -250,6 +251,10 @@ section {
     color: #dea43e;
 }
 
+.ten-step__sidebar-item--active {
+    color: #dea43e;
+}
+
 .ten-step__sidebar-desc, .ten-step__sidebar-price {
     margin: 0;
 }
@@ -266,13 +271,13 @@ section {
     .brand__item {
         flex-wrap: wrap;
     }
-    .product__item {
+    /* .product__item {
         flex: 33.33%;
-        /* max-width: 33.33%; */
+        max-width: 33.33%;
     }
     .hair-hot__item {
         flex: 33.33%;
-    }
+    } */
     .ten-step__nav-list {
         display: flex;
         overflow-x: scroll;
@@ -291,10 +296,10 @@ section {
 }
 
 @media only screen and (max-width: 767px) {
-    .product__item {
+    /* .product__item {
         flex: 50%;
         max-width: 50%;
-    }
+    } */
     .heading-title {
         font-size: 16px;
     }
