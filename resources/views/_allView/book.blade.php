@@ -287,19 +287,19 @@
                   <div class="ser-perm">
                     <b class="ser-tittle">Uốn</b>
                     <div>
-                      <label class="container-checkbox-service line-1">Cao cấp
+                      <label class="container-checkbox-service line-1-1">Cao cấp
                         <input type="radio" checked="checked" name="perm">
                         <span class="checkmark"></span>
                       </label>
-                      <label class="container-checkbox-service line-2">Tiêu chuẩn
+                      <label class="container-checkbox-service line-1-2">Tiêu chuẩn
                         <input type="radio" name="perm">
                         <span class="checkmark"></span>
                       </label>
-                      <label class="container-checkbox-service line-1">Con sâu
+                      <label class="container-checkbox-service line-1-3">Con sâu
                         <input type="radio" name="perm">
                         <span class="checkmark"></span>
                       </label>
-                      <label class="container-checkbox-service line-2">Premlock
+                      <label class="container-checkbox-service line-1-4">Premlock
                         <input type="radio" name="perm">
                         <span class="checkmark"></span>
                       </label>
@@ -311,19 +311,19 @@
                       Nhuộm tóc
                     </b>
                     <div>
-                      <label class="container-checkbox-service line-1">Đen phủ bạc
+                      <label class="container-checkbox-service line-2-1">Đen phủ bạc
                         <input type="radio" checked="checked" name="dye">
                         <span class="checkmark"></span>
                       </label>
-                      <label class="container-checkbox-service line-2">Nâu cao cấp
+                      <label class="container-checkbox-service line-2-2">Nâu cao cấp
                         <input type="radio" name="dye">
                         <span class="checkmark"></span>
                       </label>
-                      <label class="container-checkbox-service line-1">Đỏ nâu cao cấp
+                      <label class="container-checkbox-service line-2-3">Đỏ nâu cao cấp
                         <input type="radio" name="dye">
                         <span class="checkmark"></span>
                       </label>
-                      <label class="container-checkbox-service line-2">Bạc cao cấp
+                      <label class="container-checkbox-service line-2-4">Bạc cao cấp
                         <input type="radio" name="dye">
                         <span class="checkmark"></span>
                       </label>
