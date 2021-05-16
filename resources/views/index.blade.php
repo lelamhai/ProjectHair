@@ -25,10 +25,16 @@
     <link rel="stylesheet" href="assets/css/Cart/reset.css" />
     <link rel="stylesheet" href="assets/css/Log/log.css" />
 
-
+    <style>
+        .remove-padding-left[style] {
+            padding-right:0 !important;
+        }
+        .remove-padding-left.modal-open {
+            overflow: auto;
+        }
+    </style>
     <!-- JS -->
     <script src="assets/js/login.js"></script>
-
     @yield('css')
 </head>
 
@@ -84,7 +90,7 @@
         </div>
     </header>
     <!-- login start -->
-    <div id="myModal" class="modal fade" role="dialog">
+    <div id="myModal" class="modal" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -255,7 +261,11 @@
 
 
 </body>
-
+<script >
+$('#myModal').on('show.bs.modal', function (e) {
+    $('body').addClass('remove-padding-left');
+})
+</script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>
     window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
