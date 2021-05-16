@@ -134,6 +134,10 @@ button {
     border-color: unset;
 }
 
+.header {
+    z-index: 970;
+}
+
 .modal-backdrop {
     z-index: 977;
 }
@@ -164,3 +168,4 @@ button {
   right: 10px;
   font-size: 30px;
 }
+
