@@ -38,6 +38,12 @@ class ServiceController extends Controller
 		return redirect('admin/index');
 	}
 
+	public function editDetailService(Request $request) { //
+		$this->validator($request->all())->validate();
+		$this->updateDetailService($request->all());
+		return redirect('admin/index');
+	}
+
 	protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -52,11 +58,20 @@ class ServiceController extends Controller
     {
         return Service_Details::create([
         	'step' => $data['step'],
-            'title' => $data['nameStep'],
-            'thumbnail' => $data['image'],
+            'title' => $data['title'],
+            'thumbnail' => $data['thumbnail'],
             'content' => $data['content'],
             'idService' => $data['idService'],
         ]);
+    }
+
+    protected function updateDetailService(array $data)
+    {
+    	return Service_Details::where('id', $data['id'])->update(array('step' => $data['step'],
+            'title' => $data['title'],
+            'thumbnail' => $data['thumbnail'],
+            'content' => $data['content'],
+            'idService' => $data['idService']));
     }
 
     public function showStepOfServiceToEdit($id, Request $request) {
@@ -69,7 +84,7 @@ class ServiceController extends Controller
     }
 
     public function deleteStep($id) {
-
+    	return Service_Details::where('id', $id)->delete();
     }
     //
 }

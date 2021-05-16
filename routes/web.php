@@ -55,4 +55,6 @@ Route::post('/admin/add-details-service', 'AdminController\ServiceController@pos
 Route::get('/admin/service/{id}', 'AdminController\ServiceController@showAllStepOfService')->name('get.ServiceById');
 
 Route::get('admin/edit-step/{id}', 'AdminController\ServiceController@showStepOfServiceToEdit')->name('edit.step');
+Route::post('admin/submit-edit-step', 'AdminController\ServiceController@editDetailService')->name('submit-edit.step');
+
 Route::get('admin/delete-step/{id}', 'AdminController\ServiceController@deleteStep')->name('delete.step');

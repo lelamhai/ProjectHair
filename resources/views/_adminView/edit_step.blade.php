@@ -1,7 +1,7 @@
 @extends('_adminView.index')
 
 @section('content')
-	<form action="/admin/add-details-service" method="POST"> <!-- sua action  --> 
+	<form action="{{route('submit-edit.step')}}" method="POST"> <!-- sua action  --> 
 		@csrf
 		<div>
 			<label>Step</label>
@@ -23,8 +23,9 @@
 	 	<img id="holder" style="margin-top:15px;max-height:100px;">
 		</div>
 		<input type="hidden" name="idService" value="{{$idService}}">
+		<input type="hidden" name="id" value="{{ $step->id }}">
 
-		<textarea id="my-editor" name="content"  class="form-control" value="{{ $step->content }}">{!! old('content', 'test editor content') !!}</textarea>
+		<textarea id="my-editor" name="content"  class="form-control">{{ $step->content }}</textarea>
 		<div class="col-md-6 offset-md-4">
             <button type="submit" class="btn btn-primary">
                {{ __('Add') }}
