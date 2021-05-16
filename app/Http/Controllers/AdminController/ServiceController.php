@@ -42,8 +42,8 @@ class ServiceController extends Controller
     {
         return Validator::make($data, [
         	'step' => ['required', 'string'],
-            'nameStep' => ['required', 'string'],
-            'image' => ['required', 'string'],
+            'title' => ['required', 'string'],
+            'thumbnail' => ['required', 'string'],
             'content' => ['required'],
         ]);
     }
@@ -52,17 +52,20 @@ class ServiceController extends Controller
     {
         return Service_Details::create([
         	'step' => $data['step'],
-            'nameStep' => $data['nameStep'],
-            'image' => $data['image'],
+            'title' => $data['nameStep'],
+            'thumbnail' => $data['image'],
             'content' => $data['content'],
             'idService' => $data['idService'],
         ]);
     }
 
-    public function showStepOfServiceToEdit($id) {
-    	$step = DB::table('service__details')->where('id', $id)->get();
-
-    	return view('');
+    public function showStepOfServiceToEdit($id, Request $request) {
+    	$step = DB::table('service__details')->where('id', $id)->first();
+    	$services = DB::table('services')->get();
+		$p = $request->session()->get('idService');
+    	return view('_adminView.edit_step')->with(['services'=> $services,
+													'idService' => $p,
+													'step' => $step]);
     }
 
     public function deleteStep($id) {

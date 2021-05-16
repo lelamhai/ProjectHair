@@ -338,10 +338,9 @@ b {
   body{
     width: 1200px;
   }
-}
+} 
 
-
-  /* custom radio button */
+/* custom radio button */
 
 /* The container */
 .container-checkbox-service {
@@ -406,6 +405,3 @@ b {
 	border-radius: 50%;
 	background: white;
 }
-
-
-/* END - custom radio button */

@@ -3,7 +3,7 @@
 @section('content')
 	<main>
 		<div class="book-container">
-            <div class="book-container-flex" >
+            <div class="book-container-flex">
                 <div class="steps">
                     <div class="slogan">
                         <b>THƯ GIÃN 30 PHÚT VÀ BẠN SẼ TỎA SÁNG</b>
@@ -332,6 +332,7 @@
                 </div>
 
                 
+
                 <!-- Modal -->
                   <div id="myModal" class="modal fade" role="dialog">
                     <div class="modal-dialog">
