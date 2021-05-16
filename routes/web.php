@@ -37,6 +37,8 @@ Route::get('/cart', 'AllController\CartController@index')->name('getCart');
 Route::get('/contact', 'AllController\ContactController@index');
 Route::post('/contact', 'AllController\ContactController@contactSubmit')->name('contact.submit');
 
+Route::get('/payment', 'AllController\PaymentController@index');
+
 //Route::get('/detailProducts', 'AllController\DetailProductsController@index')->name('getDetailProducts');
 Route::get('/modelHot', 'AllController\ModelHotController@index')->name('getModelHot');
 Route::get('/products', 'AllController\ProductsController@index')->name('getProducts');
