@@ -20,8 +20,6 @@ use Composer\Semver\VersionParser;
 
 
 
-
-
 class InstalledVersions
 {
 private static $installed = array (
@@ -32,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '7d5f5d2684a474bf554d8d701b410d08c423d322',
+    'reference' => '18005f1b5b2afc76e4b0a58debce59b0f76bfcb8',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -419,7 +417,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '7d5f5d2684a474bf554d8d701b410d08c423d322',
+      'reference' => '18005f1b5b2afc76e4b0a58debce59b0f76bfcb8',
     ),
     'laravel/tinker' => 
     array (
@@ -1243,6 +1241,7 @@ foreach (self::getInstalled() as $installed) {
 $packages[] = array_keys($installed['versions']);
 }
 
+
 if (1 === \count($packages)) {
 return $packages[0];
 }
@@ -1434,7 +1433,6 @@ public static function reload($data)
 self::$installed = $data;
 self::$installedByVendor = array();
 }
-
 
 
 
