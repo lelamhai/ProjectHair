@@ -78,7 +78,7 @@
 
 <section class="ten-step-mobile">
     <div class="container">
-        <div class="owl-carousel owl-theme ten-step-mobile-slider">
+        <div class="ten-step-mobile-slider owl-carousel owl-theme">
 			<?php
 				$count = 1;
 				?>
