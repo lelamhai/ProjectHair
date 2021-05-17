@@ -65,8 +65,7 @@ a {
 }
 
 section {
-    padding-top: 40px;
-    padding-bottom: 15px;
+    margin: 50px 0;
 }
 
 .heading-content {
@@ -130,6 +129,10 @@ section {
 }
 
 .product__link:hover {
+    color: #dea43e;
+}
+
+.product__link--active {
     color: #dea43e;
 }
 
@@ -254,7 +257,6 @@ section {
 .ten-step__sidebar-item--active {
     color: #dea43e;
 }
-
 .ten-step__sidebar-desc, .ten-step__sidebar-price {
     margin: 0;
 }
@@ -313,7 +315,7 @@ section {
         display: block;
     }
     .ten-step {
-        display: none;
+        display: none!important;
     }
 }
 
