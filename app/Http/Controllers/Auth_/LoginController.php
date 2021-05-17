@@ -42,13 +42,13 @@ class LoginController extends Controller
 
             //lấy user từ database lên để lấy thông tin
             $results = DB::table('user')
-                ->where('phone', $request->phone)
+                ->where('email', $request->email)
                 ->get();
 
             $stringToken = substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(15/strlen($x)) )),1,15) . (string)time();
             //update token vao database
             DB::table('user')
-            ->where('phone', $request->phone)
+            ->where('email', $request->email)
             ->update(['token' => $stringToken]);
 
 
@@ -72,9 +72,9 @@ class LoginController extends Controller
         // user surpasses their maximum number of attempts they will get locked out.
         $this->incrementLoginAttempts($request);
 
-        $phone = DB::table('user')->select('phone')->where('phone', $request->phone)->get();
+        $phone = DB::table('user')->select('email')->where('email', $request->email)->get();
 
-        if (count($phone) === 0) {
+        if (count($email) === 0) {
             $message = "Account not exit! :)) Please create a account!";
         } 
         else {
@@ -160,7 +160,7 @@ class LoginController extends Controller
      */
     public function username()
     {
-        return 'phone';
+        return 'email';
     }
 
     /**
