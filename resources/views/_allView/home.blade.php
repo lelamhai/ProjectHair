@@ -72,6 +72,9 @@
         </div>
     </div>
 </section>
+<!-- End ten-step -->
+
+<!-- Begin ten-step mobile -->
 
 <section class="ten-step-mobile">
     <div class="container">
@@ -96,6 +99,7 @@
         </div>
     </div>
 </section>
+<!-- End ten-step mobile -->
 
 <!-- Begin hair-hot -->
 <section class="hair-hot">
