@@ -102,7 +102,7 @@ $(document).ready(function () {
 
         if (name_check === "") {
             $("#name").addClass("error-input");
-            $("#name").attr("placeholder", "Bổ sung password đầy đủ");
+            $("#name").attr("placeholder", "Bổ sung tên đầy đủ");
             setTimeout(function () {
                 $("#name").removeClass("error-input");
                 $("#name").attr("placeholder", "Nhập tên ở đây");
@@ -113,10 +113,10 @@ $(document).ready(function () {
 
         if (phone_check === "" || !phone_check.match(regex_phone)) {
             $("#phone").addClass("error-input");
-            $("#phone").attr("placeholder", "Bổ sung email đầy đủ");
+            $("#phone").attr("placeholder", "Bổ sung số điện thoại đầy đủ");
             setTimeout(function () {
                 $("#phone").removeClass("error-input");
-                $("#phone").attr("placeholder", "Nhập phone ở đây");
+                $("#phone").attr("placeholder", "Nhập số điện thoại ở đây");
                 $("#phone").val("");
             }, 2500);
             flag = false;
@@ -149,7 +149,7 @@ $(document).ready(function () {
 
         if (!pass_check.match(repass_check)) {
             $("#repass").addClass("error-input");
-            $("#repass").attr("placeholder", "Bổ sung password đầy đủ");
+            $("#repass").attr("placeholder", "Bổ sung repassword đầy đủ");
             setTimeout(function () {
                 $("#repass").removeClass("error-input");
                 $("#repass").attr("placeholder", "Nhập repassword ở đây");
