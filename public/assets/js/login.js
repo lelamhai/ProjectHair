@@ -1,22 +1,22 @@
-$(document).ready(function() {
+$(document).ready(function () {
     let flag_capcha;
     gen_capcha();
-    $("#slideup").click(function() {
+    $("#slideup").click(function () {
         $("#forgot").addClass("hide");
         $(".sign-in-container").fadeIn();
         $("input").val("");
         gen_capcha();
     });
-    $("#slidedown").click(function() {
+    $("#slidedown").click(function () {
         $(".sign-in-container").css("display", "none");
         $("#forgot").removeClass("hide");
         $("#forgot").fadeIn();
     });
 
-    $("#btn-log-in").click(function(e) {
-        const email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    $("#btn-log-in").click(function (e) {
+        // const email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let email_check = $(
-            "#sign-in-container .account-input input[type=email]"
+            "#sign-in-container .account-input input[type=phone]"
         ).val();
         let pass_check = $(
             "#sign-in-container .account-input input[type=password]"
@@ -24,44 +24,49 @@ $(document).ready(function() {
 
         let flag = true;
 
-        if (email_check === "" || !email_check.match(email)) {
-            $("#sign-in-container .account-input input[type=email]").addClass(
-                "error-input"
-            );
-            $("#sign-in-container .account-input input[type=email]").attr(
-                "placeholder",
-                "Bổ sung email đầy đủ"
-            );
-            setTimeout(function() {
-                $("#sign-in-container .account-input input[type=email]").removeClass(
-                    "error-input"
-                );
-                $("#sign-in-container .account-input input[type=email]").attr(
-                    "placeholder",
-                    "Nhập email ở đây"
-                );
-                $("#sign-in-container .account-input input[type=email]").val("");
-            }, 2500);
-            flag = false;
-        }
+        // if (email_check === "" || !email_check.match(email)) {
+        //     $("#sign-in-container .account-input input[type=email]").addClass(
+        //         "error-input"
+        //     );
+        //     $("#sign-in-container .account-input input[type=email]").attr(
+        //         "placeholder",
+        //         "Bổ sung email đầy đủ"
+        //     );
+        //     setTimeout(function() {
+        //         $("#sign-in-container .account-input input[type=email]").removeClass(
+        //             "error-input"
+        //         );
+        //         $("#sign-in-container .account-input input[type=email]").attr(
+        //             "placeholder",
+        //             "Nhập email ở đây"
+        //         );
+        //         $("#sign-in-container .account-input input[type=email]").val("");
+        //     }, 2500);
+        //     flag = false;
+        // }
 
-        if (pass_check === "" || pass_check.length < 8 || pass_check.length > 16) {
-            $("#sign-in-container .account-input input[type=password]").addClass(
-                "error-input"
-            );
+        if (
+            pass_check === "" ||
+            pass_check.length < 8 ||
+            pass_check.length > 16
+        ) {
+            $(
+                "#sign-in-container .account-input input[type=password]"
+            ).addClass("error-input");
             $("#sign-in-container .account-input input[type=password]").attr(
                 "placeholder",
                 "Bổ sung password đầy đủ"
             );
-            setTimeout(function() {
-                $("#sign-in-container .account-input input[type=password]").removeClass(
-                    "error-input"
+            setTimeout(function () {
+                $(
+                    "#sign-in-container .account-input input[type=password]"
+                ).removeClass("error-input");
+                $(
+                    "#sign-in-container .account-input input[type=password]"
+                ).attr("placeholder", "Nhập password ở đây");
+                $("#sign-in-container .account-input input[type=password]").val(
+                    ""
                 );
-                $("#sign-in-container .account-input input[type=password]").attr(
-                    "placeholder",
-                    "Nhập password ở đây"
-                );
-                $("#sign-in-container .account-input input[type=password]").val("");
             }, 2500);
             flag = false;
         }
@@ -76,15 +81,16 @@ $(document).ready(function() {
         }
     });
 
-    $(".nav-tabs li").click(function(e) {
+    $(".nav-tabs li").click(function (e) {
         $("input").val("");
         gen_capcha();
         gen_capcha1();
     });
 
-    $("#btn-sign-up").click(function(e) {
-        const email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        const regex_phone = /(0[3|5|7|8|9])+([0-9]{8})\b/g;
+    $("#btn-sign-up").click(function (e) {
+        const email =
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const regex_phone = /(0[3|5|7|8|9])+([0-9]{8})\b/;
 
         let email_check = $("#email").val();
         let pass_check = $("#pass").val();
@@ -92,10 +98,12 @@ $(document).ready(function() {
         let name_check = $("#name").val();
         let phone_check = $("#phone").val();
 
+        let flag = true;
+
         if (name_check === "") {
             $("#name").addClass("error-input");
             $("#name").attr("placeholder", "Bổ sung password đầy đủ");
-            setTimeout(function() {
+            setTimeout(function () {
                 $("#name").removeClass("error-input");
                 $("#name").attr("placeholder", "Nhập tên ở đây");
                 $("#name").val("");
@@ -106,7 +114,7 @@ $(document).ready(function() {
         if (phone_check === "" || !phone_check.match(regex_phone)) {
             $("#phone").addClass("error-input");
             $("#phone").attr("placeholder", "Bổ sung email đầy đủ");
-            setTimeout(function() {
+            setTimeout(function () {
                 $("#phone").removeClass("error-input");
                 $("#phone").attr("placeholder", "Nhập phone ở đây");
                 $("#phone").val("");
@@ -116,7 +124,7 @@ $(document).ready(function() {
         if (email_check === "" || !email_check.match(email)) {
             $("#email").addClass("error-input");
             $("#email").attr("placeholder", "Bổ sung email đầy đủ");
-            setTimeout(function() {
+            setTimeout(function () {
                 $("#email").removeClass("error-input");
                 $("#email").attr("placeholder", "Nhập email ở đây");
                 $("#email").val("");
@@ -124,10 +132,14 @@ $(document).ready(function() {
             flag = false;
         }
 
-        if (pass_check === "" || pass_check.length < 8 || pass_check.length > 16) {
+        if (
+            pass_check === "" ||
+            pass_check.length < 8 ||
+            pass_check.length > 16
+        ) {
             $("#pass").addClass("error-input");
             $("#pass").attr("placeholder", "Bổ sung password đầy đủ");
-            setTimeout(function() {
+            setTimeout(function () {
                 $("#pass").removeClass("error-input");
                 $("#pass").attr("placeholder", "Nhập password ở đây");
                 $("#pass").val("");
@@ -138,7 +150,7 @@ $(document).ready(function() {
         if (!pass_check.match(repass_check)) {
             $("#repass").addClass("error-input");
             $("#repass").attr("placeholder", "Bổ sung password đầy đủ");
-            setTimeout(function() {
+            setTimeout(function () {
                 $("#repass").removeClass("error-input");
                 $("#repass").attr("placeholder", "Nhập repassword ở đây");
                 $("#repass").val("");
