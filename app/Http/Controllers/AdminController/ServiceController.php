@@ -23,7 +23,8 @@ class ServiceController extends Controller
 	}
 
 	public function showAllStepOfService($id, Request $request) {
-		$steps = DB::table('service__details')->where('idService', $id)->get();
+		//$steps = Service_Details::paginate(4)->where('idService', $id);
+		$steps = DB::table('service__details')->where('idService', $id)->paginate(3);
 		$services = DB::table('services')->get();
 		$service = DB::table('services')->where('id', $id)->first();
 		$request->session()->put('idService', $id);
