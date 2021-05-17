@@ -1,3 +1,67 @@
+/* line 1, book.scss */
+* {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* replace bootstrap */
+/* header */
+
+.modal-open {
+  overflow: auto;
+  padding-right: unset !important;
+}
+body{
+  line-height: unset !important;
+}
+
+.xs-6 label{
+  display: unset;
+}
+
+.header__navbar-link, .header__login {
+  color: black;
+}
+
+.header__navbar-list{
+  margin-bottom: unset;
+}
+
+.container {
+  width: 1200px;
+}
+
+
+.header__navbar-link:hover, .header__login:hover{
+  color: unset;
+  text-decoration: unset;
+}
+  /* header-end */
+
+ .book-container{
+    display: flex;
+ }
+
+/* line 7, book.scss */
+body, .book-container {
+  
+  justify-content: center; }
+
+.book-container-flex{
+  margin-top: 60px;
+}
+
+/* line 12, book.scss */
+b {
+  display: block; }
+
+/* line 17, book.scss */
+.book-container {
+  width: 100%;
+  margin-top: 20px; }
+
 /* line 27, book.scss */
 .steps {
   display: flex;
@@ -39,7 +103,7 @@
   overflow: auto;
   white-space: nowrap;
   width: auto;
-  width: 100%; }
+  max-width: 645px; }
   /* line 74, book.scss */
   .list-avatar .list-avatar-item {
     display: inline-block;
@@ -90,7 +154,6 @@
 
 /* line 129, book.scss */
 .slot {
-  width: 100%;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
@@ -100,7 +163,7 @@
   /* line 137, book.scss */
   .slot tr td {
     text-align: center;
-    padding: 10px 32px;
+    padding: 10px 36px;
     border-bottom: 3px solid green; }
   /* line 143, book.scss */
   .slot tr .het-slot {
@@ -130,6 +193,45 @@
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
   background-color: #555;
   color: #fff; }
+
+.service{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
+.service-tittle{
+  text-align: center;
+}
+
+.service .ser-tittle{
+  font-size: 18px;
+  margin: 10px 0px;
+}
+
+.ser-perm div, .ser-dye div{
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.line-1-2{
+  margin-left: 50px;
+}
+.line-2-2{
+  margin-left: 20px;
+}
+.line-1-3{
+  margin-left: 50px;
+}
+.line-2-3{
+  margin-left: 43px;
+}
+.line-1-4{
+  margin-left: 85px;
+}
+.line-2-4{
+  margin-left: 35px;
+}
 
 /* line 177, book.scss */
 .modal-header {
@@ -207,6 +309,10 @@
     width: 100%; } }
 @media only screen and (max-device-width: 414px) and (min-device-width: 375px) and (orientation: portrait) {
   /* line 276, book.scss */
+  body{
+    width: 1200px;
+  }
+
   .book-container-flex, .slot {
     width: 100%; }
 
@@ -214,3 +320,88 @@
   .list-avatar {
     max-width: 100%;
     width: 100%; } }
+
+@media only screen and (max-device-width: 736px) and (min-device-width: 667px) and (orientation: landscape){
+  body{
+    width: 1200px;
+  }
+}
+
+      /* ipad */
+@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: portrait){
+  body{
+    width: 1200px;
+  }
+}
+
+@media only screen and (max-device-width: 1024px) and (min-device-width: 768px) and (orientation: landscape){
+  body{
+    width: 1200px;
+  }
+} 
+
+/* custom radio button */
+
+/* The container */
+.container-checkbox-service {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container-checkbox-service input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox-service:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-checkbox-service input:checked ~ .checkmark {
+  background-color: #555;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-checkbox-service input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-checkbox-service .checkmark:after {
+  top: 7px;
+  left: 7px;
+  width: 6px;
+  height: 6px;
+	border-radius: 50%;
+	background: white;
+}

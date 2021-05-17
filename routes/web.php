@@ -45,9 +45,14 @@ Route::get('/products-of-categories/{idCate}', 'AllController\ProductsController
 Route::get('/service', 'AllController\ServiceController@index')->name('getService');
 Route::get('/service/{id}', 'AllController\ServiceController@showStepOfService')->name('getServiceById');
 //-------------------------admin------------------------------
-Route::get('/admin/add-details-service', 'AdminController\ServiceController@indexFormAddDetailService')->name('form.addDetailsService');
+
 Route::get('admin/index','AdminController\ServiceController@showAllServie')->name('show.service');
-Route::get('/admin/service/{id}', 'AdminController\ServiceController@showAllStepOfService')->name('get.ServiceById');
+
+Route::get('/admin/add-details-service', 'AdminController\ServiceController@indexFormAddDetailService')->name('form.addDetailsService');
 Route::post('/admin/add-details-service', 'AdminController\ServiceController@postDetailService')->name('post.detailService');
+
+
+Route::get('/admin/service/{id}', 'AdminController\ServiceController@showAllStepOfService')->name('get.ServiceById');
+
 Route::get('admin/edit-step/{id}', 'AdminController\ServiceController@showStepOfServiceToEdit')->name('edit.step');
 Route::get('admin/delete-step/{id}', 'AdminController\ServiceController@deleteStep')->name('delete.step');

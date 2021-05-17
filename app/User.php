@@ -58,4 +58,8 @@ class User extends Authenticatable
     public function emp_comment(){
         return $this->hasMany(related: 'App\Models\Comment', foreignKey: 'idEmp', localKey: 'id');
     }
+
+    public function payer(){
+        return $this->hasMany(related: 'App\Models\Payments', foreignKey: 'payer', localKey: 'id');
+    }
 }

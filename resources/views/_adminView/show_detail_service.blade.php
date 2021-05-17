@@ -1,4 +1,4 @@
-@extends('_adminView.root')
+@extends('_adminView.index')
 
 @section('content')
 	<h3>Chi tiet ca buoc nha may con di!</h3>
@@ -7,7 +7,7 @@
 	<table>
 		<thead>
 			<tr>
-				<th></th>
+				<th>Check box</th>
 				<th>Title</th>
 				<th>Categories</th>
 				<th>Date</th>
@@ -17,15 +17,21 @@
 			@foreach ($steps as $step)
 				<tr>
 					<td>
-						
+						Checkbox
 					</td>
 					<td>
-						{{$step->step}}: {{$step->nameStep}}
-						<a href="admin/edit-step/{{$step->id}}">Edit</a> | <a 
+						{{$step->step}} {{$step->title}} <br>
+						<a href="http://localhost:8000/admin/edit-step/{{$step->id}}">Edit</a> | <a 
 						href="admin/delete-step/{{$step->id}}">Delete</a>
 					</td>
 					<td>
-						{{$service->name}}
+						{{$service->title}}
+					</td>
+					<td>
+						Created <br>
+						{{$step->created_at}} <br>
+						Updated <br>
+						{{$step->updated_at}}
 					</td>
 				</tr>
 			@endforeach
@@ -33,9 +39,9 @@
 	</table>
 
 	
-	{{$step->step}} : {{$step->nameStep}}
+	<!--  {{$step->step}} : {{$step->title}}
 	<p>{{$step->content}}</p>
-    	<img src="{{$step->image}}" alt="Loi anh roi!" width="500" height="500">
-    <h5>------------------------</h5>
+    	<img src="{{$step->thumbnail}}" alt="Loi anh roi!" width="500" height="500">
+    <h5>------------------------</h5> -->
 	
 @endsection

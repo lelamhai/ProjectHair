@@ -1,4 +1,4 @@
-@extends('_adminView.root')
+@extends('_adminView.index')
 
 @section('content')
 	<form action="/admin/add-details-service" method="POST">
@@ -9,7 +9,7 @@
 		</div>
 		<div>
 			<label>Name Step</label>
-			<input type="text" name="nameStep"><br><br>
+			<input type="text" name="title"><br><br>
 		</div>
 		<div>
 			<div class="input-group">
@@ -18,7 +18,7 @@
 		       <i class="fa fa-picture-o"></i> Choose
 		     </a>
 		   </span>
-		   <input id="thumbnail" class="form-control" type="text" name="image">
+		   <input id="thumbnail" class="form-control" type="text" name="thumbnail">
 	 	</div>
 	 	<img id="holder" style="margin-top:15px;max-height:100px;">
 		</div>
