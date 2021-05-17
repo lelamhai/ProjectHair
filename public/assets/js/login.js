@@ -14,9 +14,9 @@ $(document).ready(function () {
     });
 
     $("#btn-log-in").click(function (e) {
-        // const email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let email_check = $(
-            "#sign-in-container .account-input input[type=phone]"
+            "#sign-in-container .account-input input[type=email]"
         ).val();
         let pass_check = $(
             "#sign-in-container .account-input input[type=password]"
@@ -24,26 +24,26 @@ $(document).ready(function () {
 
         let flag = true;
 
-        // if (email_check === "" || !email_check.match(email)) {
-        //     $("#sign-in-container .account-input input[type=email]").addClass(
-        //         "error-input"
-        //     );
-        //     $("#sign-in-container .account-input input[type=email]").attr(
-        //         "placeholder",
-        //         "Bổ sung email đầy đủ"
-        //     );
-        //     setTimeout(function() {
-        //         $("#sign-in-container .account-input input[type=email]").removeClass(
-        //             "error-input"
-        //         );
-        //         $("#sign-in-container .account-input input[type=email]").attr(
-        //             "placeholder",
-        //             "Nhập email ở đây"
-        //         );
-        //         $("#sign-in-container .account-input input[type=email]").val("");
-        //     }, 2500);
-        //     flag = false;
-        // }
+        if (email_check === "" || !email_check.match(email)) {
+            $("#sign-in-container .account-input input[type=email]").addClass(
+                "error-input"
+            );
+            $("#sign-in-container .account-input input[type=email]").attr(
+                "placeholder",
+                "Bổ sung email đầy đủ"
+            );
+            setTimeout(function() {
+                $("#sign-in-container .account-input input[type=email]").removeClass(
+                    "error-input"
+                );
+                $("#sign-in-container .account-input input[type=email]").attr(
+                    "placeholder",
+                    "Nhập email ở đây"
+                );
+                $("#sign-in-container .account-input input[type=email]").val("");
+            }, 2500);
+            flag = false;
+        }
 
         if (
             pass_check === "" ||
