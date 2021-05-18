@@ -38,6 +38,8 @@ Route::get('/contact', 'AllController\ContactController@index');
 Route::post('/contact', 'AllController\ContactController@contactSubmit')->name('contact.submit');
 
 Route::get('/payment', 'AllController\PaymentController@index');
+Route::post('/payment/vnpay', 'AllController\PaymentController@createPaymentVNPay')->name('payment.vnpay');
+Route::get('/vnp/return', 'AllController\PaymentController@createPaymentVNPay')->name('vnpay.return');
 
 //Route::get('/detailProducts', 'AllController\DetailProductsController@index')->name('getDetailProducts');
 Route::get('/modelHot', 'AllController\ModelHotController@index')->name('getModelHot');
