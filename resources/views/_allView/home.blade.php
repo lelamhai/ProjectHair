@@ -72,11 +72,13 @@
         </div>
     </div>
 </section>
+<!-- End ten-step -->
+
+<!-- Begin ten-step mobile -->
 
 <section class="ten-step-mobile">
     <div class="container">
-        <div class="owl-carousel owl-theme">
-
+        <div class="ten-step-mobile-slider owl-carousel owl-theme">
 			<?php
 				$count = 1;
 				?>
@@ -97,106 +99,8 @@
         </div>
     </div>
 </section>
-<!-- End ten-step -->
+<!-- End ten-step mobile -->
 
-<!-- Begin Ten step mobile -->
-<section class="ten-step-mobile">
-                <div class="container">
-                    <div class="ten-step-mobile-slider owl-carousel owl-theme">
-                        <div class="ten-step-mobile-box">
-                            <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                                <p class="ten-step__sidebar-desc">Bước 1. Massage khai huyệt điều hòa (mới)</p>
-                            </div>
-                            <div class=" img-responsive">
-                                <img src="./assets/img/Home/step-1.jpg">
-                            </div>
-                        </div>
-
-                        <div class="ten-step-mobile-box">
-                            <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                                <p class="ten-step__sidebar-desc">Bước 2. Massage khai huyệt điều hòa (mới)</p>
-                            </div>
-                            <div class=" img-responsive ">
-                                <img src="./assets/img/Home/step-2.jpg">
-                            </div>
-                        </div>
-
-                        <div class="ten-step-mobile-box">
-                            <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                                <p class="ten-step__sidebar-desc">Bước 3. Massage khai huyệt điều hòa (mới)</p>
-                            </div>
-                            <div class=" img-responsive">
-                                <img src="./assets/img/Home/step-3.jpg">
-                            </div>
-                        </div>
-
-                        <div class="ten-step-mobile-box">
-                            <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                                <p class="ten-step__sidebar-desc">Bước 4. Massage khai huyệt điều hòa (mới)</p>
-                            </div>
-                            <div class=" img-responsive ">
-                                <img src="./assets/img/Home/step-4.jpg">
-                            </div>
-                        </div>
-
-                        <div class="ten-step-mobile-box">
-                            <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                                <p class="ten-step__sidebar-desc">Bước 5. Massage khai huyệt điều hòa (mới)</p>
-                            </div>
-                            <div class=" img-responsive">
-                                <img src="./assets/img/Home/step-5.jpg">
-                            </div>
-                        </div>
-
-                        <div class="ten-step-mobile-box">
-                            <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                                <p class="ten-step__sidebar-desc">Bước 6. Massage khai huyệt điều hòa (mới)</p>
-                            </div>
-                            <div class=" img-responsive ">
-                                <img src="./assets/img/Home/step-6.jpg">
-                            </div>
-                        </div>
-
-                        <div class="ten-step-mobile-box">
-                            <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                                <p class="ten-step__sidebar-desc">Bước 7. Massage khai huyệt điều hòa (mới)</p>
-                            </div>
-                            <div class=" img-responsive">
-                                <img src="./assets/img/Home/step-7.jpg">
-                            </div>
-                        </div>
-
-                        <div class="ten-step-mobile-box">
-                            <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                                <p class="ten-step__sidebar-desc">Bước 8. Massage khai huyệt điều hòa (mới)</p>
-                            </div>
-                            <div class=" img-responsive ">
-                                <img src="./assets/img/Home/step-8.jpg">
-                            </div>
-                        </div>
-
-                        <div class="ten-step-mobile-box">
-                            <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                                <p class="ten-step__sidebar-desc">Bước 9. Massage khai huyệt điều hòa (mới)</p>
-                            </div>
-                            <div class=" img-responsive">
-                                <img src="./assets/img/Home/step-9.jpg">
-                            </div>
-                        </div>
-
-                        <div class="ten-step-mobile-box">
-                            <div class="ten-step__sidebar-item" onclick="currentSlide(1)">
-                                <p class="ten-step__sidebar-desc">Bước 10. Massage khai huyệt điều hòa (mới)</p>
-                            </div>
-                            <div class=" img-responsive ">
-                                <img src="./assets/img/Home/step-10.jpg">
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </section>
 <!-- Begin hair-hot -->
 <section class="hair-hot">
 
