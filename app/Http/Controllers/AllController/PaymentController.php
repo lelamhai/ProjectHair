@@ -16,7 +16,6 @@ class PaymentController extends Controller
 
 	public function createPaymentVNPay(Request $request)
 	{
-
 		$vnp_TxnRef = $_POST['order_id']; //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
 		$vnp_OrderInfo = $_POST['order_desc'];
 		$vnp_OrderType = $_POST['order_type'];
@@ -27,7 +26,7 @@ class PaymentController extends Controller
 
 		$inputData = array(
 			"vnp_Version" => "2.0.0",
-			"vnp_TmnCode" => env('VNP_TMNCODE'),//$vnp_TmnCode,
+			"vnp_TmnCode" => env('VNP_TMNCODE'),
 			"vnp_Amount" => $vnp_Amount,
 			"vnp_Command" => "pay",
 			"vnp_CreateDate" => date('YmdHis'),
@@ -60,64 +59,17 @@ class PaymentController extends Controller
 		$vnp_Url = env('VNP_URL') . "?" . $query;
 		$vnp_HashSecret = env('VNP_HASHSECRET');
 		if (isset($vnp_HashSecret)) {
-		// $vnpSecureHash = md5($vnp_HashSecret . $hashdata);
 			$vnpSecureHash = hash('sha256', $vnp_HashSecret . $hashdata);
 			$vnp_Url .= 'vnp_SecureHashType=SHA256&vnp_SecureHash=' . $vnpSecureHash;
 		}
 		$returnData = array('code' => '00'
 			, 'message' => 'success'
 			, 'data' => $vnp_Url);
-		//echo json_encode($returnData);
 		return redirect($vnp_Url);
-
-
-
-		// $vnp_TxnRef = date('YmdHis');//Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
-		// $vnp_OrderInfo = $_POST['orderDesc'];
-		// $vnp_OrderType = $_POST['ordertype'];
-		// $vnp_Amount = $_POST['amount'] * 100;
-		// $vnp_Locale = $_POST['language'];
-		// $vnp_IpAddr = $_SERVER['REMOTE_ADDR'];
-		// $inputData = array(
-		// 	"vnp_Version" => "2.0.0",
-		// 	"vnp_TmnCode" => 'XX42OBHH',
-		// 	"vnp_Amount" => $vnp_Amount,
-		// 	"vnp_Command" => "pay",
-		// 	"vnp_CreateDate" => date('YmdHis'),
-		// 	"vnp_CurrCode" => "VND",
-		// 	"vnp_IpAddr" => $vnp_IpAddr,
-		// 	"vnp_Locale" => $vnp_Locale,   
-		// 	"vnp_OrderInfo" => $vnp_OrderInfo,
-		// 	"vnp_OrderType" => $vnp_OrderType,
-		// 	"vnp_ReturnUrl" => route('vnpay.return'),
-		// 	"vnp_TxnRef" => $vnp_TxnRef,    
-		// );
-		// ksort($inputData);
-		// $query = "";
-		// $i = 0;
-		// $hashdata = "";
-		// foreach ($inputData as $key => $value) {
-		// 	if ($i == 1) {
-		// 		$hashdata .= '&' . $key . "=" . $value;
-		// 	} else {
-		// 		$hashdata .= $key . "=" . $value;
-		// 		$i = 1;
-		// 	}
-		// 	$query .= urlencode($key) . "=" . urlencode($value) . '&';
-		// }
-		
-		// $vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html"
-		// $vnp_Url = $vnp_Url . "?" . $query;
-		// if (isset($vnp_HashSecret)) {
-		// 	$vnpSecureHash = hash('sha256',$vnp_HashSecret . $hashdata);
-		// 	$vnp_Url .= 'vnp_SecureHashType=SHA256&vnp_SecureHash=' . $vnpSecureHash;
-		// }
-		// return redirect($vnp_Url);
-
 	}
 
 	public function vnpayReturn(Request $request)
 	{
-
+		dd($request->toArray());
 	}
 }
