@@ -14,6 +14,10 @@
                 hàng
               </div>
               <div class="table-cart">
+
+                <?php 
+                  $total = 0;  
+                ?>
                 @foreach ($carts as $cart)
                 <div class="row-product">
                   <div class="img-pro">
@@ -26,7 +30,7 @@
                        <h3>{{$cart->products->title}}</h3> <!-- Title -->
                     </div>
                     <div class="price-product">
-                      <span>{{$cart->products->price}}.000</span> <!-- Price -->
+                      <span>{{$cart->products->price}}</span> <!-- Price -->
                     </div>
                     <div class="product-quantity">
                       <button class="subtract-pro float-left">
@@ -35,7 +39,7 @@
                       <input
                         type="text"
                         onkeypress="isInputNumber(event)"
-                        value="1"
+                        value="<?php  echo number_format($cart->amount, 0, ',', '.');?>"
                         class="quantity-input float-left"
                       />
                       <button class="plus-pro float-left">
@@ -45,7 +49,16 @@
                     <div class="total-price">
                       <p class="money-p">
                         <span>Thành tiền: </span
-                        ><span class="money-pro">960000</span>
+                        ><span class="money-pro">
+                          <?php  
+                            $totalItem = 0;
+                            $price = $cart->products->price;
+                            $amount =  $cart->amount;
+                            $totalItem = $price * $amount;
+                            $total = $total + $totalItem;
+                            echo number_format($totalItem, 0, ',', '.');
+                           ?>
+                        </span>
                       </p>
                     </div>
                     <button class="delete-product">
@@ -54,6 +67,7 @@
                   </div>
                 </div>
                 @endforeach
+               
               </div>
               <div class="note-cart">
                 <div class="left-note">
@@ -91,24 +105,22 @@
                 <h3>Thông tin đơn hàng</h3>
                 <div class="total-bill">
                   <p>
-                    Tổng tiền: <span id="all-money-product">31213654 ₫</span>
+                    Tổng tiền: <span id="all-money-product"><?php  echo number_format($total, 0, ',', '.');?></span><span>₫</span>
                   </p>
                 </div>
                 <div class="payment">
                   <p>Bạn có thể nhập mã giảm giá ở trang thanh toán</p>
                   <button>THANH TOÁN</button>
                 </div>
-                <dic class="back-store">
-                  <a> <i class="fa fa-reply mr-2"></i> Tiếp tục mua hàng </a>
-                </dic>
+                <div class="back-store">
+                  <a> <i class="fa fa-reply mr-2"></i>Tiếp tục mua hàng </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
-
-
 @endsection
 @section('css')
 	<link rel="stylesheet" href="{{ asset('assets/css/Cart/reset.css') }}">
