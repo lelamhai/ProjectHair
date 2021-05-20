@@ -24,6 +24,7 @@
           let get_value = $(inside).val();
           get_value++;
           $(amount).text(get_price * get_value);
+          console.log(get_price);
           $(inside).val(get_value);
         });
         $(".subtract-pro").click(function (e) {

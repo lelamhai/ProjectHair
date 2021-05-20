@@ -26,7 +26,7 @@
                        <h3>{{$cart->products->title}}</h3> <!-- Title -->
                     </div>
                     <div class="price-product">
-                      <span>{{$cart->products->price}}.000 ₫</span> <!-- Price -->
+                      <span>{{$cart->products->price}}.000</span> <!-- Price -->
                     </div>
                     <div class="product-quantity">
                       <button class="subtract-pro float-left">
@@ -45,7 +45,7 @@
                     <div class="total-price">
                       <p class="money-p">
                         <span>Thành tiền: </span
-                        ><span class="money-pro">960000 ₫</span>
+                        ><span class="money-pro">960000</span>
                       </p>
                     </div>
                     <button class="delete-product">
