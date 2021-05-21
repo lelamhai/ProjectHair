@@ -60,6 +60,7 @@
 }
 .content-cart .left-main .table-cart .row-product .info-pro .name-product h3 {
     font-size: 16px;
+    margin-top: unset;
 }
 .content-cart .left-main .table-cart .row-product .info-pro .price-product {
     padding: 10px 0px;
@@ -170,6 +171,10 @@
     border: 1px solid #ebeded;
     padding: 10px 15px;
     -webkit-appearance: none;
+}
+
+.content-cart .left-main .note-cart .left-note button{
+    background-color: red;
 }
 
 .right-note ul {
