@@ -20,7 +20,6 @@
             $total = 0;
             ?>
             @foreach ($carts as $cart)
-            <input type="hidden" value="{{$cart->idPro}}" id="proId">
             <div class="row-product">
               <div class="img-pro">
                 <a href="">
@@ -35,11 +34,11 @@
                   <span>{{$cart->products->price}}</span> <!-- Price -->
                 </div>
                 <div class="product-quantity">
-                  <button class="subtract-pro float-left">
+                  <button class="subtract-pro float-left" data-proid="{{$cart->idPro}}">
                     <i class="fas fa-minus"></i>
                   </button>
                   <input type="text" onkeypress="isInputNumber(event)" value="<?php echo number_format($cart->amount, 0, ',', '.'); ?>" class="quantity-input float-left" />
-                  <button class="plus-pro float-left">
+                  <button class="plus-pro float-left" data-proid="{{$cart->idPro}}">
                     <i class="fas fa-plus"></i>
                   </button>
                 </div>
@@ -57,7 +56,7 @@
                     </span>
                   </p>
                 </div>
-                <button class="delete-product">
+                <button class="delete-product" data-proid="{{$cart->idPro}}">
                   <i class="far fa-trash-alt"></i>
                 </button>
               </div>
