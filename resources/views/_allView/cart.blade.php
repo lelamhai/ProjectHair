@@ -102,7 +102,7 @@
             <h3>Thông tin đơn hàng</h3>
             <div class="total-bill">
               <p>
-                Tổng tiền: <span id="all-money-product"><?php echo number_format($total, 0, ',', '.'); ?></span><span>₫</span>
+                Tổng tiền: <span><span id="all-money-product"><?php echo number_format($total, 0, ',', '.'); ?></span><span>₫</span></span>
               </p>
             </div>
             <div class="payment">
