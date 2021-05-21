@@ -64,15 +64,24 @@
             var priceTotal = parseInt(totalRoot) - parseInt(priceCurrent);
             $('#all-money-product').text(priceTotal.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1."));
           }
-
-
-
         });
         $(".delete-product").click(function (e) {
           curren = $(this);
           inside = curren.closest(".row-product");
-
-          inside.remove();
+          var id = 1;
+          // var id = $(this).attr('data-id');
+          var token = $("meta[name='csrf-token']").attr("content");
+          $.ajax({
+            url:"/cart/delete/{id}", // đường dẫn khi gửi dữ liệu đi 'search' là tên route mình đặt bạn mở route lên xem là hiểu nó là cái j.
+            type: 'DELETE',
+            data: {
+                _token: token,
+                id: id
+            },
+            success: function (response){
+              inside.remove();
+          }
+         });
         });
       });
 
