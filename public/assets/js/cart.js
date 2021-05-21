@@ -68,17 +68,21 @@
         $(".delete-product").click(function (e) {
           curren = $(this);
           inside = curren.closest(".row-product");
-          var id = 1;
-          // var id = $(this).attr('data-id');
+          var userId = parseInt($('#userId').val());
+          var proId = parseInt($('#proId').val());
+          // console.log(userId);
+          // console.log(proId);
           var token = $("meta[name='csrf-token']").attr("content");
           $.ajax({
-            url:"/cart/delete/{id}", // đường dẫn khi gửi dữ liệu đi 'search' là tên route mình đặt bạn mở route lên xem là hiểu nó là cái j.
+            url:"/cart/delete/{userId}/{proId}",
             type: 'DELETE',
             data: {
                 _token: token,
-                id: id
+                userId: userId,
+                proId: proId
             },
             success: function (response){
+              console.log(response);
               inside.remove();
           }
          });

@@ -2,6 +2,7 @@
 
 @section('content')
 <main>
+  <input type="hidden" value="1" id="userId">
   <div class="container">
     <div class="cart-layout">
       <div class="title-cart">
@@ -19,6 +20,7 @@
             $total = 0;
             ?>
             @foreach ($carts as $cart)
+            <input type="hidden" value="{{$cart->idPro}}" id="proId">
             <div class="row-product">
               <div class="img-pro">
                 <a href="">
