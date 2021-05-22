@@ -42,49 +42,49 @@
     <header class="header" id="header">
         <div class="container">
             <div class="row header__content">
-                <div class="col l-2 m-2 xs-6">
+                <div class="col l-2 m-11 xs-6">
                     <a href="http://localhost:8000/" class="header__logo"><img src="/assets/img/Home/logo.png" alt="" class="header__logo-img img-responsive"></a>
                 </div>
                 <div class="col l-10 m-1 xs-6">
-                    <input id='item-dropdown' type='checkbox'>
-                    <label for='item-dropdown'>
-                        <span class="header__navbar-bars">
-                            <i class="fas fa-bars"></i>
-                        </span>
-                    </label>
-                    <nav class="header__navbar">
-                        <a href="http://localhost:8000/" class="header__logo header__navbar-logo"><img src="/assets/img/Home/logo.png" alt="" class="header__logo-img img-responsive"></a>
+                    <div class="header__menu-bars">
+                        <input id='item-dropdown' type='checkbox'>
                         <label for='item-dropdown'>
-                            <span class="header__navbar-bars header__navbar-bars--remove">
-                                <i class="fas fa-times"></i>
+                            <span class="header__navbar-bars">
+                                <i class="fas fa-bars header__navbar-bars-times"></i>
                             </span>
                         </label>
-                        <ul class="header__navbar-list">
-                            <li class="header__navbar-item"><a href="http://localhost:8000/" class="header__navbar-link">Trang chủ</a></li>
-                            <li class="header__navbar-item"><a href="http://localhost:8000/service/1" class="header__navbar-link"> 10 bước</a></li>
-                            <li class="header__navbar-item"><a href="http://localhost:8000/book" class="header__navbar-link">Đặt vé</a></li>
-                            <li class="header__navbar-item"><a href="http://localhost:8000/service" class="header__navbar-link">Dịch vụ khác</a></li>
-                            <li class="header__navbar-item"><a href="http://localhost:8000/products" class="header__navbar-link">Sản phầm</a></li>
-                            <li class="header__navbar-item"><a href="http://localhost:8000/contact" class="header__navbar-link">Liên hệ</a></li>
-                        </ul>
+                        <nav class="header__navbar">
+                            <a href="http://localhost:8000/" class="header__logo header__navbar-logo"><img src="/assets/img/Home/logo.png" alt="" class="header__logo-img img-responsive"></a>
+                            <label for='item-dropdown'>
+                                <span class="header__navbar-bars header__navbar-bars--remove">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                            </label>
+                            <ul class="header__navbar-list">
+                                <li class="header__navbar-item"><a href="http://localhost:8000/" class="header__navbar-link">Trang chủ</a></li>
+                                <li class="header__navbar-item"><a href="http://localhost:8000/service/1" class="header__navbar-link"> 10 bước</a></li>
+                                <li class="header__navbar-item"><a href="http://localhost:8000/book" class="header__navbar-link">Đặt vé</a></li>
+                                <li class="header__navbar-item"><a href="http://localhost:8000/service" class="header__navbar-link">Dịch vụ khác</a></li>
+                                <li class="header__navbar-item"><a href="http://localhost:8000/products" class="header__navbar-link">Sản phầm</a></li>
+                                <li class="header__navbar-item"><a href="http://localhost:8000/contact" class="header__navbar-link">Liên hệ</a></li>
+                            </ul>
 
 
-                        <a class="header__login" data-toggle="modal" href="#myModal">
-                            <i class="fas fa-crown header__login-icon"></i>
-                            Đăng nhập
-                        </a>
+                            <a class="header__login" data-toggle="modal" href="#myModal">
+                                <i class="fas fa-crown header__login-icon"></i>
+                                Đăng nhập
+                            </a>
 
-                        <!-- <a class="header__login customer_btn">
-                        <i class="fas fa-user"></i>
-                            quangzdz@gmail.com
-                        </a> -->
-
-
+                            <!-- <a class="header__login customer_btn">
+                            <i class="fas fa-user"></i>
+                                quangzdz@gmail.com
+                            </a> -->
 
 
-                    </nav>
 
 
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>

@@ -35,11 +35,11 @@ a {
     color: inherit;
 }
 
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--pd);;
+    padding: 5px var(--pd);
+    ;
 }
 
 .row {
@@ -160,6 +160,14 @@ a {
         flex: 0 0 8.33%;
         max-width: 8.33%;
     }
+    .m-10 {
+        flex: 0 0 83.3%;
+        max-width: 83.3%;
+    }
+    .m-11 {
+        flex: 0 0 91.67%;
+        max-width: 91.67%;
+    }
     .m-2 {
         flex: 0 0 16.67%;
         max-width: 16.67%;
@@ -192,12 +200,22 @@ a {
         flex: 0 0 50%;
         max-width: 50%;
     }
+    
+}
+@media (max-width: 1024px) {
+    #item-dropdown{
+        display: block;
+    }
+    label[for="item-dropdown"] {
+        display: block!important;
+    }
 }
 
 @media (max-width: 767px) {
     .row.f-col-reverse {
         flex-direction: column-reverse;
     }
+    
     .xs-0 {
         display: none;
     }
@@ -242,7 +260,6 @@ a {
     height: auto;
 }
 
-
 /* Header */
 
 .header {
@@ -276,7 +293,15 @@ a {
     font-weight: 600;
 }
 
-.header__navbar-link {}
+.header__navbar-link {
+    color: black;
+}
+
+.header__navbar-link:hover {
+    text-decoration: none;
+    color: #faa84f;
+    transition: all 0.25s ease-out;
+}
 
 .header__login {
     display: flex;
@@ -285,13 +310,16 @@ a {
     border-radius: 3px;
     background-color: gold;
     padding: 7px;
+    color:#000;
     max-width: 130px;
 }
-
+.header__login:focus{
+    text-decoration:none;
+     color:#000;
+}
 .header__logo {
     max-width: 100px;
     display: block;
-
 }
 
 .header__login-icon {
@@ -300,6 +328,11 @@ a {
 
 #item-dropdown, .header__navbar-logo, .header__navbar-bars {
     display: none;
+}
+
+label[for="item-dropdown"] {
+    display: none;
+    font-size:30px;
 }
 
 /* Footer */
@@ -394,9 +427,13 @@ a {
         flex-direction: column;
         left: 0;
         top: 0;
-        padding: 30px 0;
+        padding: 20px 0;
         background-color: #fff;
         align-items: flex-start;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .header__menu-bars{
+        width:100%;
     }
     .header__navbar-list {
         flex-direction: column;
@@ -412,9 +449,13 @@ a {
         margin-top: 20px;
     }
     .header__navbar-bars {
-        font-size: 24px;
         display: block;
         text-align: right;
+    }
+    .header__navbar-bars-times,.header__navbar-bars--remove i{
+        font-size: 24px;
+        cursor: pointer;
+        color:#333;
     }
     .header__navbar-bars--remove {
         position: absolute;
@@ -438,17 +479,3 @@ a {
         display: block;
     }
 }
-
-
-@media (max-width: 425px) {
-    .header__logo {
-        max-width: 150px;
-        display: block;
-    }
-}
-
-@media (max-width:378px) {
-
-}
-
-@media (max-width: 300px) {}
