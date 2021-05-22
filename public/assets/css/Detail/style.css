@@ -115,7 +115,7 @@ a {
 }
 
 .detail-product__right-btn {
-    flex: 3;
+    flex: 1;
     padding: 15px;
     background-color: var(--red);
     outline: none;
@@ -124,6 +124,20 @@ a {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    width: 100%;
+}
+
+.detail-product__right-btn:hover{
+    background-color: white;
+    color: red;
+}
+
+.detail-product__right-btn:hover a{
+    text-decoration: none;
+}
+
+.detail-product__right-total {
+    font-size: 20px;
 }
 
 input {
@@ -236,7 +250,7 @@ input {
 }
 
 @media only screen and (min-width: 1023px) {
-    .detail-product__right-value{
+    .detail-product__right-value {
         flex: 2;
     }
 }
@@ -254,13 +268,13 @@ input {
         margin: 0;
         padding: 5px;
     }
-    .detail-product__right-value{
+    .detail-product__right-value {
         flex: 2;
     }
 }
 
 @media only screen and (max-width: 374px) {
-    .detail-product__right-value{
+    .detail-product__right-value {
         flex: 3;
     }
 }

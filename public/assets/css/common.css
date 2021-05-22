@@ -421,7 +421,7 @@ label[for="item-dropdown"] {
 }
 
 .header__popup {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 130%;
     background: #fff;
