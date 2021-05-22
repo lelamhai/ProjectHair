@@ -38,7 +38,6 @@
 
 
           var userId = parseInt($('#userId').val());
-          
           var token = $("meta[name='csrf-token']").attr("content");
           $.ajax({
             url:"/cart/plusorminus",

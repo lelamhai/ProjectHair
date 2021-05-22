@@ -23,7 +23,8 @@ class ServiceController extends Controller
 	}
 
 	public function showAllStepOfService($id, Request $request) {
-		$steps = DB::table('service__details')->where('idService', $id)->get();
+		//$steps = Service_Details::paginate(4)->where('idService', $id);
+		$steps = DB::table('service__details')->where('idService', $id)->paginate(3);
 		$services = DB::table('services')->get();
 		$service = DB::table('services')->where('id', $id)->first();
 		$request->session()->put('idService', $id);
@@ -35,6 +36,12 @@ class ServiceController extends Controller
 	public function postDetailService(Request $request) {
 		$this->validator($request->all())->validate();
 		$this->createDetailService($request->all());
+		return redirect('admin/index');
+	}
+
+	public function editDetailService(Request $request) { //
+		$this->validator($request->all())->validate();
+		$this->updateDetailService($request->all());
 		return redirect('admin/index');
 	}
 
@@ -52,11 +59,20 @@ class ServiceController extends Controller
     {
         return Service_Details::create([
         	'step' => $data['step'],
-            'title' => $data['nameStep'],
-            'thumbnail' => $data['image'],
+            'title' => $data['title'],
+            'thumbnail' => $data['thumbnail'],
             'content' => $data['content'],
             'idService' => $data['idService'],
         ]);
+    }
+
+    protected function updateDetailService(array $data)
+    {
+    	return Service_Details::where('id', $data['id'])->update(array('step' => $data['step'],
+            'title' => $data['title'],
+            'thumbnail' => $data['thumbnail'],
+            'content' => $data['content'],
+            'idService' => $data['idService']));
     }
 
     public function showStepOfServiceToEdit($id, Request $request) {
@@ -69,7 +85,7 @@ class ServiceController extends Controller
     }
 
     public function deleteStep($id) {
-
+    	return Service_Details::where('id', $id)->delete();
     }
     //
 }

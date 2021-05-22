@@ -133,8 +133,15 @@
     .row-product
     .info-pro
     .total-price
-    .money-pro::after,.content-cart .left-main .table-cart .row-product .info-pro .price-product span::after {
-   content: " ₫";
+    .money-pro::after,
+.content-cart
+    .left-main
+    .table-cart
+    .row-product
+    .info-pro
+    .price-product
+    span::after {
+    content: " ₫";
 }
 .content-cart .left-main .table-cart .row-product .info-pro .delete-product {
     position: absolute;
@@ -173,8 +180,23 @@
     -webkit-appearance: none;
 }
 
-.content-cart .left-main .note-cart .left-note button{
+.content-cart .left-main .note-cart .left-note button {
     background-color: red;
+    width: 100%;
+    padding: 10px 10px;
+    display: inline-block;
+    border: none;
+    box-sizing: border-box;
+    cursor: text;
+    outline: none;
+    font-size: 15px;
+    background: red;
+    padding: 10px 0;
+    width: 100%;
+    color: #fff;
+    font-weight: 700;
+    background-clip: padding-box;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .right-note ul {

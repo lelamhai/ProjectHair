@@ -36,9 +36,16 @@
 				</tr>
 			@endforeach
 		</tbody>
-	</table>
 
-	
+	</table>
+	<span>{!! $steps->render() !!}</span>
+<style>
+	.pagination li{
+		list-style: none;
+		float: left;
+		margin-left: 5px;
+	}
+</style>
 	<!--  {{$step->step}} : {{$step->title}}
 	<p>{{$step->content}}</p>
     	<img src="{{$step->thumbnail}}" alt="Loi anh roi!" width="500" height="500">

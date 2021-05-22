@@ -49,7 +49,7 @@
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-button {
+button.signIn-form-button, button.signUp-form-button {
     background: #495057;
     color: white;
     height: 50px;
