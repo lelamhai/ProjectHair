@@ -33,9 +33,16 @@ Route::post('/authRegister', 'Auth_\RegisterController@register')->name('postReg
 Route::get('/step', 'AllController\StepController@index')->name('get10Step');
 Route::get('/book', 'AllController\BookController@index')->name('getBook');
 Route::get('/cart', 'AllController\CartController@index')->name('getCart');
+Route::delete('/cart/delete/{userId}/{proId}', 'AllController\CartController@deleteCart')->name('cart.deleteCart');
+Route::post('/cart/plusorminus', 'AllController\CartController@plusOrMinusCart');
+
 
 Route::get('/contact', 'AllController\ContactController@index');
 Route::post('/contact', 'AllController\ContactController@contactSubmit')->name('contact.submit');
+
+Route::get('/payment', 'AllController\PaymentController@index');
+Route::post('/payment/vnpay', 'AllController\PaymentController@createPaymentVNPay')->name('payment.vnpay');
+Route::get('/vnp/return', 'AllController\PaymentController@vnpayReturn')->name('vnpay.return');
 
 //Route::get('/detailProducts', 'AllController\DetailProductsController@index')->name('getDetailProducts');
 Route::get('/modelHot', 'AllController\ModelHotController@index')->name('getModelHot');
@@ -55,6 +62,10 @@ Route::post('/admin/add-details-service', 'AdminController\ServiceController@pos
 Route::get('/admin/service/{id}', 'AdminController\ServiceController@showAllStepOfService')->name('get.ServiceById');
 
 Route::get('admin/edit-step/{id}', 'AdminController\ServiceController@showStepOfServiceToEdit')->name('edit.step');
+
 Route::post('admin/submit-edit-step', 'AdminController\ServiceController@editDetailService')->name('submit-edit.step');
 
 Route::get('admin/delete-step/{id}', 'AdminController\ServiceController@deleteStep')->name('delete.step');
+
+Route::get('admin/delete-step/{id}', 'AdminController\ServiceController@deleteStep')->name('delete.step');
+

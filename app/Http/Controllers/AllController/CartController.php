@@ -11,10 +11,21 @@ class CartController extends Controller
 {
 	public function index() {
 		$carts = Cart::with('products', 'users')->get();
-		//dd($carts);
 		return view('_allView.cart')->with('carts', $carts);
 	}
 
+	public function deleteCart(Request $request)
+	{
+		Cart::where('idUser', $request->userId)->where('idPro', $request->proId)->delete();
+		return response()->json([
+			'message' => 'Data deleted successfully!'
+		]);
+		
+	}
 
-    //
+	public function plusOrMinusCart(Request $request)
+	{
+		Cart::where('idUser', $request->userId)->where('idPro', $request->proId)->update(['amount' => $request->amount]);
+		return  $request;
+	}
 }

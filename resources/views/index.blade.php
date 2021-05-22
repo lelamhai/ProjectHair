@@ -24,7 +24,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/Cart/reset.css" />
     <link rel="stylesheet" href="assets/css/Log/log.css" />
-
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <style>
         .remove-padding-left[style] {
             padding-right:0 !important;
@@ -195,7 +195,6 @@
                         </div>
 
                     </div>
-
                 </div>
 
             </div>
