@@ -70,16 +70,22 @@
                             </ul>
 
 
-                            <a class="header__login" data-toggle="modal" href="#myModal">
+                            <!-- <a class="header__login" data-toggle="modal" href="#myModal">
                                 <i class="fas fa-crown header__login-icon"></i>
                                 Đăng nhập
-                            </a>
-
-                            <!-- <a class="header__login customer_btn">
-                            <i class="fas fa-user"></i>
-                                quangzdz@gmail.com
                             </a> -->
 
+                            <div class="header__account">
+                                 <a href="#" class="header__cart">
+                                    <span class="header__cart-count"><i>2</i></span>
+                                    <img src="/assets/img/Log/shopping-cart.png" alt="" class="header__cart-img img-responsive">
+                                </a>
+                                <div class="header__user-wp">
+                                    <a href="#" class="header__user"><img src="/assets/img/Log/profile-user.png" alt="" class="header__cart-img img-responsive"></a>
+                                    <span class="header__cart-text">Ngọc Tuấn</span>
+                                </div>
+                            </div>
+                           
 
 
 

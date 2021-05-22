@@ -200,10 +200,10 @@ a {
         flex: 0 0 50%;
         max-width: 50%;
     }
-    
 }
+
 @media (max-width: 1024px) {
-    #item-dropdown{
+    #item-dropdown {
         display: block;
     }
     label[for="item-dropdown"] {
@@ -215,7 +215,6 @@ a {
     .row.f-col-reverse {
         flex-direction: column-reverse;
     }
-    
     .xs-0 {
         display: none;
     }
@@ -310,13 +309,15 @@ a {
     border-radius: 3px;
     background-color: gold;
     padding: 7px;
-    color:#000;
+    color: #000;
     max-width: 130px;
 }
-.header__login:focus{
-    text-decoration:none;
-     color:#000;
+
+.header__login:focus {
+    text-decoration: none;
+    color: #000;
 }
+
 .header__logo {
     max-width: 100px;
     display: block;
@@ -332,7 +333,56 @@ a {
 
 label[for="item-dropdown"] {
     display: none;
-    font-size:30px;
+    font-size: 30px;
+}
+
+.header__cart, .header__user {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    position: relative;
+}
+
+.header__cart-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: orange;
+    font-weight: bold;
+}
+
+.header__cart {
+    margin-right: 20px;
+}
+
+.header__cart-count i {
+    font-size: 13px;
+}
+
+.header__user {
+    margin-right: 10px;
+}
+
+.header__cart-text {
+    font-weight: bold;
+}
+
+.header__user-wp {
+    display: flex;
+    align-items: center;
+}
+
+.header__account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Footer */
@@ -403,8 +453,13 @@ label[for="item-dropdown"] {
     margin: 10px 0;
 }
 
+.footer__link {
+    color: #999999;
+}
+
 .footer__link:hover {
     color: #dea43e;
+    text-decoration: none;
 }
 
 .footer__desc i {
@@ -432,8 +487,8 @@ label[for="item-dropdown"] {
         align-items: flex-start;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
-    .header__menu-bars{
-        width:100%;
+    .header__menu-bars {
+        width: 100%;
     }
     .header__navbar-list {
         flex-direction: column;
@@ -452,10 +507,10 @@ label[for="item-dropdown"] {
         display: block;
         text-align: right;
     }
-    .header__navbar-bars-times,.header__navbar-bars--remove i{
+    .header__navbar-bars-times, .header__navbar-bars--remove i {
         font-size: 24px;
         cursor: pointer;
-        color:#333;
+        color: #333;
     }
     .header__navbar-bars--remove {
         position: absolute;
