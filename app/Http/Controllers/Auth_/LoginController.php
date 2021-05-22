@@ -43,7 +43,7 @@ class LoginController extends Controller
             //lấy user từ database lên để lấy thông tin
             $results = DB::table('user')
                 ->where('email', $request->email)
-                ->get();
+                ->first();
 
             $stringToken = substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(15/strlen($x)) )),1,15) . (string)time();
             //update token vao database
@@ -59,10 +59,19 @@ class LoginController extends Controller
                     //"message" => "Order thành công!",
                 ];
             $jsonData = json_encode($array);
-            $request->session()->put('user', $request->phone);
+            $request->session()->put('email', $request->email);
             $request->session()->flash('status', 'Login thành công!');
+            if (strcmp($results->human_rights,"0") == 0) // admin
+            {
+                return redirect('/admin/index')->with('keyName', $jsonData);
+            }
+            if (strcmp($results->human_rights,"1") == 0) // eml
+            {
+                return redirect('/admin/index')->with('keyName', $jsonData); // does not exist page
+            }
 
-            return redirect('/admin/index')->with('keyName', $jsonData);
+            return redirect('/')->with('keyName', $jsonData);
+            
             //return View('_adminView.add_service')->with('keyName', $jsonData);
             //return $this->sendLoginResponse($request);
         }
@@ -89,7 +98,7 @@ class LoginController extends Controller
                 ];
 
         $jsonData_l = json_encode($array_l);
-        return View('_auth.login')->with('keyName', $jsonData_l);
+        return View('index')->with('keyName', $jsonData_l);
         //return $this->sendFailedLoginResponse($request);
     }
 
