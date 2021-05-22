@@ -2,6 +2,7 @@
 
 @section('content')
 <main>
+  <input type="hidden" value="1" id="userId">
   <div class="container">
     <div class="cart-layout">
       <div class="title-cart">
@@ -33,11 +34,11 @@
                   <span>{{$cart->products->price}}</span> <!-- Price -->
                 </div>
                 <div class="product-quantity">
-                  <button class="subtract-pro float-left">
+                  <button class="subtract-pro float-left" data-proid="{{$cart->idPro}}">
                     <i class="fas fa-minus"></i>
                   </button>
                   <input type="text" onkeypress="isInputNumber(event)" value="<?php echo number_format($cart->amount, 0, ',', '.'); ?>" class="quantity-input float-left" />
-                  <button class="plus-pro float-left">
+                  <button class="plus-pro float-left" data-proid="{{$cart->idPro}}">
                     <i class="fas fa-plus"></i>
                   </button>
                 </div>
@@ -55,7 +56,7 @@
                     </span>
                   </p>
                 </div>
-                <button class="delete-product">
+                <button class="delete-product" data-proid="{{$cart->idPro}}">
                   <i class="far fa-trash-alt"></i>
                 </button>
               </div>

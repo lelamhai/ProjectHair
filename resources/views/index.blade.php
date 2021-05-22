@@ -109,18 +109,19 @@
                         <div class="tab-content">
                             <div id="log-in" class="tab-pane fade in active">
                                 <div class="form-container sign-in-container">
-                                    <form action="https://www.youtube.com/watch?v=ybFVSDUZhaQ&list=RDEV-91JV4Fws&index=8" id="sign-in-container">
+                                    <form action="{{route('postLogin')}}" id="sign-in-container" method="POST">
+                                        @csrf
                                         <div class="account-input">
                                             <div class="icon-form">
                                                 <img src="assets/img/Log/icon_letter.png" alt="">
                                             </div>
-                                            <input type="email" placeholder="Email" />
+                                            <input type="email" name="email" placeholder="Email" />
                                         </div>
                                         <div class="account-input">
                                             <div class="icon-form">
                                                 <img src="assets/img/Log/icon_lock.png" alt="">
                                             </div>
-                                            <input type="password" placeholder="Mật Khẩu" />
+                                            <input name="password" type="password" placeholder="Mật Khẩu" />
                                         </div>
                                         <div class="cappcha-input">
                                             <div id="divGenerateRandomValues"></div>

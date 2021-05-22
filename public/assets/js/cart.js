@@ -9,6 +9,7 @@
         let inside;
         let totalRoot = 0;
         $(".plus-pro").click(function (e) {
+          var proId = $(this).data("proid");
           var countRoot = 0;
           var priceCurrent = 0;
           curren = $(this);
@@ -34,8 +35,28 @@
           priceCurrent = (get_value - countRoot) * get_price;
           var priceTotal = parseInt(totalRoot) + parseInt(priceCurrent);
           $('#all-money-product').text(priceTotal.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1."));
+
+
+          var userId = parseInt($('#userId').val());
+          
+          var token = $("meta[name='csrf-token']").attr("content");
+          $.ajax({
+            url:"/cart/plusorminus",
+            method:'POST',
+            data: {
+                _token: token,
+                userId: userId,
+                proId: proId,
+                amount: get_value
+            },
+            success: function (response){
+              console.log(response);
+          }
+         });
+
         });
         $(".subtract-pro").click(function (e) {
+          var proId = $(this).data("proid");
           var countRoot = 0;
           var priceCurrent = 0;
           curren = $(this);
@@ -63,16 +84,47 @@
             priceCurrent = (countRoot - get_value) * get_price;
             var priceTotal = parseInt(totalRoot) - parseInt(priceCurrent);
             $('#all-money-product').text(priceTotal.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1."));
+
+
+            var userId = parseInt($('#userId').val());
+            
+            var token = $("meta[name='csrf-token']").attr("content");
+            $.ajax({
+              url:"/cart/plusorminus",
+              method:'POST',
+              data: {
+                  _token: token,
+                  userId: userId,
+                  proId: proId,
+                  amount: get_value
+              },
+              success: function (response){
+                console.log(response);
+            }
+          });
+
+
+
           }
-
-
-
         });
         $(".delete-product").click(function (e) {
+          var proId = $(this).data("proid");
           curren = $(this);
           inside = curren.closest(".row-product");
-
-          inside.remove();
+          var userId = parseInt($('#userId').val());
+          var token = $("meta[name='csrf-token']").attr("content");
+          $.ajax({
+            url:"/cart/delete/{userId}/{proId}",
+            type: 'DELETE',
+            data: {
+                _token: token,
+                userId: userId,
+                proId: proId
+            },
+            success: function (response){
+              location.reload(true);
+          }
+         });
         });
       });
 
