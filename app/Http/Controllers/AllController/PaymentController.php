@@ -10,8 +10,9 @@ use App\Models\Comment;
 
 class PaymentController extends Controller
 {
-	public function index() {
-		return view('_allView.payment');
+	public function index(Request $request) {
+		$total = $request->total;
+		return view('_allView.payment')->with('total', $total);
 	}
 
 	public function createPaymentVNPay(Request $request)

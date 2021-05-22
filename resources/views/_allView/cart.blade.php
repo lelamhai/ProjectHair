@@ -101,15 +101,19 @@
         <div class="right-main">
           <div class="box-right">
             <h3>Thông tin đơn hàng</h3>
-            <div class="total-bill">
-              <p>
-                Tổng tiền: <span><span id="all-money-product"><?php echo number_format($total, 0, ',', '.'); ?></span><span>₫</span></span>
-              </p>
-            </div>
-            <div class="payment">
-              <p>Bạn có thể nhập mã giảm giá ở trang thanh toán</p>
-              <button>THANH TOÁN</button>
-            </div>
+
+            <form action="{{route('post.payment')}}">
+              <div class="total-bill">
+                <p>
+                  Tổng tiền: <span><span id="all-money-product"><?php echo number_format($total, 0, ',', '.'); ?></span><span>₫</span></span>
+                  <input type="hidden" name="total" value="<?php echo $total?>">
+                </p>
+              </div>
+              <div class="payment">
+                <p>Bạn có thể nhập mã giảm giá ở trang thanh toán</p>
+                <button>THANH TOÁN</button>
+              </div>
+            </form>
             <div class="back-store">
               <a> <i class="fa fa-reply mr-2"></i>Tiếp tục mua hàng </a>
             </div>

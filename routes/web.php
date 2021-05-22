@@ -40,7 +40,7 @@ Route::post('/cart/plusorminus', 'AllController\CartController@plusOrMinusCart')
 Route::get('/contact', 'AllController\ContactController@index');
 Route::post('/contact', 'AllController\ContactController@contactSubmit')->name('contact.submit');
 
-Route::get('/payment', 'AllController\PaymentController@index');
+Route::get('/payment', 'AllController\PaymentController@index')->name('post.payment');
 Route::post('/payment/vnpay', 'AllController\PaymentController@createPaymentVNPay')->name('payment.vnpay');
 Route::get('/vnp/return', 'AllController\PaymentController@vnpayReturn')->name('vnpay.return');
 
