@@ -9,8 +9,10 @@ use App\Models\Cart;
 
 class CartController extends Controller
 {
-	public function index() {
-		$carts = Cart::with('products', 'users')->get();
+	public function index(Request $request) {
+		$email = $request->session()->get('email');
+		$user = DB::table('user')->where('email', $email)->first();
+		$carts = Cart::with('products', 'users')->where('idUser', $user->id)->get();
 		return view('_allView.cart')->with('carts', $carts);
 	}
 
