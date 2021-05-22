@@ -76,16 +76,26 @@
                             </a> -->
 
                             <div class="header__account">
+                            <a href="#" class="header__logout-mobile"><img src="/assets/img/Log/logout.png" alt="" class="header__cart-img img-responsive"></a>
+
                                  <a href="#" class="header__cart">
-                                    <span class="header__cart-count"><i>2</i></span>
-                                    <img src="/assets/img/Log/shopping-cart.png" alt="" class="header__cart-img img-responsive">
+                                     <div class="header__cart-wp">
+                                         <span class="header__cart-count"><i>2</i></span>
+                                         <img src="/assets/img/Log/shopping-cart.png" alt="" class="header__cart-img img-responsive">
+                                     </div>
                                 </a>
                                 <div class="header__user-wp">
-                                    <a href="#" class="header__user"><img src="/assets/img/Log/profile-user.png" alt="" class="header__cart-img img-responsive"></a>
-                                    <span class="header__cart-text">Ngọc Tuấn</span>
+                                    <div class ="header__info">
+                                        <a href="#" class="header__user"><img src="/assets/img/Log/profile-user.png" alt="" class="header__cart-img img-responsive"></a>
+                                        <span class="header__info-text">Ngọc Tuấn</span>
+                                        <ul class="header__popup">
+                                            <li class="header__popup-item"><a href="#" class="header__popup-link"><img class="header__popup-thumb" src="/assets/img/Log/profile-user.png" alt="" class="img-responsive">Thông tin khách hàng</a></li>
+                                            <li class="header__popup-item"><a href="#" class="header__popup-link"><img class="header__popup-thumb" src="/assets/img/Log/logout.png" alt="" class="img-responsive">Đăng xuất</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                           
+
 
 
 
