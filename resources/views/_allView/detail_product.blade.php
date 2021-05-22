@@ -17,7 +17,7 @@
 							{{$product->title}}
                         </h3>
                         <div class="detail-product__right-price">
-                            <span class="detail-product__right-price-new">{{$product->price}}đ</span>
+                            <span class="detail-product__right-price-new">Giá tiền: {{$product->price}}đ</span>
                         </div>
                         <div class="detail-product__right-quality">
                             <div class="detail-product__right-value">
@@ -26,8 +26,11 @@
                                     class="detail-product__right-selector" aria-label="Quantity input">
                                 <input type="button" value="+" onclick="plusQuantity()" class="qty-btn">
                             </div>
+                           <strong class="detail-product__right-total">Thành tiền: 1400</strong>
+                        </div>
+                        <div class="detail-product__right-submit">
                             <button class="detail-product__right-btn">
-                                <a href="http://localhost:8000/cart">THÊM VÀO GIỎ</a> 
+                                <a href="http://localhost:8000/cart">THÊM VÀO GIỎ</a>
                             </button>
                         </div>
                         <div class="detail-product__right-label">
