@@ -32,6 +32,7 @@
         .remove-padding-left.modal-open {
             overflow: auto;
         }
+      
     </style>
     <!-- JS -->
     <script src="assets/js/login.js"></script>
@@ -70,31 +71,80 @@
                             </ul>
 
 
-                            <!-- <a class="header__login" data-toggle="modal" href="#myModal">
-                                <i class="fas fa-crown header__login-icon"></i>
-                                Đăng nhập
-                            </a> -->
+                            @if (session('user'))
+                            
+                                    <div class="header__account">
+                                        <a href="#" class="header__logout-mobile"><img src="/assets/img/Log/logout.png" alt="" class="header__cart-img img-responsive"></a>
 
-                            <div class="header__account">
-                            <a href="#" class="header__logout-mobile"><img src="/assets/img/Log/logout.png" alt="" class="header__cart-img img-responsive"></a>
-
-                                 <a href="#" class="header__cart">
-                                     <div class="header__cart-wp">
-                                         <span class="header__cart-count"><i>2</i></span>
-                                         <img src="/assets/img/Log/shopping-cart.png" alt="" class="header__cart-img img-responsive">
-                                     </div>
-                                </a>
-                                <div class="header__user-wp">
-                                    <div class ="header__info">
-                                        <a href="#" class="header__user"><img src="/assets/img/Log/profile-user.png" alt="" class="header__cart-img img-responsive"></a>
-                                        <span class="header__info-text">Ngọc Tuấn</span>
-                                        <ul class="header__popup">
-                                            <li class="header__popup-item"><a href="#" class="header__popup-link"><img class="header__popup-thumb" src="/assets/img/Log/profile-user.png" alt="" class="img-responsive">Thông tin khách hàng</a></li>
-                                            <li class="header__popup-item"><a href="#" class="header__popup-link"><img class="header__popup-thumb" src="/assets/img/Log/logout.png" alt="" class="img-responsive">Đăng xuất</a></li>
-                                        </ul>
+                                        <a href="#" class="header__cart">
+                                            <div class="header__cart-wp">
+                                                <span class="header__cart-count"><i>
+                                                    <?php
+                                                        if(session('countCart') == 0)
+                                                        {
+                                                            echo 0;
+                                                        } else {
+                                                            echo session('countCart');
+                                                            
+                                                        } 
+                                                    ?>    
+                                                </i></span>
+                                                <img src="/assets/img/Log/shopping-cart.png" alt="" class="header__cart-img img-responsive">
+                                            </div>
+                                        </a>
+                                        <div class="header__user-wp">
+                                            <div class ="header__info">
+                                                <a href="#" class="header__user"><img src="/assets/img/Log/profile-user.png" alt="" class="header__cart-img img-responsive"></a>
+                                                <span class="header__info-text">{{session('user')->name}}</span>
+                                                <ul class="header__popup">
+                                                    <li class="header__popup-item"><a href="#" class="header__popup-link"><img class="header__popup-thumb" src="/assets/img/Log/profile-user.png" alt="" class="img-responsive">Thông tin khách hàng</a></li>
+                                                    <li class="header__popup-item"><a href="{{route('getLogout')}}" class="header__popup-link"><img class="header__popup-thumb" src="/assets/img/Log/logout.png" alt="" class="img-responsive">Đăng xuất</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+
+                            @else 
+                               
+                                <a class="header__login" data-toggle="modal" href="#myModal">
+                                    <i class="fas fa-crown header__login-icon"></i>
+                                    Đăng nhập
+                                </a> 
+                         
+                            @endif
+
+
+
+
+
+
+
+
+
+
+
+                            
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          
+                           
+
+                           
 
 
 

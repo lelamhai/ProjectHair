@@ -29,9 +29,19 @@
                            <strong class="detail-product__right-total">Thành tiền: 1400</strong>
                         </div>
                         <div class="detail-product__right-submit">
-                            <button class="detail-product__right-btn">
-                                <a href="http://localhost:8000/cart">THÊM VÀO GIỎ</a>
-                            </button>
+
+
+                            <form action="{{route('post.Cart')}}" method="POST">
+                                @csrf
+                                <input type="hidden" value="{{$product->idPro}}" name="idPro">
+                                <input type="hidden" value="10" name="amount">
+                                <input type="hidden" value="{{session('user')->id}}" name="idUser">
+                                <button class="detail-product__right-btn">
+                                    THÊM VÀO GIỎ
+                                </button>
+                            </form>
+
+                            
                         </div>
                         <div class="detail-product__right-label">
                             <i class="fas fa-check-circle"></i>
