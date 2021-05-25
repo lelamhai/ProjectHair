@@ -201,10 +201,9 @@ class LoginController extends Controller
 
     public function loggedOut(Request $request)
     {
-        $p = $request->session()->get('user');
-        var_dump($p);
+        $p = $request->session()->get('email');
         DB::table('user')
-            ->where('phone', $p)
+            ->where('email', $p)
             ->update(['token' => '']);
 
         $this->guard()->logout();
@@ -212,7 +211,7 @@ class LoginController extends Controller
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
-        return view('_auth.login');
+        return view('/');
         //
     }
 

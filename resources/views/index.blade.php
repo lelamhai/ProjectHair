@@ -21,9 +21,11 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+
+    <link rel="stylesheet" href="{{ asset('assets/css/steps10/steps10.css') }}">
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/Cart/reset.css" />
-    <link rel="stylesheet" href="assets/css/Log/log.css" />
+    <link rel="stylesheet" href="{{asset('assets/css/Cart/reset.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/css/Log/log.css')}}" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <style>
         .remove-padding-left[style] {
@@ -34,7 +36,7 @@
         }
     </style>
     <!-- JS -->
-    <script src="assets/js/login.js"></script>
+    <script src="{{asset('assets/js/login.js')}}"></script>
     @yield('css')
 </head>
 
@@ -120,7 +122,7 @@
                             <li><a data-toggle="tab" href="#sign-up">Đăng Kí</a></li>
                         </ul>
                         <div class="logo">
-                            <img src="assets/img/Log/log-30shine-white.9945e644.jpg" alt="" />
+                            <img src="{{asset('assets/img/Log/log-30shine-white.9945e644.jpg')}}" alt="" />
                         </div>
                         <div class="tab-content">
                             <div id="log-in" class="tab-pane fade in active">
@@ -129,13 +131,13 @@
                                         @csrf
                                         <div class="account-input">
                                             <div class="icon-form">
-                                                <img src="assets/img/Log/icon_letter.png" alt="">
+                                                <img src="{{asset('assets/img/Log/icon_letter.png')}}" alt="">
                                             </div>
                                             <input type="email" name="email" placeholder="Email" />
                                         </div>
                                         <div class="account-input">
                                             <div class="icon-form">
-                                                <img src="assets/img/Log/icon_lock.png" alt="">
+                                                <img src="{{asset('assets/img/Log/icon_lock.png')}}" alt="">
                                             </div>
                                             <input name="password" type="password" placeholder="Mật Khẩu" />
                                         </div>
@@ -154,7 +156,7 @@
                                                 <h3>Quên mật khẩu</h3>
                                                 <div class="account-input">
                                                     <div class="icon-form">
-                                                        <img src="assets/img/Log/icon_letter.png" alt="">
+                                                        <img src="{{asset('assets/img/Log/icon_letter.png')}}" alt="">
                                                     </div>
                                                     <input type="email" placeholder="Email" />
                                                 </div>
@@ -172,31 +174,31 @@
                                     <form action="#" id="sign-up-form">
                                         <div class="account-input">
                                             <div class="icon-form">
-                                                <img src="assets/img/Log/icon_user.png" alt="">
+                                                <img src="{{asset('assets/img/Log/icon_user.png')}}" alt="">
                                             </div>
                                             <input type="text" placeholder="Họ Tên" id="name" />
                                         </div>
                                         <div class="account-input">
                                             <div class="icon-form">
-                                                <img src="assets/img/Log/icon_phone.png" alt="">
+                                                <img src="{{asset('assets/img/Log/icon_phone.png')}}" alt="">
                                             </div>
                                             <input type="text" placeholder="Số Điện Thoại" id="phone" />
                                         </div>
                                         <div class="account-input">
                                             <div class="icon-form">
-                                                <img src="assets/img/Log/icon_letter.png" alt="">
+                                                <img src="{{asset('assets/img/Log/icon_letter.png')}}" alt="">
                                             </div>
                                             <input type="email" placeholder="Email" id="email" />
                                         </div>
                                         <div class="account-input">
                                             <div class="icon-form">
-                                                <img src="assets/img/Log/icon_lock.png" alt="">
+                                                <img src="{{asset('/assets/img/Log/icon_lock.png')}}" alt="">
                                             </div>
                                             <input type="password" placeholder="Mật Khẩu" id="pass" />
                                         </div>
                                         <div class="account-input">
                                             <div class="icon-form">
-                                                <img src="assets/img/Log/icon_lock.png" alt="">
+                                                <img src="{{asset('/assets/img/Log/icon_lock.png')}}" alt="">
                                             </div>
                                             <input type="password" placeholder="Nhập Lại Mật Khẩu" class="last-child" id="repass" />
                                         </div>
