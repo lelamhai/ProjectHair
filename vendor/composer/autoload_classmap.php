@@ -41,7 +41,6 @@ return array(
     'App\\Models\\Cart' => $baseDir . '/app/Models/Cart.php',
     'App\\Models\\Category' => $baseDir . '/app/Models/Category.php',
     'App\\Models\\Comment' => $baseDir . '/app/Models/Comment.php',
-    'App\\Models\\Details_Payment' => $baseDir . '/app/Models/Details_Payment.php',
     'App\\Models\\ModelsHot' => $baseDir . '/app/Models/ModelsHot.php',
     'App\\Models\\Option' => $baseDir . '/app/Models/Option.php',
     'App\\Models\\Order' => $baseDir . '/app/Models/Order.php',

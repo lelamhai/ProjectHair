@@ -10,6 +10,7 @@ use App\Models\Comment;
 use App\Models\Order;
 use App\Models\Order_Details;
 use App\Models\Cart;
+use App\Models\Payments;
 
 class PaymentController extends Controller
 {
@@ -38,6 +39,10 @@ class PaymentController extends Controller
 		}
 
 		$total = $request->total;
+
+
+		Cart::where('idUser', $user->id)->delete();
+
 		return view('_allView.payment')->with('total', $total);
 	}
 
@@ -97,7 +102,25 @@ class PaymentController extends Controller
 
 	public function vnpayReturn(Request $request)
 	{
+		$email = $request->session()->get('email');
+		$user = DB::table('user')->where('email', $email)->first();
+		$order = DB::table('orders')->where('idUser', $user->id)->first();
+		Payments::create([
+            'idOrder' => $order->idOrder, 
+			'vnp_Amount' => $request->vnp_Amount, 
+			'vnp_BankCode' => $request->vnp_BankCode, 
+			'vnp_BankTranNo' => $request->vnp_BankTranNo, 
+			'vnp_CardType' => $request->vnp_CardType, 
+			'vnp_OrderInfo' => $request->vnp_OrderInfo, 
+			'vnp_PayDate' => $request->vnp_PayDate, 
+			'vnp_ResponseCode'  => $request->vnp_ResponseCode, 
+			'vnp_TmnCode'  => $request->vnp_TmnCode, 
+			'vnp_TransactionNo'  => $request->vnp_TransactionNo,
+			'vnp_TxnRef'  => $request->vnp_TxnRef, 
+			'vnp_SecureHashType'  => $request->vnp_SecureHashType, 
+			'vnp_SecureHash'  => $request->vnp_SecureHash
+		]);
 
-		dd($request->toArray());
+		return redirect('/')->with('mess', 'Ngon nha con di!');
 	}
 }

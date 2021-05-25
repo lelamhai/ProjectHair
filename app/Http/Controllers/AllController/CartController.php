@@ -22,11 +22,11 @@ class CartController extends Controller
 
 	public function show(Request $request) {
 
-		// Cart::create([
-        //     'idPro' => $request->idPro,
-        //     'idUser' => $request->idUser,
-        //     'amount' => $request->amount
-		// ]);
+		Cart::create([
+            'idPro' => $request->idPro,
+            'idUser' => $request->idUser,
+            'amount' => $request->amount
+		]);
 
 		$email = $request->session()->get('email');
 		$user = DB::table('user')->where('email', $email)->first();
