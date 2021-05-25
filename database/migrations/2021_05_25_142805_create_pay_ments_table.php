@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDetailsPaymentsTable extends Migration
+class CreatePayMentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateDetailsPaymentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('details__payments', function (Blueprint $table) {
+        Schema::create('pay_ments', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('idOrder');
             $table->string('vnp_Amount');
             $table->string('vnp_BankCode');
             $table->string('vnp_BankTranNo');
@@ -28,6 +29,11 @@ class CreateDetailsPaymentsTable extends Migration
             $table->string('vnp_SecureHashType');
             $table->string('vnp_SecureHash');
         });
+
+        Schema::table('pay_ments', function (Blueprint $table) {
+            
+            $table->foreign('idOrder')->references('idOrder')->on('orders')->onDelete('cascade');
+        });
     }
 
     /**
@@ -37,6 +43,6 @@ class CreateDetailsPaymentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('details__payments');
+        Schema::dropIfExists('pay_ments');
     }
 }
