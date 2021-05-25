@@ -7,7 +7,7 @@
 
 <!-- Begin sidebar -->
 <section class="sidebar">
-                <div class="container">
+                <div class="">
                     <div class="sidebar-slider owl-carousel owl-theme">
                         <a href="#"><img src="./assets/img/Home/banner1.png" alt="" class="img-responsive"></a>
                         <a href="#"><img src="./assets/img/Home/banner2.png" alt="" class="img-responsive"></a>
@@ -17,21 +17,6 @@
             </section>
 <!-- End sidebar -->
 
-<!-- Begin service -->
-
-<section class="service">
-    <div class="container">
-        <div class="heading-content">
-            <h3 class="heading-title">DỊCH VỤ 30 SHIDE</h3>
-            <a href="" class="heading-more">Xem thêm >></a>
-        </div>
-        <div class="service__content">
-            <a href="" class="service__content-link"><img src="./assets/img/Home/service.png" alt=""
-                    class="service__content-img img-responsive"></a>
-        </div>
-    </div>
-</section>
-<!-- End service -->
 
 <!-- Begin ten-step -->
 <section class="ten-step">
@@ -78,6 +63,9 @@
 
 <section class="ten-step-mobile">
     <div class="container">
+        <div class="heading-content">
+            <h3 class="heading-title">QUY TRÌNH 10 BƯỚC</h3>
+        </div>
         <div class="ten-step-mobile-slider owl-carousel owl-theme">
 			<?php
 				$count = 1;
