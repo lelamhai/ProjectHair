@@ -27,9 +27,11 @@
                                 </div>
                             </div>
                             <div class="detail-product__right-submit">
-                                <button class="detail-product__right-btn">
-                                    <a href="http://localhost:8000/cart">THÊM VÀO GIỎ</a>
-                                </button>
+                                <form action="">
+                                    <button class="detail-product__right-btn">
+                                        <a href="http://localhost:8000/cart">THÊM VÀO GIỎ</a>
+                                    </button>
+                                </form>
                             </div>
                         </div>
                        
