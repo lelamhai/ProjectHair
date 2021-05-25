@@ -9,10 +9,30 @@ use App\Models\Cart;
 
 class CartController extends Controller
 {
-	public function index(Request $request) {
+
+	public function index (Request $request) {
+		
 		$email = $request->session()->get('email');
 		$user = DB::table('user')->where('email', $email)->first();
 		$carts = Cart::with('products', 'users')->where('idUser', $user->id)->get();
+		$request->session()->put('countCart',count( $carts));
+
+		return view('_allView.cart')->with('carts', $carts);
+	}
+
+	public function show(Request $request) {
+
+		// Cart::create([
+        //     'idPro' => $request->idPro,
+        //     'idUser' => $request->idUser,
+        //     'amount' => $request->amount
+		// ]);
+
+		$email = $request->session()->get('email');
+		$user = DB::table('user')->where('email', $email)->first();
+		$carts = Cart::with('products', 'users')->where('idUser', $user->id)->get();
+		$request->session()->put('countCart',count( $carts));
+
 		return view('_allView.cart')->with('carts', $carts);
 	}
 

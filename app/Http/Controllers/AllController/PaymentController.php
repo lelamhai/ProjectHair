@@ -7,10 +7,36 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Books;
 use App\Models\Comment;
+use App\Models\Order;
+use App\Models\Order_Details;
+use App\Models\Cart;
 
 class PaymentController extends Controller
 {
 	public function index(Request $request) {
+
+		$email = $request->session()->get('email');
+		$user = DB::table('user')->where('email', $email)->first();
+		$carts = Cart::with('products', 'users')->where('idUser', $user->id)->get();
+
+		Order::create([
+			'payMents' => '',
+            'totalMoney' => $request->total,
+            'status' => 'Prosecc',
+			'idUser' => $user->id
+		]);
+
+		$idOrder_1 = DB::table('orders')->where('idUser', $user->id)->first();
+
+		foreach ($carts as $cart) {
+
+			Order_Details::create([
+				'idOrder' => $idOrder_1->idOrder,
+				'idPro' => $cart->idPro,
+				'amount' => $cart->amount
+			]);
+		}
+
 		$total = $request->total;
 		return view('_allView.payment')->with('total', $total);
 	}
@@ -71,6 +97,7 @@ class PaymentController extends Controller
 
 	public function vnpayReturn(Request $request)
 	{
+
 		dd($request->toArray());
 	}
 }
