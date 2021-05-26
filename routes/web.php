@@ -43,6 +43,7 @@ Route::post('/contact', 'AllController\ContactController@contactSubmit')->name('
 
 Route::get('/payment', 'AllController\PaymentController@index')->name('post.payment');
 Route::post('/payment/vnpay', 'AllController\PaymentController@createPaymentVNPay')->name('payment.vnpay');
+Route::get('/payment/result', 'AllController\PaymentController@resultPayment')->name('payment.result');
 Route::get('/vnp/return', 'AllController\PaymentController@vnpayReturn')->name('vnpay.return');
 
 //Route::get('/detailProducts', 'AllController\DetailProductsController@index')->name('getDetailProducts');

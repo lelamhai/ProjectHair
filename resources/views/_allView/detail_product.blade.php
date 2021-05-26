@@ -29,7 +29,7 @@
                             <div class="detail-product__right-submit">
                                 <form action="{{route('post.Cart')}}" method="POST">
                                     @csrf
-                                    <input type="hidden" value="10" name="amount">
+                                    <input type="hidden" value="1" name="amount">
                                     <input type="hidden" value="{{session('user')->id}}" name="idUser">
                                     <input type="hidden" value="{{$product->idPro}}" name="idPro">
                                     

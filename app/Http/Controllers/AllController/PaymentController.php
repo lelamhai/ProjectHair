@@ -102,25 +102,34 @@ class PaymentController extends Controller
 
 	public function vnpayReturn(Request $request)
 	{
-		$email = $request->session()->get('email');
-		$user = DB::table('user')->where('email', $email)->first();
-		$order = DB::table('orders')->where('idUser', $user->id)->first();
-		Payments::create([
-            'idOrder' => $order->idOrder, 
-			'vnp_Amount' => $request->vnp_Amount, 
-			'vnp_BankCode' => $request->vnp_BankCode, 
-			'vnp_BankTranNo' => $request->vnp_BankTranNo, 
-			'vnp_CardType' => $request->vnp_CardType, 
-			'vnp_OrderInfo' => $request->vnp_OrderInfo, 
-			'vnp_PayDate' => $request->vnp_PayDate, 
-			'vnp_ResponseCode'  => $request->vnp_ResponseCode, 
-			'vnp_TmnCode'  => $request->vnp_TmnCode, 
-			'vnp_TransactionNo'  => $request->vnp_TransactionNo,
-			'vnp_TxnRef'  => $request->vnp_TxnRef, 
-			'vnp_SecureHashType'  => $request->vnp_SecureHashType, 
-			'vnp_SecureHash'  => $request->vnp_SecureHash
-		]);
-
-		return redirect('/')->with('mess', 'Ngon nha con di!');
+		if($request->vnp_ResponseCode == "00")
+		{
+			$email = $request->session()->get('email');
+			$user = DB::table('user')->where('email', $email)->first();
+			$order = DB::table('orders')->where('idUser', $user->id)->first();
+			Payments::create([
+				'idOrder' => $order->idOrder, 
+				'vnp_Amount' => $request->vnp_Amount, 
+				'vnp_BankCode' => $request->vnp_BankCode, 
+				'vnp_BankTranNo' => $request->vnp_BankTranNo, 
+				'vnp_CardType' => $request->vnp_CardType, 
+				'vnp_OrderInfo' => $request->vnp_OrderInfo, 
+				'vnp_PayDate' => $request->vnp_PayDate, 
+				'vnp_ResponseCode'  => $request->vnp_ResponseCode, 
+				'vnp_TmnCode'  => $request->vnp_TmnCode, 
+				'vnp_TransactionNo'  => $request->vnp_TransactionNo,
+				'vnp_TxnRef'  => $request->vnp_TxnRef, 
+				'vnp_SecureHashType'  => $request->vnp_SecureHashType, 
+				'vnp_SecureHash'  => $request->vnp_SecureHash
+			]);
+			session(['countCart' => 0]);
+			return view('_allView.result_payment')->with('retult',"Giao dịch thành công");
+		} 
+		return view('_allView.result_payment')->with('retult',"Giao dịch thất bại");
 	}
+
+	// public function resultPayment()
+	// {
+	// 	return view('_allView.result_payment')->with('responseCode', $request->vnp_ResponseCode);
+	// }
 }
