@@ -23,8 +23,9 @@ Route::group(['prefix' => 'laravel-filemanager'], function () {
 
 Route::get('/login', 'Auth_\LoginController@getLoginForm')->name('getLogin');
 Route::post('/login', 'Auth_\LoginController@login')->name('postLogin');
-//Route::get('/authLogout', 'Auth_\LoginController@log')->name('getLogout');
-Route::post('/authLogout', 'Auth_\LoginController@loggedOut')->name('postLogout');
+
+Route::get('/authLogout', 'Auth_\LoginController@loggedOut')->name('getLogout');
+//Route::post('/authLogout', 'Auth_\LoginController@loggedOut')->name('postLogout');
 
 Route::get('/authRegister', 'Auth_\RegisterController@getRegistrationForm')->name('getRegister');
 Route::post('/authRegister', 'Auth_\RegisterController@register')->name('postRegister');
@@ -32,7 +33,8 @@ Route::post('/authRegister', 'Auth_\RegisterController@register')->name('postReg
 //-------------------------public---------------------------
 Route::get('/step', 'AllController\StepController@index')->name('get10Step');
 Route::get('/book', 'AllController\BookController@index')->name('getBook');
-Route::get('/cart', 'AllController\CartController@index')->name('getCart');
+Route::get('/cart', 'AllController\CartController@index')->name('get.Cart');
+Route::post('/cart', 'AllController\CartController@show')->name('post.Cart');
 Route::delete('/cart/delete/{userId}/{proId}', 'AllController\CartController@deleteCart')->name('cart.deleteCart');
 Route::post('/cart/plusorminus', 'AllController\CartController@plusOrMinusCart');
 
@@ -42,6 +44,7 @@ Route::post('/contact', 'AllController\ContactController@contactSubmit')->name('
 
 Route::get('/payment', 'AllController\PaymentController@index')->name('post.payment');
 Route::post('/payment/vnpay', 'AllController\PaymentController@createPaymentVNPay')->name('payment.vnpay');
+Route::get('/payment/result', 'AllController\PaymentController@resultPayment')->name('payment.result');
 Route::get('/vnp/return', 'AllController\PaymentController@vnpayReturn')->name('vnpay.return');
 
 //Route::get('/detailProducts', 'AllController\DetailProductsController@index')->name('getDetailProducts');

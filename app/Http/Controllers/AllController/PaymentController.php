@@ -7,11 +7,42 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Books;
 use App\Models\Comment;
+use App\Models\Order;
+use App\Models\Order_Details;
+use App\Models\Cart;
+use App\Models\Payments;
 
 class PaymentController extends Controller
 {
 	public function index(Request $request) {
+
+		$email = $request->session()->get('email');
+		$user = DB::table('user')->where('email', $email)->first();
+		$carts = Cart::with('products', 'users')->where('idUser', $user->id)->get();
+
+		Order::create([
+			'payMents' => '',
+            'totalMoney' => $request->total,
+            'status' => 'Prosecc',
+			'idUser' => $user->id
+		]);
+
+		$idOrder_1 = DB::table('orders')->where('idUser', $user->id)->first();
+
+		foreach ($carts as $cart) {
+
+			Order_Details::create([
+				'idOrder' => $idOrder_1->idOrder,
+				'idPro' => $cart->idPro,
+				'amount' => $cart->amount
+			]);
+		}
+
 		$total = $request->total;
+
+
+		Cart::where('idUser', $user->id)->delete();
+
 		return view('_allView.payment')->with('total', $total);
 	}
 
@@ -71,6 +102,34 @@ class PaymentController extends Controller
 
 	public function vnpayReturn(Request $request)
 	{
-		dd($request->toArray());
+		if($request->vnp_ResponseCode == "00")
+		{
+			$email = $request->session()->get('email');
+			$user = DB::table('user')->where('email', $email)->first();
+			$order = DB::table('orders')->where('idUser', $user->id)->first();
+			Payments::create([
+				'idOrder' => $order->idOrder, 
+				'vnp_Amount' => $request->vnp_Amount, 
+				'vnp_BankCode' => $request->vnp_BankCode, 
+				'vnp_BankTranNo' => $request->vnp_BankTranNo, 
+				'vnp_CardType' => $request->vnp_CardType, 
+				'vnp_OrderInfo' => $request->vnp_OrderInfo, 
+				'vnp_PayDate' => $request->vnp_PayDate, 
+				'vnp_ResponseCode'  => $request->vnp_ResponseCode, 
+				'vnp_TmnCode'  => $request->vnp_TmnCode, 
+				'vnp_TransactionNo'  => $request->vnp_TransactionNo,
+				'vnp_TxnRef'  => $request->vnp_TxnRef, 
+				'vnp_SecureHashType'  => $request->vnp_SecureHashType, 
+				'vnp_SecureHash'  => $request->vnp_SecureHash
+			]);
+			session(['countCart' => 0]);
+			return view('_allView.result_payment')->with('retult',"Giao dịch thành công");
+		} 
+		return view('_allView.result_payment')->with('retult',"Giao dịch thất bại");
 	}
+
+	// public function resultPayment()
+	// {
+	// 	return view('_allView.result_payment')->with('responseCode', $request->vnp_ResponseCode);
+	// }
 }

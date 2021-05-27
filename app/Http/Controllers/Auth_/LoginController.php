@@ -61,6 +61,8 @@ class LoginController extends Controller
             $jsonData = json_encode($array);
             $request->session()->put('email', $request->email);
             $request->session()->flash('status', 'Login thành công!');
+            $request->session()->put('user', $results);
+
             if (strcmp($results->human_rights,"0") == 0) // admin
             {
                 return redirect('/admin/index')->with('keyName', $jsonData);
@@ -202,6 +204,7 @@ class LoginController extends Controller
     public function loggedOut(Request $request)
     {
         $p = $request->session()->get('email');
+
         DB::table('user')
             ->where('email', $p)
             ->update(['token' => '']);
@@ -212,7 +215,7 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
         return redirect('/');
-        //
+
     }
 
     /**
