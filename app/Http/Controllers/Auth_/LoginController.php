@@ -196,7 +196,7 @@ class LoginController extends Controller
      * @return mixed
      */
     public function log() {
-        return view('_auth.logout');
+        return redirect('/');
     }
 
     public function loggedOut(Request $request)
@@ -211,7 +211,7 @@ class LoginController extends Controller
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
-        return view('/');
+        return redirect('/');
         //
     }
 

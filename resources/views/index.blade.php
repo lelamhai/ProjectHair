@@ -93,7 +93,18 @@
                                         <span class="header__info-text">Ngọc Tuấn</span>
                                         <ul class="header__popup">
                                             <li class="header__popup-item"><a href="#" class="header__popup-link"><img class="header__popup-thumb" src="/assets/img/Log/profile-user.png" alt="" class="img-responsive">Thông tin khách hàng</a></li>
-                                            <li class="header__popup-item"><a href="#" class="header__popup-link"><img class="header__popup-thumb" src="/assets/img/Log/logout.png" alt="" class="img-responsive">Đăng xuất</a></li>
+                                            <li class="header__popup-item">
+                                                <form action="{{route('postLogout')}}" method="POST">
+                                                    @csrf
+                                                    <button>
+                                                     <img class="header__popup-thumb" src="/assets/img/Log/logout.png" alt="" class="img-responsive">Đăng xuất
+                                                    </button>
+                                                </form>
+                                               
+                                            <!--<a href="{{route('postLogout')}}" class="header__popup-link">
+                                               
+                                                </a> -->
+                                            <li>
                                         </ul>
                                     </div>
                                 </div>

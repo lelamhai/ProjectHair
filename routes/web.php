@@ -23,7 +23,7 @@ Route::group(['prefix' => 'laravel-filemanager'], function () {
 
 Route::get('/login', 'Auth_\LoginController@getLoginForm')->name('getLogin');
 Route::post('/login', 'Auth_\LoginController@login')->name('postLogin');
-Route::get('/authLogout', 'Auth_\LoginController@log')->name('getLogout');
+//Route::get('/authLogout', 'Auth_\LoginController@log')->name('getLogout');
 Route::post('/authLogout', 'Auth_\LoginController@loggedOut')->name('postLogout');
 
 Route::get('/authRegister', 'Auth_\RegisterController@getRegistrationForm')->name('getRegister');
