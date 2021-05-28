@@ -68,9 +68,8 @@ a {
 }
 
 .detail-product__right-title {
-    font-size: 22px;
-    font-weight: 800;
-    line-height: 50px;
+    line-height: 50px;  
+    font-weight: bold;
     border-bottom: 1px solid #eeebeb;
 }
 

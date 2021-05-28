@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
     <!-- Font, Icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
 
@@ -43,7 +41,7 @@
     @yield('css')
 </head>
 
-<body style="font-family: 'Roboto', sans-serif;">
+<body>
     <header class="header" id="header">
         <div class="container">
             <div class="row header__content">
@@ -68,6 +66,7 @@
                             <ul class="header__navbar-list">
                                 <li class="header__navbar-item"><a href="http://localhost:8000/" class="header__navbar-link">Trang chủ</a></li>
                                 <li class="header__navbar-item"><a href="http://localhost:8000/products" class="header__navbar-link">Sản phầm</a></li>
+                                <li class="header__navbar-item"><a href="http://localhost:8000/modelHot" class="header__navbar-link">Mẫu tóc</a></li>
                                 <li class="header__navbar-item"><a href="http://localhost:8000/service" class="header__navbar-link">Dịch vụ khác</a></li>
                                 <li class="header__navbar-item"><a href="http://localhost:8000/book" class="header__navbar-link">Đặt vé</a></li>
                                 <li class="header__navbar-item"><a href="http://localhost:8000/contact" class="header__navbar-link">Liên hệ</a></li>

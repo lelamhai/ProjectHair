@@ -61,7 +61,8 @@ section {
 }
 
 .heading-more {
-    color: rgb(226, 19, 19);
+    /* color: rgb(226, 19, 19); */
+    color: #9bb3cc;
 }
 
 .content {
