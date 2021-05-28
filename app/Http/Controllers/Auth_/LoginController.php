@@ -11,6 +11,7 @@ use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use App\User;
+use App\Models\Cart;
 
 class LoginController extends Controller
 {
@@ -53,11 +54,13 @@ class LoginController extends Controller
 
 
             $array = [
-                    "result" => true,
-                    "data" => $results,
-                    "token" => $stringToken 
-                    //"message" => "Order thành công!",
-                ];
+                "result" => true,
+                "data" => $results,
+                "token" => $stringToken 
+                //"message" => "Order thành công!",
+            ];
+            $carts = Cart::with('products', 'users')->where('idUser', $results->id)->get();
+            $request->session()->put('countCart',count( $carts));
             $jsonData = json_encode($array);
             $request->session()->put('email', $request->email);
             $request->session()->flash('status', 'Login thành công!');

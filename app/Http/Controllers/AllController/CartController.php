@@ -22,11 +22,25 @@ class CartController extends Controller
 
 	public function show(Request $request) {
 
-		Cart::create([
-            'idPro' => $request->idPro,
-            'idUser' => $request->idUser,
-            'amount' => $request->amount
-		]);
+		$flag = 0; // hasn't product be available
+		$email = $request->session()->get('email');
+		$user = DB::table('user')->where('email', $email)->first();
+		$carts_test = Cart::with('products', 'users')->where('idUser', $user->id)->get();
+
+		foreach ($carts_test as $ct) {
+			if ((int)$request->idPro == $ct->idPro) {
+				$flag = 1; // has product available
+			}
+		}
+
+		if ($flag == 0) {
+			Cart::create([
+		        'idPro' => $request->idPro,
+			    'idUser' => $request->idUser,
+			    'amount' => $request->amount
+			]);
+		}
+		
 
 		$email = $request->session()->get('email');
 		$user = DB::table('user')->where('email', $email)->first();
