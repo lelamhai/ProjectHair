@@ -21,10 +21,6 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-
-    <link rel="stylesheet" href="{{ asset('assets/css/steps10/steps10.css') }}">
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{asset('assets/css/Cart/reset.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/Log/log.css')}}" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <style>
@@ -68,7 +64,7 @@
                                 <li class="header__navbar-item"><a href="http://localhost:8000/products" class="header__navbar-link">Sản phầm</a></li>
                                 <li class="header__navbar-item"><a href="http://localhost:8000/modelHot" class="header__navbar-link">Mẫu tóc</a></li>
                                 <li class="header__navbar-item"><a href="http://localhost:8000/service" class="header__navbar-link">Dịch vụ khác</a></li>
-                                <li class="header__navbar-item"><a href="http://localhost:8000/book" class="header__navbar-link">Đặt vé</a></li>
+                                <li class="header__navbar-item" id="booking"><a href="http://localhost:8000/book" class="header__navbar-link">Đặt vé</a></li>
                                 <li class="header__navbar-item"><a href="http://localhost:8000/contact" class="header__navbar-link">Liên hệ</a></li>
                             </ul>
 
@@ -337,7 +333,7 @@ $('#myModal').on('show.bs.modal', function (e) {
     window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
 </script>
 <script src="/assets/js/owlcarousel/owl.carousel.min.js"></script>
-
+<script></script>
+<script src="/assets/js/main.js"></script>
 @yield('script')
-
 </html>
