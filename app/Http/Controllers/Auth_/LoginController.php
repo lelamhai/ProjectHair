@@ -102,7 +102,7 @@ class LoginController extends Controller
                 ];
 
         $jsonData_l = json_encode($array_l);
-        return View('index')->with('keyName', $jsonData_l);
+        return redirect('/')->with('keyName', $jsonData_l);
         //return $this->sendFailedLoginResponse($request);
     }
 

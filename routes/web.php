@@ -39,8 +39,8 @@ Route::delete('/cart/delete/{userId}/{proId}', 'AllController\CartController@del
 Route::post('/cart/plusorminus', 'AllController\CartController@plusOrMinusCart');
 
 
-Route::get('/contact', 'AllController\ContactController@index')->middleware('KhangMiddleware');
-Route::post('/contact', 'AllController\ContactController@contactSubmit')->name('contact.submit')->middleware('KhangMiddleware');
+Route::get('/contact', 'AllController\ContactController@index');
+Route::post('/contact', 'AllController\ContactController@contactSubmit');
 
 Route::get('/payment', 'AllController\PaymentController@index')->name('post.payment')->middleware('KhangMiddleware');
 Route::post('/payment/vnpay', 'AllController\PaymentController@createPaymentVNPay')->name('payment.vnpay');

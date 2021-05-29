@@ -15,7 +15,7 @@ class TyMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if ($request->has('user')) {
+        if ($request->session()->has('user')) {
             return $next($request);
         } else {
             return redirect('/');
