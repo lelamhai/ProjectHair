@@ -23,6 +23,7 @@
     <div class="container">
         <div class="heading-content">
             <h3 class="heading-title">QUY TRÌNH 10 BƯỚC</h3>
+            <a href="/service" class="heading-more">Xem thêm >></a>
         </div>
         <div class="row">
             <div class="col l-6 m-6 s-0">
@@ -65,6 +66,7 @@
     <div class="container">
         <div class="heading-content">
             <h3 class="heading-title">QUY TRÌNH 10 BƯỚC</h3>
+            <a href="/service" class="heading-more">Xem thêm >></a>
         </div>
         <div class="ten-step-mobile-slider owl-carousel owl-theme">
 			<?php
@@ -95,7 +97,7 @@
     <div class="container">
         <div class="heading-content">
             <h3 class="heading-title">TÓC HOT</h3>
-            <a href="" class="heading-more">Xem thêm >></a>
+            <a href="/modelHot" class="heading-more">Xem thêm >></a>
         </div>
         <div class="hair-hot__content">
             <div class="wrap-hot">
@@ -114,7 +116,7 @@
     <div class="container">
         <div class="heading-content">
             <h3 class="heading-title">THƯƠNG HIỆU ĐỘC QUYỀN</h3>
-            <a href="" class="heading-more">Xem thêm >></a>
+            <a href="/products" class="heading-more">Xem thêm >></a>
         </div>
 
 
