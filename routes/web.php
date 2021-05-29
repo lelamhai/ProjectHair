@@ -56,7 +56,7 @@ Route::get('/service', 'AllController\ServiceController@index')->name('getServic
 Route::get('/service/{id}', 'AllController\ServiceController@showStepOfService')->name('getServiceById');
 //-------------------------admin------------------------------
 
-Route::get('admin/index','AdminController\ServiceController@showAllServie')->name('show.service');
+Route::get('admin/index','AdminController\ServiceController@showAllServie')->name('show.service')->middleware('KhangMiddleware');
 
 Route::get('/admin/add-details-service', 'AdminController\ServiceController@indexFormAddDetailService')->name('form.addDetailsService')->middleware('KhangMiddleware');
 Route::post('/admin/add-details-service', 'AdminController\ServiceController@postDetailService')->name('post.detailService')->middleware('KhangMiddleware');

@@ -18,7 +18,7 @@ class TyMiddleware
         if ($request->session()->has('user')) {
             return $next($request);
         } else {
-            return redirect('/');
+            return redirect('/login');
         }
         
     }

@@ -19,7 +19,7 @@ class ServiceController extends Controller
 
 	public function showAllServie() {
 		$services = DB::table('services')->get();
-		return view('_adminView.index')->with('services', $services);
+		return view('_adminView.index')->with('services', $services); //the sp o day, ....
 	}
 
 	public function showAllStepOfService($id, Request $request) {
