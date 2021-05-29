@@ -50,7 +50,7 @@ body, .book-container {
   justify-content: center; }
 
 .book-container-flex{
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 
 /* line 12, book.scss */
@@ -233,6 +233,26 @@ b {
   margin-left: 35px;
 }
 
+.btn-book{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-book button{
+  background: #495057;
+  color: white;
+  border-radius: 10px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  display: block;
+  width: 25%;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
 /* line 177, book.scss */
 .modal-header {
   text-align: center; }
@@ -307,6 +327,8 @@ b {
   .list-avatar {
     max-width: 100%;
     width: 100%; } }
+
+    /* Iphone X , 6/7/8+ */
 @media only screen and (max-device-width: 414px) and (min-device-width: 375px) and (orientation: portrait) {
   /* line 276, book.scss */
   body{

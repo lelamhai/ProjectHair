@@ -22,7 +22,7 @@
                     </div>
                     <div class="list-avatar">
                         <div class="list-avatar-item">
-                          <span data-toggle="modal" data-target="#myModal">
+                          <span data-toggle="modal" data-target="#comment-Modal">
                             <img src="assets/img/Book/avatar-anonymous-300x300.png" alt="Avatar" class="avatar">
                           </span>
                           <p class="user-name">
@@ -31,7 +31,7 @@
                           
                         </div>
                         <div class="list-avatar-item">
-                          <span data-toggle="modal" data-target="#myModal">
+                          <span data-toggle="modal" data-target="#comment-Modal">
                             <img src="assets/img/Book/img_avatar2.png" alt="Avatar" class="avatar">
                           </span>
                           <p class="user-name">
@@ -40,7 +40,7 @@
                           
                         </div>
                         <div class="list-avatar-item">
-                          <span data-toggle="modal" data-target="#myModal">
+                          <span data-toggle="modal" data-target="#comment-Modal">
                             <img src="assets/img/Book/img_avatar.png" alt="Avatar" class="avatar">
                           </span>
                           <p class="user-name">
@@ -329,12 +329,17 @@
                       </label>
                     </div>
                   </div>
+                  <div class="btn-book">
+                    <button type="button">
+                      Đặt vé
+                    </button>
+                  </div>
                 </div>
 
                 
 
                 <!-- Modal -->
-                  <div id="myModal" class="modal fade" role="dialog">
+                  <div id="comment-Modal" class="modal fade" role="dialog">
                     <div class="modal-dialog">
 
                       <!-- Modal content-->

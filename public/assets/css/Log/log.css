@@ -49,7 +49,8 @@
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-button.signIn-form-button, button.signUp-form-button {
+button.signIn-form-button,
+button.signUp-form-button {
     background: #495057;
     color: white;
     height: 50px;
@@ -85,7 +86,7 @@ button.signIn-form-button, button.signUp-form-button {
 }
 
 .sign-in-container .account-input:nth-child(even) input {
-    border-top: unset;
+    border-bottom: unset;
 }
 
 .nav-tabs {
@@ -138,13 +139,14 @@ button.signIn-form-button, button.signUp-form-button {
     z-index: 977;
 }
 
-#btn-sign-up, #btn-log-in{
-  margin: unset;
-  margin-top: 25px;
+#btn-sign-up,
+#btn-log-in {
+    margin: unset;
+    margin-top: 25px;
 }
 
-.customer_btn{
-  max-width: unset;
+.customer_btn {
+    max-width: unset;
 }
 
 .modal-dialog {
@@ -152,16 +154,35 @@ button.signIn-form-button, button.signUp-form-button {
     width: max-content;
 }
 
-.modal-body{
-  padding: unset;
+.modal-body {
+    padding: unset;
 }
 
-.off-log{
-  width: unset;
-  height: unset;
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 30px;
+.off-log {
+    width: unset;
+    height: unset;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 30px;
 }
 
+/* iphone */
+
+@media screen and (max-width: 415px) {
+    .modal-dialog {
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .wrap-form {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .wrap-form {
+        width: 300px;
+    }
+}
