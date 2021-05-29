@@ -16,12 +16,12 @@ class PaymentController extends Controller
 {
 	public function index(Request $request) {
 
-		$email = $request->session()->get('email');
-		$user = DB::table('user')->where('email', $email)->first();
+		$user = $request->session()->get('user');
 		$carts = Cart::with('products', 'users')->where('idUser', $user->id)->get();
 
 		Order::create([
 			'payMents' => '',
+			'note' => $request->note,
             'totalMoney' => $request->total,
             'status' => 'Prosecc',
 			'idUser' => $user->id

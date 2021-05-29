@@ -62,7 +62,6 @@ class LoginController extends Controller
             $carts = Cart::with('products', 'users')->where('idUser', $results->id)->get();
             $request->session()->put('countCart',count( $carts));
             $jsonData = json_encode($array);
-            $request->session()->put('email', $request->email);
             $request->session()->flash('status', 'Login thành công!');
             $request->session()->put('user', $results);
 
@@ -86,7 +85,7 @@ class LoginController extends Controller
         // user surpasses their maximum number of attempts they will get locked out.
         $this->incrementLoginAttempts($request);
 
-        $phone = DB::table('user')->select('email')->where('email', $request->email)->get();
+        $email = DB::table('user')->select('email')->where('email', $request->email)->get();
 
         if (count($email) === 0) {
             $message = "Account not exit! :)) Please create a account!";

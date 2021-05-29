@@ -12,42 +12,36 @@ class CartController extends Controller
 
 	public function index (Request $request) {
 		
-		$email = $request->session()->get('email');
-		$user = DB::table('user')->where('email', $email)->first();
+		$user = $request->session()->get('user');
 		$carts = Cart::with('products', 'users')->where('idUser', $user->id)->get();
 		$request->session()->put('countCart',count( $carts));
-
 		return view('_allView.cart')->with('carts', $carts);
 	}
 
-	public function show(Request $request) {
+	public function show(Request $request, $idPro) {
 
 		$flag = 0; // hasn't product be available
-		$email = $request->session()->get('email');
-		$user = DB::table('user')->where('email', $email)->first();
+		$user = $request->session()->get('user');
 		$carts_test = Cart::with('products', 'users')->where('idUser', $user->id)->get();
 
 		foreach ($carts_test as $ct) {
-			if ((int)$request->idPro == $ct->idPro) {
+			if ((int)$idPro == $ct->idPro) {
 				$flag = 1; // has product available
 			}
 		}
 
 		if ($flag == 0) {
 			Cart::create([
-		        'idPro' => $request->idPro,
-			    'idUser' => $request->idUser,
-			    'amount' => $request->amount
+		        'idPro' => $idPro,
+			    'idUser' => $user->id,
+			    'amount' => 0
 			]);
 		}
-		
 
-		$email = $request->session()->get('email');
-		$user = DB::table('user')->where('email', $email)->first();
 		$carts = Cart::with('products', 'users')->where('idUser', $user->id)->get();
 		$request->session()->put('countCart',count( $carts));
 
-		return view('_allView.cart')->with('carts', $carts);
+		return redirect('cart')->with('carts', $carts);
 	}
 
 	public function deleteCart(Request $request)

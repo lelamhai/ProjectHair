@@ -32,19 +32,19 @@ Route::post('/authRegister', 'Auth_\RegisterController@register')->name('postReg
 
 //-------------------------public---------------------------
 Route::get('/step', 'AllController\StepController@index')->name('get10Step');
-Route::get('/book', 'AllController\BookController@index')->name('getBook');
-Route::get('/cart', 'AllController\CartController@index')->name('get.Cart');
-Route::post('/cart', 'AllController\CartController@show')->name('post.Cart');
+Route::get('/book', 'AllController\BookController@index')->name('getBook')->middleware('KhangMiddleware');
+Route::get('/cart', 'AllController\CartController@index')->name('get.Cart')->middleware('KhangMiddleware');
+Route::get('/cart/{idPro}', 'AllController\CartController@show')->name('add.Cart')->middleware('KhangMiddleware');
 Route::delete('/cart/delete/{userId}/{proId}', 'AllController\CartController@deleteCart')->name('cart.deleteCart');
 Route::post('/cart/plusorminus', 'AllController\CartController@plusOrMinusCart');
 
 
-Route::get('/contact', 'AllController\ContactController@index');
-Route::post('/contact', 'AllController\ContactController@contactSubmit')->name('contact.submit');
+Route::get('/contact', 'AllController\ContactController@index')->middleware('KhangMiddleware');
+Route::post('/contact', 'AllController\ContactController@contactSubmit')->name('contact.submit')->middleware('KhangMiddleware');
 
-Route::get('/payment', 'AllController\PaymentController@index')->name('post.payment');
+Route::get('/payment', 'AllController\PaymentController@index')->name('post.payment')->middleware('KhangMiddleware');
 Route::post('/payment/vnpay', 'AllController\PaymentController@createPaymentVNPay')->name('payment.vnpay');
-Route::get('/payment/result', 'AllController\PaymentController@resultPayment')->name('payment.result');
+Route::get('/payment/result', 'AllController\PaymentController@resultPayment')->name('payment.result')->middleware('KhangMiddleware');
 Route::get('/vnp/return', 'AllController\PaymentController@vnpayReturn')->name('vnpay.return');
 
 //Route::get('/detailProducts', 'AllController\DetailProductsController@index')->name('getDetailProducts');
@@ -56,7 +56,7 @@ Route::get('/service', 'AllController\ServiceController@index')->name('getServic
 Route::get('/service/{id}', 'AllController\ServiceController@showStepOfService')->name('getServiceById');
 //-------------------------admin------------------------------
 
-Route::get('admin/index','AdminController\ServiceController@showAllServie')->name('show.service');
+Route::get('admin/index','AdminController\ServiceController@showAllServie')->name('show.service')->middleware('KhangMiddleware');
 
 Route::get('/admin/add-details-service', 'AdminController\ServiceController@indexFormAddDetailService')->name('form.addDetailsService');
 Route::post('/admin/add-details-service', 'AdminController\ServiceController@postDetailService')->name('post.detailService');

@@ -8,7 +8,7 @@ class Order extends Model
 {
 
 	protected $fillable = [
-        'payMents', 'totalMoney', 'status', 'idUser',
+        'payMents', 'note', 'totalMoney', 'status', 'idUser',
     ];
 
 	public function order_vnp(){

@@ -107,7 +107,7 @@
                 <p>
                   Tổng tiền: <span><span id="all-money-product"><?php echo number_format($total, 0, ',', '.'); ?></span><span>₫</span></span>
                   <input type="hidden" name="total" value="<?php echo $total?>">
-                  
+                  <input type="hidden" name="note" value="">
                 </p>
               </div>
               <div class="payment">
