@@ -65,11 +65,11 @@ class LoginController extends Controller
             $request->session()->flash('status', 'Login thành công!');
             $request->session()->put('user', $results);
 
-            if (strcmp($results->human_rights,"0") == 0) // admin
+            if ((int)$results->human_rights == 0) // admin
             {
                 return redirect('/admin/index')->with('keyName', $jsonData);
             }
-            if (strcmp($results->human_rights,"1") == 0) // eml
+            if ((int)$results->human_rights == 1) // eml
             {
                 return redirect('/admin/index')->with('keyName', $jsonData); // does not exist page
             }

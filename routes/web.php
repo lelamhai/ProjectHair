@@ -56,19 +56,19 @@ Route::get('/service', 'AllController\ServiceController@index')->name('getServic
 Route::get('/service/{id}', 'AllController\ServiceController@showStepOfService')->name('getServiceById');
 //-------------------------admin------------------------------
 
-Route::get('admin/index','AdminController\ServiceController@showAllServie')->name('show.service')->middleware('KhangMiddleware');
+Route::get('admin/index','AdminController\ServiceController@showAllServie')->name('show.service');
 
-Route::get('/admin/add-details-service', 'AdminController\ServiceController@indexFormAddDetailService')->name('form.addDetailsService');
-Route::post('/admin/add-details-service', 'AdminController\ServiceController@postDetailService')->name('post.detailService');
+Route::get('/admin/add-details-service', 'AdminController\ServiceController@indexFormAddDetailService')->name('form.addDetailsService')->middleware('KhangMiddleware');
+Route::post('/admin/add-details-service', 'AdminController\ServiceController@postDetailService')->name('post.detailService')->middleware('KhangMiddleware');
 
 
-Route::get('/admin/service/{id}', 'AdminController\ServiceController@showAllStepOfService')->name('get.ServiceById');
+Route::get('/admin/service/{id}', 'AdminController\ServiceController@showAllStepOfService')->name('get.ServiceById')->middleware('KhangMiddleware');
 
-Route::get('admin/edit-step/{id}', 'AdminController\ServiceController@showStepOfServiceToEdit')->name('edit.step');
+Route::get('admin/edit-step/{id}', 'AdminController\ServiceController@showStepOfServiceToEdit')->name('edit.step')->middleware('KhangMiddleware');
 
-Route::post('admin/submit-edit-step', 'AdminController\ServiceController@editDetailService')->name('submit-edit.step');
+Route::post('admin/submit-edit-step', 'AdminController\ServiceController@editDetailService')->name('submit-edit.step')->middleware('KhangMiddleware');
 
-Route::get('admin/delete-step/{id}', 'AdminController\ServiceController@deleteStep')->name('delete.step');
+Route::get('admin/delete-step/{id}', 'AdminController\ServiceController@deleteStep')->name('delete.step')->middleware('KhangMiddleware');
 
-Route::get('admin/delete-step/{id}', 'AdminController\ServiceController@deleteStep')->name('delete.step');
+Route::get('admin/delete-step/{id}', 'AdminController\ServiceController@deleteStep')->name('delete.step')->middleware('KhangMiddleware');
 
