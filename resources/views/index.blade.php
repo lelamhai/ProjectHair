@@ -78,9 +78,9 @@
                             @if (session('user'))
 
                                     <div class="header__account">
-                                        <a href="#" class="header__logout-mobile"><img src="/assets/img/Log/logout.png" alt="" class="header__cart-img img-responsive"></a>
+                                        <a href="/authLogout" class="header__logout-mobile"><img src="/assets/img/Log/logout.png" alt="" class="header__cart-img img-responsive"></a>
 
-                                        <a href="#" class="header__cart">
+                                        <a href="/cart" class="header__cart">
                                             <div class="header__cart-wp">
                                                 <span class="header__cart-count"><i>
                                                     <?php
@@ -116,40 +116,6 @@
                                 </a>
 
                             @endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                         </nav>
                     </div>
