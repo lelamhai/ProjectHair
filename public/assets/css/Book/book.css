@@ -6,39 +6,6 @@
     padding: 0;
     box-sizing: border-box; }
   
-  /* replace bootstrap */
-  /* header */
-  
-  .modal-open {
-    overflow: auto;
-    padding-right: unset !important;
-  }
-  body{
-    line-height: unset !important;
-  }
-  
-  .xs-6 label{
-    display: unset;
-  }
-  
-  .header__navbar-link, .header__login {
-    color: black;
-  }
-  
-  .header__navbar-list{
-    margin-bottom: unset;
-  }
-  
-  /* .container {
-    width: 1200px;
-  } */
-  
-  
-  .header__navbar-link:hover, .header__login:hover{
-    color: unset;
-    text-decoration: unset;
-  }
-    /* header-end */
   
    .book-container{
       display: flex;
@@ -361,7 +328,7 @@
     .book-container-flex {
       width: 100%;
     }
-  
+
     .slot tr td {
       padding: 10px 28px;
     }
@@ -391,6 +358,7 @@
     /* line 276, book.scss */
     .book-container{
       width: auto;
+      padding: 0px 5px;
     }
   
     .book-container-flex, .slot {
@@ -401,9 +369,14 @@
       max-width: 100%;
       width: 100%; } 
     
-      .slot tr td {
-        padding: unset;
+    .slot tr td {
+      padding: unset;
     }
+
+    .nav-tabs li{
+      padding: 0px 10px;
+    }
+  
   
     .ser-perm div, .ser-dye div {
       display: block;
@@ -412,8 +385,26 @@
     .line-1-2, .line-2-2, .line-1-3, .line-2-3, .line-1-4, .line-2-4{
       margin-left: unset;
     }
-  
+
+    .modal-body .list-cmt .msg-box {
+      width: 65%;
+    }
+
+    .modal-body .list-cmt .right .cmt-user {
+      right: 10px;
+      left: unset;
+    }
   }
+
+@media only screen and (max-device-width: 320px) and (orientation: portrait){
+  .modal-body .list-cmt .msg-box {
+    width: 55%;
+  }
+
+  .nav-tabs li{
+    padding: unset;
+  }
+}
   
   /* custom radio button */
   
@@ -480,3 +471,39 @@
       border-radius: 50%;
       background: white;
   }
+
+  /* replace bootstrap */
+  /* header */
+  
+  .modal-open {
+    overflow: auto;
+    padding-right: unset !important;
+  }
+  body{
+    line-height: unset !important;
+    padding-right: unset !important;
+  }
+  
+  .xs-6 label{
+    display: unset;
+  }
+  
+  .header__navbar-link, .header__login {
+    color: black;
+  }
+  
+  .header__navbar-list{
+    margin-bottom: unset;
+  }
+  
+  /* .container {
+    width: 1200px;
+  } */
+  
+  
+  .header__navbar-link:hover, .header__login:hover{
+    color: unset;
+    text-decoration: unset;
+  }
+    /* header-end */
+  
