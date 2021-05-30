@@ -30,7 +30,7 @@
         .remove-padding-left.modal-open {
             overflow: auto;
         }
-      
+
     </style>
     <!-- JS -->
     <script src="{{asset('assets/js/login.js')}}"></script>
@@ -64,7 +64,7 @@
                                 <li class="header__navbar-item"><a href="http://localhost:8000/products" class="header__navbar-link">Sản phầm</a></li>
                                 <li class="header__navbar-item"><a href="http://localhost:8000/modelHot" class="header__navbar-link">Mẫu tóc</a></li>
                                 <li class="header__navbar-item"><a href="http://localhost:8000/service" class="header__navbar-link">Dịch vụ khác</a></li>
-                                <li class="header__navbar-item" id="booking"><a href="http://localhost:8000/book" class="header__navbar-link">Đặt vé</a></li>
+                                <li class="header__navbar-item" id="booking"><a href="http://localhost:8000/book" class="header__navbar-link" >Đặt vé</a></li>
                                 <li class="header__navbar-item"><a href="http://localhost:8000/contact" class="header__navbar-link">Liên hệ</a></li>
                             </ul>
 
@@ -74,9 +74,9 @@
                                 Đăng nhập
                             </a> -->
 
-                            
+
                             @if (session('user'))
-                            
+
                                     <div class="header__account">
                                         <a href="#" class="header__logout-mobile"><img src="/assets/img/Log/logout.png" alt="" class="header__cart-img img-responsive"></a>
 
@@ -89,9 +89,9 @@
                                                             echo 0;
                                                         } else {
                                                             echo session('countCart');
-                                                            
-                                                        } 
-                                                    ?>    
+
+                                                        }
+                                                    ?>
                                                 </i></span>
                                                 <img src="/assets/img/Log/shopping-cart.png" alt="" class="header__cart-img img-responsive">
                                             </div>
@@ -108,13 +108,13 @@
                                         </div>
                                     </div>
 
-                            @else 
-                               
+                            @else
+
                                 <a class="header__login" data-toggle="modal" href="#myModal">
                                     <i class="fas fa-crown header__login-icon"></i>
                                     Đăng nhập
-                                </a> 
-                         
+                                </a>
+
                             @endif
 
 
@@ -127,8 +127,6 @@
 
 
 
-                            
-                            
 
 
 
@@ -145,10 +143,12 @@
 
 
 
-                          
-                           
 
-                           
+
+
+
+
+
 
 
                         </nav>

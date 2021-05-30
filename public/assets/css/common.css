@@ -277,7 +277,11 @@ a {
 .header__navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.header__navbar label{
+    display: none;
 }
 
 .header__navbar-list {
@@ -295,7 +299,7 @@ a {
     color: black;
 }
 
-.header__navbar-link:hover {
+a.header__navbar-link:hover {
     text-decoration: none;
     color: #faa84f;
     transition: all 0.25s ease-out;
