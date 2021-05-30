@@ -4,7 +4,7 @@
 	<main>
 		<div class="book-container">
             <div class="book-container-flex">
-                <div class="steps">
+                {{-- <div class="steps">
                     <div class="slogan">
                         <b>THƯ GIÃN 30 PHÚT VÀ BẠN SẼ TỎA SÁNG</b>
                     </div>
@@ -15,10 +15,10 @@
                         <hr>
                         <a href="#"><span class="badge">3</span></a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="stylist">
                     <div class="stylist-label">
-                      <b><i class="fas fa-minus-circle"></i>  CHỌN STYLIST</b>
+                      <b>CHỌN STYLIST</b>
                     </div>
                     <div class="list-avatar">
                         <div class="list-avatar-item">
