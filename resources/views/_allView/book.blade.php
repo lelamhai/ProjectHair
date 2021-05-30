@@ -121,7 +121,7 @@
                 <div class="schedule">
                     <b>CHỌN NGÀY GIỜ CẮT (301 TRƯƠNG ĐỊNH)</b>
                     <div class="select-day">
-                      <ul class="nav nav-tabs">
+                      <ul class="nav nav-tabs time-booking">
                         <li class="active">
                           <a data-toggle="tab" href="#today">
                             <b>Hôm nay</b>
