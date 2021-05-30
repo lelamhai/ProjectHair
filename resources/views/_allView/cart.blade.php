@@ -119,7 +119,7 @@
               </div>
             </form>
             <div class="back-store">
-              <a> <i class="fa fa-reply mr-2"></i>Tiếp tục mua hàng </a>
+              <a href="/products"> <i class="fa fa-reply mr-2"></i>Tiếp tục mua hàng </a>
             </div>
           </div>
         </div>
