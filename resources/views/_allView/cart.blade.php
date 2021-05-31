@@ -31,7 +31,10 @@
                   <h3>{{$cart->products->title}}</h3> <!-- Title -->
                 </div>
                 <div class="price-product">
-                  <span>{{$cart->products->price}}</span> <!-- Price -->
+                  <span>
+                      <?php 
+                          echo number_format($cart->products->price, 0, ',', '.');
+                      ?>
                 </div>
                 <div class="product-quantity">
                   <button class="subtract-pro float-left" data-proid="{{$cart->idPro}}">
@@ -69,7 +72,7 @@
               <form action="" method="post" id="note-order">
                 <h5>Ghi chú đơn hàng</h5>
                 <textarea name="" id="" rows="6"></textarea>
-                <button type="button" id="btn-note">Gửi</button>
+                {{-- <button type="button" id="btn-note">Gửi</button> --}}
               </form>
             </div>
             <div class="right-note">
@@ -116,7 +119,7 @@
               </div>
             </form>
             <div class="back-store">
-              <a> <i class="fa fa-reply mr-2"></i>Tiếp tục mua hàng </a>
+              <a href="/products"> <i class="fa fa-reply mr-2"></i>Tiếp tục mua hàng </a>
             </div>
           </div>
         </div>

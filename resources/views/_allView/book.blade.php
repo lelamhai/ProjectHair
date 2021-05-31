@@ -4,21 +4,21 @@
 	<main>
 		<div class="book-container">
             <div class="book-container-flex">
-                <div class="steps">
+                {{-- <div class="steps">
                     <div class="slogan">
                         <b>THƯ GIÃN 30 PHÚT VÀ BẠN SẼ TỎA SÁNG</b>
                     </div>
                     <div class="three-steps">
-                        <a href="#"><span class="badge">1</span></a>                 
+                        <a href="#"><span class="badge">1</span></a>
                         <hr>
-                        <a href="#"><span class="badge">2</span></a>     
+                        <a href="#"><span class="badge">2</span></a>
                         <hr>
-                        <a href="#"><span class="badge">3</span></a>     
+                        <a href="#"><span class="badge">3</span></a>
                     </div>
-                </div>
+                </div> --}}
                 <div class="stylist">
-                    <div class="stylist-label">                 
-                      <b><i class="fas fa-minus-circle"></i>  CHỌN STYLIST</b>
+                    <div class="stylist-label">
+                      <b>CHỌN STYLIST</b>
                     </div>
                     <div class="list-avatar">
                         <div class="list-avatar-item">
@@ -28,7 +28,7 @@
                           <p class="user-name">
                             Mặc định
                           </p>
-                          
+
                         </div>
                         <div class="list-avatar-item">
                           <span data-toggle="modal" data-target="#comment-Modal">
@@ -37,7 +37,7 @@
                           <p class="user-name">
                             Quang Trương
                           </p>
-                          
+
                         </div>
                         <div class="list-avatar-item">
                           <span data-toggle="modal" data-target="#comment-Modal">
@@ -46,7 +46,7 @@
                           <p class="user-name">
                             Bảo Nhân
                           </p>
-                        
+
                         </div>
                         <div class="list-avatar-item">
                           <span>
@@ -55,7 +55,7 @@
                           <p class="user-name">
                             Ngọc Tỷ
                           </p>
-                        
+
                         </div>
                         <div class="list-avatar-item">
                           <span>
@@ -63,7 +63,7 @@
                           </span>
                           <p class="user-name">
                             Hoàng Vũ
-                          </p>             
+                          </p>
                         </div>
                         <div class="list-avatar-item">
                           <span>
@@ -71,7 +71,7 @@
                           </span>
                           <p class="user-name">
                             Hoàng Đẹp Trai
-                          </p>             
+                          </p>
                         </div>
                         <div class="list-avatar-item">
                           <span>
@@ -79,7 +79,7 @@
                           </span>
                           <p class="user-name">
                             Nhoxsok vjppro
-                          </p>             
+                          </p>
                         </div>
                         <div class="list-avatar-item">
                           <span>
@@ -87,7 +87,7 @@
                           </span>
                           <p class="user-name">
                             Hoàng Vũ
-                          </p>             
+                          </p>
                         </div>
                         <div class="list-avatar-item">
                           <span>
@@ -95,7 +95,7 @@
                           </span>
                           <p class="user-name">
                             Hoàng Vũ
-                          </p>             
+                          </p>
                         </div>
                         <div class="list-avatar-item">
                           <span>
@@ -103,7 +103,7 @@
                           </span>
                           <p class="user-name">
                             Hoàng Vũ
-                          </p>             
+                          </p>
                         </div>
                         <div class="list-avatar-item">
                           <span>
@@ -111,22 +111,22 @@
                           </span>
                           <p class="user-name">
                             Hoàng Vũ
-                          </p>             
+                          </p>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
                 </div>
                 <div class="schedule">
                     <b>CHỌN NGÀY GIỜ CẮT (301 TRƯƠNG ĐỊNH)</b>
                     <div class="select-day">
-                      <ul class="nav nav-tabs">
+                      <ul class="nav nav-tabs time-booking">
                         <li class="active">
                           <a data-toggle="tab" href="#today">
                             <b>Hôm nay</b>
                             <span>Thứ Tư, 27/06</span>
-                          </a>                         
+                          </a>
                         </li>
                         <li>
                           <a data-toggle="tab" href="#tomorrow">
@@ -185,7 +185,7 @@
                           </div>
                           <div id="tomorrow" class="tab-pane fade">
                             <table class="slot" >
-                              <tbody> 
+                              <tbody>
                                 <tr>
                                   <td>8h30<br><span class="slot-status">Hết chỗ</span></td>
                                   <td>9h00<br><span class="slot-status">Hết chỗ</span></td>
@@ -268,7 +268,7 @@
 
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="service">
                   <b class="service-tittle" >DỊCH VỤ</b>
@@ -336,7 +336,7 @@
                   </div>
                 </div>
 
-                
+
 
                 <!-- Modal -->
                   <div id="comment-Modal" class="modal fade" role="dialog">
@@ -406,20 +406,12 @@
 
 
 	</main>
-
-
-
-
-
-
-
-
 	{{-- <br><br><br><br>
 	<h3>Danh sach cac stylic</h3>
 	@foreach ($emps as $emp)
-		{{$emp->name}}	
+		{{$emp->name}}
 	@endforeach
-	
+
 	<h3>Danh sach lich da duoc dat cua cac stylic</h3>
 
 	@foreach ($listReserved as $item)
@@ -430,7 +422,7 @@
 
 	<h3>Noi dung comment</h3>
 	@foreach ($comments as $comment)<!-- if theo mã stylic -->
-		{{$comment->idEmp}} : {{$comment->emp_comment->name}} 
+		{{$comment->idEmp}} : {{$comment->emp_comment->name}}
 		{{$comment->idUser}} : {{$comment->users_comment->name}} <p>{{$comment->content}}</p>
 		<h3>///</h3>
 	@endforeach --}}
