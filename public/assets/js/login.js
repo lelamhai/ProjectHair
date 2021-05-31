@@ -316,42 +316,42 @@ $(document).ready(function () {
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         const regex_phone = /(0[3|5|7|8|9])+([0-9]{8})\b/;
 
-        let email_check = $("#email").val();
-        let pass_check = $("#pass").val();
-        let repass_check = $("#repass").val();
-        let name_check = $("#name").val();
-        let phone_check = $("#phone").val();
+        let email_check = $("#email-page").val();
+        let pass_check = $("#pass-page").val();
+        let repass_check = $("#repass-page").val();
+        let name_check = $("#name-page").val();
+        let phone_check = $("#phone-page").val();
 
         let flag = true;
 
         if (name_check === "") {
-            $("#name").addClass("error-input");
-            $("#name").attr("placeholder", "Bổ sung tên đầy đủ");
+            $("#name-page").addClass("error-input");
+            $("#name-page").attr("placeholder", "Bổ sung tên đầy đủ");
             setTimeout(function () {
-                $("#name").removeClass("error-input");
-                $("#name").attr("placeholder", "Nhập tên ở đây");
-                $("#name").val("");
+                $("#name-page").removeClass("error-input");
+                $("#name-page").attr("placeholder", "Nhập tên ở đây");
+                $("#name-page").val("");
             }, 2500);
             flag = false;
         }
 
         if (phone_check === "" || !phone_check.match(regex_phone)) {
-            $("#phone").addClass("error-input");
-            $("#phone").attr("placeholder", "Bổ sung số điện thoại đầy đủ");
+            $("#phone-page").addClass("error-input");
+            $("#phone-page").attr("placeholder", "Bổ sung số điện thoại đầy đủ");
             setTimeout(function () {
-                $("#phone").removeClass("error-input");
-                $("#phone").attr("placeholder", "Nhập số điện thoại ở đây");
-                $("#phone").val("");
+                $("#phone-page").removeClass("error-input");
+                $("#phone-page").attr("placeholder", "Nhập số điện thoại ở đây");
+                $("#phone-page").val("");
             }, 2500);
             flag = false;
         }
         if (email_check === "" || !email_check.match(email)) {
-            $("#email").addClass("error-input");
-            $("#email").attr("placeholder", "Bổ sung email đầy đủ");
+            $("#email-page").addClass("error-input");
+            $("#email-page").attr("placeholder", "Bổ sung email đầy đủ");
             setTimeout(function () {
-                $("#email").removeClass("error-input");
-                $("#email").attr("placeholder", "Nhập email ở đây");
-                $("#email").val("");
+                $("#email-page").removeClass("error-input");
+                $("#email-page").attr("placeholder", "Nhập email ở đây");
+                $("#email-page").val("");
             }, 2500);
             flag = false;
         }
@@ -361,23 +361,23 @@ $(document).ready(function () {
             pass_check.length < 8 ||
             pass_check.length > 16
         ) {
-            $("#pass").addClass("error-input");
-            $("#pass").attr("placeholder", "Bổ sung password đầy đủ");
+            $("#pass-page").addClass("error-input");
+            $("#pass-page").attr("placeholder", "Bổ sung password đầy đủ");
             setTimeout(function () {
-                $("#pass").removeClass("error-input");
-                $("#pass").attr("placeholder", "Nhập password ở đây");
-                $("#pass").val("");
+                $("#pass-page").removeClass("error-input");
+                $("#pass-page").attr("placeholder", "Nhập password ở đây");
+                $("#pass-page").val("");
             }, 2500);
             flag = false;
         }
 
         if (!pass_check.match(repass_check)) {
-            $("#repass").addClass("error-input");
-            $("#repass").attr("placeholder", "Bổ sung repassword đầy đủ");
+            $("#repass-page").addClass("error-input");
+            $("#repass-page").attr("placeholder", "Bổ sung repassword đầy đủ");
             setTimeout(function () {
-                $("#repass").removeClass("error-input");
-                $("#repass").attr("placeholder", "Nhập repassword ở đây");
-                $("#repass").val("");
+                $("#repass-page").removeClass("error-input");
+                $("#repass-page").attr("placeholder", "Nhập repassword ở đây");
+                $("#repass-page").val("");
             }, 2500);
             flag = false;
         }
