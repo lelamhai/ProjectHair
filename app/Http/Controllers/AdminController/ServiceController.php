@@ -13,7 +13,7 @@ class ServiceController extends Controller
 	public function indexFormAddDetailService(Request $request) {
 		$services = DB::table('services')->get();
 		$p = $request->session()->get('idService');
-		return view('_adminView.add_detail_service')->with(['services'=> $services,
+		return view('_adminView.service.add_step')->with(['services'=> $services,
 													'idService' => $p]);
 	}
 
@@ -28,7 +28,7 @@ class ServiceController extends Controller
 		$services = DB::table('services')->get();
 		$service = DB::table('services')->where('id', $id)->first();
 		$request->session()->put('idService', $id);
-		return view('_adminView.show_detail_service')->with(['steps'=> $steps,
+		return view('_adminView.service.show_service')->with(['steps'=> $steps,
 															'services'=> $services,
 															'service' => $service]);
 	}
@@ -79,7 +79,7 @@ class ServiceController extends Controller
     	$step = DB::table('service__details')->where('id', $id)->first();
     	$services = DB::table('services')->get();
 		$p = $request->session()->get('idService');
-    	return view('_adminView.edit_step')->with(['services'=> $services,
+    	return view('_adminView.service.edit_step')->with(['services'=> $services,
 													'idService' => $p,
 													'step' => $step]);
     }
