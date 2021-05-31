@@ -12,24 +12,30 @@ class ServiceController extends Controller
 {
 	public function indexFormAddDetailService(Request $request) {
 		$services = DB::table('services')->get();
+		$categories = DB::table('categories')->get();
 		$p = $request->session()->get('idService');
 		return view('_adminView.service.add_step')->with(['services'=> $services,
-													'idService' => $p]);
+														  'categories' => $categories,
+													      'idService' => $p]);
 	}
 
-	public function showAllServie() {
+	public function showMenu() {
 		$services = DB::table('services')->get();
-		return view('_adminView.index')->with('services', $services); //the sp o day, ....
+		$categories = DB::table('categories')->get();
+		return view('_adminView.index')->with(['services' => $services,
+												'categories' => $categories]);
 	}
 
 	public function showAllStepOfService($id, Request $request) {
 		//$steps = Service_Details::paginate(4)->where('idService', $id);
 		$steps = DB::table('service__details')->where('idService', $id)->paginate(3);
 		$services = DB::table('services')->get();
-		$service = DB::table('services')->where('id', $id)->first();
+		$categories = DB::table('categories')->get();
+		$service = DB::table('services')->where('id', $id)->first(); // lấy tên cate
 		$request->session()->put('idService', $id);
 		return view('_adminView.service.show_service')->with(['steps'=> $steps,
 															'services'=> $services,
+															'categories' => $categories,
 															'service' => $service]);
 	}
 
@@ -78,10 +84,12 @@ class ServiceController extends Controller
     public function showStepOfServiceToEdit($id, Request $request) {
     	$step = DB::table('service__details')->where('id', $id)->first();
     	$services = DB::table('services')->get();
+    	$categories = DB::table('categories')->get();
 		$p = $request->session()->get('idService');
     	return view('_adminView.service.edit_step')->with(['services'=> $services,
-													'idService' => $p,
-													'step' => $step]);
+    													   'categories' => $categories,
+														   'idService' => $p,
+													       'step' => $step]);
     }
 
     public function deleteStep($id) {

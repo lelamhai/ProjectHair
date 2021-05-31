@@ -18,10 +18,9 @@ class PaymentController extends Controller
 
 		$user = $request->session()->get('user');
 		$carts = Cart::with('products', 'users')->where('idUser', $user->id)->get();
-
 		Order::create([
 			'payMents' => '',
-			'note' => $request->note,
+			'note' => $request->note . ' ',
             'totalMoney' => $request->total,
             'status' => 'Prosecc',
 			'idUser' => $user->id

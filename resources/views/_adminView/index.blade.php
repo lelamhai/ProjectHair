@@ -49,8 +49,9 @@
 									Sản Phẩm<i class="fas fa-plus"></i>
                                 </div>
                                 <div class="left__text">
-                                    <a class="left__link" href="insert_product.html">Chèn Sản Phẩm</a>
-                                    <a class="left__link" href="view_product.html">Xem Sản Phẩm</a>
+                                    @foreach ($categories as $cate)
+                                        <a class="left__link" href="/admin/product/{{$cate->idCate}}">{{$cate->title}}</a>
+                                    @endforeach
                                 </div>
                             </li>
 
