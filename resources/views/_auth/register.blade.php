@@ -59,42 +59,42 @@
                 </div>
                 <div id="sign-up" class="tab-pane fade in active">
                     <div class="form-container sign-up-container">
-                        <form action="#" id="sign-up-form">
+                        <form action="#" id="sign-up-page">
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('assets/img/Log/icon_user.png')}}" alt="">
                                 </div>
-                                <input type="text" placeholder="Họ Tên" id="name" />
+                                <input type="text" placeholder="Họ Tên" id="name-page" />
                             </div>
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('assets/img/Log/icon_phone.png')}}" alt="">
                                 </div>
-                                <input type="text" placeholder="Số Điện Thoại" id="phone" />
+                                <input type="text" placeholder="Số Điện Thoại" id="phone-page" />
                             </div>
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('assets/img/Log/icon_letter.png')}}" alt="">
                                 </div>
-                                <input type="email" placeholder="Email" id="email" />
+                                <input type="email" placeholder="Email" id="email-page" />
                             </div>
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('/assets/img/Log/icon_lock.png')}}" alt="">
                                 </div>
-                                <input type="password" placeholder="Mật Khẩu" id="pass" />
+                                <input type="password" placeholder="Mật Khẩu" id="pass-page" />
                             </div>
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('/assets/img/Log/icon_lock.png')}}" alt="">
                                 </div>
-                                <input type="password" placeholder="Nhập Lại Mật Khẩu" class="last-child" id="repass" />
+                                <input type="password" placeholder="Nhập Lại Mật Khẩu" class="last-child" id="repass-page" />
                             </div>
                             <div class="cappcha-input">
-                                <div id="divGenerateRandomValues1"></div>
+                                <div id="divGenerateRandomValues1-page"></div>
                                 <input type="text" id='txtInput1' />
                             </div>
-                            <button class="mt-3 signUp-form-button" id="btn-sign-up" type="button">Sign Up</button>
+                            <button class="mt-3 signUp-form-button" id="btn-sign-up-page" type="button">Sign Up</button>
                         </form>
                     </div>
                 </div>

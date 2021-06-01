@@ -263,7 +263,7 @@
             <div class="tab-content">
                 <div id="log-in" class="tab-pane fade in active">
                     <div class="form-container sign-in-container">
-                        <form action="{{route('postLogin')}}" id="sign-in-container" method="POST">
+                        <form action="{{route('postLogin')}}" id="sign-in-page" method="POST">
                             @csrf
                             <div class="account-input">
                                 <div class="icon-form">
@@ -278,11 +278,11 @@
                                 <input name="password" type="password" placeholder="Mật Khẩu" />
                             </div>
                             <div class="cappcha-input">
-                                <div id="divGenerateRandomValues"></div>
+                                <div id="divGenerateRandomValues-page"></div>
                                 <input type="text" id='txtInput' />
                             </div>
                             <p class="forgot" id="slidedown">Forgot your password?</p>
-                            <button class="signIn-form-button" id="btn-log-in" type="button">Sign In</button>
+                            <button class="signIn-form-button" id="btn-log-in-page" type="button">Sign In</button>
                         </form>
                     </div>
                     <div class="hide" id="forgot">
