@@ -71,7 +71,7 @@
                             </li>
 
                             <li class="left__menuItem">
-                                <div class="left__title">Quản lý đơn hàng
+                                <a class="left__title" href="/admin/order">Quản lý đơn hàng</a>
                             </li>
 
                             <li class="left__menuItem">

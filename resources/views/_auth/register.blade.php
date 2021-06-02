@@ -92,7 +92,7 @@
                             </div>
                             <div class="cappcha-input">
                                 <div id="divGenerateRandomValues1-page"></div>
-                                <input type="text" id='txtInput1' />
+                                <input type="text" id='txtInput1-page' />
                             </div>
                             <button class="mt-3 signUp-form-button" id="btn-sign-up-page" type="button">Sign Up</button>
                         </form>

@@ -37,7 +37,7 @@
                             </div>
                             <div class="cappcha-input">
                                 <div id="divGenerateRandomValues-page"></div>
-                                <input type="text" id='txtInput' />
+                                <input type="text" id='txtInput-page' />
                             </div>
                             <p class="forgot" id="slidedown">Forgot your password?</p>
                             <button class="signIn-form-button" id="btn-log-in-page" type="button">Sign In</button>

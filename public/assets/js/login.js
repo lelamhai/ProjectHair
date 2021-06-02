@@ -1,5 +1,6 @@
 $(document).ready(function () {
     let flag_capcha;
+    let flag_capcha1;
     gen_capcha();
     $("#slideup").click(function () {
         $("#forgot").addClass("hide");
@@ -219,7 +220,9 @@ $(document).ready(function () {
     }
 
     // page=============================================
+
     $("#btn-log-in-page").click(function (e) {
+
         const email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let email_check = $(
             "#sign-in-page .account-input input[type=email]"
@@ -277,7 +280,10 @@ $(document).ready(function () {
             flag = false;
         }
 
-        if ($("#txtInput-page").val() != flag_capcha) {
+        console.log("input: " + $("#txtInput-page").val());
+        console.log("check_flag" + flag_capcha1);
+
+        if ($("#txtInput-page").val() != flag_capcha1) {
             gen_capcha_page();
             flag = false;
         }
@@ -309,7 +315,10 @@ $(document).ready(function () {
             color: "black",
         });
         $("#txtNewInput-page").val(iNumber);
-        flag_capcha = iNumber;
+        flag_capcha1 = iNumber;
+
+        console.log("check 1" + flag_capcha1);
+        console.log("check 2:" + iNumber);
     }
     $("#btn-sign-up-page").click(function (e) {
         const email =
@@ -382,7 +391,7 @@ $(document).ready(function () {
             flag = false;
         }
 
-        if ($("#txtInput1-page").val() != flag_capcha) {
+        if ($("#txtInput1-page").val() != flag_capcha1) {
             gen_capcha1_page();
             flag = false;
         }
@@ -414,6 +423,6 @@ $(document).ready(function () {
             color: "black",
         });
         $("#txtNewInput1-page").val(iNumber);
-        flag_capcha = iNumber;
+        flag_capcha1 = iNumber;
     }
 });
