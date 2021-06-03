@@ -165,7 +165,7 @@ $(document).ready(function () {
         }
 
         if (flag == true) {
-            $("#sign-in-container").submit();
+            $("#sign--container").submit();
         }
     });
 

@@ -34,7 +34,7 @@ class CartController extends Controller
 			Cart::create([
 		        'idPro' => $idPro,
 			    'idUser' => $user->id,
-			    'amount' => 0
+			    'amount' => 1
 			]);
 		}
 

@@ -12,7 +12,7 @@
     <div class="container">
         <div class="wrap-form">
             <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="/login">Đăng Nhập</a></li>
+                <li class="active"><a data-toggle="tab" href="#log-in">Đăng Nhập</a></li>
                 <li class=""><a href="{{route('getRegister')}}">Đăng Kí</a></li>
             </ul>
             <div class="logo">
@@ -65,7 +65,8 @@
                 </div>
                 <div id="sign-up" class="tab-pane fade">
                     <div class="form-container sign-up-container">
-                        <form action="#" id="sign-up-form">
+                        <form action="{{route('post.Register')}}" id="sign-up-form" method="POST">
+                            @csrf
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('assets/img/Log/icon_user.png')}}" alt="">

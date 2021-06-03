@@ -39,9 +39,6 @@ class PaymentController extends Controller
 
 		$total = $request->total;
 
-
-		Cart::where('idUser', $user->id)->delete();
-
 		return view('_allView.payment')->with('total', $total);
 	}
 
@@ -103,8 +100,7 @@ class PaymentController extends Controller
 	{
 		if($request->vnp_ResponseCode == "00")
 		{
-			$email = $request->session()->get('email');
-			$user = DB::table('user')->where('email', $email)->first();
+			$user = $request->session()->get('user');
 			$order = DB::table('orders')->where('idUser', $user->id)->first();
 			Payments::create([
 				'idOrder' => $order->idOrder, 
@@ -122,6 +118,9 @@ class PaymentController extends Controller
 				'vnp_SecureHash'  => $request->vnp_SecureHash
 			]);
 			session(['countCart' => 0]);
+
+			Cart::where('idUser', $user->id)->delete();
+
 			return view('_allView.result_payment')->with('retult',"Giao dịch thành công");
 		} 
 		return view('_allView.result_payment')->with('retult',"Giao dịch thất bại");

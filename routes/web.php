@@ -23,7 +23,7 @@ Route::get('/login', 'Auth_\LoginController@getLoginForm')->name('getLogin');
 Route::post('/login', 'Auth_\LoginController@login')->name('postLogin');
 Route::get('/authLogout', 'Auth_\LoginController@loggedOut')->name('getLogout');
 Route::get('/authRegister', 'Auth_\RegisterController@getRegistrationForm')->name('getRegister');
-Route::post('/authRegister', 'Auth_\RegisterController@register')->name('postRegister');
+Route::post('/authRegister', 'Auth_\RegisterController@register')->name('post.Register');
 
 //-------------------------public---------------------------//
 Route::get('/step', 'AllController\StepController@index')->name('get10Step');

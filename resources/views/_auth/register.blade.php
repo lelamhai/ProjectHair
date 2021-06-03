@@ -59,30 +59,31 @@
                 </div>
                 <div id="sign-up" class="tab-pane fade in active">
                     <div class="form-container sign-up-container">
-                        <form action="#" id="sign-up-page">
+                        <form action="{{route('post.Register')}}" id="sign-up-page" method="POST">
+                            @csrf
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('assets/img/Log/icon_user.png')}}" alt="">
                                 </div>
-                                <input type="text" placeholder="Họ Tên" id="name-page" />
+                                <input type="text" placeholder="Họ Tên" id="name-page" name="name" />
                             </div>
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('assets/img/Log/icon_phone.png')}}" alt="">
                                 </div>
-                                <input type="text" placeholder="Số Điện Thoại" id="phone-page" />
+                                <input type="text" placeholder="Số Điện Thoại" id="phone-page" name="phone"/>
                             </div>
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('assets/img/Log/icon_letter.png')}}" alt="">
                                 </div>
-                                <input type="email" placeholder="Email" id="email-page" />
+                                <input type="email" placeholder="Email" id="email-page" name="email"/>
                             </div>
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('/assets/img/Log/icon_lock.png')}}" alt="">
                                 </div>
-                                <input type="password" placeholder="Mật Khẩu" id="pass-page" />
+                                <input type="password" placeholder="Mật Khẩu" id="pass-page" name="password"/>
                             </div>
                             <div class="account-input">
                                 <div class="icon-form">
