@@ -320,6 +320,10 @@ a.header__navbar-link:hover {
     text-decoration: none;
     color: #000;
 }
+.header__login:hover{
+    text-decoration: none;
+    color: rgb(100, 99, 99);
+}
 
 .header__logo {
     max-width: 100px;

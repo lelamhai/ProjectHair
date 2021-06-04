@@ -66,9 +66,12 @@ a {
 .detail-product {
     padding: 100px 0 20px 0;
 }
-
-.detail-product__right {
-    position:fixed;
+.detail-product__right{
+    position: relative;
+}
+.detail-product__right--fixed{
+    position:sticky;
+    z-index: 100;
     background-color: #fff;
 }
 

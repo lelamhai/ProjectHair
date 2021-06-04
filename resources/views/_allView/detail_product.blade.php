@@ -3,7 +3,7 @@
 @section('content')
 
 
-<section class="detail-product">
+<section class="detail-product" id="detail-product">
         <section class="container detail-product-wp">
             <div class="row">
                 <div class="col l-6 m-12">
@@ -11,8 +11,8 @@
                         <img src="{{$product->thumbnail}}" alt="" class="detail-product__img img-responsive">
                     </div>
                 </div>
-                <div class="col l-6 m-12">
-                    <div class="detail-product__right">
+                <div class="col l-6 m-12 detail-product__right">
+                    <div class=" detail-product__right--fixed">
                         <h3 class="detail-product__right-title">
 							{{$product->title}}
                         </h3>
@@ -23,14 +23,14 @@
                             <div class="detail-product__right-value">
                                 {{-- <div class="detail-product__right-price-new"></div> --}}
                                 <div class="detail-product__right-price">
-                                    <span>Giá tiền:</span><span class="detail-product__right-price-new">{{$product->price}}đ</span>  
+                                    <span>Giá tiền:</span><span class="detail-product__right-price-new">{{$product->price}}đ</span>
                                 </div>
                             </div>
                             <div class="detail-product__right-submit">
                                     <a href="/cart/{{$product->idPro}}" class="detail-product__right-btn">THÊM VÀO GIỎ</a>
                             </div>
                         </div>
-                       
+
                         <div class="detail-product__right-label">
                             <i class="fas fa-check-circle"></i>
                             <span>CHẤT LƯỢNG ĐẢM BẢO Hơn 200 Thương Hiệu hàng đầu Thế Giới</span>
