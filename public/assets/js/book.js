@@ -52,26 +52,28 @@ $(document).ready(function () {
             userId: userId
         },
         success: function (response){
-          var obj = jQuery.parseJSON(response);
-          if(obj.result)
-          {
-              $( ".item-time").each(function( index, element ) {
-                  $(element).removeClass("booking");
-              });
+         if(response.result)
+         {
+             $( ".item-time").each(function( index, element ) {
+                 $(element).removeClass("booking");
+             });
 
-
-              var list = obj.index;
-              var i = 0;
-              $.each(list, function() {
-                $( ".item-time").each(function( index, element ) {
-                    if(list[i] == index)
-                    {
-                        $(element).addClass("booking");
-                    } 
-                });
-                i++;
-              });
-          }
+            var list = [];
+             $.each(response.index, function( index, value ) {
+              list.push(value.idEmp);
+            });
+            
+             var i = 0;
+             $.each(list, function() {
+               $( ".item-time").each(function( index, element ) {
+                   if(list[i] == index)
+                   {
+                       $(element).addClass("booking");
+                   } 
+               });
+               i++;
+             });
+         }
       }
      });
   });

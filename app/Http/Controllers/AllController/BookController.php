@@ -27,7 +27,12 @@ class BookController extends Controller
 
 	public function user(Request $request)
 	{
-		$json = "{\"result\": true, \"index\": [1,7,12,15,24,30,55,74]}";
-        return response()->json($json);
+		$comments = DB::table('comments')->where('idEmp', $request->userId)->get();
+		$index = DB::table('books')->select('idEmp')->where('idEmp', $request->userId)->get();
+		return response()->json([
+			'result' => true,
+			'comments' => $comments,
+			'index' => $index
+		]);
 	}
 }
