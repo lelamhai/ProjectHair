@@ -9,21 +9,51 @@
                       <b>CHỌN STYLIST</b>
                     </div>
                     <div class="list-avatar">
+
+                    <?php $loadFirst = true; ?>
                     @foreach ($emps as $emp)
-                      <div class="wrap-avatar-boookig">
-                        <div class="icon-info-bookig" data-toggle="modal" data-target="#comment-Modal">
-                          <img src="assets/img/Book/icon-info.png" alt="" >
-                        </div>
-                        <div class="list-avatar-item" data-user="{{$emp->id}}">
-                          <span data-toggle="modal">
-                            <img src="assets/img/Book/avatar-anonymous-300x300.png" alt="Avatar" class="avatar">
-                          </span>
-                          <p class="user-name">
-                            {{$emp->name}}
-                          </p>
-                        </div>
-                      </div>
+                      <?php
+                        if($loadFirst)
+                        {
+                          ?>
+                            <div class="wrap-avatar-boookig">
+                              <div class="icon-info-bookig" data-toggle="modal" data-target="#comment-Modal">
+                                <img src="assets/img/Book/icon-info.png" alt="" >
+                              </div>
+                              <div class="list-avatar-item stylish-active" data-user="{{$emp->id}}">
+                                <span data-toggle="modal">
+                                  <img src="assets/img/Book/avatar-anonymous-300x300.png" alt="Avatar" class="avatar">
+                                </span>
+                                <p class="user-name">
+                                  {{$emp->name}}
+                                </p>
+                              </div>
+                            </div>
+                          <?php
+                        } else {
+                          ?>
+                            <div class="wrap-avatar-boookig">
+                              <div class="icon-info-bookig" data-toggle="modal" data-target="#comment-Modal">
+                                <img src="assets/img/Book/icon-info.png" alt="" >
+                              </div>
+                              <div class="list-avatar-item" data-user="{{$emp->id}}">
+                                <span data-toggle="modal">
+                                  <img src="assets/img/Book/avatar-anonymous-300x300.png" alt="Avatar" class="avatar">
+                                </span>
+                                <p class="user-name">
+                                  {{$emp->name}}
+                                </p>
+                              </div>
+                            </div>
+                          <?php
+                        }
+                        $loadFirst = false;
+                      ?>
                     @endforeach
+
+
+
+
                     <div class="list-avatar-item">
                       <span data-toggle="modal" data-target="#comment-Modal">
                         <img src="assets/img/Book/avatar-anonymous-300x300.png" alt="Avatar" class="avatar">
