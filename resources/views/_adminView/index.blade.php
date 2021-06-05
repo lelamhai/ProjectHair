@@ -4,9 +4,12 @@
 	<title>Admin nha!! Giết:))</title>
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta http-equiv="refresh" content="{{ route('form.addDetailsService') }}">
-	<link rel="stylesheet" href="/assets/admin/css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+	<link rel="stylesheet" href="/assets/admin/css/main.css">
+
+
+    <link rel="stylesheet" href="/assets/admin/css/booking.css">
+    <link rel="stylesheet" href="/assets/admin/css/popup.css">
 
 </head>
 <body>
@@ -98,6 +101,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
     <script src="/assets/admin/js/main.js"></script>
+    <script src="/assets/admin/js/popup.js"></script>
 
 	<script>
 		$('#lfm').filemanager('image');
