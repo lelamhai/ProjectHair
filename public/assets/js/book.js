@@ -38,4 +38,13 @@ $(document).ready(function () {
   change_status();
   change_position();
   select_stylish();
+
+
+  
+  $( ".list-avatar-item" ).click(function() {
+      $userId = $(this).data('user');
+  });
+
+
+
 });
