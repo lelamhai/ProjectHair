@@ -35,6 +35,7 @@ Route::get('/service/{id}', 'AllController\ServiceController@showStepOfService')
 Route::get('/modelHot', 'AllController\ModelHotController@index')->name('getModelHot');
 //  ===================== booking ===================
 Route::get('/book', 'AllController\BookController@index')->name('getBook')->middleware('KhangMiddleware');
+Route::post('/book/user', 'AllController\BookController@user');
 //  ===================== cart ===================
 Route::get('/cart', 'AllController\CartController@index')->name('get.Cart')->middleware('KhangMiddleware');
 Route::get('/cart/{idPro}', 'AllController\CartController@show')->name('add.Cart')->middleware('KhangMiddleware');

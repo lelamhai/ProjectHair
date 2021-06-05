@@ -42,9 +42,38 @@ $(document).ready(function () {
 
   
   $( ".list-avatar-item" ).click(function() {
-      $userId = $(this).data('user');
+      var token = $("meta[name='csrf-token']").attr("content");
+      var userId = parseInt($(this).data('user'));
+      $.ajax({
+        url:"/book/user",
+        method:'POST',
+        data: {
+            _token: token,
+            userId: userId
+        },
+        success: function (response){
+          var obj = jQuery.parseJSON(response);
+          if(obj.result)
+          {
+              $( ".item-time").each(function( index, element ) {
+                  $(element).removeClass("booking");
+              });
+
+
+              var list = obj.index;
+              var i = 0;
+              $.each(list, function() {
+                $( ".item-time").each(function( index, element ) {
+                    if(list[i] == index)
+                    {
+                        $(element).addClass("booking");
+                    } 
+                });
+                i++;
+              });
+          }
+      }
+     });
   });
-
-
 
 });
