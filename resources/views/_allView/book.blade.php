@@ -149,6 +149,7 @@
 
                     </div>
                 </div>
+
                 <div class="schedule">
                     <b>CHỌN NGÀY GIỜ CẮT (301 TRƯƠNG ĐỊNH)</b>
                     <div class="select-day">
@@ -174,55 +175,55 @@
                       </ul>
                         <div class="tab-content">
                           <div id="today" class="tab-pane fade in active">
-                            <div class="wrap-day">
+                            <div class="wrap-day" id="today">
                               <div class="item-time">8h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">9h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">9h30<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">9h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">10h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">10h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">11h00<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time booking">11h00<br><span class="slot-status">Hết chỗ</span></div>
                               <div class="item-time">11h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">12h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">12h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">13h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">13h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">14h00<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time booking">14h00<br><span class="slot-status">Hết chỗ</span></div>
                               <div class="item-time">14h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">15h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">15h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">16h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">16h30<br><span class="slot-status">Hết chỗ</span></div>
-                              <div class="item-time booking">17h00<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time">16h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time booking">17h00<br><span class="slot-status">Hết chỗ</span></div>
                               <div class="item-time">17h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">18h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">18h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">19h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">19h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">20h00<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time booking">19h30<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time booking">20h00<br><span class="slot-status">Hết chỗ</span></div>
                               <div class="item-time">20h30<br><span class="slot-status">Còn chỗ</span></div>
                             </div>
                           </div>
                           <div id="tomorrow" class="tab-pane fade">
-                            <div class="wrap-day">
-                              <div class="item-time">8h30<br><span class="slot-status">Hết chỗ</span></div>
-                              <div class="item-time">9h00<br><span class="slot-status">Hết chỗ</span></div>
-                              <div class="item-time">9h30<br><span class="slot-status">Hết chỗ</span></div>
-                              <div class="item-time">10h00<br><span class="slot-status">Hết chỗ</span></div>
+                            <div class="wrap-day" id="tomorrow">
+                              <div class="item-time">8h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time">9h00<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time">9h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time">10h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time booking">10h30<br><span class="slot-status">Hết chỗ</span></div>
-                              <div class="item-time booking">11h00<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time booking">11h00<br><span class="slot-status">Hết chỗ</span></div>
                               <div class="item-time">11h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">12h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">12h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">13h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">13h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time booking">13h30<br><span class="slot-status">Hết chỗ</span></div>
                               <div class="item-time">14h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">14h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time booking">14h30<br><span class="slot-status">Hết chỗ</span></div>
                               <div class="item-time">15h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">15h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">16h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">16h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">17h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">17h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time booking">17h30<br><span class="slot-status">Hết chỗ</span></div>
                               <div class="item-time">18h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">18h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">19h00<br><span class="slot-status">Còn chỗ</span></div>
@@ -233,31 +234,31 @@
 
                           </div>
                           <div id="after-tomorrow" class="tab-pane fade">
-                            <div class="wrap-day">
+                            <div class="wrap-day" id="aftertomorrow">
                               <div class="item-time">8h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">9h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">9h30<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">9h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">10h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">10h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">11h00<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time booking">11h00<br><span class="slot-status">Hết chỗ</span></div>
                               <div class="item-time">11h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">12h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">12h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">13h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">13h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">14h00<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time booking">14h00<br><span class="slot-status">Hết chỗ</span></div>
                               <div class="item-time">14h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">15h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">15h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">16h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">16h30<br><span class="slot-status">Hết chỗ</span></div>
-                              <div class="item-time booking">17h00<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time">16h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time booking">17h00<br><span class="slot-status">Hết chỗ</span></div>
                               <div class="item-time">17h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">18h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">18h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">19h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">19h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">20h00<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time booking">19h30<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time booking">20h00<br><span class="slot-status">Hết chỗ</span></div>
                               <div class="item-time">20h30<br><span class="slot-status">Còn chỗ</span></div>
                             </div>
                           </div>
@@ -330,6 +331,9 @@
                   </div>
                 </div>
 
+               
+
+                
 
 
                 <!-- Modal -->

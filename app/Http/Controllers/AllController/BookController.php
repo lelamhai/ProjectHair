@@ -12,6 +12,8 @@ class BookController extends Controller
 {
 	public function index() {
 
+		
+
 		$emps = DB::table('user')->where('human_rights', 1)->get();
 
 		$listReserved = Books::with('users_book', 'emp_book')->get();
@@ -22,5 +24,10 @@ class BookController extends Controller
 											'listReserved' => $listReserved,
 											'comments' => $comments]);
 	}
-    //
+
+	public function user(Request $request)
+	{
+		$json = "{\"result\": true, \"index\": [1,7,12,15,24,30,55,74]}";
+        return response()->json($json);
+	}
 }
