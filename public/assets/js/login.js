@@ -1,20 +1,28 @@
-$(document).ready(function () {
+$(document).ready(function() {
+    $("#fileupload-page").change(function(event) {
+        var x = URL.createObjectURL(event.target.files[0]);
+        $("#upload-img-page").attr("src", x);
+    });
+    $("#fileupload").change(function(event) {
+        var x = URL.createObjectURL(event.target.files[0]);
+        $("#upload-img").attr("src", x);
+    });
     let flag_capcha;
     let flag_capcha1;
     gen_capcha();
-    $("#slideup").click(function () {
+    $("#slideup").click(function() {
         $("#forgot").addClass("hide");
         $(".sign-in-container").fadeIn();
         $("input").val("");
         gen_capcha();
     });
-    $("#slidedown").click(function () {
+    $("#slidedown").click(function() {
         $(".sign-in-container").css("display", "none");
         $("#forgot").removeClass("hide");
         $("#forgot").fadeIn();
     });
 
-    $("#btn-log-in").click(function (e) {
+    $("#btn-log-in").click(function(e) {
         const email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let email_check = $(
             "#sign-in-container .account-input input[type=email]"
@@ -34,14 +42,16 @@ $(document).ready(function () {
                 "Bổ sung email đầy đủ"
             );
             setTimeout(function() {
-                $("#sign-in-container .account-input input[type=email]").removeClass(
-                    "error-input"
-                );
+                $(
+                    "#sign-in-container .account-input input[type=email]"
+                ).removeClass("error-input");
                 $("#sign-in-container .account-input input[type=email]").attr(
                     "placeholder",
                     "Nhập email ở đây"
                 );
-                $("#sign-in-container .account-input input[type=email]").val("");
+                $("#sign-in-container .account-input input[type=email]").val(
+                    ""
+                );
             }, 2500);
             flag = false;
         }
@@ -58,7 +68,7 @@ $(document).ready(function () {
                 "placeholder",
                 "Bổ sung password đầy đủ"
             );
-            setTimeout(function () {
+            setTimeout(function() {
                 $(
                     "#sign-in-container .account-input input[type=password]"
                 ).removeClass("error-input");
@@ -82,15 +92,14 @@ $(document).ready(function () {
         }
     });
 
-    $(".nav-tabs li").click(function (e) {
+    $(".nav-tabs li").click(function(e) {
         $("input").val("");
         gen_capcha();
         gen_capcha1();
     });
 
-    $("#btn-sign-up").click(function (e) {
-        const email =
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    $("#btn-sign-up").click(function(e) {
+        const email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         const regex_phone = /(0[3|5|7|8|9])+([0-9]{8})\b/;
 
         let email_check = $("#email").val();
@@ -104,7 +113,7 @@ $(document).ready(function () {
         if (name_check === "") {
             $("#name").addClass("error-input");
             $("#name").attr("placeholder", "Bổ sung tên đầy đủ");
-            setTimeout(function () {
+            setTimeout(function() {
                 $("#name").removeClass("error-input");
                 $("#name").attr("placeholder", "Nhập tên ở đây");
                 $("#name").val("");
@@ -115,7 +124,7 @@ $(document).ready(function () {
         if (phone_check === "" || !phone_check.match(regex_phone)) {
             $("#phone").addClass("error-input");
             $("#phone").attr("placeholder", "Bổ sung số điện thoại đầy đủ");
-            setTimeout(function () {
+            setTimeout(function() {
                 $("#phone").removeClass("error-input");
                 $("#phone").attr("placeholder", "Nhập số điện thoại ở đây");
                 $("#phone").val("");
@@ -125,7 +134,7 @@ $(document).ready(function () {
         if (email_check === "" || !email_check.match(email)) {
             $("#email").addClass("error-input");
             $("#email").attr("placeholder", "Bổ sung email đầy đủ");
-            setTimeout(function () {
+            setTimeout(function() {
                 $("#email").removeClass("error-input");
                 $("#email").attr("placeholder", "Nhập email ở đây");
                 $("#email").val("");
@@ -140,7 +149,7 @@ $(document).ready(function () {
         ) {
             $("#pass").addClass("error-input");
             $("#pass").attr("placeholder", "Bổ sung password đầy đủ");
-            setTimeout(function () {
+            setTimeout(function() {
                 $("#pass").removeClass("error-input");
                 $("#pass").attr("placeholder", "Nhập password ở đây");
                 $("#pass").val("");
@@ -151,7 +160,7 @@ $(document).ready(function () {
         if (!pass_check.match(repass_check)) {
             $("#repass").addClass("error-input");
             $("#repass").attr("placeholder", "Bổ sung repassword đầy đủ");
-            setTimeout(function () {
+            setTimeout(function() {
                 $("#repass").removeClass("error-input");
                 $("#repass").attr("placeholder", "Nhập repassword ở đây");
                 $("#repass").val("");
@@ -174,7 +183,7 @@ $(document).ready(function () {
         $("#divGenerateRandomValues").css({
             "background-image": "url(assets/img/Log/bg6.png)",
             width: "100px",
-            height: "50px",
+            height: "50px"
         });
         $("#divGenerateRandomValues").html(
             "<input id='txtNewInput' readonly></input>"
@@ -183,12 +192,12 @@ $(document).ready(function () {
             background: "transparent",
             "font-family": "Arial",
             "font-style": "bold",
-            "font-size": "40px",
+            "font-size": "40px"
         });
         $("#txtNewInput").css({
             width: "100px",
             border: "none",
-            color: "black",
+            color: "black"
         });
         $("#txtNewInput").val(iNumber);
         flag_capcha = iNumber;
@@ -199,7 +208,7 @@ $(document).ready(function () {
         $("#divGenerateRandomValues1").css({
             "background-image": "url(assets/img/Log/bg6.png)",
             width: "100px",
-            height: "50px",
+            height: "50px"
         });
         $("#divGenerateRandomValues1").html(
             "<input id='txtNewInput1' readonly></input>"
@@ -208,12 +217,12 @@ $(document).ready(function () {
             background: "transparent",
             "font-family": "Arial",
             "font-style": "bold",
-            "font-size": "40px",
+            "font-size": "40px"
         });
         $("#txtNewInput1").css({
             width: "100px",
             border: "none",
-            color: "black",
+            color: "black"
         });
         $("#txtNewInput1").val(iNumber);
         flag_capcha = iNumber;
@@ -221,8 +230,7 @@ $(document).ready(function () {
 
     // page=============================================
 
-    $("#btn-log-in-page").click(function (e) {
-
+    $("#btn-log-in-page").click(function(e) {
         const email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let email_check = $(
             "#sign-in-page .account-input input[type=email]"
@@ -259,23 +267,22 @@ $(document).ready(function () {
             pass_check.length < 8 ||
             pass_check.length > 16
         ) {
-            $(
-                "#sign-in-page .account-input input[type=password]"
-            ).addClass("error-input");
+            $("#sign-in-page .account-input input[type=password]").addClass(
+                "error-input"
+            );
             $("#sign-in-page .account-input input[type=password]").attr(
                 "placeholder",
                 "Bổ sung password đầy đủ"
             );
-            setTimeout(function () {
+            setTimeout(function() {
                 $(
                     "#sign-in-page .account-input input[type=password]"
                 ).removeClass("error-input");
-                $(
-                    "#sign-in-page .account-input input[type=password]"
-                ).attr("placeholder", "Nhập password ở đây");
-                $("#sign-in-page .account-input input[type=password]").val(
-                    ""
+                $("#sign-in-page .account-input input[type=password]").attr(
+                    "placeholder",
+                    "Nhập password ở đây"
                 );
+                $("#sign-in-page .account-input input[type=password]").val("");
             }, 2500);
             flag = false;
         }
@@ -298,7 +305,7 @@ $(document).ready(function () {
         $("#divGenerateRandomValues-page").css({
             "background-image": "url(assets/img/Log/bg6.png)",
             width: "100px",
-            height: "50px",
+            height: "50px"
         });
         $("#divGenerateRandomValues-page").html(
             "<input id='txtNewInput-page' readonly></input>"
@@ -307,12 +314,12 @@ $(document).ready(function () {
             background: "transparent",
             "font-family": "Arial",
             "font-style": "bold",
-            "font-size": "40px",
+            "font-size": "40px"
         });
         $("#txtNewInput-page").css({
             width: "100px",
             border: "none",
-            color: "black",
+            color: "black"
         });
         $("#txtNewInput-page").val(iNumber);
         flag_capcha1 = iNumber;
@@ -320,9 +327,8 @@ $(document).ready(function () {
         console.log("check 1" + flag_capcha1);
         console.log("check 2:" + iNumber);
     }
-    $("#btn-sign-up-page").click(function (e) {
-        const email =
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    $("#btn-sign-up-page").click(function(e) {
+        const email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         const regex_phone = /(0[3|5|7|8|9])+([0-9]{8})\b/;
 
         let email_check = $("#email-page").val();
@@ -336,7 +342,7 @@ $(document).ready(function () {
         if (name_check === "") {
             $("#name-page").addClass("error-input");
             $("#name-page").attr("placeholder", "Bổ sung tên đầy đủ");
-            setTimeout(function () {
+            setTimeout(function() {
                 $("#name-page").removeClass("error-input");
                 $("#name-page").attr("placeholder", "Nhập tên ở đây");
                 $("#name-page").val("");
@@ -346,10 +352,16 @@ $(document).ready(function () {
 
         if (phone_check === "" || !phone_check.match(regex_phone)) {
             $("#phone-page").addClass("error-input");
-            $("#phone-page").attr("placeholder", "Bổ sung số điện thoại đầy đủ");
-            setTimeout(function () {
+            $("#phone-page").attr(
+                "placeholder",
+                "Bổ sung số điện thoại đầy đủ"
+            );
+            setTimeout(function() {
                 $("#phone-page").removeClass("error-input");
-                $("#phone-page").attr("placeholder", "Nhập số điện thoại ở đây");
+                $("#phone-page").attr(
+                    "placeholder",
+                    "Nhập số điện thoại ở đây"
+                );
                 $("#phone-page").val("");
             }, 2500);
             flag = false;
@@ -357,7 +369,7 @@ $(document).ready(function () {
         if (email_check === "" || !email_check.match(email)) {
             $("#email-page").addClass("error-input");
             $("#email-page").attr("placeholder", "Bổ sung email đầy đủ");
-            setTimeout(function () {
+            setTimeout(function() {
                 $("#email-page").removeClass("error-input");
                 $("#email-page").attr("placeholder", "Nhập email ở đây");
                 $("#email-page").val("");
@@ -372,7 +384,7 @@ $(document).ready(function () {
         ) {
             $("#pass-page").addClass("error-input");
             $("#pass-page").attr("placeholder", "Bổ sung password đầy đủ");
-            setTimeout(function () {
+            setTimeout(function() {
                 $("#pass-page").removeClass("error-input");
                 $("#pass-page").attr("placeholder", "Nhập password ở đây");
                 $("#pass-page").val("");
@@ -383,7 +395,7 @@ $(document).ready(function () {
         if (!pass_check.match(repass_check)) {
             $("#repass-page").addClass("error-input");
             $("#repass-page").attr("placeholder", "Bổ sung repassword đầy đủ");
-            setTimeout(function () {
+            setTimeout(function() {
                 $("#repass-page").removeClass("error-input");
                 $("#repass-page").attr("placeholder", "Nhập repassword ở đây");
                 $("#repass-page").val("");
@@ -406,7 +418,7 @@ $(document).ready(function () {
         $("#divGenerateRandomValues1-page").css({
             "background-image": "url(assets/img/Log/bg6.png)",
             width: "100px",
-            height: "50px",
+            height: "50px"
         });
         $("#divGenerateRandomValues1-page").html(
             "<input id='txtNewInput1-page' readonly></input>"
@@ -415,12 +427,12 @@ $(document).ready(function () {
             background: "transparent",
             "font-family": "Arial",
             "font-style": "bold",
-            "font-size": "40px",
+            "font-size": "40px"
         });
         $("#txtNewInput1-page").css({
             width: "100px",
             border: "none",
-            color: "black",
+            color: "black"
         });
         $("#txtNewInput1-page").val(iNumber);
         flag_capcha1 = iNumber;

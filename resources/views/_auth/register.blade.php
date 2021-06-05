@@ -61,6 +61,11 @@
                     <div class="form-container sign-up-container">
                         <form action="{{route('post.Register')}}" id="sign-up-page" method="POST">
                             @csrf
+                            <div class="wrapper">
+                                <img src="{{asset('assets/img/Log/icon_user.png')}}" class="img-circle" alt="Cinque Terre" id="upload-img-page">
+                                <input type="file" name="uploadfile" class="upload-img" id="fileupload-page"/>
+                                <label for="" class="lb-uploadfile">Chọn ảnh</label>
+                            </div>
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('assets/img/Log/icon_user.png')}}" alt="">
@@ -71,19 +76,19 @@
                                 <div class="icon-form">
                                     <img src="{{asset('assets/img/Log/icon_phone.png')}}" alt="">
                                 </div>
-                                <input type="text" placeholder="Số Điện Thoại" id="phone-page" name="phone"/>
+                                <input type="text" placeholder="Số Điện Thoại" id="phone-page" name="phone" />
                             </div>
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('assets/img/Log/icon_letter.png')}}" alt="">
                                 </div>
-                                <input type="email" placeholder="Email" id="email-page" name="email"/>
+                                <input type="email" placeholder="Email" id="email-page" name="email" />
                             </div>
                             <div class="account-input">
                                 <div class="icon-form">
                                     <img src="{{asset('/assets/img/Log/icon_lock.png')}}" alt="">
                                 </div>
-                                <input type="password" placeholder="Mật Khẩu" id="pass-page" name="password"/>
+                                <input type="password" placeholder="Mật Khẩu" id="pass-page" name="password" />
                             </div>
                             <div class="account-input">
                                 <div class="icon-form">
