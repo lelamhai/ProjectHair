@@ -44,7 +44,7 @@
 
 					<tbody>
 						<tr class="right__table-item">
-							<td class="stylelist" data-label="Email" style="text-align: left;padding-left: 30px;">
+							<td class="stylelist" data-label="Email">
 							  <select class="name" name="" id="">
 								<option value="">Nguyễn Văn A</option>
 								<option value="">Nguyễn Văn B</option>
@@ -55,16 +55,16 @@
 							<td data-label="Số Hoá Đơn">Combo cắt tóc 10 bước</td>
 							<td data-label="ID Sản Phẩm">
 							  <div class="day-date">13/05/2021</div>
-							  <button type="button" class="change_date btn btn-primary" data-toggle="modal" data-target="#booking">
+							  <button type="button" class="change_date btn btn-primary" id="btn-booking">
 								Đổi Ngày
 							  </button>
 
 							</td>
-							<td><button><i class="fas fa-times  fa-lg"></i></button></td>
+							<td><button class="btn-delete-booking"><i class="fas fa-times"></i></button></td>
 
 						</tr>
 						<tr class="right__table-item">
-							<td class="stylelist" data-label="Email" style="text-align: left;padding-left: 30px;">
+							<td class="stylelist" data-label="Email">
 							  <select class="name" name="" id="">
 								<option value="">Nguyễn Văn A</option>
 								<option value="">Nguyễn Văn B</option>
@@ -75,15 +75,15 @@
 							<td data-label="Số Hoá Đơn">Combo cắt tóc 10 bước</td>
 							<td data-label="ID Sản Phẩm">
 							  <div class="day-date">13/05/2021</div>
-								<button type="button" class="change_date btn btn-primary" data-toggle="modal" data-target="#booking">
+								<button type="button" class="change_date btn btn-primary" >
 								  Đổi Ngày
 								</button>
 							</td>
-							<td><button><i class="fas fa-times  fa-lg"></i></button></td>
+							<td><button class="btn-delete-booking"><i class="fas fa-times"></i></button></td>
 
 						</tr>
 						<tr class="right__table-item">
-							<td class="stylelist" data-label="Email" style="text-align: left;padding-left: 30px;">
+							<td class="stylelist" data-label="Email">
 							  <select class="name" name="" id="">
 								<option value="">Nguyễn Văn A</option>
 								<option value="">Nguyễn Văn B</option>
@@ -95,15 +95,15 @@
 							<td data-label="Số Hoá Đơn">Combo cắt tóc 10 bước</td>
 							<td data-label="ID Sản Phẩm">
 							  <div class="day-date">13/05/2021</div>
-							  <button type="button" class="change_date btn btn-primary" data-toggle="modal" data-target="#booking">
+							  <button type="button" class="change_date btn btn-primary" >
 								Đổi Ngày
 							  </button>
 							</td>
-							<td><button><i class="fas fa-times  fa-lg"></i></button></td>
+							<td><button class="btn-delete-booking"><i class="fas fa-times"></i></button></td>
 
 						</tr>
 						<tr class="right__table-item">
-							<td class="stylelist" data-label="Email" style="text-align: left;padding-left: 30px;  ">
+							<td class="stylelist" data-label="Email">
 								<select class="name" name="" id="">
 								  <option value="">Nguyễn Văn A</option>
 								  <option value="">Nguyễn Văn B</option>
@@ -114,44 +114,38 @@
 							<td data-label="Số Hoá Đơn">Combo cắt tóc 10 bước</td>
 							<td data-label="ID Sản Phẩm">
 							  <div class="day-date">13/05/2021</div>
-							  <button type="button" class="change_date btn btn-primary" data-toggle="modal" data-target="#booking">
+							  <button type="button" class="change_date btn btn-primary">
 								Đổi Ngày
 							  </button>
 							</td>
-							<td><button><i class="fas fa-times  fa-lg"></i></button></td>
+							<td><button class="btn-delete-booking"><i class="fas fa-times"></i></button></td>
 						</tr>
-
-					   
 					</tbody>
 				</table>
 			</div>
 		</div>
-		<div class="right_pagination d-flex">
-			<span class="right_pagination-item">
-				1
-			</span>
-			<span class="right_pagination-item">
-				2
-			</span>
-			<span class="right_pagination-item">
-				3
-			</span>
-
-			<span class="right_pagination-item">
-				...
-			</span>
-
-			<span class="right_pagination-item">
-				<i class="fas fa-arrow-right"></i>
-			</span>
-		</div>
 	</div>
 </section>
+
+{{-- popup --}}
+{{-- <button id="btn-booking">Open Modal</button> --}}
+
+<!-- The Modal -->
+<div id="modal-booking" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+
 @endsection
 @section('css')
-	
+	<link rel="stylesheet" href="/assets/admin/css/booking.css">
 @endsection
 
 @section('script')
-
 @endsection
