@@ -173,6 +173,8 @@ button.signUp-form-button {
     border-radius: 5px;
     overflow: hidden;
     z-index: 1;
+    text-align: center;
+    padding-top: 30px;
 }
 
 .wrapper img {
@@ -180,10 +182,14 @@ button.signUp-form-button {
     height: 60px;
     object-fit: cover;
     border: 2px solid;
+    margin: 0px auto;
 }
 
 .lb-uploadfile{
     border-bottom: 2px solid;
+    display: block;
+    margin: 0px auto;
+    width: fit-content;
 }
 
 .upload-img {
