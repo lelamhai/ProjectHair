@@ -12,13 +12,34 @@
    }
 
   /* line 7, book.scss */
-  body, .book-container {
+  .book-container {
 
     justify-content: center; }
 
   .book-container-flex{
-    /* margin-top: 60px; */
+    width: 1140px;
   }
+
+  .wrap-day {
+    border: 1px solid #9f9a9a;
+    padding: 40px;
+  }
+
+.booking {
+    border-bottom: 3px solid red !important;
+}
+
+.item-time {
+    display: inline-block;
+    text-align: center;
+    padding: 30px;
+    width: 19%;
+    border-bottom: 3px solid green;
+}
+
+.item-time:hover {
+    background-color: #9f9a9a ;
+}
 
   /* line 12, book.scss */
   b {
@@ -70,26 +91,37 @@
     overflow: auto;
     white-space: nowrap;
     width: auto;
-    max-width: 645px; }
+    }
     /* line 74, book.scss */
     .list-avatar .list-avatar-item {
       display: inline-block;
       text-align: center;
       cursor: pointer;
-      max-width: 90px;
-      min-width: 85px;
       padding: 0px 10px;
       padding-top: 10px;
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis; }
+
+      .wrap-avatar-boookig {
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        padding: 0px 10px;
+        padding-top: 10px;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
       /* line 87, book.scss */
       .list-avatar .list-avatar-item .avatar {
         display: block;
-        width: 50px;
-        height: 50px;
-        border: 2px solid #7cde56;
+        width: 140px;
+        height: auto;
+        /* border: 2px solid #7cde56; */
         border-radius: 50%;
         cursor: pointer; }
     /* line 97, book.scss */
@@ -97,8 +129,11 @@
       background-color: #e5e5e5;
       opacity: 0.7; }
     /* line 101, book.scss */
-    .list-avatar .list-avatar-item:hover {
-      background-color: #e4e4e4; }
+
+    .wrap-avatar-boookig:hover .avatar{
+      border: 2px solid #7cde56; }
+    /* .list-avatar .list-avatar-item:hover {
+      background-color: #e4e4e4; } */
 
   /* line 108, book.scss */
   .list-avatar-item span img {
@@ -107,14 +142,25 @@
   .list-avatar-item .user-name {
     overflow: hidden; }
 
+    .icon-info-bookig {
+      float: right;
+    }
+
+    .icon-info-bookig img{
+      width: 32px;
+      height: auto;
+    }
+
+
   /* line 117, book.scss */
-  .stylish-active {
-    background-color: #9f9a9a !important; }
+  .stylish-active  .avatar {
+    border: 2px solid #7cde56; 
+  }
 
   /* line 121, book.scss */
   .schedule {
     text-align: center;
-    margin-top: 10px; }
+    margin-top: 75px; }
     /* line 124, book.scss */
     .schedule b {
       padding: 5px 0px; }
@@ -164,7 +210,7 @@
   .service{
     display: flex;
     flex-direction: column;
-    margin: 20px 0px;
+    margin: 75px 0px;
   }
 
   .service-tittle{
@@ -203,12 +249,12 @@
   .btn-book{
     display: flex;
     justify-content: center;
+    margin-top: 75px;
   }
 
   .btn-book button{
     background: #495057;
     color: white;
-    border-radius: 10px;
     height: 50px;
     font-weight: 600;
     font-size: 18px;
