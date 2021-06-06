@@ -17,7 +17,7 @@
                         {
                           ?>
                             <div class="wrap-avatar-boookig">
-                              <div class="icon-info-bookig" data-toggle="modal" data-target="#comment-Modal">
+                              <div class="icon-info-bookig" data-toggle="modal" data-target="#comment-Modal" data-user="{{$emp->id}}">
                                 <img src="assets/img/Book/icon-info.png" alt="" >
                               </div>
                               <div class="list-avatar-item stylish-active" data-user="{{$emp->id}}">
@@ -33,7 +33,7 @@
                         } else {
                           ?>
                             <div class="wrap-avatar-boookig">
-                              <div class="icon-info-bookig" data-toggle="modal" data-target="#comment-Modal">
+                              <div class="icon-info-bookig" data-toggle="modal"  data-target="#comment-Modal" data-user="{{$emp->id}}">
                                 <img src="assets/img/Book/icon-info.png" alt="" >
                               </div>
                               <div class="list-avatar-item" data-user="{{$emp->id}}">
@@ -51,101 +51,9 @@
                       ?>
                     @endforeach
 
+                
 
 
-
-                    <div class="list-avatar-item">
-                      <span data-toggle="modal" data-target="#comment-Modal">
-                        <img src="assets/img/Book/avatar-anonymous-300x300.png" alt="Avatar" class="avatar">
-                      </span>
-                      <p class="user-name">
-                        Mặc định
-                      </p>
-
-                    </div>
-                    <div class="list-avatar-item">
-                      <span data-toggle="modal" data-target="#comment-Modal">
-                        <img src="assets/img/Book/img_avatar2.png" alt="Avatar" class="avatar">
-                      </span>
-                      <p class="user-name">
-                        Quang Trương
-                      </p>
-
-                    </div>
-                    <div class="list-avatar-item">
-                      <span data-toggle="modal" data-target="#comment-Modal">
-                        <img src="assets/img/Book/img_avatar.png" alt="Avatar" class="avatar">
-                      </span>
-                      <p class="user-name">
-                        Bảo Nhân
-                      </p>
-
-                    </div>
-                    <div class="list-avatar-item">
-                      <span>
-                        <img src="assets/img/Book/img_avatar2.png" alt="Avatar" class="avatar">
-                      </span>
-                      <p class="user-name">
-                        Ngọc Tỷ
-                      </p>
-
-                    </div>
-                    <div class="list-avatar-item">
-                      <span>
-                        <img src="assets/img/Book/img_avatar.png" alt="Avatar" class="avatar">
-                      </span>
-                      <p class="user-name">
-                        Hoàng Vũ
-                      </p>
-                    </div>
-                    <div class="list-avatar-item">
-                      <span>
-                        <img src="assets/img/Book/img_avatar.png" alt="Avatar" class="avatar">
-                      </span>
-                      <p class="user-name">
-                        Hoàng Đẹp Trai
-                      </p>
-                    </div>
-                    <div class="list-avatar-item">
-                      <span>
-                        <img src="assets/img/Book/img_avatar.png" alt="Avatar" class="avatar">
-                      </span>
-                      <p class="user-name">
-                        Nhoxsok vjppro
-                      </p>
-                    </div>
-                    <div class="list-avatar-item">
-                      <span>
-                        <img src="assets/img/Book/img_avatar.png" alt="Avatar" class="avatar">
-                      </span>
-                      <p class="user-name">
-                        Hoàng Vũ
-                      </p>
-                    </div>
-                    <div class="list-avatar-item">
-                      <span>
-                        <img src="assets/img/Book/img_avatar.png" alt="Avatar" class="avatar">
-                      </span>
-                      <p class="user-name">
-                        Hoàng Vũ
-                      </p>
-                    </div>
-                    <div class="list-avatar-item">
-                      <span>
-                        <img src="assets/img/Book/img_avatar.png" alt="Avatar" class="avatar">
-                      </span>
-                      <p class="user-name">
-                        Hoàng Vũ
-                      </p>
-                    </div>
-                    <div class="list-avatar-item">
-                      <span>
-                        <img src="assets/img/Book/img_avatar.png" alt="Avatar" class="avatar">
-                      </span>
-                      <p class="user-name">
-                        Hoàng Vũ
-                      </p>
-                    </div>
 
                     </div>
                 </div>
@@ -181,25 +89,25 @@
                               <div class="item-time">9h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">10h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">10h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">11h00<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">11h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">11h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">12h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">12h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">13h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">13h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">14h00<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">14h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">14h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">15h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">15h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">16h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">16h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">17h00<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">17h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">17h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">18h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">18h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">19h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">19h30<br><span class="slot-status">Hết chỗ</span></div>
-                              <div class="item-time booking">20h00<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">19h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time">20h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">20h30<br><span class="slot-status">Còn chỗ</span></div>
                             </div>
                           </div>
@@ -209,21 +117,21 @@
                               <div class="item-time">9h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">9h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">10h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">10h30<br><span class="slot-status">Hết chỗ</span></div>
-                              <div class="item-time booking">11h00<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">10h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time">11h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">11h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">12h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">12h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">13h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">13h30<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">13h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">14h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">14h30<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">14h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">15h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">15h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">16h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">16h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">17h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">17h30<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">17h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">18h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">18h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">19h00<br><span class="slot-status">Còn chỗ</span></div>
@@ -240,25 +148,25 @@
                               <div class="item-time">9h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">10h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">10h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">11h00<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">11h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">11h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">12h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">12h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">13h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">13h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">14h00<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">14h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">14h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">15h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">15h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">16h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">16h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">17h00<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">17h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">17h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">18h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">18h30<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">19h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time booking">19h30<br><span class="slot-status">Hết chỗ</span></div>
-                              <div class="item-time booking">20h00<br><span class="slot-status">Hết chỗ</span></div>
+                              <div class="item-time">19h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time">20h00<br><span class="slot-status">Còn chỗ</span></div>
                               <div class="item-time">20h30<br><span class="slot-status">Còn chỗ</span></div>
                             </div>
                           </div>
@@ -330,82 +238,39 @@
                     </button>
                   </div>
                 </div>
-
-               
-
-                
-
-
-                <!-- Modal -->
-                <div class="modal fade" id="comment-Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-
-                      <!-- Modal content-->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <img src="assets/img/Book/avatar-anonymous-300x300.png" alt="Avatar" class="avatar">
-                          <h4 class="modal-title popup-name">Nguyễn Văn An</h4>
-                          <div class="rate">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-                        </div>
-
-
-                        <div class="modal-body">
-                          <div class="list-cmt">
-                            <div class="msg-box">
-                              <b class="cmt-user">User A</b>
-                              <p>Một comment vô danh nào đó </p>
-                            </div>
-                            <div class="msg-box">
-                              <b class="cmt-user">User A</b>
-                              <p>Một comment vô danh nào đó </p>
-                            </div>
-                            <div class="msg-box">
-                              <b class="cmt-user">User A</b>
-                              <p>Một comment vô danh nào đó </p>
-                            </div>
-                            <div class="msg-box">
-                              <b class="cmt-user">User A</b>
-                              <p>Một comment vô danh nào đó </p>
-                            </div>
-                            <div class="msg-box">
-                              <b class="cmt-user">User A</b>
-                              <p>Một comment vô danh nào đó </p>
-                            </div>
-                            <div class="msg-box">
-                              <b class="cmt-user">User A</b>
-                              <p>Một comment vô danh nào đó </p>
-                            </div>
-                            <div class="msg-box">
-                              <b class="cmt-user">User A</b>
-                              <p>Một comment vô danh nào đó </p>
-                            </div>
-                            <div class="msg-box">
-                              <b class="cmt-user">User A</b>
-                              <p>Một comment vô danh nào đó </p>
-                            </div>
-                            <div class="msg-box">
-                              <b class="cmt-user">User A</b>
-                              <p>Một comment vô danh nào đó </p>
-                            </div>
-                          </div>
-
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
             </div>
         </div>
-	</main>
 
-	{{-- <br><br><br><br>
+        <div class="modal fade" id="comment-Modal">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <img src="assets/img/Book/avatar-anonymous-300x300.png" alt="Avatar" class="avatar">
+                <h4 class="modal-title popup-name">Nguyễn Văn An</h4>
+                <div class="rate">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div class="list-cmt" id="list-cmt">
+                    
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+
+</main>
+
+{{-- 
+	<br><br><br><br>
 	<h3>Danh sach cac stylic</h3>
 	@foreach ($emps as $emp)
 		{{$emp->name}}
@@ -421,11 +286,11 @@
 
 	<h3>Noi dung comment</h3>
 	@foreach ($comments as $comment)<!-- if theo mã stylic -->
-		{{$comment->idEmp}} : {{$comment->emp_comment->name}}
+		{{$comment->idEmp}} : {{$comment->emp_comment->name}} <br>
 		{{$comment->idUser}} : {{$comment->users_comment->name}} <p>{{$comment->content}}</p>
 		<h3>///</h3>
-	@endforeach --}}
-@endsection
+	@endforeach
+@endsection --}}
 
 @section('css')
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">

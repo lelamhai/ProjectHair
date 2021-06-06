@@ -36,6 +36,8 @@ Route::get('/modelHot', 'AllController\ModelHotController@index')->name('getMode
 //  ===================== booking ===================
 Route::get('/book', 'AllController\BookController@index')->name('getBook')->middleware('KhangMiddleware');
 Route::post('/book/user', 'AllController\BookController@user');
+Route::post('/book/load', 'AllController\BookController@loadFirst');
+Route::post('/book/comment', 'AllController\BookController@comment');
 //  ===================== cart ===================
 Route::get('/cart', 'AllController\CartController@index')->name('get.Cart')->middleware('KhangMiddleware');
 Route::get('/cart/{idPro}', 'AllController\CartController@show')->name('add.Cart')->middleware('KhangMiddleware');
