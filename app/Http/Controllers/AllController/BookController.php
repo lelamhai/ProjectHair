@@ -14,16 +14,16 @@ class BookController extends Controller
 
 		$emps = DB::table('user')->where('human_rights', 1)->get();
 
-		$listReserved = Books::with('users_book', 'emp_book')->get();
-
-		$comments = Comment::with('users_comment', 'emp_comment')->get();
-
 		$commentsCustomer = DB::table('comments')->get();
+
+		$services = DB::table('services')->get();
+
+		$steps = DB::table('service__details')->get(); // 
 
 		return view('_allView.book')->with(['commentsCustomer' => $commentsCustomer,
 											'emps'=> $emps,
-											'listReserved' => $listReserved,
-											'comments' => $comments]);
+											'services' => $services,
+											'steps' => $steps]);
 	}
 
 	public function loadFirst(Request $request)
@@ -51,8 +51,8 @@ class BookController extends Controller
 
 	public function comment(Request $request)
 	{
-		$comments = Comment::with('users_comment', 'emp_comment')->get();
-		// $comments = DB::table('comments')->select('content')->where('idEmp', $request->userId)->get();
+		$comments = Comment::with('users_comment', 'emp_comment')->where('idEmp', $request->userId)->get();
+
 		return response()->json([
 			'result' => true,
 			'comments'	=> $comments
