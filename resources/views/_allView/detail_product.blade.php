@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col l-6 m-12">
+                <div class="col l-12 m-12">
                     <div class="detail-product-desc">
                         <p class="detail-product-desc-title">
                             MÔ TẢ SẢN PHẨM
