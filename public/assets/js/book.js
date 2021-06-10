@@ -42,7 +42,7 @@ $(document).ready(function () {
             userId: userId
         },
         success: function (response){
-          // console.log(response);
+          console.log(response);
           if(response.result)
           {
             $( ".item-time").each(function( index, element ) {
@@ -96,10 +96,11 @@ $(document).ready(function () {
              });
 
             var list = [];
-             $.each(response.index, function( index, value ) {
-              list.push(value.idEmp);
-            });
-
+            for(var i=0; i < response.index.length; i++)
+            {
+              list.push(response.index[i].index);
+            }
+            // load time
              var i = 0;
              $.each(list, function() {
                $( ".item-time").each(function( index, element ) {
@@ -131,6 +132,7 @@ $(document).ready(function () {
           // console.log(response.comments[0]);
          if(response.result)
          {
+            $(".fa-star").remove();
             $(".msg-box").remove();
             for(var i=0; i< response.comments.length; i++)
             {
@@ -142,6 +144,21 @@ $(document).ready(function () {
                   $("#list-cmt").append("<div class='msg-box'><b class='cmt-user'>"+response.comments[i].users_comment.name+"</b><p>"+response.comments[i].content +"</p></div>");
                 }
             }
+
+            if(response.rates.length > 0)
+            {
+              var rates = 0;
+              for(var i=0; i< response.rates.length; i++)
+              {
+                rates = rates + response.rates[i].rate;
+              }
+              rates = rates/response.rates.length;
+              rates = Math.round(rates);
+              for(var j=0; j < rates; j++)
+              {
+                  $('.rate').append('<i class="fas fa-star"></i>');
+              }
+            }
          }
       }
      });
@@ -149,6 +166,7 @@ $(document).ready(function () {
 
   // Choose time
   var index = -1;
+  var date = "";
   $( ".item-time" ).click(function() {
     if($(this).hasClass("booked") )
     {
@@ -163,10 +181,38 @@ $(document).ready(function () {
       {
           $(this).addClass("booking");
           index = $('.item-time').index(this);
-          var date = $.trim($(".time-schedule.active span").text());
+          date = $.trim($(".time-schedule.active span").text());
       }
     }
   });
   // Radio
+
+  // Submit booking
+  $( "#btn-booking" ).click(function() {
+      if(index != -1)
+      {
+          var token = $("meta[name='csrf-token']").attr("content");
+          var empId = $(".UserId").val();
+          var userId = $(".list-avatar-item.stylish-active").data('user');
+          $.ajax({
+            url:"/book/insert",
+            method:'POST',
+            data: {
+                _token: token,
+                userId: userId,
+                empId: empId,
+                date: date,
+                index: index,
+                service: 1
+            },
+            success: function (response){
+              if(response.result)
+              {
+                console.log(response);
+              }
+          }
+         });
+      }
+  });
 
 });

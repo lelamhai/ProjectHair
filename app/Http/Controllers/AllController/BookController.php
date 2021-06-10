@@ -28,10 +28,12 @@ class BookController extends Controller
 
 	public function loadFirst(Request $request)
 	{
-		$index = DB::table('books')->select('idEmp')->where('idEmp', $request->userId)->get();
+		$index = DB::table('books')->select('index')->where('idEmp', $request->userId)->get();
+		$rates = DB::table('rates')->select('rate')->where('idEmp', $request->userId)->get();
 		return response()->json([
 			'result' => true,
-			'index'	=> $index
+			'index'	=> $index,
+			'rates' => $rates
 		]);
 	}
 
@@ -40,22 +42,38 @@ class BookController extends Controller
 	{
 		$comments = DB::table('comments')->where('idEmp', $request->userId)->get();
 		$user = DB::table('user')->where('id', $request->userId)->get();
-		$index = DB::table('books')->select('idEmp')->where('idEmp', $request->userId)->get();
+		$index = DB::table('books')->select('index')->where('idEmp', $request->userId)->get();
+		
 		return response()->json([
 			'result' => true,
 			'user'	=> $user,
-			'comments' => $comments,
-			'index' => $index
+			'comments' => $comments
+			
 		]);
 	}
 
 	public function comment(Request $request)
 	{
 		$comments = Comment::with('users_comment', 'emp_comment')->where('idEmp', $request->userId)->get();
-
+		$rates = DB::table('rates')->select('rate')->where('idEmp', $request->userId)->get();
 		return response()->json([
 			'result' => true,
-			'comments'	=> $comments
+			'comments'	=> $comments,
+			'rates' => $rates
+		]);
+	}
+
+	public function insertBook(Request $request)
+	{
+		// Book::create([
+		// 	'idUser' => $request->userId,
+		// 	'idEmp' => $request->empId,
+		// 	'index' => $request->index,
+		// 	'date' => $date
+		// ]);
+	
+		return response()->json([
+			'result' => true
 		]);
 	}
 }

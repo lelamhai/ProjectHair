@@ -245,9 +245,10 @@
                     </div>
                   </div>
                   <div class="btn-book">
-                    <button type="button">
-                      Đặt vé
-                    </button>
+                      <input type="hidden" class="UserId" value="<?php echo session('user')->id;?>">
+                      <button type="button" id="btn-booking">
+                        Đặt vé
+                      </button>
                   </div>
                 </div>
             </div>
@@ -262,11 +263,11 @@
                 <img src="assets/img/Book/avatar-anonymous-300x300.png" alt="Avatar" class="avatar">
                 <h4 class="modal-title popup-name">Nguyễn Văn An</h4>
                 <div class="rate">
+                  {{-- <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i> --}}
                 </div>
               </div>
               <div class="modal-body">
