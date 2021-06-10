@@ -46,7 +46,7 @@ $(document).ready(function () {
           if(response.result)
           {
             $( ".item-time").each(function( index, element ) {
-              $(element).removeClass("booking");
+              $(element).removeClass("booked");
             });
 
             var list = [];
@@ -59,7 +59,7 @@ $(document).ready(function () {
               $( ".item-time").each(function( index, element ) {
                   if(list[i] == index)
                   {
-                      $(element).addClass("booking");
+                      $(element).addClass("booked");
                   } 
               });
               i++;
@@ -92,7 +92,7 @@ $(document).ready(function () {
          if(response.result)
          {
              $( ".item-time").each(function( index, element ) {
-                 $(element).removeClass("booking");
+                 $(element).removeClass("booked");
              });
 
             var list = [];
@@ -105,7 +105,7 @@ $(document).ready(function () {
                $( ".item-time").each(function( index, element ) {
                    if(list[i] == index)
                    {
-                      $(element).addClass("booking");
+                      $(element).addClass("booked");
                    } 
                });
                i++;
@@ -146,4 +146,27 @@ $(document).ready(function () {
       }
      });
   });
+
+  // Choose time
+  var index = -1;
+  $( ".item-time" ).click(function() {
+    if($(this).hasClass("booked") )
+    {
+      return;
+    }
+    if($(this).hasClass("booking"))
+    {
+      $(this).removeClass("booking");
+      index = -1;
+    } else {
+      if(index === -1 )
+      {
+          $(this).addClass("booking");
+          index = $('.item-time').index(this);
+          var date = $.trim($(".time-schedule.active span").text());
+      }
+    }
+  });
+  // Radio
+
 });
