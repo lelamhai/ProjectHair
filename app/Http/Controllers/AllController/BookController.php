@@ -28,7 +28,8 @@ class BookController extends Controller
 
 	public function loadFirst(Request $request)
 	{
-		$index = DB::table('books')->select('index')->where('idEmp', $request->userId)->get();
+		// $index = DB::table('books')->select('index')->where('idEmp', $request->userId)->get();
+		// $index
 		$rates = DB::table('rates')->select('rate')->where('idEmp', $request->userId)->get();
 		return response()->json([
 			'result' => true,
@@ -42,8 +43,8 @@ class BookController extends Controller
 	{
 		$comments = DB::table('comments')->where('idEmp', $request->userId)->get();
 		$user = DB::table('user')->where('id', $request->userId)->get();
-		$index = DB::table('books')->select('index')->where('idEmp', $request->userId)->get();
-		
+		// $index = DB::table('books')->select('index')->where('idEmp', $request->userId)->get();
+		// $index
 		return response()->json([
 			'result' => true,
 			'user'	=> $user,
