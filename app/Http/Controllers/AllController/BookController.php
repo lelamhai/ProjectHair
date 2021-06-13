@@ -38,9 +38,19 @@ class BookController extends Controller
 
 	public function user(Request $request)
 	{
+		$date = date('Y-m-d');
+		$date1 = strtotime ( '+2 day' , strtotime ( $date ) ) ;
+		$date1 = date ( 'Y-m-d' , $date1 );
+
+		$date2 = strtotime ( '+2 day' , strtotime ( $date ) ) ;
+		$date2 = date ( 'Y-m-d' , $date2 );
+
 		$comments = DB::table('comments')->where('idEmp', $request->userId)->get();
 		$user = DB::table('user')->where('id', $request->userId)->get();
-		$index = DB::table('books')->select('idEmp')->where('idEmp', $request->userId)->get();
+		$index = DB::table('books')->select('idEmp')->where('idEmp', $request->userId)
+													->where('date', $date)
+													->orwhere('date', $date1)
+													->orwhere('date', $date2)->get();
 		return response()->json([
 			'result' => true,
 			'user'	=> $user,

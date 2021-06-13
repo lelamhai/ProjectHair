@@ -14,6 +14,10 @@ class Books extends Model
 	public function emp_book () {
 		return $this->belongsTo(related: 'App\User', foreignKey:'idEmp', ownerKey:'id');
 	}
+
+	public function service_book () {
+		return $this->belongsTo(related: 'App\Models\Service_Details', foreignKey:'service', ownerKey:'id');
+	}
     
 }
 

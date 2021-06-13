@@ -465,6 +465,9 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminController\\BookingController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController/BookingController.php',
+        'App\\Http\\Controllers\\AdminController\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController/OrderController.php',
+        'App\\Http\\Controllers\\AdminController\\ProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController/ProductController.php',
         'App\\Http\\Controllers\\AdminController\\ServiceController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController/ServiceController.php',
         'App\\Http\\Controllers\\AllController\\BookController' => __DIR__ . '/../..' . '/app/Http/Controllers/AllController/BookController.php',
         'App\\Http\\Controllers\\AllController\\CartController' => __DIR__ . '/../..' . '/app/Http/Controllers/AllController/CartController.php',
@@ -493,6 +496,7 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
+        'App\\Http\\Middleware\\TyMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/TyMiddleware.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Books' => __DIR__ . '/../..' . '/app/Models/Books.php',
         'App\\Models\\Cart' => __DIR__ . '/../..' . '/app/Models/Cart.php',

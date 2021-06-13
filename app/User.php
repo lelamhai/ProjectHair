@@ -62,4 +62,8 @@ class User extends Authenticatable
     public function payer(){
         return $this->hasMany(related: 'App\Models\Payments', foreignKey: 'payer', localKey: 'id');
     }
+
+    public function user_order(){
+        return $this->hasMany(related: 'App\Models\Order', foreignKey: 'idUser', localKey: 'id');
+    }
 }
