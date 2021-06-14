@@ -20,13 +20,19 @@
     width: 1140px;
   }
 
-  .wrap-day {
+.wrap-day {
     border: 1px solid #9f9a9a;
     padding: 40px;
-  }
+}
+
+  
+.booked {
+  background-color: #B2121E;
+}
 
 .booking {
-    background-color: #B2121E;
+    background-color: #7FB368;
+
 }
 
 .item-time {

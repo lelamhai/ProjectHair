@@ -14,24 +14,27 @@ class BookController extends Controller
 
 		$emps = DB::table('user')->where('human_rights', 1)->get();
 
-		$listReserved = Books::with('users_book', 'emp_book')->get();
-
-		$comments = Comment::with('users_comment', 'emp_comment')->get();
-
 		$commentsCustomer = DB::table('comments')->get();
+
+		$services = DB::table('services')->get();
+
+		$steps = DB::table('service__details')->get(); // 
 
 		return view('_allView.book')->with(['commentsCustomer' => $commentsCustomer,
 											'emps'=> $emps,
-											'listReserved' => $listReserved,
-											'comments' => $comments]);
+											'services' => $services,
+											'steps' => $steps]);
 	}
 
 	public function loadFirst(Request $request)
 	{
-		$index = DB::table('books')->select('idEmp')->where('idEmp', $request->userId)->get();
+		// $index = DB::table('books')->select('index')->where('idEmp', $request->userId)->get();
+		// $index
+		$rates = DB::table('rates')->select('rate')->where('idEmp', $request->userId)->get();
 		return response()->json([
 			'result' => true,
-			'index'	=> $index
+			'index'	=> $index,
+			'rates' => $rates
 		]);
 	}
 
@@ -54,18 +57,33 @@ class BookController extends Controller
 		return response()->json([
 			'result' => true,
 			'user'	=> $user,
-			'comments' => $comments,
-			'index' => $index
+			'comments' => $comments
+			
 		]);
 	}
 
 	public function comment(Request $request)
 	{
-		$comments = Comment::with('users_comment', 'emp_comment')->get();
-		// $comments = DB::table('comments')->select('content')->where('idEmp', $request->userId)->get();
+		$comments = Comment::with('users_comment', 'emp_comment')->where('idEmp', $request->userId)->get();
+		$rates = DB::table('rates')->select('rate')->where('idEmp', $request->userId)->get();
 		return response()->json([
 			'result' => true,
-			'comments'	=> $comments
+			'comments'	=> $comments,
+			'rates' => $rates
+		]);
+	}
+
+	public function insertBook(Request $request)
+	{
+		// Book::create([
+		// 	'idUser' => $request->userId,
+		// 	'idEmp' => $request->empId,
+		// 	'index' => $request->index,
+		// 	'date' => $date
+		// ]);
+	
+		return response()->json([
+			'result' => true
 		]);
 	}
 }

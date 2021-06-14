@@ -62,22 +62,34 @@
                     <b>CHỌN NGÀY GIỜ CẮT (301 TRƯƠNG ĐỊNH)</b>
                     <div class="select-day">
                       <ul class="nav nav-tabs time-booking">
-                        <li class="active">
+                        <li class="time-schedule active">
                           <a data-toggle="tab" href="#today">
                             <b>Hôm nay</b>
-                            <span>Thứ Tư, 27/06</span>
+                            <span>
+                              <?php echo date("d/m/Y", time());?>
+                              </span>
                           </a>
                         </li>
-                        <li>
+                        <li class="time-schedule">
                           <a data-toggle="tab" href="#tomorrow">
                             <b>Ngày mai</b>
-                            <span>Thứ Năm, 28/06</span>
+                            <span>
+                                <?php
+                                    $Date = date("Y-m-d", time());;
+                                    echo date('d/m/Y', strtotime($Date. ' + 1 days'));
+                                  ?>
+                            </span>
                           </a>
                         </li>
-                        <li>
+                        <li class="time-schedule">
                           <a data-toggle="tab" href="#after-tomorrow">
                             <b>Ngày kia</b>
-                            <span>Thứ Sáu, 29/06</span>
+                            <span>
+                                <?php 
+                                  $Date = date("Y-m-d", time());;
+                                    echo date('d/m/Y', strtotime($Date. ' + 2 days'));  
+                                ?>
+                            </span>
                           </a>
                         </li>
                       </ul>
@@ -233,9 +245,10 @@
                     </div>
                   </div>
                   <div class="btn-book">
-                    <button type="button">
-                      Đặt vé
-                    </button>
+                      <input type="hidden" class="UserId" value="<?php echo session('user')->id;?>">
+                      <button type="button" id="btn-booking">
+                        Đặt vé
+                      </button>
                   </div>
                 </div>
             </div>
@@ -250,11 +263,11 @@
                 <img src="assets/img/Book/avatar-anonymous-300x300.png" alt="Avatar" class="avatar">
                 <h4 class="modal-title popup-name">Nguyễn Văn An</h4>
                 <div class="rate">
+                  {{-- <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i> --}}
                 </div>
               </div>
               <div class="modal-body">

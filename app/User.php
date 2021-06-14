@@ -66,4 +66,13 @@ class User extends Authenticatable
     public function user_order(){
         return $this->hasMany(related: 'App\Models\Order', foreignKey: 'idUser', localKey: 'id');
     }
+    
+    public function user_rate(){
+        return $this->hasMany(related: 'App\Models\Rates', foreignKey: 'idUser', localKey: 'id');
+    }
+
+    public function Emp_rate(){
+        return $this->hasMany(related: 'App\Models\Rates', foreignKey: 'idEmp', localKey: 'id');
+
+    }
 }

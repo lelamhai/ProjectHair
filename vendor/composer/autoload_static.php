@@ -508,6 +508,7 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'App\\Models\\Order_Details' => __DIR__ . '/../..' . '/app/Models/Order_Details.php',
         'App\\Models\\Payments' => __DIR__ . '/../..' . '/app/Models/Payments.php',
         'App\\Models\\Products' => __DIR__ . '/../..' . '/app/Models/Products.php',
+        'App\\Models\\Rates' => __DIR__ . '/../..' . '/app/Models/Rates.php',
         'App\\Models\\Service_Details' => __DIR__ . '/../..' . '/app/Models/Service_Details.php',
         'App\\Models\\Services' => __DIR__ . '/../..' . '/app/Models/Services.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

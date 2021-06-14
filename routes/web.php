@@ -38,6 +38,7 @@ Route::get('/book', 'AllController\BookController@index')->name('getBook')->midd
 Route::post('/book/user', 'AllController\BookController@user');
 Route::post('/book/load', 'AllController\BookController@loadFirst');
 Route::post('/book/comment', 'AllController\BookController@comment');
+Route::post('/book/insert', 'AllController\BookController@insertBook');
 //  ===================== cart ===================
 Route::get('/cart', 'AllController\CartController@index')->name('get.Cart')->middleware('KhangMiddleware');
 Route::get('/cart/{idPro}', 'AllController\CartController@show')->name('add.Cart')->middleware('KhangMiddleware');
