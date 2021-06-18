@@ -49,9 +49,10 @@ $(document).ready(function () {
               $(element).removeClass("booked");
             });
 
+
             var list = [];
              $.each(response.index, function( index, value ) {
-              list.push(value.idEmp);
+              list.push(value.index);
             });
 
             var i = 0;
@@ -100,6 +101,7 @@ $(document).ready(function () {
             {
               list.push(response.index[i].index);
             }
+
             // load time
              var i = 0;
              $.each(list, function() {
@@ -167,6 +169,7 @@ $(document).ready(function () {
   // Choose time
   var index = -1;
   var date = "";
+  var time = "";
   $( ".item-time" ).click(function() {
     if($(this).hasClass("booked") )
     {
@@ -182,8 +185,10 @@ $(document).ready(function () {
           $(this).addClass("booking");
           index = $('.item-time').index(this);
           date = $.trim($(".time-schedule.active span").text());
+          time = $.trim($(this).children().first().text());
       }
     }
+
   });
   // Radio
 
@@ -192,8 +197,9 @@ $(document).ready(function () {
       if(index != -1)
       {
           var token = $("meta[name='csrf-token']").attr("content");
-          var empId = $(".UserId").val();
-          var userId = $(".list-avatar-item.stylish-active").data('user');
+          var userId = $(".UserId").val();
+          var empId = $(".list-avatar-item.stylish-active").data('user');
+          console.log(time);
           $.ajax({
             url:"/book/insert",
             method:'POST',
@@ -202,13 +208,14 @@ $(document).ready(function () {
                 userId: userId,
                 empId: empId,
                 date: date,
+                time: time,
                 index: index,
                 service: 1
             },
             success: function (response){
               if(response.result)
               {
-                console.log(response);
+                location.reload(true);
               }
           }
          });

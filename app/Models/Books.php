@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Books extends Model
 {
+
+	protected $fillable = [
+        'idUser', 'idEmp', 'date', 'time', 'service', 'index',
+    ];
+
 	public function users_book () {
 		return $this->belongsTo(related: 'App\User', foreignKey:'idUser', ownerKey:'id');
 		
