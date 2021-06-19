@@ -190,11 +190,31 @@ $(document).ready(function () {
     }
 
   });
+
   // Radio
+  var serivce = -1;
+  $(".radio-service").click(function(){
+      serivce = $(this).val();
+  });
+
 
   // Submit booking
   $( "#btn-booking" ).click(function() {
-      if(index != -1)
+      if(index == -1)
+      {
+          alert("Bạn chưa chọn thời gian");
+          return;
+      }
+
+      if(serivce == -1)
+      {
+          alert("Bạn chưa chọn dịch vụ");
+          return;
+      }
+
+      
+    
+      if(index != -1 && serivce != -1)
       {
           var token = $("meta[name='csrf-token']").attr("content");
           var userId = $(".UserId").val();
@@ -210,7 +230,7 @@ $(document).ready(function () {
                 date: date,
                 time: time,
                 index: index,
-                service: 1
+                service: serivce
             },
             success: function (response){
               if(response.result)
@@ -219,7 +239,12 @@ $(document).ready(function () {
               }
           }
          });
-      }
+      } 
+      
+     
   });
+
+
+  
 
 });

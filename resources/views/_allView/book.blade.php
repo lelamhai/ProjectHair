@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="schedule">
-                    <b>CHỌN NGÀY GIỜ CẮT (301 TRƯƠNG ĐỊNH)</b>
+                    <b>CHỌN NGÀY GIỜ CẮT</b>
                     <div class="select-day">
                       <ul class="nav nav-tabs time-booking">
                         <li class="time-schedule active">
@@ -188,68 +188,39 @@
                 </div>
                 <div class="service">
                   <b class="service-tittle" >DỊCH VỤ</b>
-                  <div class="ser-cut">
-                    <b class="ser-tittle">
-                      Cắt tóc
-                    </b>
-                    <div>
-                      <label class="container-checkbox-service">Combo 10 bước
-                        <input type="radio" checked="checked">
-                        <span class="checkmark"></span>
-                      </label>
-                    </div>
-                  </div>
-
+                  @foreach ($services as $service)
                   <div class="ser-perm">
-                    <b class="ser-tittle">Uốn</b>
-                    <div>
-                      <label class="container-checkbox-service line-1-1">Cao cấp
-                        <input type="radio" checked="checked" name="perm">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox-service line-1-2">Tiêu chuẩn
-                        <input type="radio" name="perm">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox-service line-1-3">Con sâu
-                        <input type="radio" name="perm">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox-service line-1-4">Premlock
-                        <input type="radio" name="perm">
-                        <span class="checkmark"></span>
-                      </label>
+                    <b class="ser-tittle">{{$service->title}}</b>
+                    <div class="wrap-serivce">
+                      @foreach ($steps as $step)
+                      <?php 
+                        if($service ->id == $step->idService &&  $step->idService == 1)
+                        {
+                          ?>
+                            <label class="container-checkbox-service">Combo 10 bước
+                              <input type="radio" class="radio-service" value="<?php echo $service->id?>"name="perm">
+                              <span class="checkmark"></span>
+                            </label>
+                          <?php
+                           break;
+                        } else if($service ->id == $step->idService) {
+                            ?>
+                            <label class="container-checkbox-service"><?php echo $step->title;?>
+                              <input type="radio" class="radio-service" value="<?php echo $step->id?>" name="perm">
+                              <span class="checkmark"></span>
+                            </label>
+                            <?php
+                        }
+                      ?>
+                      @endforeach
                     </div>
                   </div>
-
-                  <div class="ser-dye">
-                    <b class= "ser-tittle">
-                      Nhuộm tóc
-                    </b>
-                    <div>
-                      <label class="container-checkbox-service line-2-1">Đen phủ bạc
-                        <input type="radio" checked="checked" name="dye">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox-service line-2-2">Nâu cao cấp
-                        <input type="radio" name="dye">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox-service line-2-3">Đỏ nâu cao cấp
-                        <input type="radio" name="dye">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox-service line-2-4">Bạc cao cấp
-                        <input type="radio" name="dye">
-                        <span class="checkmark"></span>
-                      </label>
-                    </div>
-                  </div>
+                @endforeach
                   <div class="btn-book">
-                      <input type="hidden" class="UserId" value="<?php echo session('user')->id;?>">
-                      <button type="button" id="btn-booking">
-                        Đặt vé
-                      </button>
+                    <input type="hidden" class="UserId" value="<?php echo session('user')->id;?>">
+                    <button type="button" id="btn-booking">
+                      Đặt vé
+                    </button>
                   </div>
                 </div>
             </div>
