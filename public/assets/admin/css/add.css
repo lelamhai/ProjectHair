@@ -286,7 +286,6 @@ body {
   color: #fff;
   height: 0px;
   overflow: hidden;
-  padding: 0 25px;
   transition: all 0.4s ease;
 }
 
@@ -1228,7 +1227,8 @@ body {
   padding: 10px;
 }
 .right__add-image-title{
-  font-size: 24px;
+  border-bottom: 1px solid black;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 .right__add-image-label{
@@ -1267,4 +1267,18 @@ body {
 
 @media screen and (max-width: 799px) {
 
+}
+
+.wrap-left {
+    float: left;
+    width: 78%;
+}
+
+.wrap-right {
+    float: left;
+    width: 20%;
+}
+
+.add-field {
+    padding-bottom: 15px;
 }

@@ -57,27 +57,6 @@
 			</div>
 		</div>
 		<span>{!! $products->render() !!}</span>
-
-		{{-- <div class="right_pagination d-flex">
-
-			<span class="right_pagination-item">
-				1
-			</span>
-			<span class="right_pagination-item">
-				2
-			</span>
-			<span class="right_pagination-item">
-				3
-			</span>
-
-			<span class="right_pagination-item">
-				...
-			</span>
-
-			<span class="right_pagination-item">
-				<i class="fas fa-arrow-right"></i>
-			</span>
-		</div> --}}
 	</div>
 </section>
 @endsection

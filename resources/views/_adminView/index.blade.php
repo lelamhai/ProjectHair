@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Admin nha!! Giết:))</title>
+	<title>Trang admin</title>
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta http-equiv="refresh" content="{{ route('form.addDetailsService') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
 	<link rel="stylesheet" href="/assets/admin/css/main.css">
-
-
     <link rel="stylesheet" href="/assets/admin/css/booking.css">
     <link rel="stylesheet" href="/assets/admin/css/popup.css">
-
+    <link rel="stylesheet" href="/assets/admin/css/add.css" >
 </head>
 <body>
 	{{-- <h1>Khu vực admin. Thằng lào láo, diệt tộc!!</h1>
