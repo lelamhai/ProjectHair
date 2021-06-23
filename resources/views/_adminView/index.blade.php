@@ -78,7 +78,7 @@
                             </li>
 
                             <li class="left__menuItem">
-                                <div class="left__title">Đặt vé
+                                <a class="left__title" href="/admin/booking">Đặt vé</a>
                             </li>
 							
                             <li class="left__menuItem">
