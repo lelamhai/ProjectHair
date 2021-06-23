@@ -69,7 +69,7 @@
 										<div class="product__detail">
 											<a href="/detail-product/{{$product->idPro}}" class="product__link">Bộ đôi DẦU GỘI - XẢ TIGI RESURRECTION
 												{{$product->title}}</a>
-											<p class="product__price--new">{{$product->price}}₫</p>
+											<p class="product__price--new"><?php echo number_format($product->price, 0, ',', '.'); ?>₫</p>
 										</div>
 									</div>
 								</div>
