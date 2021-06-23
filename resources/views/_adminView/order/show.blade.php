@@ -33,25 +33,34 @@
 							<th>Trạng Thái</th>
 							<th>Hình Thức Thanh Toán</th>
 							<th>Mã Khách Hàng</th>
+							<th></th>
 						</tr>
 					</thead>
 
 					<tbody>
 
-						@foreach ($products as $product)
+						@foreach ($orders as $order)
 
 						<tr class="right__table-item">
 							<td data-label="Email" style="text-align: left;">
-								{{$product->title}}
-								<div class="right__table-item-change">
-									<a class="right__table-item-btn right__table-item-btn--edit" href="/admin/edit-product/{{$product->idPro}}">Edit</a>
-									|
-									<a class="right__table-item-btn right__table-item-btn--delete" href="/admin/delete-product/{{$product->idPro}}">Delete</button>
-								</div>
+								{{$order->idOrder}}
 							</td>
-							<td data-label="Số Hoá Đơn">{{$category->title}}</td>
-							<td data-label="ID Sản Phẩm">{{$product->created_at}}</td>
-
+							<td data-label="Số Hoá Đơn">{{$order->totalMoney}}</td>
+							<td data-label="ID Sản Phẩm">{{$order->created_at}}</td>
+							<td data-label="ID Sản Phẩm">{{$order->status}}</td>
+							<td data-label="ID Sản Phẩm">{{$order->payMents}}</td>
+							<td data-label="ID Sản Phẩm">{{$order->order_user->id}}</td>
+							<td></td>
+							
+						</tr>
+						<tr>
+							@foreach ($i_orders as $item)
+								@if ($order->idOrder == $item->idOrder)
+									<td>
+										{{$item->order_pro->title}} || {{$item->order_pro->thumbnail}} || {{$item->order_pro->price}}
+									</td>
+								@endif
+							@endforeach
 						</tr>
 						@endforeach
 						
@@ -59,7 +68,7 @@
 				</table>
 			</div>
 		</div>
-		<span>{!! $products->render() !!}</span>
+		<span>{!! $orders->render() !!}</span>
 
 		{{-- <div class="right_pagination d-flex">
 

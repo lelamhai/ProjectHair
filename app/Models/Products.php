@@ -12,5 +12,9 @@ class Products extends Model
 	public function cart(){
 		return $this->hasMany(related: 'App\Models\Cart', foreignKey: 'idPro', localKey: 'idPro');
 	}
+
+	public function order_i(){
+		return $this->hasMany(related: 'App\Models\Order_Details', foreignKey: 'idPro', localKey: 'idPro');
+	}
     //
 }

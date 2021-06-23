@@ -14,5 +14,10 @@ class Order extends Model
 	public function order_vnp(){
 		return $this->hasMany(related: 'App\Models\Payments', foreignKey: 'idOrder', localKey: 'idOrder');
 	}
+
+
+	public function order_user () {
+		return $this->belongsTo(related: 'App\User', foreignKey:'idUser', ownerKey:'id');
+	}
     //
 }
