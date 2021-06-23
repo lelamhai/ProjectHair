@@ -38,90 +38,36 @@
 							<th style="text-align: center;">StyleList</th>
 							<th>Dịch vụ</th>
 							<th>Thời gian đặt vé</th>
+							<th>Khách hàng</th>
+							<th>Số điện thoại</th>
+							<th>Trạng thái</th>
 							<th>Hủy lịch</th>
 						</tr>
 					</thead>
 
 					<tbody>
-						<tr class="right__table-item">
-							<td class="stylelist" data-label="Email">
-							  <select class="name" name="" id="">
-								<option value="">Nguyễn Văn A</option>
-								<option value="">Nguyễn Văn B</option>
-								<option value="">Nguyễn Văn B</option>
-								<option value="">Nguyễn Văn B</option>
-							  </select>
-							</td>
-							<td data-label="Số Hoá Đơn">Combo cắt tóc 10 bước</td>
-							<td data-label="ID Sản Phẩm">
-							  <div class="day-date">13/05/2021</div>
-							  <button type="button" class="change_date btn btn-primary" id="btn-booking">
-								Đổi Ngày
-							  </button>
 
-							</td>
-							<td><button class="btn-delete-booking"><i class="fas fa-times"></i></button></td>
+						@foreach ($books as $book)
+							<tr class="right__table-item">
+								<td class="stylelist" data-label="Email">{{$book->emp_book->name}}</td>
+								<td data-label="Số Hoá Đơn">{{$book->service_book->title}}</td>
+								<td data-label="ID Sản Phẩm">
+								  <div class="day-date">{{$book->date}}</div>
+								</td>
+								<td data-label="Số Hoá Đơn">{{$book->users_book->name}}</td>
+								<td data-label="Số Hoá Đơn">{{$book->users_book->phone}}</td>
+								<td data-label="Số Hoá Đơn">{{$book->finish}}
+								</td>
+								<td><button class="btn-delete-booking"><i class="fas fa-times"></i></button></td>
 
-						</tr>
-						<tr class="right__table-item">
-							<td class="stylelist" data-label="Email">
-							  <select class="name" name="" id="">
-								<option value="">Nguyễn Văn A</option>
-								<option value="">Nguyễn Văn B</option>
-								<option value="">Nguyễn Văn B</option>
-								<option value="">Nguyễn Văn B</option>
-							  </select>
-							</td>
-							<td data-label="Số Hoá Đơn">Combo cắt tóc 10 bước</td>
-							<td data-label="ID Sản Phẩm">
-							  <div class="day-date">13/05/2021</div>
-								<button type="button" class="change_date btn btn-primary" >
-								  Đổi Ngày
-								</button>
-							</td>
-							<td><button class="btn-delete-booking"><i class="fas fa-times"></i></button></td>
+							</tr>
+						@endforeach
 
-						</tr>
-						<tr class="right__table-item">
-							<td class="stylelist" data-label="Email">
-							  <select class="name" name="" id="">
-								<option value="">Nguyễn Văn A</option>
-								<option value="">Nguyễn Văn B</option>
-								<option value="">Nguyễn Văn B</option>
-								<option value="">Nguyễn Văn B</option>
-							  </select>
-
-							</td>
-							<td data-label="Số Hoá Đơn">Combo cắt tóc 10 bước</td>
-							<td data-label="ID Sản Phẩm">
-							  <div class="day-date">13/05/2021</div>
-							  <button type="button" class="change_date btn btn-primary" >
-								Đổi Ngày
-							  </button>
-							</td>
-							<td><button class="btn-delete-booking"><i class="fas fa-times"></i></button></td>
-
-						</tr>
-						<tr class="right__table-item">
-							<td class="stylelist" data-label="Email">
-								<select class="name" name="" id="">
-								  <option value="">Nguyễn Văn A</option>
-								  <option value="">Nguyễn Văn B</option>
-								  <option value="">Nguyễn Văn B</option>
-								  <option value="">Nguyễn Văn B</option>
-								</select>
-							</td>
-							<td data-label="Số Hoá Đơn">Combo cắt tóc 10 bước</td>
-							<td data-label="ID Sản Phẩm">
-							  <div class="day-date">13/05/2021</div>
-							  <button type="button" class="change_date btn btn-primary">
-								Đổi Ngày
-							  </button>
-							</td>
-							<td><button class="btn-delete-booking"><i class="fas fa-times"></i></button></td>
-						</tr>
+						
+						
 					</tbody>
 				</table>
+				<span>{!! $books->render() !!}</span>
 			</div>
 		</div>
 	</div>
