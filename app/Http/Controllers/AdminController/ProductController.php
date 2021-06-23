@@ -57,9 +57,9 @@ class ProductController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'price' => ['required', 'string'],
+            //'price' => ['required', 'string'],
             'title' => ['required', 'string'],
-            'thumbnail' => ['required', 'string'],
+            //'thumbnail' => ['required', 'string'],
         ]);
     }
 
@@ -80,8 +80,8 @@ class ProductController extends Controller
             'title' => $data['title'],
             'price' => $data['price'],
             'thumbnail' => $data['thumbnail'],
-            'short_Description' => $data['short_Description'],
-            'detailed_description' => $data['detailed_description'],
+            'short_Description' => $data['short_Description'] . ' ',
+            'detailed_description' => $data['detailed_description'] . ' ',
         ]);
     }
 

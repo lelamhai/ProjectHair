@@ -76,5 +76,7 @@ Route::post('/admin/add-product', 'AdminController\ProductController@postAdd')->
 Route::get('/admin/delete-product/{idPro}', 'AdminController\ProductController@deleteProduct')->name('get.deleteProduct')->middleware('KhangMiddleware');
 //  ===================== Order =================== 
 Route::get('/admin/order', 'AdminController\OrderController@showOrders')->name('get.orders')->middleware('KhangMiddleware');
+Route::delete('/admin/order/delete/{idOrder}', 'AdminController\OrderController@deleteOrder')->name('order.deleteOrder');
+Route::post('/admin/order/detail/{idOrder}', 'AdminController\OrderController@detailOrder')->name('order.detailOrder');
 //  ===================== Booking =================== 
 Route::get('/admin/booking', 'AdminController\BookingController@index')->name('booking.index')->middleware('KhangMiddleware');

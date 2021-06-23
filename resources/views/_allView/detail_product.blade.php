@@ -23,7 +23,12 @@
                             <div class="detail-product__right-value">
                                 {{-- <div class="detail-product__right-price-new"></div> --}}
                                 <div class="detail-product__right-price">
-                                    <span>Giá tiền:</span><span class="detail-product__right-price-new">{{$product->price}}đ</span>
+                                    <span>Giá tiền:</span><span class="detail-product__right-price-new">
+                                        <?php
+                                                echo number_format( $product->price, 0, ',', '.');    
+                                        ?>
+                                        đ
+                                    </span>
                                 </div>
                             </div>
                             <div class="detail-product__right-submit">
@@ -69,14 +74,19 @@
                         <div class=" owl-carousel owl-theme">
 							@foreach ($products as $product)
 								<div class="product__item">
-									<a href="#" class="product__thumb">
+									<a href="/detail-product/{{$product->idPro}}" class="product__thumb">
 										<img src="{{$product->thumbnail}}" alt=""
 											class="product__photo img-responsive">
 									</a>
 
 									<div class="product__detail">
-										<a href="#" class="product__link">{{$product->title}}</a>
-										<p class="product__price--new">{{$product->price}}₫</p>
+										<a href="/detail-product/{{$product->idPro}}" class="product__link">{{$product->title}}</a>
+										<p class="product__price--new">
+                                            <?php
+                                                echo number_format( $product->price, 0, ',', '.');    
+                                            ?>
+                                            ₫
+                                        </p>
 									</div>
 								</div>
 							@endforeach

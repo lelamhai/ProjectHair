@@ -5,8 +5,8 @@
 	<div class="right__content">
 		<div class="right__head d-flex">
 			<div class="right__head-post d-flex">
-				<h5 class="right__head-post-title">Posts</h5>
-				<a href="{{route('form.addDetailsService')}}" class="right__head-post-add">Add New</a>
+				<h5 class="right__head-post-title">Dịch vụ</h5>
+				<a href="{{route('form.addDetailsService')}}" class="right__head-post-add">Thêm mới</a>
 			</div>
 			<div class="right__head-search">
 				{{-- <input type="text" class="right__head-search-input">
@@ -19,7 +19,7 @@
 				<label for="all" class="right__head-bar-label">All</label>
 				<button class="right__head-bar-delete">Delete</button> --}}
 			</div>
-			<span class="right__head-bar-count">2 items</span>
+			<span class="right__head-bar-count"><?php echo count($steps)?> items</span>
 		</div>
 
 		<div class="right__table">
@@ -56,7 +56,7 @@
 				</table>
 			</div>
 		</div>
-		<span>{!! $steps->render() !!}</span>
+		<span class="pagination-admin">{!! $steps->render() !!}</span>
 	</div>
 </section>
 @endsection

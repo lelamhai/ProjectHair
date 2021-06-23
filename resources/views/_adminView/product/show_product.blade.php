@@ -6,7 +6,7 @@
 		<div class="right__head d-flex">
 			<div class="right__head-post d-flex">
 				<h5 class="right__head-post-title">Posts</h5>
-				<a href="{{route('get.addProduct')}}" class="right__head-post-add">Add New</a>
+				<a href="{{route('get.addProduct')}}" class="right__head-post-add">Thêm mới</a>
 			</div>
 			<div class="right__head-search">
 				{{-- <input type="text" class="right__head-search-input">
@@ -19,7 +19,7 @@
 				<label for="all" class="right__head-bar-label">All</label>
 				<button class="right__head-bar-delete">Delete</button> --}}
 			</div>
-			<span class="right__head-bar-count">2 items</span>
+			<span class="right__head-bar-count"><?php echo count($products)?> items</span>
 		</div>
 
 		<div class="right__table">
@@ -57,27 +57,6 @@
 			</div>
 		</div>
 		<span>{!! $products->render() !!}</span>
-
-		{{-- <div class="right_pagination d-flex">
-
-			<span class="right_pagination-item">
-				1
-			</span>
-			<span class="right_pagination-item">
-				2
-			</span>
-			<span class="right_pagination-item">
-				3
-			</span>
-
-			<span class="right_pagination-item">
-				...
-			</span>
-
-			<span class="right_pagination-item">
-				<i class="fas fa-arrow-right"></i>
-			</span>
-		</div> --}}
 	</div>
 </section>
 @endsection
