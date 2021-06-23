@@ -1345,3 +1345,30 @@ body {
     width: 100%;
     height: auto;
 }
+
+.left__link {
+    color: white;
+}
+
+.pagination-admin {
+    display: block;
+}
+
+.pagination-admin .page-item.active .page-link {
+    background-color: transparent;
+    border: 0;
+}
+
+.pagination-admin .page-link {
+    color: #000;
+    background-color: transparent;
+    border: 0;
+}
+
+.pagination-admin .page-link:hover {
+    background-color:transparent;
+}
+
+.pagination-admin .page-item.disabled .page-link { 
+    background-color: transparent;
+}

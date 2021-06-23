@@ -12,20 +12,6 @@
     <link rel="stylesheet" href="/assets/admin/css/add.css" >
 </head>
 <body>
-	{{-- <h1>Khu vực admin. Thằng lào láo, diệt tộc!!</h1>
-
-	<li><a class="active-menu" href="#"><i
-			class="fa fa-dashboard fa-3x"></i> Dashboard</a></li>
-	@foreach ($services as $service)
-		<li><a href="/admin/service/{{$service->id}}"><i class="fa fa-desktop fa-3x"></i>
-			{{$service->title}}</a></li>
-	@endforeach
-
-	@yield('content')
-	@csrf --}}
-
-
-
 	
 <div class="wrapper">
         <div class="container">

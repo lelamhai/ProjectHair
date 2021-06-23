@@ -14,7 +14,7 @@
 		<div class="right__head-bar d-flex">
 			<div class="right__head-bar-select">
 			</div>
-			<span class="right__head-bar-count">2 items</span>
+			<span class="right__head-bar-count"><?php echo count($orders); ?> items</span>
 		</div>
 
 		<div class="right__table">
@@ -40,17 +40,7 @@
 								<td>{{$order->created_at}}</td>
 								<td><button class="btn-detail-order" data-order="{{$order->idOrder}}" data-toggle="modal" data-target="#detail-order">Chi tiết đơn hàng</button> <button class="btn-delete-order" data-order="{{$order->idOrder}}" >Xóa</button></td>
 							</tr>
-							{{-- <tr>
-								@foreach ($i_orders as $item)
-									@if ($order->idOrder == $item->idOrder)
-										<td>
-											{{$item->order_pro->title}} || {{$item->order_pro->thumbnail}} || {{$item->order_pro->price}}
-										</td>
-									@endif
-								@endforeach
-							</tr> --}}
 						@endforeach
-						
 					</tbody>
 				</table>
 			</div>

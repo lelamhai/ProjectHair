@@ -19,7 +19,7 @@
 				<label for="all" class="right__head-bar-label">All</label>
 				<button class="right__head-bar-delete">Delete</button> --}}
 			</div>
-			<span class="right__head-bar-count">2 items</span>
+			<span class="right__head-bar-count"><?php echo count($products)?> items</span>
 		</div>
 
 		<div class="right__table">
