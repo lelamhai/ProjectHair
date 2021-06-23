@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
 	<link rel="stylesheet" href="/assets/admin/css/main.css">
     <link rel="stylesheet" href="/assets/admin/css/booking.css">
-    <link rel="stylesheet" href="/assets/admin/css/popup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    {{-- <link rel="stylesheet" href="/assets/admin/css/popup.css"> --}}
     <link rel="stylesheet" href="/assets/admin/css/add.css" >
 </head>
 <body>
@@ -38,7 +39,14 @@
                     <div class="left__content">
                         <div class="left__profile">
                             <div class="left__image"><img src="/assets/admin/assets/avatar.jpg" alt=""></div>
-                            <p class="left__name">Tên User</p>
+                            <p class="left__name">
+                                <?php 
+                                    if (session('user'))
+                                    {
+                                        echo session('user')->name;
+                                    }    
+                                ?>
+                            </p>
                         </div>
                         <ul class="left__menu">
                             <li class="left__menuItem">
@@ -72,7 +80,7 @@
                             </li>
 
                             <li class="left__menuItem">
-                                <a class="left__title" href="/admin/order">Quản lý đơn hàng</a>
+                                <a class="left__title" href="/admin/order">Đơn hàng</a>
                             </li>
 
                             <li class="left__menuItem">
@@ -97,9 +105,14 @@
 	<!-- đoạn js cho editor -->
 	<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
     <script src="/assets/admin/js/main.js"></script>
-    <script src="/assets/admin/js/popup.js"></script>
+
+    
+    {{-- <script src="/assets/admin/js/popup.js"></script> --}}
 
 	<script>
 		$('#lfm').filemanager('image');

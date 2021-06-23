@@ -20,4 +20,34 @@ class OrderController extends Controller
                                                   'services' => $services,
                                                   'categories' => $categories]);
     }
+
+    public function deleteOrder(Request $request)
+    {
+        Order::where('idOrder', $request->idOrder)->delete();
+        return response()->json([
+			'result' => true
+		]);
+    }
+
+    public function detailOrder(Request $request)
+    {
+        $listIdPorduts = DB::table('order__details')->select("idPro")->where('idOrder', $request->idOrder)->get();//Order_Details::select('idPro')->where('idOrder', $request->idOrder);
+
+        $data = array();
+        foreach($listIdPorduts as $item)
+        {
+            //$value = DB::table('products')->where('idPro', $item->idPro)->get();
+
+            $value = DB::table('order__details')
+            ->join('products', 'products.idPro', '=', 'order__details.idPro')
+            ->where('products.idPro', '=', $item->idPro)
+            ->where('order__details.idOrder', '=', $request->idOrder)
+            ->get();
+            array_push($data, $value);
+        }
+        return response()->json([
+            'result' => true,
+            'data' =>  $data
+        ]);
+    }
 }

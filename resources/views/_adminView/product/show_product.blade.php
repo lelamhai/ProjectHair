@@ -6,7 +6,7 @@
 		<div class="right__head d-flex">
 			<div class="right__head-post d-flex">
 				<h5 class="right__head-post-title">Posts</h5>
-				<a href="{{route('get.addProduct')}}" class="right__head-post-add">Add New</a>
+				<a href="{{route('get.addProduct')}}" class="right__head-post-add">Thêm mới</a>
 			</div>
 			<div class="right__head-search">
 				{{-- <input type="text" class="right__head-search-input">

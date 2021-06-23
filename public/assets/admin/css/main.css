@@ -1287,3 +1287,61 @@ body {
     color: none;
     cursor: not-allowed;
 }
+
+.btn-detail-order {
+    background-color: green;
+    padding: 10px;
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-delete-order {
+    padding: 10px;
+    color: white;
+    margin-right: 10px;
+    background-color: FireBrick;
+}
+
+#detail-order .modal-dialog {
+    max-width: 45%;
+}
+
+.item-detail-order {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.item-detail-order a {
+    color: rgb(33, 37, 41);
+    display: inline-flex;
+}
+
+.item-detail-order a:hover {
+    color: rgb(33, 37, 41);
+    text-decoration:none;
+}
+
+.img-detail-order {
+    width: 20%;
+    padding-right: 10px;
+}
+
+.title-detail-order {
+    width: 45%;
+    padding-right: 10px;
+}
+
+.amount-detail-order {
+    width: 20%;
+    padding-right: 10px;
+}
+
+.price-detail-order {
+    width: 15%;
+    padding-right: 1px;
+}
+
+.img-detail-order img {
+    width: 100%;
+    height: auto;
+}
