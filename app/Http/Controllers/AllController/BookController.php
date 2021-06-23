@@ -28,14 +28,27 @@ class BookController extends Controller
 
 	public function loadFirst(Request $request)
 	{
-		// $index = DB::table('books')->select('index')->where('idEmp', $request->userId)->get();
-		// $index
+		$date = date('Y-m-d');
+		$date1 = strtotime ( '+2 day' , strtotime ( $date ) ) ;
+		$date1 = date ( 'Y-m-d' , $date1 );
+
+		$date2 = strtotime ( '+2 day' , strtotime ( $date ) ) ;
+		$date2 = date ( 'Y-m-d' , $date2 );
+
+		$index = DB::table('books')->select('index')->where('idEmp', $request->userId)
+													->where('date', $date)
+													->orwhere('date', $date1)
+													->orwhere('date', $date2)->get();
+
+
 		$rates = DB::table('rates')->select('rate')->where('idEmp', $request->userId)->get();
 		return response()->json([
 			'result' => true,
 			'index'	=> $index,
 			'rates' => $rates
 		]);
+
+		
 	}
 
 
@@ -50,13 +63,14 @@ class BookController extends Controller
 
 		$comments = DB::table('comments')->where('idEmp', $request->userId)->get();
 		$user = DB::table('user')->where('id', $request->userId)->get();
-		$index = DB::table('books')->select('idEmp')->where('idEmp', $request->userId)
+		$index = DB::table('books')->select('index')->where('idEmp', $request->userId)
 													->where('date', $date)
 													->orwhere('date', $date1)
 													->orwhere('date', $date2)->get();
 		return response()->json([
 			'result' => true,
 			'user'	=> $user,
+			'index'	=> $index,
 			'comments' => $comments
 			
 		]);
@@ -75,12 +89,15 @@ class BookController extends Controller
 
 	public function insertBook(Request $request)
 	{
-		// Book::create([
-		// 	'idUser' => $request->userId,
-		// 	'idEmp' => $request->empId,
-		// 	'index' => $request->index,
-		// 	'date' => $date
-		// ]);
+		$date = date('Y-m-d',strtotime($request->date));
+		Books::create([
+			'idUser' => $request->userId,
+			'idEmp' => $request->empId,
+			'index' => $request->index,
+			'service' => 22,
+			'time' => $request->time,
+			'date' => $date
+		]);
 	
 		return response()->json([
 			'result' => true

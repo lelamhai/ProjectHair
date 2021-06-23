@@ -59,14 +59,14 @@
                 </div>
 
                 <div class="schedule">
-                    <b>CHỌN NGÀY GIỜ CẮT (301 TRƯƠNG ĐỊNH)</b>
+                    <b>CHỌN NGÀY GIỜ CẮT</b>
                     <div class="select-day">
                       <ul class="nav nav-tabs time-booking">
                         <li class="time-schedule active">
                           <a data-toggle="tab" href="#today">
                             <b>Hôm nay</b>
                             <span>
-                              <?php echo date("d/m/Y", time());?>
+                              <?php echo date("d-m-Y", time());?>
                               </span>
                           </a>
                         </li>
@@ -76,7 +76,7 @@
                             <span>
                                 <?php
                                     $Date = date("Y-m-d", time());;
-                                    echo date('d/m/Y', strtotime($Date. ' + 1 days'));
+                                    echo date('d-m-Y', strtotime($Date. ' + 1 days'));
                                   ?>
                             </span>
                           </a>
@@ -87,99 +87,100 @@
                             <span>
                                 <?php 
                                   $Date = date("Y-m-d", time());;
-                                    echo date('d/m/Y', strtotime($Date. ' + 2 days'));  
+                                    echo date('d-m-Y', strtotime($Date. ' + 2 days'));  
                                 ?>
                             </span>
                           </a>
                         </li>
                       </ul>
+
                         <div class="tab-content">
                           <div id="today" class="tab-pane fade in active">
                             <div class="wrap-day" id="today">
-                              <div class="item-time">8h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">9h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">9h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">10h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">10h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">11h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">11h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">12h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">12h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">13h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">13h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">14h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">14h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">15h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">15h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">16h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">16h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">17h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">17h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">18h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">18h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">19h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">19h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">20h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">20h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time"><div class="time-text">8:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">9:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">9:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">10:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">10:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">11:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">11:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">12:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">12:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">13:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">13:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">14:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">14:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">15:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">15:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">16:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">16:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">17:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">17:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">18:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">18:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">19:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">19:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">20:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">20:30</div><div class="slot-status">Còn chỗ</div></div>
                             </div>
                           </div>
                           <div id="tomorrow" class="tab-pane fade">
                             <div class="wrap-day" id="tomorrow">
-                              <div class="item-time">8h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">9h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">9h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">10h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">10h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">11h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">11h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">12h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">12h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">13h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">13h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">14h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">14h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">15h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">15h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">16h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">16h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">17h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">17h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">18h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">18h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">19h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">19h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">20h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">20h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time"><div class="time-text">8:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">9:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">9:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">10:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">10:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">11:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">11:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">12:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">12:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">13:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">13:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">14:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">14:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">15:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">15:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">16:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">16:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">17:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">17:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">18:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">18:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">19:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">19:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">20:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">20:30</div><div class="slot-status">Còn chỗ</div></div>
                             </div>
 
                           </div>
                           <div id="after-tomorrow" class="tab-pane fade">
                             <div class="wrap-day" id="aftertomorrow">
-                              <div class="item-time">8h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">9h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">9h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">10h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">10h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">11h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">11h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">12h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">12h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">13h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">13h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">14h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">14h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">15h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">15h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">16h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">16h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">17h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">17h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">18h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">18h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">19h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">19h30<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">20h00<br><span class="slot-status">Còn chỗ</span></div>
-                              <div class="item-time">20h30<br><span class="slot-status">Còn chỗ</span></div>
+                              <div class="item-time"><div class="time-text">8:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">9:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">9:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">10:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">10:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">11:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">11:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">12:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">12:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">13:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">13:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">14:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">14:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">15:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">15:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">16:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">16:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">17:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">17:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">18:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">18:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">19:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">19:30</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">20:00</div><div class="slot-status">Còn chỗ</div></div>
+                              <div class="item-time"><div class="time-text">20:30</div><div class="slot-status">Còn chỗ</div></div>
                             </div>
                           </div>
                         </div>
@@ -187,68 +188,39 @@
                 </div>
                 <div class="service">
                   <b class="service-tittle" >DỊCH VỤ</b>
-                  <div class="ser-cut">
-                    <b class="ser-tittle">
-                      Cắt tóc
-                    </b>
-                    <div>
-                      <label class="container-checkbox-service">Combo 10 bước
-                        <input type="radio" checked="checked">
-                        <span class="checkmark"></span>
-                      </label>
-                    </div>
-                  </div>
-
+                  @foreach ($services as $service)
                   <div class="ser-perm">
-                    <b class="ser-tittle">Uốn</b>
-                    <div>
-                      <label class="container-checkbox-service line-1-1">Cao cấp
-                        <input type="radio" checked="checked" name="perm">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox-service line-1-2">Tiêu chuẩn
-                        <input type="radio" name="perm">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox-service line-1-3">Con sâu
-                        <input type="radio" name="perm">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox-service line-1-4">Premlock
-                        <input type="radio" name="perm">
-                        <span class="checkmark"></span>
-                      </label>
+                    <b class="ser-tittle">{{$service->title}}</b>
+                    <div class="wrap-serivce">
+                      @foreach ($steps as $step)
+                      <?php 
+                        if($service ->id == $step->idService &&  $step->idService == 1)
+                        {
+                          ?>
+                            <label class="container-checkbox-service">Combo 10 bước
+                              <input type="radio" class="radio-service" value="<?php echo $service->id?>"name="perm">
+                              <span class="checkmark"></span>
+                            </label>
+                          <?php
+                           break;
+                        } else if($service ->id == $step->idService) {
+                            ?>
+                            <label class="container-checkbox-service"><?php echo $step->title;?>
+                              <input type="radio" class="radio-service" value="<?php echo $step->id?>" name="perm">
+                              <span class="checkmark"></span>
+                            </label>
+                            <?php
+                        }
+                      ?>
+                      @endforeach
                     </div>
                   </div>
-
-                  <div class="ser-dye">
-                    <b class= "ser-tittle">
-                      Nhuộm tóc
-                    </b>
-                    <div>
-                      <label class="container-checkbox-service line-2-1">Đen phủ bạc
-                        <input type="radio" checked="checked" name="dye">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox-service line-2-2">Nâu cao cấp
-                        <input type="radio" name="dye">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox-service line-2-3">Đỏ nâu cao cấp
-                        <input type="radio" name="dye">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="container-checkbox-service line-2-4">Bạc cao cấp
-                        <input type="radio" name="dye">
-                        <span class="checkmark"></span>
-                      </label>
-                    </div>
-                  </div>
+                @endforeach
                   <div class="btn-book">
-                      <input type="hidden" class="UserId" value="<?php echo session('user')->id;?>">
-                      <button type="button" id="btn-booking">
-                        Đặt vé
-                      </button>
+                    <input type="hidden" class="UserId" value="<?php echo session('user')->id;?>">
+                    <button type="button" id="btn-booking">
+                      Đặt vé
+                    </button>
                   </div>
                 </div>
             </div>
