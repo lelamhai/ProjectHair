@@ -21,8 +21,9 @@ class PaymentController extends Controller
 		$carts = Cart::with('products', 'users')->where('idUser', $user->id)->get();
 
 		$today = date("Y-m-d");
-		$orders = DB::table('orders')->where(DB::raw('DATE(`created_at`)'), $today)->get();
+		//$orders = DB::table('orders')->where(DB::raw('DATE(`created_at`)'), $today)->get();
 
+		$orders = DB::table('orders')->where('status','Prosecc')->where('idUser', $user->id)->get();
 		// foreach ($orders as $order) {
 		// 	if ($today == $order->created_at->format('Y-m-d')) {
 		// 		$flag = 1; // has product available
