@@ -16,26 +16,40 @@ class PaymentController extends Controller
 {
 	public function index(Request $request) {
 
+		$flag = 0; // hasn't order be available
 		$user = $request->session()->get('user');
 		$carts = Cart::with('products', 'users')->where('idUser', $user->id)->get();
-		Order::create([
-			'payMents' => '',
-			'note' => $request->note . ' ',
-            'totalMoney' => $request->total,
-            'status' => 'Prosecc',
-			'idUser' => $user->id
-		]);
 
-		$idOrder_1 = DB::table('orders')->where('idUser', $user->id)->first();
+		$today = date("Y-m-d");
+		$orders = DB::table('orders')->where(DB::raw('DATE(`created_at`)'), $today)->get();
 
-		foreach ($carts as $cart) {
-
-			Order_Details::create([
-				'idOrder' => $idOrder_1->idOrder,
-				'idPro' => $cart->idPro,
-				'amount' => $cart->amount
+		// foreach ($orders as $order) {
+		// 	if ($today == $order->created_at->format('Y-m-d')) {
+		// 		$flag = 1; // has product available
+		// 	}
+		// }
+		//dd($orders->toArray());
+		if (count($orders) == 0) {
+			Order::create([
+				'payMents' => '',
+				'note' => $request->note . ' ',
+	            'totalMoney' => $request->total,
+	            'status' => 'Prosecc',
+				'idUser' => $user->id
 			]);
+
+			$idOrder_1 = DB::table('orders')->where('idUser', $user->id)->first();
+			$request->session()->put('idOrder', $idOrder_1->idOrder);
+			foreach ($carts as $cart) {
+
+				Order_Details::create([
+					'idOrder' => $idOrder_1->idOrder,
+					'idPro' => $cart->idPro,
+					'amount' => $cart->amount
+				]);
+			}
 		}
+
 
 		$total = $request->total;
 
@@ -120,6 +134,11 @@ class PaymentController extends Controller
 			session(['countCart' => 0]);
 
 			Cart::where('idUser', $user->id)->delete();
+
+			DB::table('orders')
+            ->where('idOrder', $request->session()->get('idOrder'))
+            ->update(['status' => 'Paid']);
+            $request->session()->forget('idOrder');
 
 			return view('_allView.result_payment')->with('retult',"Giao dịch thành công");
 		} 
