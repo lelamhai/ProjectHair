@@ -15,10 +15,10 @@ class CreateServiceDetailsTable extends Migration
     {
         Schema::create('service__details', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('step');
+            $table->string('step')->nullable();
             $table->string('title');
-            $table->text('content');
-            $table->string('thumbnail');
+            $table->text('content')->nullable();
+            $table->string('thumbnail')->nullable();
             $table->unsignedInteger('idService');
             $table->timestamps();
         });

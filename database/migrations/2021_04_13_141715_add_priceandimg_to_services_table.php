@@ -14,8 +14,8 @@ class AddPriceandimgToServicesTable extends Migration
     public function up()
     {
         Schema::table('services', function (Blueprint $table) {
-            $table->integer('oldPrice');
-            $table->string('thumbnail');
+            $table->integer('oldPrice')->nullable();
+            $table->string('thumbnail')->nullable();
             //
         });
     }

@@ -15,10 +15,9 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('idOrder');
-            $table->string('payMents');//0: online, 1:Tien mat
-            $table->string('note');
+            $table->string('note')->nullable();
             $table->integer('totalMoney');
-            $table->string('status');//trang thai giao
+            $table->string('status')->nullable();//trang thai giao
             $table->unsignedInteger('idUser');
             $table->timestamps();
         });

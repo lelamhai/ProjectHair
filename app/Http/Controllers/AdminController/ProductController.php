@@ -43,13 +43,13 @@ class ProductController extends Controller
     }
 
     public function postAdd(Request $request) {
-        $this->validator($request->all())->validate();
+        //$this->validator($request->all())->validate();
         $this->addProduct($request->all());
         return redirect('admin/index');
     }
 
     public function postEdit (Request $request) {
-        $this->validator($request->all())->validate();
+        //$this->validator($request->all())->validate();
         $this->updateProduct($request->all());
         return redirect('admin/index');
     }

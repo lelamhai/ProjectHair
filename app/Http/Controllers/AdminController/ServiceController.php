@@ -40,13 +40,13 @@ class ServiceController extends Controller
 	}
 
 	public function postDetailService(Request $request) {
-		$this->validator($request->all())->validate();
+		//$this->validator($request->all())->validate();
 		$this->createDetailService($request->all());
 		return redirect('admin/index');
 	}
 
 	public function editDetailService(Request $request) { //
-		$this->validator($request->all())->validate();
+		//$this->validator($request->all())->validate();
 		$this->updateDetailService($request->all());
 		return redirect('admin/index');
 	}

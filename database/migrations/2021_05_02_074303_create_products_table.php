@@ -17,10 +17,10 @@ class CreateProductsTable extends Migration
             $table->increments('idPro');
             $table->unsignedInteger('idCate');
             $table->string('title');
-            $table->integer('price');
-            $table->string('thumbnail');
-            $table->text('short_Description');
-            $table->text('detailed_description');
+            $table->integer('price')->nullable();
+            $table->string('thumbnail')->nullable();
+            $table->text('short_Description')->nullable();
+            $table->text('detailed_description')->nullable();
             $table->timestamps();
         });
 

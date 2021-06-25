@@ -62,7 +62,7 @@ Route::get('/products-of-categories/{idCate}', 'AllController\ProductsController
 Route::get('admin/index','AdminController\ServiceController@showMenu')->name('show.service')->middleware('KhangMiddleware');
 //  ===================== Service ===================
 Route::get('/admin/add-details-service', 'AdminController\ServiceController@indexFormAddDetailService')->name('form.addDetailsService')->middleware('KhangMiddleware');
-Route::post('/admin/add-details-service', 'AdminController\ServiceController@postDetailService')->name('post.detailService')->middleware('KhangMiddleware');
+Route::post('/admin/add-details-service', 'AdminController\ServiceController@postDetailService')->name('post.detailService')->middleware('KhangMiddleware'); 
 Route::get('/admin/service/{id}', 'AdminController\ServiceController@showAllStepOfService')->name('get.ServiceById')->middleware('KhangMiddleware');
 Route::get('admin/edit-step/{id}', 'AdminController\ServiceController@showStepOfServiceToEdit')->name('edit.step')->middleware('KhangMiddleware');
 Route::post('admin/submit-edit-step', 'AdminController\ServiceController@editDetailService')->name('submit-edit.step')->middleware('KhangMiddleware');
