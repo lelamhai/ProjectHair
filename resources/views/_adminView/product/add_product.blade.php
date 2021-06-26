@@ -8,6 +8,7 @@
 			<form action="{{route('post.addProduct')}}" method="POST">
 				@csrf
 				<input type="hidden" name="idCate" value="{{$idCate}}">
+				<input type="hidden" name="short_Description" value="Ty">
 				<div class="wrap-left">
 					<div class="right__add-post">
 						<div class="right__head-new-post add-field">
@@ -17,8 +18,10 @@
 						<div class="add-field">
 							<textarea id="my-editor" name="detailed_description"  class="form-control" ></textarea>
 						</div>
+
 						<div class="add-field">
-							<input type="text" name="price" class="right__head-new-post-input" placeholder="Giá tiền">
+							<div class="title-field">Giá tiền (₫)</div>
+							<input type="number" name="price" class="right__head-new-post-input">
 						</div>
 					</div>
 
@@ -30,7 +33,6 @@
 						<h5 class="right__add-image-title">Hình đại diện</h5>
 						<input type="file" hidden accept="image/*" id="feature-image" onchange="loadFile(event)">
 						<div class="show-image" id="holder">
-							{{-- <img id="output" class="img-responsive" /> --}}
 						</div>
 
 						<div class="input-group">
@@ -52,36 +54,7 @@
 			</form>
     	</div>
 </section>
-
-	{{-- <form action="{{route('post.addProduct')}}" method="POST"> <!-- sua action  --> 
-		@csrf
-		<div>
-			<label>Title</label>
-			<input type="text" name="title"><br><br>
-		</div>
-		<div>
-			<label>Price</label>
-			<input type="text" name="price"><br><br>
-		</div>
-		<div>
-			<div class="input-group">
-		   <span class="input-group-btn">
-		     <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-		       <i class="fa fa-picture-o"></i> Choose
-		     </a>
-		   </span>
-		   <input id="thumbnail" class="form-control" type="text" name="thumbnail">
-	 	</div>
-	 	<img id="holder" style="margin-top:15px;max-height:100px;">
-		</div>
-		<input type="hidden" name="idCate" value="{{$idCate}}">
-		<textarea id="my-editor" name="detailed_description"  class="form-control"></textarea>
-		<div class="col-md-6 offset-md-4">
-            <button type="submit" class="btn btn-primary">
-               {{ __('Add') }}
-            </button>
-        </div>
-	</form> --}}
+	
 @endsection
 
 @section('css')

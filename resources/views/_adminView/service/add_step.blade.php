@@ -1,7 +1,66 @@
 @extends('_adminView.index')
 
 @section('content')
-	<form action="/admin/add-details-service" method="POST">
+
+
+<section class="right">
+	<h5 class="right__head-post-title">Thêm mới</h5>
+	<div class="right__content">
+		<form action="/admin/add-details-service" method="POST">
+			@csrf
+			<input type="hidden" name="idService" value="{{$idService}}">
+			<input type="hidden"name="content" value="temp">
+			
+			<div class="wrap-left">
+				<div class="right__add-post">
+					<div class="right__head-new-post add-field">
+						<input type="text" name="title" class="right__head-new-post-input" placeholder="Tiêu đề">
+					</div>
+
+
+					{{-- Chổ này để check combo 10 bước hay là các dịch vụ khác --}}
+					<div class="add-field">
+						<div class="title-field">Các bước</div>
+						<input type="text" name="step" class="right__head-new-post-input" placeholder="Bước 1">
+					</div>
+					{{-- end --}}
+
+				</div>
+
+			</div>
+		
+			<div class="wrap-right">
+			
+				<div class="right__add-image">
+					<h5 class="right__add-image-title">Hình đại diện</h5>
+					<input type="file" hidden accept="image/*" id="feature-image" onchange="loadFile(event)">
+					<div class="show-image" id="holder">
+					</div>
+
+					<div class="input-group">
+					   <span class="input-group-btn">
+						 <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+						   <i class="fa fa-picture-o"></i> Choose
+						 </a>
+					   </span>
+					   <input id="thumbnail" class="form-control" type="text" name="thumbnail">
+					</div>
+					
+
+					<div class="wrap-submit">
+						<button class="right__add-image-btn">{{ __('Lưu dữ liệu') }}</button>
+					</div>
+				</div>
+			
+			</div>
+		</form>
+	</div>
+</section>
+
+
+
+
+	{{-- <form action="/admin/add-details-service" method="POST">
 		@csrf
 		<div>
 			<label>Step</label>
@@ -30,7 +89,7 @@
                {{ __('Add') }}
             </button>
         </div>
-	</form>
+	</form> --}}
 @endsection
 
 @section('js-editor')
