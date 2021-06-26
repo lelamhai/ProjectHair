@@ -9,14 +9,19 @@
  */
 
 return [
+    'base_directory' => '',
+    'images_folder_name' => 'photos',
+    'files_folder_name' => 'files',
+    'shared_folder_name' => 'shares',
+    'thumb_folder_name' => 'thumbs', 
+
     /*
     |--------------------------------------------------------------------------
     | Routing
     |--------------------------------------------------------------------------
      */
-
     'use_package_routes'       => true,
-
+    
     /*
     |--------------------------------------------------------------------------
     | Shared folder / Private folder

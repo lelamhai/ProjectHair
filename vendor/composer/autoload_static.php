@@ -19,17 +19,16 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
-        '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
+        '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '9cdd7b9056abc3081735233ba9dd9c7f' => __DIR__ . '/..' . '/facade/flare-client-php/src/helpers.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
-        'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
     );
 
@@ -37,10 +36,6 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
-        ),
-        'X' => 
-        array (
-            'XdgBaseDir\\' => 11,
         ),
         'W' => 
         array (
@@ -170,10 +165,6 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-        ),
-        'XdgBaseDir\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src',
         ),
         'Whoops\\' => 
         array (
@@ -786,6 +777,7 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'Facade\\FlareClient\\Http\\Response' => __DIR__ . '/..' . '/facade/flare-client-php/src/Http/Response.php',
         'Facade\\FlareClient\\Middleware\\AddGlows' => __DIR__ . '/..' . '/facade/flare-client-php/src/Middleware/AddGlows.php',
         'Facade\\FlareClient\\Middleware\\AnonymizeIp' => __DIR__ . '/..' . '/facade/flare-client-php/src/Middleware/AnonymizeIp.php',
+        'Facade\\FlareClient\\Middleware\\CensorRequestBodyFields' => __DIR__ . '/..' . '/facade/flare-client-php/src/Middleware/CensorRequestBodyFields.php',
         'Facade\\FlareClient\\Report' => __DIR__ . '/..' . '/facade/flare-client-php/src/Report.php',
         'Facade\\FlareClient\\Solutions\\ReportSolution' => __DIR__ . '/..' . '/facade/flare-client-php/src/Solutions/ReportSolution.php',
         'Facade\\FlareClient\\Stacktrace\\Codesnippet' => __DIR__ . '/..' . '/facade/flare-client-php/src/Stacktrace/Codesnippet.php',
@@ -2645,6 +2637,7 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'League\\CommonMark\\Inline\\Renderer\\TextRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Inline/Renderer/TextRenderer.php',
         'League\\CommonMark\\Input\\MarkdownInput' => __DIR__ . '/..' . '/league/commonmark/src/Input/MarkdownInput.php',
         'League\\CommonMark\\Input\\MarkdownInputInterface' => __DIR__ . '/..' . '/league/commonmark/src/Input/MarkdownInputInterface.php',
+        'League\\CommonMark\\MarkdownConverter' => __DIR__ . '/..' . '/league/commonmark/src/MarkdownConverter.php',
         'League\\CommonMark\\MarkdownConverterInterface' => __DIR__ . '/..' . '/league/commonmark/src/MarkdownConverterInterface.php',
         'League\\CommonMark\\Node\\Node' => __DIR__ . '/..' . '/league/commonmark/src/Node/Node.php',
         'League\\CommonMark\\Node\\NodeWalker' => __DIR__ . '/..' . '/league/commonmark/src/Node/NodeWalker.php',
@@ -2687,6 +2680,7 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'League\\Flysystem\\ConfigAwareTrait' => __DIR__ . '/..' . '/league/flysystem/src/ConfigAwareTrait.php',
         'League\\Flysystem\\ConnectionErrorException' => __DIR__ . '/..' . '/league/flysystem/src/ConnectionErrorException.php',
         'League\\Flysystem\\ConnectionRuntimeException' => __DIR__ . '/..' . '/league/flysystem/src/ConnectionRuntimeException.php',
+        'League\\Flysystem\\CorruptedPathDetected' => __DIR__ . '/..' . '/league/flysystem/src/CorruptedPathDetected.php',
         'League\\Flysystem\\Directory' => __DIR__ . '/..' . '/league/flysystem/src/Directory.php',
         'League\\Flysystem\\Exception' => __DIR__ . '/..' . '/league/flysystem/src/Exception.php',
         'League\\Flysystem\\File' => __DIR__ . '/..' . '/league/flysystem/src/File.php',
@@ -3373,6 +3367,7 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'PhpParser\\Builder' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder.php',
         'PhpParser\\BuilderFactory' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/BuilderFactory.php',
         'PhpParser\\BuilderHelpers' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/BuilderHelpers.php',
+        'PhpParser\\Builder\\ClassConst' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/ClassConst.php',
         'PhpParser\\Builder\\Class_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/Class_.php',
         'PhpParser\\Builder\\Declaration' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/Declaration.php',
         'PhpParser\\Builder\\FunctionLike' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder/FunctionLike.php',
@@ -3403,6 +3398,7 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'PhpParser\\Lexer\\Emulative' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/Emulative.php',
         'PhpParser\\Lexer\\TokenEmulator\\AttributeEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/AttributeEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\CoaleseEqualTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/CoaleseEqualTokenEmulator.php',
+        'PhpParser\\Lexer\\TokenEmulator\\EnumTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/EnumTokenEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\FlexibleDocStringEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/FlexibleDocStringEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\FnTokenEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/FnTokenEmulator.php',
         'PhpParser\\Lexer\\TokenEmulator\\KeywordEmulator' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Lexer/TokenEmulator/KeywordEmulator.php',
@@ -3564,6 +3560,8 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'PhpParser\\Node\\Stmt\\Echo_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Echo_.php',
         'PhpParser\\Node\\Stmt\\ElseIf_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/ElseIf_.php',
         'PhpParser\\Node\\Stmt\\Else_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Else_.php',
+        'PhpParser\\Node\\Stmt\\EnumCase' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/EnumCase.php',
+        'PhpParser\\Node\\Stmt\\Enum_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Enum_.php',
         'PhpParser\\Node\\Stmt\\Expression' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Expression.php',
         'PhpParser\\Node\\Stmt\\Finally_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/Finally_.php',
         'PhpParser\\Node\\Stmt\\For_' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Node/Stmt/For_.php',
@@ -3791,6 +3789,7 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'Psy\\ConsoleColorFactory' => __DIR__ . '/..' . '/psy/psysh/src/ConsoleColorFactory.php',
         'Psy\\Context' => __DIR__ . '/..' . '/psy/psysh/src/Context.php',
         'Psy\\ContextAware' => __DIR__ . '/..' . '/psy/psysh/src/ContextAware.php',
+        'Psy\\EnvInterface' => __DIR__ . '/..' . '/psy/psysh/src/EnvInterface.php',
         'Psy\\Exception\\BreakException' => __DIR__ . '/..' . '/psy/psysh/src/Exception/BreakException.php',
         'Psy\\Exception\\DeprecatedException' => __DIR__ . '/..' . '/psy/psysh/src/Exception/DeprecatedException.php',
         'Psy\\Exception\\ErrorException' => __DIR__ . '/..' . '/psy/psysh/src/Exception/ErrorException.php',
@@ -3836,6 +3835,7 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'Psy\\Shell' => __DIR__ . '/..' . '/psy/psysh/src/Shell.php',
         'Psy\\Sudo' => __DIR__ . '/..' . '/psy/psysh/src/Sudo.php',
         'Psy\\Sudo\\SudoVisitor' => __DIR__ . '/..' . '/psy/psysh/src/Sudo/SudoVisitor.php',
+        'Psy\\SuperglobalsEnv' => __DIR__ . '/..' . '/psy/psysh/src/SuperglobalsEnv.php',
         'Psy\\TabCompletion\\AutoCompleter' => __DIR__ . '/..' . '/psy/psysh/src/TabCompletion/AutoCompleter.php',
         'Psy\\TabCompletion\\Matcher\\AbstractContextAwareMatcher' => __DIR__ . '/..' . '/psy/psysh/src/TabCompletion/Matcher/AbstractContextAwareMatcher.php',
         'Psy\\TabCompletion\\Matcher\\AbstractDefaultParametersMatcher' => __DIR__ . '/..' . '/psy/psysh/src/TabCompletion/Matcher/AbstractDefaultParametersMatcher.php',
@@ -4097,8 +4097,10 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'SebastianBergmann\\Timer\\Timer' => __DIR__ . '/..' . '/phpunit/php-timer/src/Timer.php',
         'SebastianBergmann\\Type\\CallableType' => __DIR__ . '/..' . '/sebastian/type/src/CallableType.php',
         'SebastianBergmann\\Type\\Exception' => __DIR__ . '/..' . '/sebastian/type/src/exception/Exception.php',
+        'SebastianBergmann\\Type\\FalseType' => __DIR__ . '/..' . '/sebastian/type/src/FalseType.php',
         'SebastianBergmann\\Type\\GenericObjectType' => __DIR__ . '/..' . '/sebastian/type/src/GenericObjectType.php',
         'SebastianBergmann\\Type\\IterableType' => __DIR__ . '/..' . '/sebastian/type/src/IterableType.php',
+        'SebastianBergmann\\Type\\LogicException' => __DIR__ . '/..' . '/sebastian/type/src/exception/LogicException.php',
         'SebastianBergmann\\Type\\MixedType' => __DIR__ . '/..' . '/sebastian/type/src/MixedType.php',
         'SebastianBergmann\\Type\\NullType' => __DIR__ . '/..' . '/sebastian/type/src/NullType.php',
         'SebastianBergmann\\Type\\ObjectType' => __DIR__ . '/..' . '/sebastian/type/src/ObjectType.php',
@@ -4936,7 +4938,6 @@ class ComposerStaticInit6c91f4c32541c36bf72799cbacdd9054
         'Whoops\\Util\\Misc' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/Misc.php',
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
-        'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',
