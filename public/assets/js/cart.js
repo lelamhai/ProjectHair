@@ -26,16 +26,21 @@
             .find(".price-product")
             .children()
             .text();
+
+          get_price = get_price.replaceAll('.','').trim();
+
           let get_value = $(inside).val();
           countRoot =  get_value;
           get_value++;
+
           $price = get_price * get_value;
+
           $(amount).text($price.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1."));
+
           $(inside).val(get_value);
           priceCurrent = (get_value - countRoot) * get_price;
           var priceTotal = parseInt(totalRoot) + parseInt(priceCurrent);
           $('#all-money-product').text(priceTotal.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1."));
-
 
           var userId = parseInt($('#userId').val());
           var token = $("meta[name='csrf-token']").attr("content");
@@ -72,6 +77,8 @@
             .find(".price-product")
             .children()
             .text();
+
+          get_price = get_price.replaceAll('.','').trim();
           let get_value = $(inside).val();
           countRoot =  get_value;
           if (get_value > 0) {
