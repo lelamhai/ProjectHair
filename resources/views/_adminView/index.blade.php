@@ -74,7 +74,7 @@
                             </li>
 							
                             <li class="left__menuItem">
-                                <div class="left__title">Đăng xuất
+                                <a class="left__title" href="{{route('getLogout')}}">Đăng xuất</a>
                             </li>
                         </ul>
                     </div>

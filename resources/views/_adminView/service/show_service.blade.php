@@ -5,7 +5,7 @@
 	<div class="right__content">
 		<div class="right__head d-flex">
 			<div class="right__head-post d-flex">
-				<h5 class="right__head-post-title">Dịch vụ</h5>
+				<h5 class="right__head-post-title">{{$service->title}}</h5>
 				<a href="{{route('form.addDetailsService')}}" class="right__head-post-add">Thêm mới</a>
 			</div>
 			<div class="right__head-search">
