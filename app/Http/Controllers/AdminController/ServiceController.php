@@ -77,7 +77,7 @@ class ServiceController extends Controller
     	return Service_Details::where('id', $data['id'])->update(array('step' => $data['step'],
             'title' => $data['title'],
             'thumbnail' => $data['thumbnail'],
-            'content' => $data['content'],
+            //'content' => $data['content'],
             'idService' => $data['idService']));
     }
 
