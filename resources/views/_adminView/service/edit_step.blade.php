@@ -9,7 +9,7 @@
 		<form action="{{route('submit-edit.step')}}" method="POST">
 			@csrf
 			<input type="hidden" name="idService" value="{{$idService}}">
-			<input type="hidden"name="content" value="temp">
+			<input type="hidden" name="id" value="{{ $step->id }}">
 			
 			<div class="wrap-left">
 				<div class="right__add-post">

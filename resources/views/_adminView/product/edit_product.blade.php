@@ -8,7 +8,7 @@
 		<form action="{{route('post.editProduct')}}" method="POST">
 			@csrf
 			<input type="hidden" name="idCate" value="{{$idCate}}">
-			<input type="hidden" name="short_Description" value="Ty">
+			<input type="hidden" name="idPro" value="{{ $product->idPro }}">
 			<div class="wrap-left">
 				<div class="right__add-post">
 					<div class="right__head-new-post add-field">
@@ -25,7 +25,6 @@
 					</div>
 
 				</div>
-
 			</div>
 		
 			<div class="wrap-right">

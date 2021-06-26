@@ -69,8 +69,9 @@ class ProductController extends Controller
             'title' => $data['title'],
             'price' => $data['price'],
             'thumbnail' => $data['thumbnail'],
-            'short_Description' => $data['short_Description'] . ' ',
-            'detailed_description' => $data['detailed_description']));
+            //'short_Description' => $data['short_Description'] . ' ',
+            'detailed_description' => $data['detailed_description'],
+        ));
     }
 
     protected function addProduct(array $data)
