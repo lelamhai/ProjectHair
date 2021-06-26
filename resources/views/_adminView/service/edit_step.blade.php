@@ -17,12 +17,14 @@
 						<input type="text" name="title" class="right__head-new-post-input" value='{{ $step->title }}'>
 					</div>
 
-					{{-- Chổ này để check combo 10 bước hay là các dịch vụ khác --}}
-					<div class="add-field">
-						<div class="title-field">Các bước</div>
-						<input type="text" name="step" class="right__head-new-post-input" value="{{ $step->step }}">
-					</div>
-					{{-- end --}}
+					@if ($message = Session::get('idService'))
+					    @if ($message == '1')
+					    	<div class="add-field">
+								<div class="title-field">Các bước</div>
+								<input type="text" name="step" class="right__head-new-post-input" value="{{ $step->step }}">
+							</div>
+					    @endif
+    				 @endif
 
 
 				</div>

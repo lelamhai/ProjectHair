@@ -85,4 +85,4 @@ Route::get('/admin/delete-booking/{id}', 'AdminController\BookingController@dele
 Route::get('/admin/hot', 'AdminController\HotController@index')->name('hot.index')->middleware('KhangMiddleware');
 Route::get('/admin/delete-hot/{id}', 'AdminController\HotController@deleteHot')->name('delete.hot');
 Route::get('/admin/add-hot', 'AdminController\HotController@showFormToAdd')->name('get.addHot')->middleware('KhangMiddleware');
-Route::post('/admin/add-hot', 'AdminController\HotController@showFormToAdd')->name('post.addHot')->middleware('KhangMiddleware');
+Route::post('/admin/add-hot', 'AdminController\HotController@postHot')->name('post.addHot')->middleware('KhangMiddleware');

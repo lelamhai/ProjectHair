@@ -13,7 +13,9 @@
 		   <input id="thumbnail" class="form-control" type="text" name="thumbnail">
 	 	</div>
 	 	<img id="holder" style="margin-top:15px;max-height:100px;">
-		
+		<div class="wrap-submit">
+			<button class="right__add-image-btn">{{ __('Lưu dữ liệu') }}</button>
+		</div>
 	</form>
 @endsection
 

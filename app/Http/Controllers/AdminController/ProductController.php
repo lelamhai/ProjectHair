@@ -11,7 +11,7 @@ use App\Models\Products;
 class ProductController extends Controller
 {
     public function showProductOfCategories ($id, Request $request) {
-        $products = DB::table('products')->where('idCate', $id)->paginate(3);
+        $products = DB::table('products')->where('idCate', $id)->paginate(8);
         $categories = DB::table('categories')->get(); 
         $services = DB::table('services')->get();
         $category = DB::table('categories')->where('idCate', $id)->first(); // name cate
@@ -46,7 +46,7 @@ class ProductController extends Controller
         //$this->validator($request->all())->validate();
         $this->addProduct($request->all());
         $id = $request->session()->get('idCate');
-        $products = DB::table('products')->where('idCate', $id)->paginate(3);
+        $products = DB::table('products')->where('idCate', $id)->paginate(8);
         $categories = DB::table('categories')->get(); 
         $services = DB::table('services')->get();
         $category = DB::table('categories')->where('idCate', $id)->first(); // name cate
@@ -60,7 +60,7 @@ class ProductController extends Controller
         //$this->validator($request->all())->validate();
         $this->updateProduct($request->all());
         $id = $request->session()->get('idCate');
-        $products = DB::table('products')->where('idCate', $id)->paginate(3);
+        $products = DB::table('products')->where('idCate', $id)->paginate(8);
         $categories = DB::table('categories')->get(); 
         $services = DB::table('services')->get();
         $category = DB::table('categories')->where('idCate', $id)->first(); // name cate
@@ -102,7 +102,16 @@ class ProductController extends Controller
         ]);
     }
 
-    public function deleteProduct($idPro) {
-        return Products::where('idPro', $idPro)->delete();
+    public function deleteProduct($idPro, Request $request) {
+        Products::where('idPro', $idPro)->delete();
+        $id = $request->session()->get('idCate');
+        $products = DB::table('products')->where('idCate', $id)->paginate(8);
+        $categories = DB::table('categories')->get(); 
+        $services = DB::table('services')->get();
+        $category = DB::table('categories')->where('idCate', $id)->first(); // name cate
+        return view('_adminView.product.show_product')->with(['products'=> $products,
+                                                            'categories'=> $categories,
+                                                            'services' => $services,
+                                                            'category' => $category]);
     }
 }

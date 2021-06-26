@@ -28,10 +28,10 @@ class ServiceController extends Controller
 
 	public function showAllStepOfService($id, Request $request) {
 		//$steps = Service_Details::paginate(4)->where('idService', $id);
-		$steps = DB::table('service__details')->where('idService', $id)->paginate(3);
+		$steps = DB::table('service__details')->where('idService', $id)->paginate(8);
 		$services = DB::table('services')->get();
 		$categories = DB::table('categories')->get();
-		$service = DB::table('services')->where('id', $id)->first(); // lấy tên cate
+		$service = DB::table('services')->where('id', $id)->first(); // lấy tên cate 
 		$request->session()->put('idService', $id);
 		return view('_adminView.service.show_service')->with(['steps'=> $steps,
 															'services'=> $services,
@@ -43,7 +43,7 @@ class ServiceController extends Controller
 		//$this->validator($request->all())->validate();
 		$this->createDetailService($request->all());
 		$id = $request->session()->get('idService');
-		$steps = DB::table('service__details')->where('idService', $id)->paginate(3);
+		$steps = DB::table('service__details')->where('idService', $id)->paginate(8);
 		$services = DB::table('services')->get();
 		$categories = DB::table('categories')->get();
 		$service = DB::table('services')->where('id', $id)->first(); // lấy tên cate
@@ -57,7 +57,7 @@ class ServiceController extends Controller
 		//$this->validator($request->all())->validate();
 		$this->updateDetailService($request->all());
 		$id = $request->session()->get('idService');
-		$steps = DB::table('service__details')->where('idService', $id)->paginate(3);
+		$steps = DB::table('service__details')->where('idService', $id)->paginate(8);
 		$services = DB::table('services')->get();
 		$categories = DB::table('categories')->get();
 		$service = DB::table('services')->where('id', $id)->first(); // lấy tên cate
@@ -108,8 +108,17 @@ class ServiceController extends Controller
 													       'step' => $step]);
     }
 
-    public function deleteStep($id) {
-    	return Service_Details::where('id', $id)->delete();
+    public function deleteStep($id, Request $request) {
+    	Service_Details::where('id', $id)->delete();
+    	$id = $request->session()->get('idService');
+		$steps = DB::table('service__details')->where('idService', $id)->paginate(8);
+		$services = DB::table('services')->get();
+		$categories = DB::table('categories')->get();
+		$service = DB::table('services')->where('id', $id)->first(); // lấy tên cate
+		return view('_adminView.service.show_service')->with(['steps'=> $steps,
+															'services'=> $services,
+															'categories' => $categories,
+															'service' => $service]);
     }
     //
 }
