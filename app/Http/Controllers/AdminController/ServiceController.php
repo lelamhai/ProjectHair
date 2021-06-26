@@ -42,13 +42,29 @@ class ServiceController extends Controller
 	public function postDetailService(Request $request) {
 		//$this->validator($request->all())->validate();
 		$this->createDetailService($request->all());
-		return redirect('admin/index');
+		$id = $request->session()->get('idService');
+		$steps = DB::table('service__details')->where('idService', $id)->paginate(3);
+		$services = DB::table('services')->get();
+		$categories = DB::table('categories')->get();
+		$service = DB::table('services')->where('id', $id)->first(); // lấy tên cate
+		return view('_adminView.service.show_service')->with(['steps'=> $steps,
+															'services'=> $services,
+															'categories' => $categories,
+															'service' => $service]);
 	}
 
 	public function editDetailService(Request $request) { //
 		//$this->validator($request->all())->validate();
 		$this->updateDetailService($request->all());
-		return redirect('admin/index');
+		$id = $request->session()->get('idService');
+		$steps = DB::table('service__details')->where('idService', $id)->paginate(3);
+		$services = DB::table('services')->get();
+		$categories = DB::table('categories')->get();
+		$service = DB::table('services')->where('id', $id)->first(); // lấy tên cate
+		return view('_adminView.service.show_service')->with(['steps'=> $steps,
+															'services'=> $services,
+															'categories' => $categories,
+															'service' => $service]);
 	}
 
 	protected function validator(array $data)
