@@ -19,4 +19,16 @@ class BookingController extends Controller
                                                          'books' => $books,
                                                          'hots' => $hots]);
     } 
+
+    public function deleteBook (Request $request) {
+        DB::table('books')->where('id', $request->id)->delete();
+        $hots = DB::table('modesl_hair__hots')->get();
+        $services = DB::table('services')->get();
+        $categories = DB::table('categories')->get();
+        $books = Books::with('users_book', 'emp_book', 'service_book')->paginate(3);//nhớ lọc lại
+        return view("_adminView.booking.booking")->with(['services' => $services,
+                                                         'categories' => $categories,
+                                                         'books' => $books,
+                                                         'hots' => $hots]);
+    }
 }

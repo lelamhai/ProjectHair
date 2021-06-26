@@ -46,7 +46,7 @@
 						@foreach ($hots as $hot)
 							<tr class="right__table-item">
 								<td class="stylelist" data-label="Email"><img src="{{$hot->thumbnail}}"></td>
-								<td data-label="Số Hoá Đơn"><a class="right__table-item-btn right__table-item-btn--delete" href="/admin/delete-hot/{{$hot->id}}">Delete</button></td>
+								<td data-label="Số Hoá Đơn"><a class="right__table-item-btn right__table-item-btn--delete" href="/admin/delete-hot/{{$hot->id}}">Delete</td>
 
 							</tr>
 						@endforeach

@@ -58,7 +58,7 @@
 								<td data-label="Số Hoá Đơn">{{$book->users_book->phone}}</td>
 								<td data-label="Số Hoá Đơn">{{$book->finish}}
 								</td>
-								<td><button class="btn-delete-booking"><i class="fas fa-times"></i></button></td>
+								<td><button class="btn-delete-booking"><a class="right__table-item-btn right__table-item-btn--delete" href="/admin/delete-booking/{{$book->id}}">Hủy</button></td>
 
 							</tr>
 						@endforeach

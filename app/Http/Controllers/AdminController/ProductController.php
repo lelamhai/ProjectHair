@@ -45,13 +45,29 @@ class ProductController extends Controller
     public function postAdd(Request $request) {
         //$this->validator($request->all())->validate();
         $this->addProduct($request->all());
-        return redirect('admin/index');
+        $id = $request->session()->get('idCate');
+        $products = DB::table('products')->where('idCate', $id)->paginate(3);
+        $categories = DB::table('categories')->get(); 
+        $services = DB::table('services')->get();
+        $category = DB::table('categories')->where('idCate', $id)->first(); // name cate
+        return view('_adminView.product.show_product')->with(['products'=> $products,
+                                                            'categories'=> $categories,
+                                                            'services' => $services,
+                                                            'category' => $category]);
     }
 
     public function postEdit (Request $request) {
         //$this->validator($request->all())->validate();
         $this->updateProduct($request->all());
-        return redirect('admin/index');
+        $id = $request->session()->get('idCate');
+        $products = DB::table('products')->where('idCate', $id)->paginate(3);
+        $categories = DB::table('categories')->get(); 
+        $services = DB::table('services')->get();
+        $category = DB::table('categories')->where('idCate', $id)->first(); // name cate
+        return view('_adminView.product.show_product')->with(['products'=> $products,
+                                                            'categories'=> $categories,
+                                                            'services' => $services,
+                                                            'category' => $category]);
     }
 
     protected function validator(array $data)

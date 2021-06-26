@@ -19,13 +19,18 @@ class HotController extends Controller
                                                          'categories' => $categories,
                                                          'books' => $books,
                                                          'hots' => $hots]);
-    }
+    } 
 
     public function deleteHot (Request $request) {
-        ModelsHot::where('id', $request->id)->delete();
-        return response()->json([
-            'result' => true
-        ]);
+        DB::table('modesl_hair__hots')->where('id', $request->id)->delete();
+        $hots = DB::table('modesl_hair__hots')->get();
+        $services = DB::table('services')->get();
+        $categories = DB::table('categories')->get();
+        $books = Books::with('users_book', 'emp_book', 'service_book')->paginate(3);//nhớ lọc lại
+        return view("_adminView.models_hot.show")->with(['services' => $services,
+                                                         'categories' => $categories,
+                                                         'books' => $books,
+                                                         'hots' => $hots]);
     }
 
     public function showFormToAdd() {
