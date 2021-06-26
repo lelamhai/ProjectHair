@@ -1248,13 +1248,17 @@ body {
   margin: 0 auto;
   cursor: pointer;
   color: #fff;
-  background-color: #0086BA;
+  background-color: #333;
   margin-top: 20px;
 }
 
-.show-image{
-  max-width: 350px;
-  height: auto;
+.show-image img{
+  width: 100%;
+  height: auto !important;
+}
+
+#lfm {
+  background-color: #0069d9;
 }
 
 .right__add-image-notify{
