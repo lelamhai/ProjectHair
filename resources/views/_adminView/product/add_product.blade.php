@@ -29,12 +29,10 @@
 					<div class="right__add-image">
 						<h5 class="right__add-image-title">Hình đại diện</h5>
 						<input type="file" hidden accept="image/*" id="feature-image" onchange="loadFile(event)">
-						<div class="show-image">
-							<img id="output" class="img-responsive" />
+						<div class="show-image" id="holder">
+							{{-- <img id="output" class="img-responsive" /> --}}
 						</div>
-						<div class="wrap-thumbnail">
-							
-						</div>
+
 						<div class="input-group">
 						   <span class="input-group-btn">
 							 <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
