@@ -80,3 +80,8 @@ Route::delete('/admin/order/delete/{idOrder}', 'AdminController\OrderController@
 Route::post('/admin/order/detail/{idOrder}', 'AdminController\OrderController@detailOrder')->name('order.detailOrder');
 //  ===================== Booking =================== 
 Route::get('/admin/booking', 'AdminController\BookingController@index')->name('booking.index')->middleware('KhangMiddleware');
+//  ===================== Hot =================== 
+Route::get('/admin/hot', 'AdminController\HotController@index')->name('hot.index')->middleware('KhangMiddleware');
+Route::delete('/admin/delete-hot/{id}', 'AdminController\HotController@deleteHot')->name('delete.hot');
+Route::get('/admin/add-hot', 'AdminController\HotController@showFormToAdd')->name('get.addHot')->middleware('KhangMiddleware');
+Route::post('/admin/add-hot', 'AdminController\HotController@showFormToAdd')->name('post.addHot')->middleware('KhangMiddleware');

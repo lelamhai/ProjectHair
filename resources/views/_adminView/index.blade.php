@@ -62,7 +62,7 @@
                             </li>
 
                             <li class="left__menuItem">
-                                <div class="left__title">Mẫu tóc
+                                <a class="left__title" href="/admin/hot">Mẫu tóc</a>
                             </li>
 
                             <li class="left__menuItem">

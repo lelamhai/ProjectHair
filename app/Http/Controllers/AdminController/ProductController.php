@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     public function showProductOfCategories ($id, Request $request) {
         $products = DB::table('products')->where('idCate', $id)->paginate(3);
-        $categories = DB::table('categories')->get();
+        $categories = DB::table('categories')->get(); 
         $services = DB::table('services')->get();
         $category = DB::table('categories')->where('idCate', $id)->first(); // name cate
         $request->session()->put('idCate', $id); // to add product
