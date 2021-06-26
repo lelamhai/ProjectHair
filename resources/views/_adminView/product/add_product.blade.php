@@ -8,7 +8,6 @@
 			<form action="{{route('post.addProduct')}}" method="POST">
 				@csrf
 				<input type="hidden" name="idCate" value="{{$idCate}}">
-				<input type="hidden" name="short_Description" value="Ty">
 				<div class="wrap-left">
 					<div class="right__add-post">
 						<div class="right__head-new-post add-field">
@@ -26,18 +25,17 @@
 				</div>
 			
 				<div class="wrap-right">
+				
 					<div class="right__add-image">
 						<h5 class="right__add-image-title">Hình đại diện</h5>
 						<input type="file" hidden accept="image/*" id="feature-image" onchange="loadFile(event)">
 						<div class="show-image">
 							<img id="output" class="img-responsive" />
 						</div>
-									
-						<p class="right__add-image-notify">Click the image to edit or upload image</p>
-						<label for="feature-image" class="right__add-image-label">Set feature image</label>
-
-						<div>
-							<div class="input-group">
+						<div class="wrap-thumbnail">
+							
+						</div>
+						<div class="input-group">
 						   <span class="input-group-btn">
 							 <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
 							   <i class="fa fa-picture-o"></i> Choose
@@ -45,7 +43,11 @@
 						   </span>
 						   <input id="thumbnail" class="form-control" type="text" name="thumbnail">
 						</div>
-						<button class="right__add-image-btn">{{ __('Thêm') }}</button>
+						
+
+						<div class="wrap-submit">
+							<button class="right__add-image-btn">{{ __('Lưu dữ liệu') }}</button>
+						</div>
 					</div>
 				
 				</div>
