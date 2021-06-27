@@ -36,7 +36,7 @@
                         </div>
                         <ul class="left__menu">
                             <li class="left__menuItem">
-                                <div class="left__title">Bảng điều khiển
+                                <a class="left__title" href="/admin/index">Bảng điều khiển</a>
                             </li>
 
                             <li class="left__menuItem">
@@ -79,6 +79,94 @@
                         </ul>
                     </div>
                 </div>
+
+
+                    {{--Sản phẩm--}}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tên danh mục</th>
+                                <th>Số lượng</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach ($categories as $categorie)
+                                <tr>
+                                    <td>{{$categorie->title}}</td>
+                                </tr>
+                            @endforeach
+                            @foreach ($arrNumberOfProduct as $key => $item)
+                                <tr>
+                                    <td>{{$item}}</td>
+                                </tr>
+                            @endforeach
+
+                        </tbody>
+                    </table>
+
+                    {{--Service--}}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tên các dịch vụ</th>
+                                <th>Dữ liệu</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach ($services as $service)
+                                <tr>
+                                    <td>{{$service->title}}</td>
+                                </tr>
+                            @endforeach
+                            @foreach ($arrNumberOfService as $key => $item)
+                                <tr>
+                                    <td>{{$item}}</td>
+                                </tr>
+                            @endforeach
+
+                        </tbody>
+                    </table>
+
+                    {{--Models Hot--}}
+                    <div>Mẫu tóc có {{$numHot}} dữ liệu</div>
+
+                    {{--Book--}}
+                    <div>Có {{$numBook}} vé được đặt</div>
+
+                    {{--Order--}}
+                    Có {{$arrNumberOfOrder[0]}} đơn hàng được thanh toán
+                    Có {{$arrNumberOfOrder[1]}} đơn hàng chưa được thanh toán
+
+                    {{--Account--}}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Loại tài khoản</th>
+                                <th>Số lượng</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                                <tr>
+                                    <td>Quản trị viên</td>
+                                </tr>
+                                <tr>
+                                    <td>Nhân viên</td>
+                                </tr>
+                                <tr>
+                                    <td>Khách hàng</td>
+                                </tr>
+                            @foreach ($arrNumberOfAcc as $key => $item)
+                                <tr>
+                                    <td>{{$item}}</td>
+                                </tr>
+                            @endforeach
+
+                        </tbody>
+                    </table>
+
                 @yield('content')
 	            @csrf 
             </div>

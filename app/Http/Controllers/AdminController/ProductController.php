@@ -16,10 +16,22 @@ class ProductController extends Controller
         $services = DB::table('services')->get();
         $category = DB::table('categories')->where('idCate', $id)->first(); // name cate
         $request->session()->put('idCate', $id); // to add product
+        $arrNumberOfProduct = $request->session()->get('arrNumberOfProduct');
+        $arrNumberOfService = $request->session()->get('arrNumberOfService');
+        $numHot = $request->session()->get('numHot');
+        $numBook = $request->session()->get('numBook');
+        $arrNumberOfOrder = $request->session()->get('arrNumberOfOrder');
+        $arrNumberOfAcc = $request->session()->get('arrNumberOfAcc');
         return view('_adminView.product.show_product')->with(['products'=> $products,
                                                             'categories'=> $categories,
                                                             'services' => $services,
-                                                            'category' => $category]);
+                                                            'category' => $category,
+                                                            'arrNumberOfProduct' => $arrNumberOfProduct,
+                                                'arrNumberOfService' => $arrNumberOfService,
+                                                'numHot' => $numHot,
+                                                'numBook' => $numBook,
+                                                'arrNumberOfOrder' => $arrNumberOfOrder,
+                                                'arrNumberOfAcc' => $arrNumberOfAcc]);
     }
 
     public function showFormToEdit ($idPro, Request $request) {
@@ -27,19 +39,43 @@ class ProductController extends Controller
         $services = DB::table('services')->get();
         $categories = DB::table('categories')->get();
         $p = $request->session()->get('idCate');
+        $arrNumberOfProduct = $request->session()->get('arrNumberOfProduct');
+        $arrNumberOfService = $request->session()->get('arrNumberOfService');
+        $numHot = $request->session()->get('numHot');
+        $numBook = $request->session()->get('numBook');
+        $arrNumberOfOrder = $request->session()->get('arrNumberOfOrder');
+        $arrNumberOfAcc = $request->session()->get('arrNumberOfAcc');
         return view('_adminView.product.edit_product')->with(['services'=> $services,
                                                            'categories' => $categories,
                                                            'idCate' => $p,
-                                                           'product' => $product]);
+                                                           'product' => $product,
+                                                           'arrNumberOfProduct' => $arrNumberOfProduct,
+                                                'arrNumberOfService' => $arrNumberOfService,
+                                                'numHot' => $numHot,
+                                                'numBook' => $numBook,
+                                                'arrNumberOfOrder' => $arrNumberOfOrder,
+                                                'arrNumberOfAcc' => $arrNumberOfAcc]);
     }
 
     public function showFormToAdd (Request $request) {
         $services = DB::table('services')->get();
         $categories = DB::table('categories')->get();
         $p = $request->session()->get('idCate');
+        $arrNumberOfProduct = $request->session()->get('arrNumberOfProduct');
+        $arrNumberOfService = $request->session()->get('arrNumberOfService');
+        $numHot = $request->session()->get('numHot');
+        $numBook = $request->session()->get('numBook');
+        $arrNumberOfOrder = $request->session()->get('arrNumberOfOrder');
+        $arrNumberOfAcc = $request->session()->get('arrNumberOfAcc');
         return view('_adminView.product.add_product')->with(['services'=> $services,
                                                            'categories' => $categories,
-                                                           'idCate' => $p]);
+                                                           'idCate' => $p,
+                                                           'arrNumberOfProduct' => $arrNumberOfProduct,
+                                                'arrNumberOfService' => $arrNumberOfService,
+                                                'numHot' => $numHot,
+                                                'numBook' => $numBook,
+                                                'arrNumberOfOrder' => $arrNumberOfOrder,
+                                                'arrNumberOfAcc' => $arrNumberOfAcc]);
     }
 
     public function postAdd(Request $request) {
@@ -50,10 +86,22 @@ class ProductController extends Controller
         $categories = DB::table('categories')->get(); 
         $services = DB::table('services')->get();
         $category = DB::table('categories')->where('idCate', $id)->first(); // name cate
+        $arrNumberOfProduct = $request->session()->get('arrNumberOfProduct');
+        $arrNumberOfService = $request->session()->get('arrNumberOfService');
+        $numHot = $request->session()->get('numHot');
+        $numBook = $request->session()->get('numBook');
+        $arrNumberOfOrder = $request->session()->get('arrNumberOfOrder');
+        $arrNumberOfAcc = $request->session()->get('arrNumberOfAcc');
         return view('_adminView.product.show_product')->with(['products'=> $products,
                                                             'categories'=> $categories,
                                                             'services' => $services,
-                                                            'category' => $category]);
+                                                            'category' => $category,
+                                                           'arrNumberOfProduct' => $arrNumberOfProduct,
+                                                'arrNumberOfService' => $arrNumberOfService,
+                                                'numHot' => $numHot,
+                                                'numBook' => $numBook,
+                                                'arrNumberOfOrder' => $arrNumberOfOrder,
+                                                'arrNumberOfAcc' => $arrNumberOfAcc]);
     }
 
     public function postEdit (Request $request) {
@@ -64,10 +112,22 @@ class ProductController extends Controller
         $categories = DB::table('categories')->get(); 
         $services = DB::table('services')->get();
         $category = DB::table('categories')->where('idCate', $id)->first(); // name cate
+        $arrNumberOfProduct = $request->session()->get('arrNumberOfProduct');
+        $arrNumberOfService = $request->session()->get('arrNumberOfService');
+        $numHot = $request->session()->get('numHot');
+        $numBook = $request->session()->get('numBook');
+        $arrNumberOfOrder = $request->session()->get('arrNumberOfOrder');
+        $arrNumberOfAcc = $request->session()->get('arrNumberOfAcc');
         return view('_adminView.product.show_product')->with(['products'=> $products,
                                                             'categories'=> $categories,
                                                             'services' => $services,
-                                                            'category' => $category]);
+                                                            'category' => $category,
+                                                           'arrNumberOfProduct' => $arrNumberOfProduct,
+                                                'arrNumberOfService' => $arrNumberOfService,
+                                                'numHot' => $numHot,
+                                                'numBook' => $numBook,
+                                                'arrNumberOfOrder' => $arrNumberOfOrder,
+                                                'arrNumberOfAcc' => $arrNumberOfAcc]);
     }
 
     protected function validator(array $data)
@@ -109,9 +169,21 @@ class ProductController extends Controller
         $categories = DB::table('categories')->get(); 
         $services = DB::table('services')->get();
         $category = DB::table('categories')->where('idCate', $id)->first(); // name cate
+        $arrNumberOfProduct = $request->session()->get('arrNumberOfProduct');
+        $arrNumberOfService = $request->session()->get('arrNumberOfService');
+        $numHot = $request->session()->get('numHot');
+        $numBook = $request->session()->get('numBook');
+        $arrNumberOfOrder = $request->session()->get('arrNumberOfOrder');
+        $arrNumberOfAcc = $request->session()->get('arrNumberOfAcc');
         return view('_adminView.product.show_product')->with(['products'=> $products,
                                                             'categories'=> $categories,
                                                             'services' => $services,
-                                                            'category' => $category]);
+                                                            'category' => $category,
+                                                           'arrNumberOfProduct' => $arrNumberOfProduct,
+                                                'arrNumberOfService' => $arrNumberOfService,
+                                                'numHot' => $numHot,
+                                                'numBook' => $numBook,
+                                                'arrNumberOfOrder' => $arrNumberOfOrder,
+                                                'arrNumberOfAcc' => $arrNumberOfAcc]);
     }
 }
