@@ -45,11 +45,20 @@ class RegisterController extends Controller
 
     protected function create(array $data)
     {
+        $newImageName = "";
+        if($data['avatar'] != "")
+        {
+            $newImageName = time() .'-'.$data['name'].'.'.$data['avatar']->extension();
+            $data['avatar']->move(public_path('avatars'), $newImageName);
+        }
+     
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
             'token' => '',
+            'avata' => $newImageName,
             'human_rights' => 2,
             'password' => Hash::make($data['password']),
         ]);

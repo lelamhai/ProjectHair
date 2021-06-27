@@ -24,9 +24,11 @@
                     </span>
                     <div class="left__content">
                         <div class="left__profile">
-                            <div class="left__image"><img src="/assets/admin/assets/avatar.jpg" alt=""></div>
+                            <div class="left__image"><img src="{{asset('avatars/'. session('user')->avata)}}" alt=""></div>
                             <p class="left__name">
-                                <?php 
+                                
+                               
+                                <?php
                                     if (session('user'))
                                     {
                                         echo session('user')->name;

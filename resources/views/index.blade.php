@@ -135,7 +135,7 @@
                     <div class="wrap-form">
                         <ul class="nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="#log-in">Đăng Nhập</a></li>
-                            <li><a data-toggle="tab" href="#sign-up">Đăng Kí</a></li>
+                            <li><a data-toggle="tab" href="#sign-up">Đăng Ký</a></li>
                         </ul>
                         <div class="logo">
                             <img src="{{asset('assets/img/Log/log-30shine-white.9945e644.jpg')}}" alt="" />
@@ -162,7 +162,7 @@
                                             <input class="popup-field" type="text" id='txtInput' />
                                         </div>
                                         <p class="forgot" id="slidedown">Forgot your password?</p>
-                                        <button class="signIn-form-button" id="btn-log-in" type="button">Sign In</button>
+                                        <button class="signIn-form-button" id="btn-log-in" type="button">Đăng nhập</button>
                                     </form>
                                 </div>
                                 <div class="hide" id="forgot">
@@ -187,7 +187,7 @@
                             </div>
                             <div id="sign-up" class="tab-pane fade">
                                 <div class="form-container sign-up-container">
-                                    <form action="{{route('post.Register')}}" id="sign-up-form" method="POST">
+                                    <form action="{{route('post.Register')}}" id="sign-up-form" method="POST" enctype="multipart/form-data">
                                         @csrf
                                         <div class="account-input">
                                             <div class="icon-form">
@@ -219,12 +219,20 @@
                                             </div>
                                             <input class="popup-field" type="password" placeholder="Nhập Lại Mật Khẩu" class="last-child" id="repass" />
                                         </div>
+
+                                        <div class="account-input">
+                                            <div class="wrap-avatar">
+                                                <div class="img-avatar"><img src="{{asset('/assets/img/book/avatar-anonymous-300x300.png')}}" alt=""></div>
+                                                <div class="button-avatar"><input type="file" name="avatar"></div>
+                                            </div>
+                                        </div>
+
                                         <div class="cappcha-input">
                                             <div id="divGenerateRandomValues1"></div>
                                             <input class="popup-field" type="text" id='txtInput1' />
                                         </div>
 
-                                        <button class="mt-3 signUp-form-button" id="btn-sign-up" type="button">Sign Up</button>
+                                        <button class="mt-3 signUp-form-button" id="btn-sign-up" type="button">Đăng ký</button>
                                     </form>
                                 </div>
                             </div>
