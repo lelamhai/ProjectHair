@@ -400,7 +400,7 @@ $(document).ready(function () {
         }
 
         if (flag == true) {
-            $("#sign-in-page").submit();
+            $("#sign-up-page").submit();
         }
     });
     gen_capcha1_page();
