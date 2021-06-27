@@ -149,17 +149,17 @@
                                             <div class="icon-form">
                                                 <img src="{{asset('assets/img/Log/icon_letter.png')}}" alt="">
                                             </div>
-                                            <input type="email" name="email" placeholder="Email" />
+                                            <input type="email" name="email" placeholder="Email" class="popup-field" />
                                         </div>
                                         <div class="account-input">
                                             <div class="icon-form">
                                                 <img src="{{asset('assets/img/Log/icon_lock.png')}}" alt="">
                                             </div>
-                                            <input name="password" type="password" placeholder="Mật Khẩu" />
+                                            <input class="popup-field" name="password" type="password" placeholder="Mật Khẩu" />
                                         </div>
                                         <div class="cappcha-input">
                                             <div id="divGenerateRandomValues"></div>
-                                            <input type="text" id='txtInput' />
+                                            <input class="popup-field" type="text" id='txtInput' />
                                         </div>
                                         <p class="forgot" id="slidedown">Forgot your password?</p>
                                         <button class="signIn-form-button" id="btn-log-in" type="button">Sign In</button>
@@ -174,7 +174,7 @@
                                                     <div class="icon-form">
                                                         <img src="{{asset('assets/img/Log/icon_letter.png')}}" alt="">
                                                     </div>
-                                                    <input type="email" placeholder="Email" />
+                                                    <input class="popup-field" type="email" placeholder="Email" />
                                                 </div>
                                                 <div class="">
                                                     <button class="signIn-form-button">Send</button>
@@ -193,38 +193,38 @@
                                             <div class="icon-form">
                                                 <img src="{{asset('assets/img/Log/icon_user.png')}}" alt="">
                                             </div>
-                                            <input type="text" placeholder="Họ Tên" id="name" name="name"/>
+                                            <input class="popup-field" type="text" placeholder="Họ Tên" id="name" name="name"/>
                                         </div>
                                         <div class="account-input">
                                             <div class="icon-form">
                                                 <img src="{{asset('assets/img/Log/icon_phone.png')}}" alt="">
                                             </div>
-                                            <input type="text" placeholder="Số Điện Thoại" id="phone" name="phone"/>
+                                            <input class="popup-field" type="text" placeholder="Số Điện Thoại" id="phone" name="phone"/>
                                         </div>
                                         <div class="account-input">
                                             <div class="icon-form">
                                                 <img src="{{asset('assets/img/Log/icon_letter.png')}}" alt="">
                                             </div>
-                                            <input type="email" placeholder="Email" id="email" name="email"/>
+                                            <input class="popup-field" type="email" placeholder="Email" id="email" name="email"/>
                                         </div>
                                         <div class="account-input">
                                             <div class="icon-form">
                                                 <img src="{{asset('/assets/img/Log/icon_lock.png')}}" alt="">
                                             </div>
-                                            <input type="password" placeholder="Mật Khẩu" id="pass" name="password" />
+                                            <input class="popup-field" type="password" placeholder="Mật Khẩu" id="pass" name="password" />
                                         </div>
                                         <div class="account-input">
                                             <div class="icon-form">
                                                 <img src="{{asset('/assets/img/Log/icon_lock.png')}}" alt="">
                                             </div>
-                                            <input type="password" placeholder="Nhập Lại Mật Khẩu" class="last-child" id="repass" />
+                                            <input class="popup-field" type="password" placeholder="Nhập Lại Mật Khẩu" class="last-child" id="repass" />
                                         </div>
                                         <div class="cappcha-input">
                                             <div id="divGenerateRandomValues1"></div>
-                                            <input type="text" id='txtInput1' />
+                                            <input class="popup-field" type="text" id='txtInput1' />
                                         </div>
 
-                                        <button class="mt-3 signUp-form-button" id="btn-sign-up" type="button">Sign Up kjlklklk</button>
+                                        <button class="mt-3 signUp-form-button" id="btn-sign-up" type="button">Sign Up</button>
                                     </form>
                                 </div>
                             </div>

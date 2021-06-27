@@ -1,6 +1,13 @@
 $(document).ready(function () {
     let flag_capcha;
     let flag_capcha1;
+
+    $(".nav-tabs li").click(function (e) {
+        $(".popup-field").val("");
+        gen_capcha();
+        gen_capcha1();
+    });
+
     gen_capcha();
     $("#slideup").click(function () {
         $("#forgot").addClass("hide");
@@ -82,11 +89,7 @@ $(document).ready(function () {
         }
     });
 
-    $(".nav-tabs li").click(function (e) {
-        $("input").val("");
-        gen_capcha();
-        gen_capcha1();
-    });
+   
 
     $("#btn-sign-up").click(function (e) {
         const email =
@@ -165,7 +168,7 @@ $(document).ready(function () {
         }
 
         if (flag == true) {
-            $("#sign--container").submit();
+            $("#sign-up-form").submit();
         }
     });
 
