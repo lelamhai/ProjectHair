@@ -106,6 +106,8 @@ button.signUp-form-button {
     padding-top: 15px;
 }
 
+#txtInput-page,
+#txtInput1-page,
 #txtInput,
 #txtInput1 {
     border: 1px solid #9e9393;

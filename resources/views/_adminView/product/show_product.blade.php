@@ -56,7 +56,7 @@
 				</table>
 			</div>
 		</div>
-		<span>{!! $products->render() !!}</span>
+		<span class="pagination-admin">{!! $products->render() !!}</span>
 	</div>
 </section>
 @endsection

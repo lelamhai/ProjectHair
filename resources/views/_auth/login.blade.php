@@ -40,7 +40,7 @@
                                 <input type="text" id='txtInput-page' />
                             </div>
                             <p class="forgot" id="slidedown">Forgot your password?</p>
-                            <button class="signIn-form-button" id="btn-log-in-page" type="button">Sign In</button>
+                            <button class="signIn-form-button" id="btn-log-in-page" type="button">Đăng nhập</button>
                         </form>
                     </div>
                     <div class="hide" id="forgot">
@@ -101,7 +101,7 @@
                                 <div id="divGenerateRandomValues1"></div>
                                 <input type="text" id='txtInput1' />
                             </div>
-                            <button class="mt-3 signUp-form-button" id="btn-sign-up" type="button">Sign Up</button>
+                            <button class="mt-3 signUp-form-button" id="btn-sign-up" type="button">Đăng ký</button>
                         </form>
                     </div>
                 </div>
