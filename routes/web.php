@@ -59,7 +59,9 @@ Route::get('/products-of-categories/{idCate}', 'AllController\ProductsController
 
 
 //----------------------------------------------- admin --------------------------------------------------------//
-Route::get('admin/index','AdminController\ServiceController@showMenu')->name('show.service')->middleware('KhangMiddleware');
+// Route::get('admin/index','AdminController\ServiceController@showMenu')->name('show.service')->middleware('KhangMiddleware');
+Route::get('admin/index','AdminController\DashboardController@index')->middleware('KhangMiddleware');
+
 //  ===================== Service ===================
 Route::get('/admin/add-details-service', 'AdminController\ServiceController@indexFormAddDetailService')->name('form.addDetailsService')->middleware('KhangMiddleware');
 Route::post('/admin/add-details-service', 'AdminController\ServiceController@postDetailService')->name('post.detailService')->middleware('KhangMiddleware'); 

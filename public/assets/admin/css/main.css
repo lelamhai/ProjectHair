@@ -1372,3 +1372,31 @@ body {
 .pagination-admin .page-item.disabled .page-link { 
     background-color: transparent;
 }
+
+.wrap-content-dashboard {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center
+}
+
+.wrap-booking,
+.wrap-order,
+.wrap-products,
+.wrap-service,
+.wrap-hair,
+.wrap-user {
+    padding: 0 15px;
+    float: left;
+    margin-bottom: 80px;
+}
+
+.wrap-data {
+    display: flex;
+    justify-content: flex-start
+}
+
+.item-dashboard {
+    padding: 0 0 15px 15px;
+}
+

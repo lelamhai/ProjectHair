@@ -32,7 +32,6 @@ class PaymentController extends Controller
 		//dd($orders->toArray());
 		if (count($orders) == 0) {
 			Order::create([
-				'payMents' => '',
 				'note' => $request->note . ' ',
 	            'totalMoney' => $request->total,
 	            'status' => 'Prosecc',
