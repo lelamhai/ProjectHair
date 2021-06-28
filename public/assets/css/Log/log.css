@@ -133,6 +133,25 @@ button.signUp-form-button {
     border-color: unset;
 }
 
+.wrap-avatar {
+    display: flex;
+}
+
+.img-avatar img {
+    width: 70px;
+    height: auto;
+}
+
+.button-avatar {
+    padding-left: 10px;
+    align-self: center;
+}
+
+.button-avatar input {
+    padding: 0;
+}
+
+
 .header {
     z-index: 970;
 }

@@ -59,7 +59,7 @@
                 </div>
                 <div id="sign-up" class="tab-pane fade in active">
                     <div class="form-container sign-up-container">
-                        <form action="{{route('post.Register')}}" id="sign-up-page" method="POST">
+                        <form action="{{route('post.Register')}}" id="sign-up-page" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="account-input">
                                 <div class="icon-form">
@@ -91,6 +91,14 @@
                                 </div>
                                 <input type="password" placeholder="Nhập Lại Mật Khẩu" class="last-child" id="repass-page" />
                             </div>
+
+                            <div class="account-input">
+                                <div class="wrap-avatar">
+                                    <div class="img-avatar"><img src="{{asset('/assets/img/book/avatar-anonymous-300x300.png')}}" alt=""></div>
+                                    <div class="button-avatar"><input type="file" name="avatar"></div>
+                                </div>
+                            </div>
+
                             <div class="cappcha-input">
                                 <div id="divGenerateRandomValues1-page"></div>
                                 <input type="text" id='txtInput1-page' />
