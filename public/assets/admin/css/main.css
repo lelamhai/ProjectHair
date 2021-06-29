@@ -1400,3 +1400,8 @@ body {
     padding: 0 0 15px 15px;
 }
 
+.role-user {
+    width: 20%;
+    padding: 15px;
+    border: 1px solid;
+}

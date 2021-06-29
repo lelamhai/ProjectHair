@@ -74,6 +74,10 @@
                             <li class="left__menuItem">
                                 <a class="left__title" href="/admin/booking">Đặt vé</a>
                             </li>
+
+                            <li class="left__menuItem">
+                                <a class="left__title" href="/admin/user/index">Tài khoản</a>
+                            </li>
 							
                             <li class="left__menuItem">
                                 <a class="left__title" href="{{route('getLogout')}}">Đăng xuất</a>

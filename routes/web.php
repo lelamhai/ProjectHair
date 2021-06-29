@@ -59,9 +59,8 @@ Route::get('/products-of-categories/{idCate}', 'AllController\ProductsController
 
 
 //----------------------------------------------- admin --------------------------------------------------------//
-// Route::get('admin/index','AdminController\ServiceController@showMenu')->name('show.service')->middleware('KhangMiddleware');
+//  ===================== Dashboard ===================
 Route::get('admin/index','AdminController\DashboardController@index')->middleware('KhangMiddleware');
-
 //  ===================== Service ===================
 Route::get('/admin/add-details-service', 'AdminController\ServiceController@indexFormAddDetailService')->name('form.addDetailsService')->middleware('KhangMiddleware');
 Route::post('/admin/add-details-service', 'AdminController\ServiceController@postDetailService')->name('post.detailService')->middleware('KhangMiddleware'); 
@@ -88,3 +87,7 @@ Route::get('/admin/hot', 'AdminController\HotController@index')->name('hot.index
 Route::get('/admin/delete-hot/{id}', 'AdminController\HotController@deleteHot')->name('delete.hot');
 Route::get('/admin/add-hot', 'AdminController\HotController@showFormToAdd')->name('get.addHot')->middleware('KhangMiddleware');
 Route::post('/admin/add-hot', 'AdminController\HotController@postHot')->name('post.addHot')->middleware('KhangMiddleware');
+//  ===================== User =================== 
+Route::get('admin/user/index','AdminController\UserController@index')->name('user.index')->middleware('KhangMiddleware');
+Route::get('admin/user/edit/{id}','AdminController\UserController@editUser')->middleware('KhangMiddleware');
+Route::post('admin/user/update','AdminController\UserController@updateRoleUser')->name('user.update')->middleware('KhangMiddleware');

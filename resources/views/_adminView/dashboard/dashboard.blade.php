@@ -109,7 +109,7 @@
 					{
 						?>
 						<div class="wrap-data">
-							<div class="item-dashboard">User: </div>
+							<div class="item-dashboard">Người dùng: </div>
 							<div class="item-dashboard"><?php echo $user->total;?></div>
 						</div>
 						<?php
