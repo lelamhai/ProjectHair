@@ -3,7 +3,7 @@
 <head>
 	<title>Trang admin</title>
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-	<meta http-equiv="refresh" content="{{ route('form.addDetailsService') }}">
+	{{-- <meta http-equiv="refresh" content="{{ route('form.addDetailsService') }}"> --}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
 	<link rel="stylesheet" href="/assets/admin/css/main.css">
     <link rel="stylesheet" href="/assets/admin/css/booking.css">
@@ -64,7 +64,7 @@
                             </li>
 
                             <li class="left__menuItem">
-                                <a class="left__title" href="/admin/hot">Mẫu tóc</a>
+                                <a class="left__title" href="/admin/models/index">Mẫu tóc</a>
                             </li>
 
                             <li class="left__menuItem">
@@ -97,7 +97,7 @@
 
 
 	<!-- đoạn js cho editor -->
-	<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+	{{-- <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script> --}}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -118,6 +118,6 @@
 	  };
 	  
 	</script>
-	@yield('js-editor')
+	{{-- @yield('js-editor') --}}
 </body>
 </html>

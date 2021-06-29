@@ -9,17 +9,13 @@
 				<a href="{{route('get.addProduct')}}" class="right__head-post-add">Thêm mới</a>
 			</div>
 			<div class="right__head-search">
-				{{-- <input type="text" class="right__head-search-input">
-				<button type="button" class="right__head-search-btn">Search Posts</button> --}}
 			</div>
 		</div>
 		<div class="right__head-bar d-flex">
 			<div class="right__head-bar-select">
-				{{-- <input type="checkbox" id="all" class="right__head-bar-checkbox">
-				<label for="all" class="right__head-bar-label">All</label>
-				<button class="right__head-bar-delete">Delete</button> --}}
+				
 			</div>
-			<span class="right__head-bar-count"><?php echo count($products)?> items</span>
+			<span class="right__head-bar-count"><?php echo count($products)?> dữ liệu</span>
 		</div>
 
 		<div class="right__table">
@@ -27,9 +23,9 @@
 				<table>
 					<thead>
 						<tr>
-							<th style="text-align: left;">Title</th>
-							<th>Categories</th>
-							<th>Date</th>
+							<th style="text-align: left;">Tên sản phẩm</th>
+							<th>Danh mục</th>
+							<th>Ngày tạo</th>
 						</tr>
 					</thead>
 
@@ -41,9 +37,9 @@
 							<td data-label="Email" style="text-align: left;">
 								{{$product->title}}
 								<div class="right__table-item-change">
-									<a class="right__table-item-btn right__table-item-btn--edit" href="/admin/edit-product/{{$product->idPro}}">Edit</a>
+									<a class="right__table-item-btn right__table-item-btn--edit" href="/admin/edit-product/{{$product->idPro}}">Chỉnh sửa</a>
 									|
-									<a class="right__table-item-btn right__table-item-btn--delete" href="/admin/delete-product/{{$product->idPro}}">Delete</button>
+									<a class="right__table-item-btn right__table-item-btn--delete" href="/admin/delete-product/{{$product->idPro}}">Xóa</button>
 								</div>
 							</td>
 							<td data-label="Số Hoá Đơn">{{$category->title}}</td>

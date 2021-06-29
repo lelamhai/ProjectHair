@@ -83,10 +83,16 @@ Route::post('/admin/order/detail/{idOrder}', 'AdminController\OrderController@de
 Route::get('/admin/booking', 'AdminController\BookingController@index')->name('booking.index')->middleware('KhangMiddleware');
 Route::get('/admin/delete-booking/{id}', 'AdminController\BookingController@deleteBook')->name('booking.delete')->middleware('KhangMiddleware');
 //  ===================== Hot =================== 
-Route::get('/admin/hot', 'AdminController\HotController@index')->name('hot.index')->middleware('KhangMiddleware');
-Route::get('/admin/delete-hot/{id}', 'AdminController\HotController@deleteHot')->name('delete.hot');
-Route::get('/admin/add-hot', 'AdminController\HotController@showFormToAdd')->name('get.addHot')->middleware('KhangMiddleware');
-Route::post('/admin/add-hot', 'AdminController\HotController@postHot')->name('post.addHot')->middleware('KhangMiddleware');
+// Route::get('/admin/hot', 'AdminController\HotController@index')->name('hot.index')->middleware('KhangMiddleware');
+// Route::get('/admin/delete-hot/{id}', 'AdminController\HotController@deleteHot')->name('delete.hot');
+// Route::post('/admin/add-hot', 'AdminController\HotController@postHot')->name('post.addHot')->middleware('KhangMiddleware');
+
+Route::get('/admin/models/index', 'AdminController\HotController@index')->name('models.index')->middleware('KhangMiddleware');
+Route::get('/admin/models/add', 'AdminController\HotController@add')->name('models.add')->middleware('KhangMiddleware');
+Route::post('/admin/models/insert', 'AdminController\HotController@insert')->name('models.insert')->middleware('KhangMiddleware');
+Route::get('/admin/models/edit/{id}', 'AdminController\HotController@edit')->name('models.edit')->middleware('KhangMiddleware');
+Route::post('/admin/models/update', 'AdminController\HotController@update')->name('models.update')->middleware('KhangMiddleware');
+Route::get('/admin/models/delete/{id}', 'AdminController\HotController@delete')->name('models.delete')->middleware('KhangMiddleware');
 //  ===================== User =================== 
 Route::get('admin/user/index','AdminController\UserController@index')->name('user.index')->middleware('KhangMiddleware');
 Route::get('admin/user/edit/{id}','AdminController\UserController@editUser')->middleware('KhangMiddleware');

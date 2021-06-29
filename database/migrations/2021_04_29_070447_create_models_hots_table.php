@@ -16,6 +16,7 @@ class CreateModelsHotsTable extends Migration
         Schema::create('modesl_hair__hots', function (Blueprint $table) {
             $table->increments('id');
             $table->string('thumbnail');
+            $table->string('title');
             $table->timestamps();
         });
     }
