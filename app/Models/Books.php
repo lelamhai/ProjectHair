@@ -8,7 +8,7 @@ class Books extends Model
 {
 
 	protected $fillable = [
-        'idUser', 'idEmp', 'date', 'time', 'service', 'index',
+        'idUser', 'idEmp', 'date', 'time', 'service', 'index', 'finish',
     ];
 
 	public function users_book () {

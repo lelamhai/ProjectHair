@@ -15,22 +15,10 @@ class OrderController extends Controller
         $i_orders = Order_Details::with('order_pro')->get();
         $services = DB::table('services')->get();
         $categories = DB::table('categories')->get();
-        $arrNumberOfProduct = $request->session()->get('arrNumberOfProduct');
-        $arrNumberOfService = $request->session()->get('arrNumberOfService');
-        $numHot = $request->session()->get('numHot');
-        $numBook = $request->session()->get('numBook');
-        $arrNumberOfOrder = $request->session()->get('arrNumberOfOrder');
-        $arrNumberOfAcc = $request->session()->get('arrNumberOfAcc');
         return view('_adminView.order.show')->with(['orders' => $orders,
                                                   'i_orders' => $i_orders,
                                                   'services' => $services,
-                                                  'categories' => $categories,
-                                                  'arrNumberOfProduct' => $arrNumberOfProduct,
-                                                'arrNumberOfService' => $arrNumberOfService,
-                                                'numHot' => $numHot,
-                                                'numBook' => $numBook,
-                                                'arrNumberOfOrder' => $arrNumberOfOrder,
-                                                'arrNumberOfAcc' => $arrNumberOfAcc]);
+                                                  'categories' => $categories]);
     }
 
     public function deleteOrder(Request $request)

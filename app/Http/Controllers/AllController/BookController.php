@@ -94,8 +94,9 @@ class BookController extends Controller
 			'idUser' => $request->userId,
 			'idEmp' => $request->empId,
 			'index' => $request->index,
-			'service' => 22,
+			'service' => $request->service,
 			'time' => $request->time,
+			'finish' => 0,
 			'date' => $date
 		]);
 	
