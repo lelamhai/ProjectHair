@@ -100,4 +100,48 @@ $(document).ready(function () {
         }
     }
    
+    // booking
+    $( ".status-service" ).change(function() {
+        var token = $("meta[name='csrf-token']").attr("content");
+        var idBook = $(this).data('book');
+        var status = $(this).val();
+
+        $.ajax({
+            url:"/admin/update-booking",
+            method:'POST',
+            data: {
+                _token: token,
+                idBook: idBook,
+                status: status
+            },
+            success: function (response){
+                if(response.result)
+                {
+                    location.reload(true);
+                }
+          }
+         });
+    });
+
+
+
+    $( ".right__table-item .report-stylist" ).click(function () {
+        var idStylist = $(this).data('stylist');
+        var _index = $(this).data('index');
+        $("#report-"+idStylist).css('display','block');
+        $( ".item-report" ).each(function( index ) {
+            if(_index != index )
+            {
+                $( this ).remove();
+            } 
+        });
+    });
+
+    // $( ".close" ).click(function () {
+    //     $(".item-report").css('display','none');
+    // });
+    
+    // $( ".btn-save" ).click(function () {
+    //     $(".item-report").css('display','none');
+    // });
 });

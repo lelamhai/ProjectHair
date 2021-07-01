@@ -82,11 +82,9 @@ Route::post('/admin/order/detail/{idOrder}', 'AdminController\OrderController@de
 //  ===================== Booking =================== 
 Route::get('/admin/booking', 'AdminController\BookingController@index')->name('booking.index')->middleware('KhangMiddleware');
 Route::get('/admin/delete-booking/{id}', 'AdminController\BookingController@deleteBook')->name('booking.delete')->middleware('KhangMiddleware');
+Route::post('/admin/update-booking', 'AdminController\BookingController@updateStatus')->name('booking.updateStatus')->middleware('KhangMiddleware');
+Route::post('/admin/create-report', 'AdminController\BookingController@createReport')->name('booking.createReport')->middleware('KhangMiddleware');
 //  ===================== Hot =================== 
-// Route::get('/admin/hot', 'AdminController\HotController@index')->name('hot.index')->middleware('KhangMiddleware');
-// Route::get('/admin/delete-hot/{id}', 'AdminController\HotController@deleteHot')->name('delete.hot');
-// Route::post('/admin/add-hot', 'AdminController\HotController@postHot')->name('post.addHot')->middleware('KhangMiddleware');
-
 Route::get('/admin/models/index', 'AdminController\HotController@index')->name('models.index')->middleware('KhangMiddleware');
 Route::get('/admin/models/add', 'AdminController\HotController@add')->name('models.add')->middleware('KhangMiddleware');
 Route::post('/admin/models/insert', 'AdminController\HotController@insert')->name('models.insert')->middleware('KhangMiddleware');

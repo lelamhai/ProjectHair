@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+	protected $table = "comments";
+
 	public function users_comment () {
 		return $this->belongsTo(related: 'App\User', foreignKey:'idUser', ownerKey:'id');
 	}

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rates extends Model
 {
+    protected $table = "rates";
+
     public function users_rate () {
         return $this->belongsTo(related: 'App\User', foreignKey:'idUser', ownerKey:'id');
         
