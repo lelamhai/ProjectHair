@@ -33,8 +33,8 @@ class ContactController extends Controller
 			// $message->from('leelamhair@gmail.com', 'Admin');
 			// $message->to($request->mail,  $request->fullName);
 
-			$message->from($request->mail,  $request->fullName);
-			$message->to('leelamhair@gmail.com', 'Admin');
+			$message->from("khangsv1999@gmail.com",  $request->fullName);
+			$message->to("khangsv1999@gmail.com", 'Admin');
 			
 			$message->subject('Khách Hàng Liên Hệ');
 		});
