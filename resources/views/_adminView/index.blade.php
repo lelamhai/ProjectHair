@@ -41,39 +41,54 @@
                                 <a class="left__title" href="/admin/index">Thống kê</a>
                             </li>
 
-                            <li class="left__menuItem">
-                                <div class="left__title">
-									Sản Phẩm<i class="fas fa-plus"></i>
-                                </div>
-                                <div class="left__text">
-                                    @foreach ($categories as $cate)
-                                        <a class="left__link" href="/admin/product/{{$cate->idCate}}">{{$cate->title}}</a>
-                                    @endforeach
-                                </div>
-                            </li>
-
-                            <li class="left__menuItem">
-                                <div class="left__title">
-									Dịch vụ<i class="fas fa-plus"></i>
-                                </div>
-                                <div class="left__text">
-									@foreach ($services as $service)
-										<a class="left__link" href="/admin/service/{{$service->id}}">{{$service->title}}</a>
-									@endforeach
-                                </div>
-                            </li>
-
-                            <li class="left__menuItem">
-                                <a class="left__title" href="/admin/models/index">Mẫu tóc</a>
-                            </li>
-
-                            <li class="left__menuItem">
-                                <a class="left__title" href="/admin/order">Đơn hàng</a>
-                            </li>
-
-                            <li class="left__menuItem">
-                                <a class="left__title" href="/admin/booking">Đặt vé</a>
-                            </li>
+                            <?php
+                                if(intval(session('user')->human_rights) == 0)
+                                {
+                                    ?>
+                                    <li class="left__menuItem">
+                                        <div class="left__title">
+                                            Sản Phẩm<i class="fas fa-plus"></i>
+                                        </div>
+                                        <div class="left__text">
+                                            @foreach ($categories as $cate)
+                                                <a class="left__link" href="/admin/product/{{$cate->idCate}}">{{$cate->title}}</a>
+                                            @endforeach
+                                        </div>
+                                    </li>
+        
+                                    <li class="left__menuItem">
+                                        <div class="left__title">
+                                            Dịch vụ<i class="fas fa-plus"></i>
+                                        </div>
+                                        <div class="left__text">
+                                            @foreach ($services as $service)
+                                                <a class="left__link" href="/admin/service/{{$service->id}}">{{$service->title}}</a>
+                                            @endforeach
+                                        </div>
+                                    </li>
+        
+                                    <li class="left__menuItem">
+                                        <a class="left__title" href="/admin/models/index">Mẫu tóc</a>
+                                    </li>
+        
+                                    <li class="left__menuItem">
+                                        <a class="left__title" href="/admin/order">Đơn hàng</a>
+                                    </li>
+        
+                                    <li class="left__menuItem">
+                                        <a class="left__title" href="/admin/booking">Đặt vé</a>
+                                    </li>
+                                    <?php
+                                } else if(intval(session('user')->human_rights) == 1)
+                                {
+                                    ?>
+                                     <li class="left__menuItem">
+                                        <a class="left__title" href="/admin/booking">Đặt vé</a>
+                                    </li>
+                                    <?php
+                                }
+                            ?>
+                           
 
                             <li class="left__menuItem">
                                 <a class="left__title" href="/admin/user/index">Tài khoản</a>

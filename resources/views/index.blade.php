@@ -101,7 +101,7 @@
                                                 <a href="#" class="header__user"><img src="/assets/img/Log/profile-user.png" alt="" class="header__cart-img img-responsive"></a>
                                                 <span class="header__info-text">{{session('user')->name}}</span>
                                                 <ul class="header__popup">
-                                                    <li class="header__popup-item"><a href="#" class="header__popup-link"><img class="header__popup-thumb" src="/assets/img/Log/profile-user.png" alt="" class="img-responsive">Thông tin khách hàng</a></li>
+                                                    <li class="header__popup-item"><a href="/admin/index" class="header__popup-link"><img class="header__popup-thumb" src="/assets/img/Log/profile-user.png" alt="" class="img-responsive">Trang quản lý</a></li>
                                                     <li class="header__popup-item"><a href="{{route('getLogout')}}" class="header__popup-link"><img class="header__popup-thumb" src="/assets/img/Log/logout.png" alt="" class="img-responsive">Đăng xuất</a></li>
                                                 </ul>
                                             </div>
@@ -161,7 +161,7 @@
                                             <div id="divGenerateRandomValues"></div>
                                             <input class="popup-field" type="text" id='txtInput' />
                                         </div>
-                                        <p class="forgot" id="slidedown">Forgot your password?</p>
+                                        {{-- <p class="forgot" id="slidedown">Forgot your password?</p> --}}
                                         <button class="signIn-form-button" id="btn-log-in" type="button">Đăng nhập</button>
                                     </form>
                                 </div>

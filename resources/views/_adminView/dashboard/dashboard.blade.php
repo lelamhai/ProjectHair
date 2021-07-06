@@ -31,6 +31,10 @@
 				</div>
 			</div>
 	
+<?php
+	if(session('user')->human_rights == 0)
+	{
+		?>
 			<div class="wrap-products">
 				<b>Dữ liệu danh mục</b>
 			
@@ -51,7 +55,7 @@
 						</div>
 					@endforeach
 			</div>
-	
+
 			
 			<div class="wrap-service">
 				<b>Dữ liệu dịch vụ</b>
@@ -73,7 +77,7 @@
 						</div>
 					@endforeach
 			</div>
-	
+
 			
 			<div class="wrap-hair">
 				<b>Dữ liệu mẫu tóc</b>
@@ -118,6 +122,11 @@
 				
 				@endforeach
 			</div>
+		<?php
+	} 
+?>
+
+			
 
 
 		</div>
