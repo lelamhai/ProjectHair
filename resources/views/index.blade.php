@@ -256,10 +256,10 @@
                             <h4 class="footer__title">Giới thiệu</h4>
                             <p class="footer__desc">30ShineStore Số 1 Về Mỹ Phẩm </p>
                             <ul class="footer__list-icon">
-                                <li class="footer__item-icon"><a href="" class="footer__link-icon facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="footer__item-icon"><a href="" class="footer__link-icon instagram"><i class="fab fa-instagram"></i></a></li>
-                                <li class="footer__item-icon"><a href="" class="footer__link-icon youtube"><i class="fab fa-youtube"></i></a></li>
-                                <li class="footer__item-icon"><a href="" class="footer__link-icon twitter"><i class="fab fa-twitter"></i></a></li>
+                                <li class="footer__item-icon"><a href="https://www.facebook.com/Kevin-BarberShop-100753045538234/?ref=pages_you_manage" class="footer__link-icon facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="footer__item-icon"><a href="https://www.instagram.com/khangkaka19/?fbclid=IwAR3hcgH6qYR1aoFHW_Kslfb6ryWKKrklegLL42xC44LoJISgyFfUoEELvOA" class="footer__link-icon instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li class="footer__item-icon"><a href="https://www.youtube.com/channel/UC7_4a1xLiXkK9QKrTLSMnig" class="footer__link-icon youtube"><i class="fab fa-youtube"></i></a></li>
+                                {{-- <li class="footer__item-icon"><a href="" class="footer__link-icon twitter"><i class="fab fa-twitter"></i></a></li> --}}
                             </ul>
                         </div>
                     </div>
@@ -267,25 +267,24 @@
                         <div class="footer__wp">
                             <h4 class="footer__title">Liên kết</h4>
                             <ul class="footer__list">
-                                <li class="footer__item"><a href="" class="footer__link">Thương Hiệu Độc Quyền</a>
-                                </li>
-                                <li class="footer__item"><a href="" class="footer__link">Tạo kiểu tóc</a></li>
-                                <li class="footer__item"><a href="" class="footer__link">Chăm sóc da</a></li>
-                                <li class="footer__item"><a href="" class="footer__link">Chăm sóc cơ thể</a></li>
-                                <li class="footer__item"><a href="" class="footer__link">Mỹ phẩm</a></li>
-                                <li class="footer__item"><a href="" class="footer__link">Phụ kiện</a></li>
-                                <li class="footer__item"><a href="" class="footer__link">Thực phẩm chức năng</a>
+                                <li class="footer__item"><a href="http://localhost:8000/" class="footer__link">Trang chủ</a></li>
+                                <li class="footer__item"><a href="http://localhost:8000/products" class="footer__link">Sản phẩm</a></li>
+                                <li class="footer__item"><a href="http://localhost:8000/modelHot" class="footer__link">Mẫu tóc</a></li>
+                                <li class="footer__item"><a href="http://localhost:8000/service" class="footer__link">Dịch vụ</a></li>
+                                <li class="footer__item"><a href="http://localhost:8000/book" class="footer__link">Đặt vé</a></li>
+                                <li class="footer__item"><a href="http://localhost:8000/contact" class="footer__link">Liên hệ</a></li>
+                                {{-- <li class="footer__item"><a href="" class="footer__link">Thực phẩm chức năng</a> --}}
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col l-3 m-6 xs-12">
                         <div class="footer__wp">
-                            <h4 class="footer__title"> Thông tin liên hệ</h4>
-                            <p class="footer__desc"><i class="fas fa-map-marker-alt"></i> Công ty cổ phần 30 Shide
+                            <h4 class="footer__title">Thông tin liên hệ</h4>
+                            <p class="footer__desc"><i class="fas fa-map-marker-alt"></i> 451 Lê Văn Việt, TP Thủ Đức
                             </p>
                             <p class="footer__desc"><i class="fas fa-phone"></i>0904.600.500 - 0898.586.335</p>
-                            <p class="footer__desc"><i class="fas fa-envelope"></i>30shinestore@30shine.com </p>
+                            <p class="footer__desc"><i class="fas fa-envelope"></i>Khangsv1999@gmail.com</p>
                         </div>
                     </div>
                     <div class="col l-3 m-6 xs-12">
