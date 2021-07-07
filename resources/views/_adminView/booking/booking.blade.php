@@ -60,7 +60,15 @@
 							<th>Số điện thoại</th>
 							<th>Trạng thái</th>
 							<th></th>
-							<th></th>
+							<?php
+									if(intval(session('user')->human_rights) == 2)
+									{
+										?>
+											<th></th>
+
+										<?php
+									}
+								?>
 						</tr>
 					</thead>
 
@@ -96,11 +104,19 @@
 										</select>
 								</td>
 								<td><button class="btn-delete-booking"><a class="right__table-item-btn right__table-item-btn--delete" href="/admin/delete-booking/{{$book->id}}">Xóa</button></td>
-								<td>
-									<button type="button" data-index=<?php echo $indexx;?> data-stylist="{{$book->users_book->id}}" class="btn btn-primary report-stylist" data-toggle="modal" data-target="#report-styleist">
-										Đánh giá
-									  </button>
-								</td>
+								
+								<?php
+									if(intval(session('user')->human_rights) == 2)
+									{
+										?>
+											<td>
+												<button type="button" data-index=<?php echo $indexx;?> data-stylist="{{$book->users_book->id}}" class="btn btn-primary report-stylist" data-toggle="modal" data-target="#report-styleist">
+													Đánh giá
+												</button>
+											</td>
+										<?php
+									}
+								?>
 							</tr>
 							<?php $indexx ++;?>
 						@endforeach

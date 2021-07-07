@@ -11,10 +11,19 @@ class UserController extends Controller
 {
     public function index()
     {
+        $currentIdUser = session('user')->human_rights;
+        $users = null;
+        if(intval(session('user')->human_rights) == 0)
+        {
+            $users = DB::table('user')->get();
+        } else {
+            $users = DB::table('user')->where('id', session('user')->id) ->get();
+        }
+
         $services = DB::table('services')->get();
         $categories = DB::table('categories')->get();
 
-        $users = DB::table('user')->get();
+
         return view("_adminView.user.index")->with(['services' => $services,
                                                     'categories' => $categories,
                                                     'users' => $users
