@@ -22,9 +22,18 @@ class DashboardController extends Controller
 		$products = DB::table('products')->get();
 
 		$booking = Books::with('users_book', 'emp_book', 'service_book')->get();
+		
+		$currentUser = session('user');
 
 		$orderPaid = DB::table('orders')->where('status','Paid')->get();
 		$orderProsecc = DB::table('orders')->where('status','Prosecc')->get();
+
+		if(intval($currentUser->human_rights) != 0)
+		{
+			$orderPaid = DB::table('orders')->where('status','Paid')->where('idUser', $currentUser->id)->get();
+			$orderProsecc = DB::table('orders')->where('status','Prosecc')->where('idUser', $currentUser->id)->get();
+		}
+		
 
 		$hairModels = DB::table('modesl_hair__hots')->get();
 

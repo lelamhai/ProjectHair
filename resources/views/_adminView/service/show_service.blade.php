@@ -27,9 +27,9 @@
 				<table>
 					<thead>
 						<tr>
-							<th style="text-align: left;">Title</th>
-							<th>Categories</th>
-							<th>Date</th>
+							<th style="text-align: left;">Tên</th>
+							<th>Danh mục</th>
+							<th>Ngày</th>
 						</tr>
 					</thead>
 
@@ -41,9 +41,9 @@
 							<td data-label="Email" style="text-align: left;">
 								{{$step->step}} {{$step->title}}
 								<div class="right__table-item-change">
-									<a class="right__table-item-btn right__table-item-btn--edit" href="/admin/edit-step/{{$step->id}}">Edit</a>
+									<a class="right__table-item-btn right__table-item-btn--edit" href="/admin/edit-step/{{$step->id}}">Chỉnh sửa</a>
 									|
-									<a class="right__table-item-btn right__table-item-btn--delete" href="/admin/delete-step/{{$step->id}}">Delete</button>
+									<a class="right__table-item-btn right__table-item-btn--delete" href="/admin/delete-step/{{$step->id}}">Xóa</button>
 								</div>
 							</td>
 							<td data-label="Số Hoá Đơn">{{$service->title}}</td>

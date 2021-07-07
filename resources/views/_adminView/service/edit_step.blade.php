@@ -10,7 +10,7 @@
 			@csrf
 			<input type="hidden" name="idService" value="{{$idService}}">
 			<input type="hidden" name="id" value="{{ $step->id }}">
-			
+			<input type="hidden" name="step" value="">
 			<div class="wrap-left">
 				<div class="right__add-post">
 					<div class="right__head-new-post add-field">
