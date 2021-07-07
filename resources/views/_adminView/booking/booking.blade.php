@@ -58,8 +58,21 @@
 							<th>Thời gian đặt vé</th>
 							<th>Khách hàng</th>
 							<th>Số điện thoại</th>
-							<th>Trạng thái</th>
-							<th></th>
+
+							<?php
+								if(intval(session('user')->human_rights) == 0)
+								{
+									?>
+										<th>Trạng thái</th>
+
+										<th></th>
+
+									<?php
+								}
+							?>
+
+
+
 							<?php
 									if(intval(session('user')->human_rights) == 2)
 									{
@@ -83,7 +96,11 @@
 								</td>
 								<td>{{$book->users_book->name}}</td>
 								<td>{{$book->users_book->phone}}</td>
-								<td>
+								<?php
+								if(intval(session('user')->human_rights) == 0)
+								{
+									?>
+									<td>
 										<select data-book="{{$book->id}}" class="status-service">
 											<?php
 												if($book->finish == 0)
@@ -102,8 +119,13 @@
 											
 											
 										</select>
-								</td>
+									</td>
 								<td><button class="btn-delete-booking"><a class="right__table-item-btn right__table-item-btn--delete" href="/admin/delete-booking/{{$book->id}}">Xóa</button></td>
+
+									<?php
+								}
+								?>
+								
 								
 								<?php
 									if(intval(session('user')->human_rights) == 2)

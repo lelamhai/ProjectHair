@@ -79,7 +79,7 @@
                                         <a class="left__title" href="/admin/booking">Đặt vé</a>
                                     </li>
                                     <?php
-                                } else if(intval(session('user')->human_rights) == 1)
+                                } else 
                                 {
                                     ?>
                                      <li class="left__menuItem">
