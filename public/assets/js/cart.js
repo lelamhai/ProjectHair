@@ -134,3 +134,6 @@
         });
       });
 
+      $('#note').on('input propertychange paste', function() {
+        $("#reNote").val($(this).val());
+  });

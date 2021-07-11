@@ -71,7 +71,7 @@
             <div class="left-note">
               <form action="" method="post" id="note-order">
                 <h5>Ghi chú đơn hàng</h5>
-                <textarea name="" id="" rows="6"></textarea>
+                <textarea name="" id="note" rows="6"></textarea>
                 {{-- <button type="button" id="btn-note">Gửi</button> --}}
               </form>
             </div>
@@ -110,7 +110,7 @@
                 <p>
                   Tổng tiền: <span><span id="all-money-product"><?php echo number_format($total, 0, ',', '.'); ?></span><span>₫</span></span>
                   <input type="hidden" name="total" value="<?php echo $total?>">
-                  <input type="hidden" name="note" value="text">
+                  <input type="hidden" id="reNote" name="note" value="text">
                 </p>
               </div>
               <div class="payment">
